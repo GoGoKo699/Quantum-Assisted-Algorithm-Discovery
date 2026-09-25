@@ -1,0 +1,188 @@
+{
+  "checks_sha256": "fc3e11381603cba8de26001ee5c966b01ce2c49b918eb11d4aa9025fa94babec",
+  "cpp": {
+    "wht_canonical.json": {
+      "audit_records": 84925,
+      "by_depth": [
+        1,
+        16,
+        236,
+        4064,
+        80608
+      ],
+      "closures": 291989,
+      "first_helper_set": [
+        [
+          0,
+          1,
+          0,
+          -1
+        ],
+        [
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          -1,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          0
+        ]
+      ],
+      "goals": [
+        0,
+        0,
+        0,
+        0,
+        3
+      ],
+      "method": "canonical",
+      "ordered_histories_by_depth": [
+        1,
+        16,
+        356,
+        10864,
+        442044
+      ],
+      "pair_tests": 42699150,
+      "parent_tests": 207064,
+      "proposals": 174816,
+      "vertices": 84925
+    },
+    "wht_memoized.json": {
+      "audit_records": 84925,
+      "by_depth": [
+        1,
+        16,
+        236,
+        4064,
+        80608
+      ],
+      "closures": 84925,
+      "first_helper_set": [
+        [
+          0,
+          0,
+          1,
+          -1
+        ],
+        [
+          0,
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          -1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          0
+        ]
+      ],
+      "goals": [
+        0,
+        0,
+        0,
+        0,
+        3
+      ],
+      "method": "memoized",
+      "ordered_histories_by_depth": [
+        1,
+        16,
+        356,
+        10864,
+        442044
+      ],
+      "pair_tests": 14486619,
+      "parent_tests": 0,
+      "proposals": 174816,
+      "vertices": 84925
+    },
+    "wht_no_cache.json": {
+      "audit_records": 0,
+      "by_depth": [
+        1,
+        16,
+        236,
+        4064,
+        80608
+      ],
+      "closures": 291989,
+      "first_helper_set": [
+        [
+          0,
+          1,
+          0,
+          -1
+        ],
+        [
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          -1,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          0
+        ]
+      ],
+      "goals": [
+        0,
+        0,
+        0,
+        0,
+        3
+      ],
+      "method": "canonical",
+      "ordered_histories_by_depth": null,
+      "pair_tests": 42699150,
+      "parent_tests": 207064,
+      "proposals": 174816,
+      "vertices": 84925
+    }
+  },
+  "winograd_input_transform": {
+    "inputs": 16,
+    "required_directions": 16,
+    "status": "known separable construction; no minimum or runtime claim",
+    "supplied_helpers": 16,
+    "verified_gate_count": 32
+  },
+  "xor_exhaustive": {
+    "canonical_parent_edges": 173652,
+    "disjoint_target_helper_pairs": 177147,
+    "feasible_helper_states": 175700,
+    "optimum_helper_histogram": {
+      "0": 1857,
+      "1": 185,
+      "2": 6
+    },
+    "ordered_histories": 144736968,
+    "target_families": 2048,
+    "unrestricted_wire_states": 1857,
+    "wire_extension_edges": 9684
+  }
+}
