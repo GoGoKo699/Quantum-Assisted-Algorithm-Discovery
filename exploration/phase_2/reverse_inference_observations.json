@@ -1,0 +1,63 @@
+{
+  "biased_stationary_prior": {
+    "evidence": 0.019682999999999992,
+    "expected_evidence": 0.019683000000000003,
+    "reverse_posterior_tv": 3.640386942982709e-16,
+    "single_site_occupation": 0.27
+  },
+  "conserving_example": {
+    "charge_commutator_max_error": 0.0,
+    "compatible_endpoints": 5,
+    "dephasing_comparison": "Different physical model, not strongest classical simulation.",
+    "evidence": 0.07142857142857137,
+    "exact_evidence_fraction": "1/14",
+    "occupied_output_sites": 3,
+    "particles": 4,
+    "per_gate_dephasing_changes_posterior_tv": 0.19687968973147574,
+    "reverse_posterior_tv": 3.729031845601213e-16,
+    "sector_configurations": 70,
+    "spins": 8,
+    "two_site_gates": 28,
+    "unitarity_max_error": 2.7755575615628914e-15
+  },
+  "controlled_parameter": {
+    "desired_posterior": [
+      0.03334533565363167,
+      0.13336800492486378,
+      0.3000280000796056,
+      0.533258659341899
+    ],
+    "forward_evidence": 0.0007497050543275913,
+    "parameter_distribution_after_filter": [
+      0.03334533565363167,
+      0.13336800492486378,
+      0.3000280000796056,
+      0.533258659341899
+    ],
+    "parameter_distribution_before_filter": [
+      0.25,
+      0.25,
+      0.25,
+      0.25
+    ],
+    "reverse_workspace_acceptance": 0.0007497050543275913
+  },
+  "large_example_count_only": {
+    "evidence": 8.79303628551999e-08,
+    "expected_forward_rejection_trials": 11372635.885135135,
+    "occupied_output_sites": 20,
+    "particles": 50,
+    "scope": "Combinatorial calculation only; no 100-spin simulation.",
+    "spins": 100
+  },
+  "numpy_version": "2.3.5",
+  "restricted_initial_state": {
+    "expected_ratio": "forward_evidence / 5",
+    "forward_evidence": 0.060737618292779245,
+    "initial_basis_index": 85,
+    "ratio_error": 0.0,
+    "reverse_acceptance": 0.012147523658555849
+  },
+  "scope": "Classical finite-matrix controls, not a quantum run or advantage benchmark.",
+  "seed": 20260926
+}
