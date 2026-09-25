@@ -1,0 +1,33 @@
+{
+  "delta": 1.0,
+  "duration": 3.5124073655203634,
+  "endpoint_error": 2.4492935982947064e-16,
+  "exact_transfer_rotating": 0.4444444444444444,
+  "exact_transfer_stationary": 0.0,
+  "expected_fraction": "4/9",
+  "gauge_return_error": 0.0,
+  "maximum_spectrum_error": 2.220446049250313e-16,
+  "midpoint_checks": [
+    {
+      "absolute_probability_error": 7.108523283622104e-05,
+      "normalization_error": 1.6653345369377348e-14,
+      "steps": 200,
+      "transition_probability": 0.4443733592116082
+    },
+    {
+      "absolute_probability_error": 4.442367963708449e-06,
+      "normalization_error": 3.419486915845482e-14,
+      "steps": 800,
+      "transition_probability": 0.4444400020764807
+    },
+    {
+      "absolute_probability_error": 2.776463597364831e-07,
+      "normalization_error": 3.4505731605349865e-13,
+      "steps": 3200,
+      "transition_probability": 0.4444441667980847
+    }
+  ],
+  "numpy_version": "2.3.5",
+  "rotation_rate": 1.7888543819998317,
+  "scope": "Elementary isospectral two-state counterexample; no molecular or quantum advantage claim."
+}
