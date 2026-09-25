@@ -1,0 +1,84 @@
+% Partial manuscript section. Not a complete manuscript or novelty assertion.
+% Requires amsmath, amssymb, amsthm; theorem/proposition environments supplied by host.
+\section{Grounded budget certificates for cyclic extraction}
+Let $G$ be an explicitly represented equality graph with root set $R$ and
+nonnegative integer node costs. An extraction selects one representative for
+each used class and must induce an acyclic computation. Each shared result is
+charged once. All equivalences are upstream assumptions.
+Let $C$ contain the roots and every potentially reachable class referenced by
+at least two distinct parent classes; write $s=|C|$. A private class has a
+unique boundary owner and the private support is acyclic. For $S\subseteq C$,
+let $c_v(S)$ be the minimum cost of a private local expansion constructing $v$
+using only $S$ as available boundary results. Unavailable expansions cost
+$+\infty$. The local functions are computed in polynomial time by min-plus
+evaluation of the private support.
+
+For $b\in\mathbb Z_{\ge0}^C$, set
+\[
+ S_0(b)=\varnothing,\qquad
+ S_{t+1}(b)=S_t(b)\cup\{v\in C:c_v(S_t(b))\le b_v\}.
+\]
+Since $c_v$ is nonincreasing in its argument, this reaches a fixed point
+$S_*(b)$ after at most $s$ changing rounds.
+
+\begin{theorem}[Grounded budget certificate]
+For every integer $K\ge0$, the following are equivalent:
+\begin{enumerate}
+\item $G$ has an acyclic extraction containing $R$ with cost at most $K$.
+\item There is $b\in\mathbb Z_{\ge0}^C$ with $\sum_v b_v\le K$ and
+$R\subseteq S_*(b)$.
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+For the second-to-first implication, retain a minimizing local witness when
+$v$ first enters the closure. Its boundary dependencies were constructed in
+earlier rounds, and private support is acyclic. The concatenated witnesses
+therefore give an acyclic program. Their private pieces have distinct owners,
+so their costs add without double counting. Each is charged at most $b_v$.
+Pruning components unused by the roots cannot increase nonnegative cost.
+
+Conversely, partition an acyclic extraction into its boundary-owned local
+pieces. Assign to each used $v$ its actual local cost and assign zero to
+unused boundary classes. The resulting vector sums to the extraction cost.
+Induction on any dependency-first ordering of the used boundary classes
+shows that each class enters the closure: once its predecessors are present,
+the definition of $c_v$ admits the extraction's piece at cost at most $b_v$.
+This includes zero-cost pieces; a zero cap is not an assumption of availability.
+\end{proof}
+
+\begin{corollary}[Circuit-model upper bound; comparison qualified]
+The threshold problem admits a bounded-error quantum algorithm using
+\[
+ O\!\left(\sqrt{\binom{K+s}{s}}\,
+       \operatorname{poly}(N,L,\log(K+2))\right)
+\]
+time and polynomial workspace, where $N$ is explicit graph size and $L$
+includes the binary input-cost lengths. No quantum random-access table of
+exponential size is required.
+\end{corollary}
+\begin{proof}
+There are $M=\binom{K+s}{s}$ nonnegative cap vectors with sum at most $K$.
+A rank in $[0,M)$ can be decoded with binomial prefix counts and binary
+search; the computation uses polynomial time and space in $s$ and
+$\log(K+2)$, not a loop of length $K$. Prepare a uniform superposition of
+$q=\lceil\log_2M\rceil$ bits, rejecting padded indices. Evaluate the grounded
+certificate reversibly, mark acceptance, and uncompute. Saturate local costs
+at $K+1$, so all arithmetic has polynomial bit width. Standard search for
+an unknown number of marked elements uses $O(\sqrt M)$ evaluations at
+constant bounded error. Decode the measured rank, recover the local
+witnesses, prune, and verify the classical output. When $M=1$, evaluate it
+directly. The reversible construction follows ordinary computation-history
+storage and uncomputation; its workspace is polynomial in the explicit
+instance. The implementation accompanying this section compiles the binary
+cap marker, but not the complete compact-index decoder and search circuit.
+\end{proof}
+
+This corollary improves allocation enumeration, not necessarily the best
+classical algorithm. Classical subset dynamic programming has a
+$2^s\operatorname{poly}(N,L)$ bound; representative enumeration, treewidth
+methods, memoization and heuristics may be better. Numeric rescaling of
+costs changes the cap domain without changing the extraction problem.
+Relevant cost granularity and domain redundancies must therefore be included
+in any significance or application claim. The fixed-point, min-plus and
+quantum-search tools are prior techniques; priority for this structural
+combination remains to be established.

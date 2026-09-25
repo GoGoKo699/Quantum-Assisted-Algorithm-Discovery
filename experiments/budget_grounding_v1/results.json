@@ -1,0 +1,192 @@
+{
+  "claims_not_established": [
+    "novelty",
+    "best_classical_separation",
+    "large_native_benchmark",
+    "useful_quantum_advantage",
+    "compiled_physical_resources"
+  ],
+  "cycles": {
+    "grounded_optimum": {
+      "all_constructed_cost": 10,
+      "allocation_space": 286,
+      "allocations_checked": 66,
+      "budgets": [
+        0,
+        10,
+        0
+      ],
+      "choices": {
+        "A": "AfromB",
+        "B": "Bleaf",
+        "r": "rAB"
+      },
+      "cost": 10,
+      "mask": 7,
+      "rounds": [
+        [
+          "B"
+        ],
+        [
+          "A"
+        ],
+        [
+          "r"
+        ]
+      ],
+      "success": true
+    },
+    "ungrounded_cycle_rejected": true,
+    "zero_caps_accepted": false
+  },
+  "domain_counts": [
+    {
+      "K": 2,
+      "allocations": 231,
+      "log2_allocations": 7.851749,
+      "log2_sqrt_allocations": 3.925875,
+      "note": "Search-domain counts, not lower bounds or runtime estimates.",
+      "s": 20
+    },
+    {
+      "K": 10,
+      "allocations": 10272278170,
+      "log2_allocations": 33.258037,
+      "log2_sqrt_allocations": 16.629019,
+      "note": "Search-domain counts, not lower bounds or runtime estimates.",
+      "s": 40
+    },
+    {
+      "K": 20,
+      "allocations": 535983370403809682970,
+      "log2_allocations": 68.86075,
+      "log2_sqrt_allocations": 34.430375,
+      "note": "Search-domain counts, not lower bounds or runtime estimates.",
+      "s": 80
+    },
+    {
+      "K": 40,
+      "allocations": 107507208733336176461620,
+      "log2_allocations": 76.50878,
+      "log2_sqrt_allocations": 38.25439,
+      "note": "Search-domain counts, not lower bounds or runtime estimates.",
+      "s": 40
+    },
+    {
+      "K": 80,
+      "allocations": 114556848244965165743109806892471,
+      "log2_allocations": 106.497763,
+      "log2_sqrt_allocations": 53.248881,
+      "note": "Search-domain counts, not lower bounds or runtime estimates.",
+      "s": 40
+    },
+    {
+      "K": 1205,
+      "allocations": 20870021715849586939188589488,
+      "log2_allocations": 94.075419,
+      "log2_sqrt_allocations": 47.037709,
+      "note": "Search-domain counts, not lower bounds or runtime estimates.",
+      "s": 12
+    }
+  ],
+  "finite_cap_checks": {
+    "accepted_cap_vectors": 2579,
+    "cap_vectors": 8374,
+    "cyclic_graphs": 177,
+    "decisions_sha256": "6bc917e94d3dd090efc5f499c6878f62471aaf992636a4520447f15aab341002",
+    "exhaustive_assignments": 3455,
+    "graphs": 400,
+    "infeasible_graphs": 85,
+    "threshold_decisions": 2000
+  },
+  "previous_graph_witness_transfer": {
+    "feasible_witnesses_verified": 1790,
+    "graphs": 2100
+  },
+  "public_calibration": {
+    "allocation_count": 20870021715849586939188589488,
+    "budget_vector": [
+      1,
+      1,
+      1,
+      100,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      1100
+    ],
+    "choices": {
+      "0": "0.0",
+      "1": "1.2",
+      "2": "2.2",
+      "26": "26.2",
+      "27": "27.2",
+      "4": "4.2",
+      "5": "5.2",
+      "7": "7.3"
+    },
+    "core": [
+      "0",
+      "1",
+      "2",
+      "27",
+      "3",
+      "37",
+      "4",
+      "40",
+      "45",
+      "5",
+      "6",
+      "7"
+    ],
+    "cost": 1205,
+    "grounding_rounds": [
+      [
+        "0",
+        "1",
+        "2",
+        "4",
+        "5"
+      ],
+      [
+        "27"
+      ],
+      [
+        "7"
+      ]
+    ],
+    "scope": "Witness reconstruction only; allocation enumeration not run; not a hard workload.",
+    "source": {
+      "bytes": 17477,
+      "git_blob_sha": "0a6fdaa6432a55b7c49001bd83531835efc6a1af"
+    },
+    "sum_caps": 1205
+  },
+  "ranking": {
+    "exhaustive_rank_roundtrips": 31823,
+    "large_binary_thresholds": [
+      {
+        "checked_ranks": 4,
+        "core": 12,
+        "rank_bits": 211,
+        "threshold_bits": 20
+      },
+      {
+        "checked_ranks": 4,
+        "core": 20,
+        "rank_bits": 1933,
+        "threshold_bits": 100
+      },
+      {
+        "checked_ranks": 4,
+        "core": 3,
+        "rank_bits": 766,
+        "threshold_bits": 257
+      }
+    ]
+  }
+}
