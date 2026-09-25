@@ -1,0 +1,122 @@
+% Candidate theorem and comparison section. No priority or advantage claim.
+\section{Implicit completion of single-recurrent-boundary components}
+
+\paragraph{Input and boundary.}
+The input is an explicit finite e-graph with nonnegative binary-encoded integer
+node weights and a set of required e-classes. A feasible extraction selects one
+representative in each reached class and has no selected dependency cycle.
+Costs count a reached representative once. Semantic equivalence is an input
+assumption; mapped hardware performance is not the objective in this section.
+Let $C$ contain the required classes and every root-reachable class with at
+least two distinct possible parent classes. The remaining private dependency
+regions are acyclic, and regions owned by distinct boundary classes are disjoint
+until another boundary is reached. We use the earlier ownership lemma.
+
+Project possible dependency paths through private regions onto $C$ and compute
+the strongly connected components $B_1,\ldots,B_m$ of this support graph.
+A local implementation of $v\in C$ expands private classes and stops at boundary
+references. An implementation containing a reference to $v$ itself cannot
+participate in an acyclic extraction and may be discarded.
+
+\paragraph{Structural promise.}
+Every remaining local implementation of every $v$ references at most one
+\emph{distinct other} class in $B(v)$, its support component. It may reference
+arbitrarily many boundary classes outside $B(v)$. Repeated ports to the same
+boundary class count as one dependency. This promise includes every
+acyclic-support input but also genuine cyclic alternatives. It does not assert
+that the entire program is unary. The promise can be checked in polynomial time:
+propagate local support labels $\emptyset$, a singleton in $B(v)$, or a sentinel
+for two-or-more. Discard self-references, combine distinct children by union and
+alternatives by choice. The private graph is acyclic. A surviving sentinel is
+an obstruction, not an infeasibility certificate. The recognition may conservatively
+reject globally unusable conjunctive alternatives.
+
+\paragraph{Implicit local tables.}
+Fix an active set $A\subseteq C$ containing all required classes. Core references
+outside $A$ are forbidden. For each $v\in A$, compute $w_v(\bot;A)$ and
+$w_v(u;A)$ for $u\in (A\cap B(v))\setminus\{v\}$. These are minimum private
+costs of local implementations using, respectively, no same-component boundary
+reference, or exactly the single reference $u$. References in other components
+are permitted exactly when in $A$ and have zero local price. Their actual cost
+will be charged at their own boundary class. The tables use min-plus propagation
+with at most $|B(v)|+1$ numerical entries at a private vertex; impossible entries
+are infinite. No list of all attainable costs, threshold grid, or cost spectrum
+is constructed. Conditional minima and witnesses suffice.
+
+\paragraph{Arborescence completion theorem.}
+For each component $B$, make a directed graph on
+$\{\bot\}\cup(A\cap B)$. Include $\bot\to v$ with weight $w_v(\bot;A)$
+and $u\to v$ with weight $w_v(u;A)$ whenever finite. Let $\tau_B(A)$ be the
+minimum weight of a spanning out-arborescence rooted at $\bot$, or infinity
+if none exists. Define $F(A)=\sum_B\tau_B(A)$, with the empty component costing
+zero. Under the structural promise, $F(A)$ equals the minimum cost of an
+acyclic computation constructing all of $A$ and no other boundary classes.
+Consequently,
+\[
+ \operatorname{OPT}=\min_{A\supseteq R}F(A),
+\]
+where $R$ is the required boundary set. Any sound mandatory-class inference may
+replace $R$ by a larger set which every valid extraction contains.
+
+\paragraph{Proof.}
+In a local implementation there is at most one same-component prerequisite.
+Reverse the dependency arrow to point from prerequisite to result. Selecting
+one local implementation per active boundary class therefore selects one incoming
+arc at every non-ground vertex. Acyclicity is exactly the condition that these
+arcs form a rooted spanning arborescence: every predecessor chain terminates at
+$\bot$ rather than a cycle. Replacing any local implementation by the cheapest
+one with its same internal prerequisite does not change that condition. External
+prerequisites are in strictly earlier components of the dependency condensation
+and cannot create an intercomponent cycle. Thus any computation for $A$ has
+cost at least $\sum_B\tau_B(A)$. Conversely, optimal component arborescences
+choose local witnesses. Construct them dependency-first within each arborescence
+and dependency-first across the condensation. All selected prerequisites then
+exist. Private ownership prevents double charging or conflicting representative
+choices. This constructs all of $A$ at the stated cost. Taking the active boundary
+of an optimum extraction proves one direction of the last equality. For the
+other direction, remove unused pieces from a constructed $A$; nonnegative weights
+ensure the root-reachable extraction costs no more.\hfill$\square$
+
+\paragraph{Complexity and quantum corollary.}
+Minimum arborescence is a standard polynomial-time problem (Chu--Liu/Edmonds;
+Tarjan). A simple one-cycle-at-a-time implementation costs $O(VE)$ arithmetic
+operations. The local tables and their witnesses are polynomial in the original
+explicit graph, not a compiled numerical catalog. With $N$ the explicit size,
+$L$ the cost bit length including a threshold $K$, and $h=|C\setminus R|$,
+activation enumeration runs in $O(2^h\operatorname{poly}(N,L))$ time and
+polynomial workspace. Standard bounded-error quantum search for $F(A)\leq K$
+gives
+\[
+ O(2^{h/2}\operatorname{poly}(N,L))
+\]
+time and polynomial workspace in the \emph{original} input. Multiplying all
+weights and $K$ by an integer changes arithmetic bit lengths, not the activation
+domain. A uniform register for $h$ optional bits is directly preparable. The
+polynomial classical predicate can be compiled into a fixed-time Boolean circuit
+and made reversible by keeping and uncomputing its bounded history. Dynamic
+indices can use explicit linear scans, with polynomial overhead, rather than
+free QRAM. A measured activation is completed and checked classically. No
+complete Toffoli counts or fault-tolerance resources are claimed here. This is
+a speedup over activation enumeration, not a lower bound against all classical
+extractors or a claimed new quantum-search theorem.
+
+\paragraph{Why the promise matters.}
+Let all $X,Y,Z$ be required. $X$ can be built for ten or from both $Y,Z$ for
+zero; each of $Y,Z$ can be built for one or from $X$ for zero. The true optimum
+is two. Replacing the two-prerequisite rule by a choice of one predecessor makes
+an invalid cost-one arborescence appear. The implementation reports this input
+as outside its promise; it does not silently drop or relax the conjunction.
+
+\paragraph{Classical comparative boundary.}
+If \emph{every original representative} has at most one distinct child, extraction
+is a directed Steiner tree problem: use a ground edge for a leaf and a weighted
+edge from the prerequisite to its resulting class, with required outputs as
+terminals. Both directions preserve optimum cost. The standard terminal-subset
+DP supplies a different reference upper bound
+$O(n^3+3^r n+2^r n^2)$ for $r$ terminals, using $O(2^r n+n^2)$ space.
+A single output is just a shortest-path problem, even with cyclic alternatives.
+These classical reductions must not be suppressed when comparing against
+$2^h$ enumeration. Treewidth/pathwidth extraction, simplification, heuristic
+and exact native solvers remain additional competitors on the broader promise.
+No useful-workload prevalence, priority for the combined reduction, or
+best-classical separation has been established.
