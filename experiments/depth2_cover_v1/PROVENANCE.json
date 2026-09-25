@@ -1,0 +1,26 @@
+{
+  "access_limits": [
+    "SAT-CMM and PAGSuite GitLab landing pages inspected; raw/archive retrieval unsuccessful.",
+    "jMCM author interface read through GitHub; Julia and native RPAG/SAT-CMM not installed.",
+    "No paid computation, external contacts, or repository administration changes."
+  ],
+  "base_commit": "9a9c8c02acc50a6855e460f00c5d98cbd268ab74",
+  "date": "2026-09-25",
+  "model": "Positive odd fundamentals <2^B; both shifts <=B; free signs/copies/shifts and unlimited fanout/live storage; optimize binary-node count and arithmetic depth only.",
+  "native_upstream_run": false,
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+  "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "source": {
+    "blob_sha": "5e6a36da1fc80edae17c69610d42474eb31dfa25",
+    "commit": "7a0705a5a699a748d7421405b2635d312c55e08d",
+    "path": "benchmark/inputs/mcm/mcm.csv",
+    "repository": "Rammbock9000/sat_mcm"
+  },
+  "source_classification": "Numeric facts independently transcribed. Complete source CSV Git blob checked locally; not bundled or imported. No upstream solver code incorporated.",
+  "timing_scope": "One initial compute() invocation after imports, approximately 0.27s; no comparative benchmark or portable guarantee.",
+  "verification_scope": [
+    "Previous supplied filter_mcm_v1 default verifier rerun.",
+    "New deterministic screen and independent tiny checks rerun.",
+    "Previous optional Z3 and older full benchmarks not rerun."
+  ]
+}

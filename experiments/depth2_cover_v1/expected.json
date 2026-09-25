@@ -1,0 +1,229 @@
+{
+  "checks_sha256": "2bac5ff867db69765abd9da1ade91ad80a2062bd5534b40554c4625928681ce3",
+  "finite_validation": {
+    "inputs_per_certificate": 384,
+    "pareto_certificates": 15,
+    "signed_input_runs": 5760,
+    "tiny": {
+      "decision_sha256": "fc62097537b6517b834a4cc36003bec89cf7fce816f9dbcb5502e2dc6d93f67c",
+      "helper_subsets_checked": 972,
+      "layered_decisions": 1536,
+      "layered_states_by_budget": {
+        "1": [
+          1,
+          6,
+          16,
+          26
+        ],
+        "2": [
+          1,
+          6,
+          41,
+          155
+        ],
+        "3": [
+          1,
+          6,
+          41,
+          270
+        ]
+      },
+      "target_families": 128
+    }
+  },
+  "screen_sha256": "5835f6df94018beff96aea476375f7be4187e9e0b113f72547e28e04d11bc62d",
+  "summary": [
+    {
+      "B": 9,
+      "cover_unions": 11,
+      "largest_cover_frontier": 10,
+      "minimum_depth": 2,
+      "minimum_operations": 4,
+      "name": "gaussian_3x3_8bit",
+      "outputs": 3,
+      "pareto": [
+        [
+          4,
+          2
+        ]
+      ],
+      "two_layer_status": "feasible"
+    },
+    {
+      "B": 8,
+      "cover_unions": 4,
+      "largest_cover_frontier": 3,
+      "minimum_depth": 2,
+      "minimum_operations": 3,
+      "name": "laplacian_3x3_8bit",
+      "outputs": 3,
+      "pareto": [
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          2
+        ]
+      ],
+      "two_layer_status": "feasible"
+    },
+    {
+      "B": 8,
+      "cover_unions": 9,
+      "largest_cover_frontier": 8,
+      "minimum_depth": 2,
+      "minimum_operations": 4,
+      "name": "unsharp_3x3_8bit",
+      "outputs": 3,
+      "pareto": [
+        [
+          4,
+          2
+        ]
+      ],
+      "two_layer_status": "feasible"
+    },
+    {
+      "B": 12,
+      "cover_unions": 0,
+      "largest_cover_frontier": 1,
+      "minimum_depth": 3,
+      "minimum_operations": 5,
+      "name": "unsharp_3x3_12bit",
+      "outputs": 3,
+      "pareto": [
+        [
+          5,
+          3
+        ]
+      ],
+      "two_layer_status": "infeasible"
+    },
+    {
+      "B": 13,
+      "cover_unions": 0,
+      "largest_cover_frontier": 1,
+      "minimum_depth": 3,
+      "minimum_operations": 5,
+      "name": "gaussian_5x5_12bit",
+      "outputs": 3,
+      "pareto": [
+        [
+          5,
+          4
+        ],
+        [
+          6,
+          3
+        ]
+      ],
+      "two_layer_status": "infeasible"
+    },
+    {
+      "B": 8,
+      "cover_unions": 1,
+      "largest_cover_frontier": 1,
+      "minimum_depth": 2,
+      "minimum_operations": 4,
+      "name": "highpass_5x5_8bit",
+      "outputs": 4,
+      "pareto": [
+        [
+          4,
+          2
+        ]
+      ],
+      "two_layer_status": "feasible"
+    },
+    {
+      "B": 9,
+      "cover_unions": 106,
+      "largest_cover_frontier": 11,
+      "minimum_depth": 2,
+      "minimum_operations": 6,
+      "name": "lowpass_5x5_8bit",
+      "outputs": 5,
+      "pareto": [
+        [
+          6,
+          3
+        ],
+        [
+          7,
+          2
+        ]
+      ],
+      "two_layer_status": "feasible"
+    },
+    {
+      "B": 10,
+      "cover_unions": 2,
+      "largest_cover_frontier": 1,
+      "minimum_depth": 2,
+      "minimum_operations": 5,
+      "name": "highpass_9x9_10bit",
+      "outputs": 5,
+      "pareto": [
+        [
+          5,
+          2
+        ]
+      ],
+      "two_layer_status": "feasible"
+    },
+    {
+      "B": 10,
+      "cover_unions": 9,
+      "largest_cover_frontier": 3,
+      "minimum_depth": 2,
+      "minimum_operations": 12,
+      "name": "lowpass_9x9_10bit",
+      "outputs": 12,
+      "pareto": [
+        [
+          12,
+          3
+        ],
+        [
+          13,
+          2
+        ]
+      ],
+      "two_layer_status": "feasible"
+    },
+    {
+      "B": 12,
+      "cover_unions": 6,
+      "largest_cover_frontier": 1,
+      "minimum_depth": 2,
+      "minimum_operations": 12,
+      "name": "highpass_15x15_12bit",
+      "outputs": 12,
+      "pareto": [
+        [
+          12,
+          2
+        ]
+      ],
+      "two_layer_status": "feasible"
+    },
+    {
+      "B": 12,
+      "cover_unions": 0,
+      "largest_cover_frontier": 1,
+      "minimum_depth": 3,
+      "minimum_operations": 25,
+      "name": "lowpass_15x15_12bit",
+      "outputs": 25,
+      "pareto": [
+        [
+          25,
+          3
+        ]
+      ],
+      "two_layer_status": "infeasible"
+    }
+  ]
+}

@@ -1,71 +1,53 @@
 # Quantum-Assisted Algorithm Discovery
 
-**Can a circuit-model quantum computer discover a reusable classical algorithm more efficiently than a serious classical discovery process?**
+**Can a circuit-model quantum computer discover a useful reusable classical method more efficiently than a serious classical discovery process?**
 
-The intended output is a finite, explicitly verified classical method. Its later use should not require quantum hardware. A compact discovery target can have consequences at much larger application sizes; neither compactness nor reuse alone establishes quantum advantage.
+The final method should run classically. Compactness and reuse can make discovery worthwhile, but neither establishes a quantum discovery advantage.
 
-**Status: exploratory research. No useful quantum advantage, new multiplication identity, or deployed faster classical routine has been established.** See [STATUS.md](STATUS.md) for the claim boundaries.
+**Status: exploratory. No useful quantum advantage, new multiplication identity, or deployed faster routine is established.**
 
-## Current approach
+## Current research decision
 
-**Current candidate: search only for new helper expressions, while deriving all reachable required expressions deterministically.** Exact arithmetic-schedule synthesis is the present workload; matrix multiplication supplies a calibration, not the project's exclusive scope.
+The latest [eleven-bank filter synthesis screen](experiments/depth2_cover_v1/README.md) is complete in its declared bounded, positive-odd shift/add model. It determines all nondominated binary-operation-count/arithmetic-depth pairs, including the two 15x15 banks omitted from the first screen. The largest bank has a target-only 25-operation, depth-three certificate. The whole new classical screen took about 0.27 seconds in one local run, not a portable or cross-solver benchmark.
 
-In the gate-count model with free signs/copies and unlimited live storage, a linear map with `d` required non-basis directions has a circuit of at most `d+k` gates exactly when an eager target-closure search can finish with at most `k` non-target helpers. This isolates a finite helper-choice tree instead of searching execution orders. The proof, coefficient bounds, model restrictions and prospective quantum-backtracking accounting are in [the current derivation](docs/target-closure-normal-form.md).
+**These eleven count/depth tasks are retired as quantum-advantage candidates.** The result does not rule out other synthesis workloads, bit-area or physical-timing objectives, or quantum-assisted algorithm discovery. Do not add constraints just to make the existing classical method fail.
 
-The published dependency-search core for a known 55-addition circuit is reproduced and simplified by positive-rule closure. The same known circuit is reconstructed and checked over the integers. A precise 398-state local neighborhood is also excluded from a 54-addition target. **These are classical calibration and exclusion results, not a quantum advantage or a new arithmetic routine.** There is no claim that 55 is the latest global record or that 54 is globally novel.
+The implementation combines a small first-layer helper coverage problem for depth two with exact depth-aware helper search for the remaining cases. Classical structure removes the apparent difficulty. Covering, signed-digit depth bounds, and helper saturation are not advertised as new general principles. No quantum circuit was compiled in this successor.
 
-The next substantive obstacle is finding a non-calibration workload where the helper choices remain expensive after strong classical deductions, and pricing an entire quantum search against that competitor. The helper tree is not yet a reversible circuit. Old raw-search resource estimates do not apply.
+The planned native SAT-CMM/RPAG/jMCM comparison remains incomplete: package retrieval/execution was unavailable here. Our code is not their solver. That limitation does not make the explicitly solved eleven cases hard.
 
-The earlier [staged guided flip-graph design](docs/current-design.md) and immutable experiments remain available. Further compilation of that mechanism is paused while the useful workload and simpler search parameterization are assessed; it is not declared impossible.
+## Read and verify
 
-## Read and run
-
-- [Current helper-only formulation and proof](docs/target-closure-normal-form.md)
-- [Earlier guided design and its boundaries](docs/current-design.md)
+- [Latest derivation, full Pareto table, and limitations](experiments/depth2_cover_v1/README.md)
+- [Current continuation contract](work_orders/CURRENT.md)
 - [Claim ledger](STATUS.md)
-- [Current research task](work_orders/CURRENT.md)
-- [Source provenance and checkpoint history](PROVENANCE.md)
+- [New mathematical input and access provenance](experiments/depth2_cover_v1/PROVENANCE.json)
+- [Historical provenance](PROVENANCE.md)
 
-From the repository root, with Python 3.10 or later, verify the new exact synthesis checkpoint:
-
-```bash
-python verify_target_closure.py
-```
-
-It compares both generated JSON reports byte-for-byte, including the published-core reproduction, helper-only circuit certificates, exhaustive small tests and the exact radius-two neighborhood.
-
-Verify the preserved guided-search checkpoint separately:
+From the repository root, with Python 3.10 or later:
 
 ```bash
-python verify.py
+python experiments/depth2_cover_v1/verify.py
 ```
 
-For one deterministic compiled benchmark (also requires `g++` with C++17 support):
+This regenerates complete reports in temporary storage, checks 1,536 independent tiny-circuit decisions and 972 helper portfolios, and verifies 15 exact integer certificates plus 5,760 signed input evaluations. It uses only the standard library. Generate the full report, including all circuits and failed lower-budget counts, with:
 
 ```bash
-python verify.py --quick
+python experiments/depth2_cover_v1/run_screen.py --output /tmp/new-filter-screen.json
 ```
 
-For all ten archived benchmark configurations:
+Existing output files are not overwritten. Do not use Python `-O` or `-OO`.
 
-```bash
-python verify.py --full
-```
+## Earlier evidence, preserved
 
-Checks run in temporary copies and do not overwrite the stored reference results. Do not use Python `-O` or `-OO`. The default verifies import hashes, reference generation, 729 integer tensor equations, ten stored witnesses, 19,683 small states, 52,488 directed legal edges, and a small coin/shift inverse test. These are classical mathematical/software checks, not quantum-hardware execution.
+The original [guided flip-graph design](docs/current-design.md), [target-closure normal form](docs/target-closure-normal-form.md), [unique-helper search](experiments/unique_helpers_v1/README.md), and [first filter screen](experiments/filter_mcm_v1/README.md) remain available. Earlier raw/guided quantum resource estimates apply only to their original constructions, not these new algorithms.
 
-## What the existing benchmark says
+Their verifiers remain `python verify.py`, `python verify_target_closure.py`, `python experiments/unique_helpers_v1/verify.py`, and `python experiments/filter_mcm_v1/verify.py`. Consult the versioned notes for optional C++ or native-Z3 requirements and actual historical verification scope. The latest turn reran the supplied previous filter default verifier and the new checks; it did not rerun every historical experiment.
 
-For 64 specified seed labels and 65,536 outer steps from the 27-product binary schoolbook scheme, the stored runs reach at most 23 products in 0/64 raw, 30/64 legal-move, and 34/64 dependency-guided trials. The step costs differ. These success frequencies are not runtime speedups, do not represent the strongest published solver, and are not quantum-walk search parameters.
+## Research objective, not a platform commitment
 
-The main finding is that weakening the classical search can manufacture apparent difficulty. The target-closure successor applies that lesson to a published exact arithmetic synthesizer. It removes unnecessary schedule search before considering a quantum improvement.
-
-## Scope and provenance
-
-The original guided-search code and data are imported from the checkpoint of 25 September 2026. New target-closure work resides separately under `experiments/target_closure_v1/`, with its own manifest and licensed source provenance. Their original bytes and source archive hash are recorded in [the import manifest](provenance/import-manifest.json). Historical checkpoint ZIPs are indexed in [the history record](provenance/checkpoint-history.json); the bootstrap imports active code/data, not those binary archives.
-
-The known 23-product reference is attributed to its pinned public source. It is a calibration certificate, not a discovery by this project. Binary-field search results do not automatically lift to real arithmetic. Standard flip graphs, directed-edge walks, amplitude amplification, Gaussian elimination, Horn closure, and quantum backtracking are prior tools, not novelty claims here.
+Matrix multiplication, linear-map synthesis and filter banks are testbeds. The next substantive result must start from an independently valuable, unsupplied routine and a credible classical discovery shortfall. It must compare the cost of obtaining a qualifying routine, not inflate difficulty through unnecessary optimality proofs or weak search representations. Physical area, latency and fanout constraints require their own models; arithmetic-depth results are not clock-frequency claims.
 
 ## License
 
-[MIT](LICENSE), Copyright (c) 2026 Ruge Lin. The repository's original license is preserved unchanged. See [PROVENANCE.md](PROVENANCE.md) for the public mathematical reference and historical attribution.
+[MIT](LICENSE), Copyright (c) 2026 Ruge Lin. The original license and historical source/result files remain unchanged. All upstream source notices are retained where applicable; new coefficient data are attributed mathematical transcriptions, not imports of upstream solver code.

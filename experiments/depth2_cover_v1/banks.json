@@ -1,0 +1,194 @@
+{
+  "banks": [
+    {
+      "B": 9,
+      "coefficients": [
+        3,
+        21,
+        159
+      ],
+      "name": "gaussian_3x3_8bit",
+      "source_entry_count": 9
+    },
+    {
+      "B": 8,
+      "coefficients": [
+        -107,
+        5,
+        21
+      ],
+      "name": "laplacian_3x3_8bit",
+      "source_entry_count": 9
+    },
+    {
+      "B": 8,
+      "coefficients": [
+        -11,
+        -3,
+        69
+      ],
+      "name": "unsharp_3x3_8bit",
+      "source_entry_count": 9
+    },
+    {
+      "B": 12,
+      "coefficients": [
+        -171,
+        -43,
+        1109
+      ],
+      "name": "unsharp_3x3_12bit",
+      "source_entry_count": 9
+    },
+    {
+      "B": 13,
+      "coefficients": [
+        0,
+        1,
+        46,
+        343,
+        2534
+      ],
+      "name": "gaussian_5x5_12bit",
+      "source_entry_count": 25
+    },
+    {
+      "B": 8,
+      "coefficients": [
+        -10,
+        -7,
+        -3,
+        -2,
+        8,
+        121
+      ],
+      "name": "highpass_5x5_8bit",
+      "source_entry_count": 25
+    },
+    {
+      "B": 9,
+      "coefficients": [
+        22,
+        88,
+        103,
+        106,
+        132,
+        140
+      ],
+      "name": "lowpass_5x5_8bit",
+      "source_entry_count": 25
+    },
+    {
+      "B": 10,
+      "coefficients": [
+        -14,
+        -11,
+        -10,
+        -7,
+        -6,
+        -3,
+        -2,
+        -1,
+        0,
+        4,
+        500
+      ],
+      "name": "highpass_9x9_10bit",
+      "source_entry_count": 81
+    },
+    {
+      "B": 10,
+      "coefficients": [
+        -62,
+        -50,
+        -25,
+        -10,
+        -7,
+        -1,
+        73,
+        117,
+        126,
+        130,
+        165,
+        194,
+        268,
+        303
+      ],
+      "name": "lowpass_9x9_10bit",
+      "source_entry_count": 81
+    },
+    {
+      "B": 12,
+      "coefficients": [
+        -23,
+        -21,
+        -19,
+        -18,
+        -17,
+        -15,
+        -14,
+        -13,
+        -11,
+        -10,
+        -9,
+        -8,
+        -6,
+        -5,
+        -4,
+        -3,
+        -2,
+        -1,
+        0,
+        2028
+      ],
+      "name": "highpass_15x15_12bit",
+      "source_entry_count": 225
+    },
+    {
+      "B": 12,
+      "coefficients": [
+        -137,
+        -133,
+        -122,
+        -106,
+        -103,
+        -101,
+        -93,
+        -64,
+        -43,
+        -41,
+        -21,
+        -17,
+        -8,
+        0,
+        1,
+        2,
+        5,
+        7,
+        10,
+        13,
+        27,
+        40,
+        45,
+        79,
+        199,
+        304,
+        333,
+        613,
+        662,
+        904,
+        1097,
+        1197
+      ],
+      "name": "lowpass_15x15_12bit",
+      "source_entry_count": 225
+    }
+  ],
+  "classification": "Mathematical coefficient transcription. Repeated coefficients removed because copying is free. No upstream program code imported.",
+  "source": {
+    "blob_sha": "5e6a36da1fc80edae17c69610d42474eb31dfa25",
+    "commit": "7a0705a5a699a748d7421405b2635d312c55e08d",
+    "path": "benchmark/inputs/mcm/mcm.csv",
+    "repository": "Rammbock9000/sat_mcm"
+  }
+}
