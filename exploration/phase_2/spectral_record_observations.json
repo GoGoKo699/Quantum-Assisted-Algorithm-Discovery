@@ -1,0 +1,141 @@
+{
+  "bath_dimension": 16,
+  "bath_spins": 4,
+  "duration": 8.0,
+  "liouvillian_action_error": 0.0,
+  "max_trace_spectral_identity_error": 5.551176109162981e-16,
+  "numpy_version": "2.3.5",
+  "pulse_bins": 12,
+  "records": [
+    {
+      "best_exact_response": 0.4244749334408046,
+      "chosen_signs": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "correlation_error_on_grid": 0.19540204968012392,
+      "gram_entrywise_bound": 0.18241888982980695,
+      "samples": 128,
+      "selected_true_response": 0.4244749334408046,
+      "selection_regret": 0.0,
+      "tested_pulses": 4096,
+      "worst_tested_pulse_error": 0.1124540056866215
+    },
+    {
+      "best_exact_response": 0.4244749334408046,
+      "chosen_signs": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "correlation_error_on_grid": 0.04767817346070966,
+      "gram_entrywise_bound": 0.042850904387117805,
+      "samples": 1024,
+      "selected_true_response": 0.4244749334408046,
+      "selection_regret": 0.0,
+      "tested_pulses": 4096,
+      "worst_tested_pulse_error": 0.021733113135811666
+    },
+    {
+      "best_exact_response": 0.4244749334408046,
+      "chosen_signs": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "correlation_error_on_grid": 0.012776599701295854,
+      "gram_entrywise_bound": 0.01132807827217766,
+      "samples": 8192,
+      "selected_true_response": 0.4244749334408046,
+      "selection_regret": 0.0,
+      "tested_pulses": 4096,
+      "worst_tested_pulse_error": 0.0012226383112449168
+    }
+  ],
+  "rounding": {
+    "all_time_upper_bound": 0.008,
+    "frequency_step": 0.002,
+    "grid_discrepancy": 0.0007396932171122028
+  },
+  "scope": "Small classical floating-point sanity checks only; no quantum execution or advantage.",
+  "seed": 20260925,
+  "spectral_support_radius": 9.58319727977121,
+  "weak_probe_checks": [
+    {
+      "coupling_area": 0.05,
+      "discrepancy": 6.91970252438218e-07,
+      "dyson_upper_bound": 2.084027901799214e-06,
+      "full_probe_transition_probability": 0.0010604953633495736,
+      "pulse_id": 0,
+      "quadratic_prediction": 0.0010611873336020118
+    },
+    {
+      "coupling_area": 0.1,
+      "discrepancy": 1.1061798841410266e-05,
+      "dyson_upper_bound": 3.3377809537922173e-05,
+      "full_probe_transition_probability": 0.004233687535566637,
+      "pulse_id": 0,
+      "quadratic_prediction": 0.004244749334408047
+    },
+    {
+      "coupling_area": 0.25,
+      "discrepancy": 0.0004294528272059915,
+      "dyson_upper_bound": 0.0013129826031903907,
+      "full_probe_transition_probability": 0.026100230512844297,
+      "pulse_id": 0,
+      "quadratic_prediction": 0.02652968334005029
+    },
+    {
+      "coupling_area": 0.05,
+      "discrepancy": 1.5649837413906622e-08,
+      "dyson_upper_bound": 2.084027901799214e-06,
+      "full_probe_transition_probability": 0.0001586331487383026,
+      "pulse_id": 1773,
+      "quadratic_prediction": 0.00015864879857571652
+    },
+    {
+      "coupling_area": 0.1,
+      "discrepancy": 2.5036044954546144e-07,
+      "dyson_upper_bound": 3.3377809537922173e-05,
+      "full_probe_transition_probability": 0.0006343448338533206,
+      "pulse_id": 1773,
+      "quadratic_prediction": 0.0006345951943028661
+    },
+    {
+      "coupling_area": 0.25,
+      "discrepancy": 9.76960933158754e-06,
+      "dyson_upper_bound": 0.0013129826031903907,
+      "full_probe_transition_probability": 0.003956450355061324,
+      "pulse_id": 1773,
+      "quadratic_prediction": 0.003966219964392912
+    }
+  ]
+}
