@@ -1,0 +1,56 @@
+{
+  "envelope_grid_excess": 0.0,
+  "exact_integral_check_error": 2.220446049250313e-16,
+  "illustrative_uniform_bound": {
+    "delta": 0.05,
+    "epsilon": 0.05,
+    "grid_points": 1475,
+    "observed_errors_are_not_this_certificate": true,
+    "sufficient_independent_samples": 153486
+  },
+  "next_requirement": "A justified bounded event estimator and matched microscopic classical/quantum cost.",
+  "normalizer": 3.492968045894011,
+  "number_of_draws": 32768,
+  "numerical_proposal_mass": 0.9999999999999993,
+  "numpy_version": "2.3.5",
+  "proposal_primitive_draws": 42094,
+  "records": [
+    {
+      "example_mixture_error": 0.007948787485048542,
+      "largest_observed_importance_weight": 3.4929680458940116,
+      "maximum_grid_error": 0.03342580989103283,
+      "rms_grid_error": 0.01645942678645806,
+      "samples": 1024,
+      "test_temperatures": 129
+    },
+    {
+      "example_mixture_error": 0.002926742105386751,
+      "largest_observed_importance_weight": 3.4929680458940116,
+      "maximum_grid_error": 0.01390264239690086,
+      "rms_grid_error": 0.006551481943265441,
+      "samples": 8192,
+      "test_temperatures": 129
+    },
+    {
+      "example_mixture_error": 0.0005666633582689096,
+      "largest_observed_importance_weight": 3.4929680458940116,
+      "maximum_grid_error": 0.0025501828227235887,
+      "rms_grid_error": 0.001586572925365293,
+      "samples": 32768,
+      "test_temperatures": 129
+    }
+  ],
+  "scale_identity_error": 4.440892098500626e-16,
+  "scope": "Synthetic event sampler; no quantum/scattering calculation or advantage.",
+  "seed": 20260925,
+  "thermal_scale_range": [
+    0.1,
+    10.0
+  ],
+  "window_weight_bounds": {
+    "1": 1.0,
+    "10": 2.2464840229470058,
+    "100": 3.492968045894011,
+    "1000": 4.739452068841016
+  }
+}
