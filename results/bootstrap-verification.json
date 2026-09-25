@@ -1,0 +1,21 @@
+{
+  "schema": 1,
+  "date": "2026-09-25",
+  "scope": "Repository bootstrap, not new research",
+  "source_archive_sha256": "7b5495a887ba93dd10141f9b3d0245143b93a0ffb18e5f9e0c0e4a2734bb6608",
+  "source_manifest_entries_verified": 26,
+  "active_files_imported": 18,
+  "reference_regenerated_byte_identically": true,
+  "integer_tensor_equations_checked": 729,
+  "stored_witnesses_checked": 10,
+  "exhaustive_small_states": 19683,
+  "directed_legal_edges_checked": 52488,
+  "compiled_benchmarks_rerun": [
+    "school_legal.json"
+  ],
+  "compiled_benchmarks_match": "parsed JSON exact equality",
+  "full_ten_configuration_replay_rerun_at_bootstrap": false,
+  "historical_binary_archives_committed": false,
+  "original_license_blob": "e17a781bf47c4aadf18b68fc593846a1193b86c1",
+  "no_quantum_advantage_claim": true
+}

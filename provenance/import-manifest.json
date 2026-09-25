@@ -1,0 +1,98 @@
+{
+  "schema": 1,
+  "archive": "Quantum_Discovery_Guided_Search_Probe.zip",
+  "archive_sha256": "7b5495a887ba93dd10141f9b3d0245143b93a0ffb18e5f9e0c0e4a2734bb6608",
+  "scope": "18 active code/data files copied byte-for-byte. Historical ZIPs are indexed separately, not stored in this repository bootstrap.",
+  "files": {
+    "experiments/guided_search/guided_core.py": {
+      "source_member": "quantum_discovery_guided_probe/guided_core.py",
+      "bytes": 6604,
+      "sha256": "6974d2380570502c504c43aba08e91ca0cb88452679ea87895cf3a222a14a395"
+    },
+    "experiments/guided_search/guided_survey.cpp": {
+      "source_member": "quantum_discovery_guided_probe/guided_survey.cpp",
+      "bytes": 5187,
+      "sha256": "c0611087324bfe42b13f29379210fca2773aa68400cbd112984786b63eb5a875"
+    },
+    "experiments/guided_search/make_reference.py": {
+      "source_member": "quantum_discovery_guided_probe/make_reference.py",
+      "bytes": 2822,
+      "sha256": "a980a0abdc03bcb6528cee006ef4ea7bd30ca1e8d9127e5f075109d00c357343"
+    },
+    "experiments/guided_search/reproduce.py": {
+      "source_member": "quantum_discovery_guided_probe/reproduce.py",
+      "bytes": 1801,
+      "sha256": "34c9eb636283f69ecfd28ae8bb459c1d1995a1d5e6f626e1b345bf7c13e3e6a6"
+    },
+    "experiments/guided_search/reference23.json": {
+      "source_member": "quantum_discovery_guided_probe/reference23.json",
+      "bytes": 7963,
+      "sha256": "8bed638626fb569eb08ff9539010936af5167c8af18b5c777208d038cc137980"
+    },
+    "experiments/guided_search/reference23.txt": {
+      "source_member": "quantum_discovery_guided_probe/reference23.txt",
+      "bytes": 217,
+      "sha256": "1f1c433334f11b4864547e8a9eae931e2a7cf7cb093a34880f4d4bf679df089f"
+    },
+    "experiments/guided_search/selector_collision.json": {
+      "source_member": "quantum_discovery_guided_probe/selector_collision.json",
+      "bytes": 528,
+      "sha256": "5373f13bb93100c97b7456f46d06f2eff60cb9c63ce904669ba26a141926553b"
+    },
+    "experiments/guided_search/validation.json": {
+      "source_member": "quantum_discovery_guided_probe/validation.json",
+      "bytes": 1020,
+      "sha256": "e00c617c2edf7de5c9fc5d6e2bf2d312d891c803b10024cddc872757fbad66c9"
+    },
+    "experiments/guided_search/excursion_dependency.json": {
+      "source_member": "quantum_discovery_guided_probe/excursion_dependency.json",
+      "bytes": 1297,
+      "sha256": "41adfbff68f9670db95ec55ecb5334aa79e783d9ca1429d594aa31f0a09cd771"
+    },
+    "experiments/guided_search/excursion_legal.json": {
+      "source_member": "quantum_discovery_guided_probe/excursion_legal.json",
+      "bytes": 1394,
+      "sha256": "89ed90d8a3f3d7b7115b024954fd72e85dd927b2885e352b333418722ec6bf44"
+    },
+    "experiments/guided_search/excursion_raw.json": {
+      "source_member": "quantum_discovery_guided_probe/excursion_raw.json",
+      "bytes": 1576,
+      "sha256": "57b36aa29dd8b017933b4d302d19b833e105c9f8eb10b8f0208e9782cdbb3890"
+    },
+    "experiments/guided_search/school_adaptive.json": {
+      "source_member": "quantum_discovery_guided_probe/school_adaptive.json",
+      "bytes": 1533,
+      "sha256": "952387df31bee3eac098055f884259191ebd0fdc7e8b235d3722040b6ba72b63"
+    },
+    "experiments/guided_search/school_dependency.json": {
+      "source_member": "quantum_discovery_guided_probe/school_dependency.json",
+      "bytes": 1515,
+      "sha256": "591d015c139a55aec18a1d3cd89ba35f6844353c4d77be15d7a9981c8e1ab58a"
+    },
+    "experiments/guided_search/school_dependency_long.json": {
+      "source_member": "quantum_discovery_guided_probe/school_dependency_long.json",
+      "bytes": 1708,
+      "sha256": "c13de98e8efc386c5e33d5daaf63ed24a35437a89105932ca52d13c886d68797"
+    },
+    "experiments/guided_search/school_legal.json": {
+      "source_member": "quantum_discovery_guided_probe/school_legal.json",
+      "bytes": 1524,
+      "sha256": "1edf96479205d9bced6659dd137f49013ff5044f78c80ff616c00b21cc54fa3d"
+    },
+    "experiments/guided_search/school_legal_long.json": {
+      "source_member": "quantum_discovery_guided_probe/school_legal_long.json",
+      "bytes": 1685,
+      "sha256": "6271bb90402a98272934028d03bfcd00101d8fc4138b9625dffaa6bf6f750b69"
+    },
+    "experiments/guided_search/school_raw.json": {
+      "source_member": "quantum_discovery_guided_probe/school_raw.json",
+      "bytes": 1487,
+      "sha256": "0b0cf97fd35b38cadcbcd95232f2c326758613df039a237b8fab0506eec06647"
+    },
+    "experiments/guided_search/school_raw_long.json": {
+      "source_member": "quantum_discovery_guided_probe/school_raw_long.json",
+      "bytes": 1584,
+      "sha256": "5076f30f393fb7ec4f5c4e38b078d0f28a6a0e837d1d0a9825710647ab27c4dd"
+    }
+  }
+}

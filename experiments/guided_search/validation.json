@@ -1,0 +1,30 @@
+{
+  "integer_reference_coefficients_checked": 729,
+  "verified_survey_witnesses": [
+    "excursion_dependency.json",
+    "excursion_legal.json",
+    "excursion_raw.json",
+    "school_adaptive.json",
+    "school_dependency.json",
+    "school_dependency_long.json",
+    "school_legal.json",
+    "school_legal_long.json",
+    "school_raw.json",
+    "school_raw_long.json"
+  ],
+  "exhaustive_small_states": 19683,
+  "directed_legal_edges_checked": 52488,
+  "invalid_ordinals_counted_from_rule": 577368,
+  "invalid_ordinal_calls_executed": 39366,
+  "selector_collision_confirmed": true,
+  "collision_reverse_ordinals": [
+    0,
+    2
+  ],
+  "small_component_vertices": 72,
+  "small_component_directed_edges": 216,
+  "small_component_marked_vertices": 36,
+  "coin_shift_inverse_max_error": 1.5515838457795457e-17,
+  "coin_shift_norm_error": 1.1102230246251565e-16,
+  "scope": "Exact algebra/edge-permutation tests and one small classical coined-walk simulation, not gate synthesis of guided selector, not useful advantage."
+}

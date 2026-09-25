@@ -1,0 +1,26 @@
+{
+  "schema": 1,
+  "scope": "Archive inventory, not a claim that these binaries are stored in GitHub. All were supplied with the conversation; the guided archive embeds the three predecessors.",
+  "archives": {
+    "Quantum_Algorithm_Discovery_First_Probe.zip": {
+      "bytes": 15224,
+      "sha256": "7327fab5327a5b4fd54160a5b4855982d4421197661d0e47e592b683c398d5ea",
+      "committed_binary": false
+    },
+    "Quantum_Discovery_Classical_Algorithms_First_Circuit_Probe.zip": {
+      "bytes": 20422,
+      "sha256": "c3f00cd62ca1fec409ca15d419243208fe2c37a98d84ea66fd0b6b4fc6f77486",
+      "committed_binary": false
+    },
+    "Quantum_Discovery_Complete_Search_Probe.zip": {
+      "bytes": 99218,
+      "sha256": "ecc119a53d24a2a4cf29f23551cecb1ee6b76784b216e20a8998c561d4348990",
+      "committed_binary": false
+    },
+    "Quantum_Discovery_Guided_Search_Probe.zip": {
+      "bytes": 162197,
+      "sha256": "7b5495a887ba93dd10141f9b3d0245143b93a0ffb18e5f9e0c0e4a2734bb6608",
+      "committed_binary": false
+    }
+  }
+}
