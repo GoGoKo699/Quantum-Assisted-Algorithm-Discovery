@@ -1,0 +1,73 @@
+% Candidate theorem section; no submission or novelty claim.
+\section{Scale-invariant local-price search}
+Let $C$ be the shared boundary of an explicit e-graph, $s=|C|$, and let
+$c_v(S)$ be the inherited minimum local construction price. Costs are
+nonnegative integers and the threshold is $K$. Define $P_v$ to contain every
+price at most $K$ of a private local implementation of $v$, stopping at
+boundary references. Boundary references are not assumed constructed.
+Let $A_v=\{0\}\cup P_v$.
+
+\paragraph{Snapping lemma.}
+For $0\leq b_v\leq K$, define
+\[
+ \pi_v(b_v)=\max\{a\in A_v:a\leq b_v\}.
+\]
+Then, for every $S\subseteq C$,
+\[
+ c_v(S)\leq b_v\quad\Longleftrightarrow\quad c_v(S)\leq\pi_v(b_v).
+\]
+Indeed every finite minimum below $K$ is realized by a local implementation
+and hence belongs to $P_v$; the reverse direction follows from
+$\pi_v(b_v)\leq b_v$. Grounding from the empty set therefore has exactly
+the same synchronous rounds under $b$ and $\pi(b)$, with no increase in total
+budget. The grounded-budget threshold theorem remains exact after restricting
+to the finite alphabets. The alphabets need not be minimal: an attainable
+local price may never be optimal under any boundary availability pattern.
+
+\paragraph{Mandatory grounding.}
+Let $M\subseteq C$ be any sound set of mandatory classes. Set
+$\ell_v=c_v(C\setminus\{v\})$ for $v\in M$ and $\ell_v=0$ otherwise.
+Every successful budget vector satisfies $b\geq\ell$.
+Let $G$ be the least grounded set under $\ell$. Replacing $b_v$ by $\ell_v$
+for $v\in G$ preserves its final grounded set and cannot raise cost.
+To see this, the new budgets still dominate $\ell$, so $G$ remains available;
+all other enabling tests retain their caps. Induction through the old
+construction proves equality of the final sets. This justifies fixing those
+coordinates before price compilation. It does not assert equality of every
+intermediate round after this second reduction.
+
+\paragraph{Quantum corollary with charged preprocessing.}
+Suppose the surviving alphabets have product $Q$ and total explicit table size
+$P$, and their computation costs $\mathcal A$. For $Q\geq2$, a binary index
+of length $\lceil\log_2 Q\rceil$ is reversibly decoded by mixed-radix division
+and explicit table scans. Reject padding, check the sum, perform grounded
+construction, mark, and uncompute. Standard bounded-error quantum search gives
+\[
+ \mathcal A+O\!\left(\sqrt Q\,\operatorname{poly}(N,P,\log(K+2))\right)
+\]
+time and polynomial workspace in the compiled representation. Zero/one-label
+domains are settled classically. No QRAM or exponential lookup table is assumed
+free. A measured index produces an independently checked classical program.
+Multiplying every cost and $K$ by an integer $\lambda>0$ multiplies the prices,
+not $Q$. Arithmetic bit costs still grow with $\log\lambda$.
+
+\paragraph{Compilation obstruction.}
+For $i=0,\ldots,n-1$, let a root require private $p_i,q_i$, each obtainable
+for price $3^i$ or for zero using a shared $b_i$ of price $2\cdot3^i+1$.
+The root is zero-cost. Its local price set is
+$\{0,\ldots,3^n-1\}$; its conditional minimum prices number $2^n$.
+No class grounds at the zero lower vector. Yet the exact optimum is
+$\sum_i2\cdot3^i=3^n-1$, because independent direct construction is cheaper
+than sharing in every component. Thus even distinct local thresholds can be
+exponentially numerous on a classically easy graph. Explicit preprocessing
+must be charged, and this corollary does not promise polynomial $\mathcal A$
+or $P$ in the original input.
+
+\paragraph{Comparison boundary.}
+The $5^w$ treewidth bound of Goharshady--Lam--Parreaux is not, unchanged,
+a bound for acyclic extraction from cyclic alternatives; their discussion
+states the reachability extension incurs a $c^{w^2}$ dependence. The
+acyclicity-aware construction of Sun--Zhang--Ni is a relevant
+$2^{O(w^2)}\operatorname{poly}(N,w)$ comparator. Neither this distinction
+nor the present corollary establishes superiority over those methods, the
+$2^s$ subset dynamic program, representative enumeration, or native solvers.

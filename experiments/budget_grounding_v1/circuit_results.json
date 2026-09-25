@@ -1,0 +1,125 @@
+[
+  {
+    "accepted": 2,
+    "basis_states": 4096,
+    "boolean_gate_counts": {
+      "and": 136,
+      "not": 127,
+      "or": 56,
+      "xor": 66
+    },
+    "cap_input_qubits": 12,
+    "clean_work_qubits": 385,
+    "exclusions": [
+      "allocation unranking",
+      "initial Hadamards",
+      "outer search and diffusion",
+      "connectivity and physical error correction"
+    ],
+    "logical_qubits": 397,
+    "marker_cnot": 742,
+    "marker_toffoli": 384,
+    "marker_x": 254,
+    "name": "cycle",
+    "phase_z": 1,
+    "threshold": 10
+  },
+  {
+    "accepted": 2,
+    "basis_states": 8,
+    "boolean_gate_counts": {
+      "and": 5,
+      "not": 10,
+      "xor": 3
+    },
+    "cap_input_qubits": 3,
+    "clean_work_qubits": 18,
+    "exclusions": [
+      "allocation unranking",
+      "initial Hadamards",
+      "outer search and diffusion",
+      "connectivity and physical error correction"
+    ],
+    "logical_qubits": 21,
+    "marker_cnot": 32,
+    "marker_toffoli": 10,
+    "marker_x": 20,
+    "name": "private_chain",
+    "phase_z": 1,
+    "threshold": 3
+  },
+  {
+    "accepted": 0,
+    "basis_states": 4,
+    "boolean_gate_counts": {
+      "and": 5,
+      "not": 9,
+      "or": 2,
+      "xor": 2
+    },
+    "cap_input_qubits": 2,
+    "clean_work_qubits": 18,
+    "exclusions": [
+      "allocation unranking",
+      "initial Hadamards",
+      "outer search and diffusion",
+      "connectivity and physical error correction"
+    ],
+    "logical_qubits": 20,
+    "marker_cnot": 34,
+    "marker_toffoli": 14,
+    "marker_x": 18,
+    "name": "pure_cycle",
+    "phase_z": 1,
+    "threshold": 2
+  },
+  {
+    "accepted": 1,
+    "basis_states": 2,
+    "boolean_gate_counts": {
+      "and": 1,
+      "not": 4,
+      "xor": 1
+    },
+    "cap_input_qubits": 1,
+    "clean_work_qubits": 6,
+    "exclusions": [
+      "allocation unranking",
+      "initial Hadamards",
+      "outer search and diffusion",
+      "connectivity and physical error correction"
+    ],
+    "logical_qubits": 7,
+    "marker_cnot": 12,
+    "marker_toffoli": 2,
+    "marker_x": 8,
+    "name": "zero_root",
+    "phase_z": 1,
+    "threshold": 0
+  },
+  {
+    "accepted": 3,
+    "basis_states": 64,
+    "boolean_gate_counts": {
+      "and": 61,
+      "not": 69,
+      "or": 15,
+      "xor": 35
+    },
+    "cap_input_qubits": 6,
+    "clean_work_qubits": 180,
+    "exclusions": [
+      "allocation unranking",
+      "initial Hadamards",
+      "outer search and diffusion",
+      "connectivity and physical error correction"
+    ],
+    "logical_qubits": 186,
+    "marker_cnot": 338,
+    "marker_toffoli": 152,
+    "marker_x": 138,
+    "name": "private_alternatives",
+    "phase_z": 1,
+    "threshold": 4
+  }
+]

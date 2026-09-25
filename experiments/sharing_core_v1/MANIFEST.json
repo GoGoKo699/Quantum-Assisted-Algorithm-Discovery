@@ -1,0 +1,16 @@
+{
+  "schema": 1,
+  "sha256": {
+    "PROVENANCE.json": "7d056966fd2ffb551cace2a4e270876e5beac4509aa77ab0c7260c17bb5ffa27",
+    "README.md": "9f26cc542427a10cf9e1a3569a610494912d15f7b1672dd3300b54b84e7057b6",
+    "checks.py": "59e2f8b0b42baadcece1b95722309b7ef6f41a452765488e54e630782937da26",
+    "core.py": "7f9423d3589ac1608f8f634110efbe54cdd8952dc317a5b816aba96532f8240c",
+    "observations.json": "78e69b4a0cad6894ee5986bf938078b6916d9968d4690d8f36512060ed382e34",
+    "public_graph.py": "dc3ac7a02e1b6f4d3f52fe449f204d8533cc2a401bb1e9771033aea77159b650",
+    "results.json": "103efd5d7219a639cee5b9e81c1d7fa197b07a4b61aabd212b0d6ea85486241c",
+    "vendor/LICENSE-APACHE-2.0": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "vendor/NOTICE": "16e09046353e2231de393fc54227eea16b5293e06f156f1ec9ff19372d73674d",
+    "vendor/greedy_core.py": "5db13fbfc2c61a86b2d78ffeae8b4a0bcb22e8866b7dd40a436182f378aadfe6",
+    "verify.py": "389c7a2823bd32eafa394baeed18c468238ec6452af9e7def66cb7ff34443e82"
+  }
+}

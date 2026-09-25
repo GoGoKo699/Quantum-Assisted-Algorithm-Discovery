@@ -1,0 +1,361 @@
+{
+  "branchings": {
+    "brute_assignments": 29932,
+    "cyclic_contractions": 165,
+    "graphs": 480,
+    "networkx_checks": 480,
+    "networkx_disagreements": [
+      {
+        "arcs": [
+          [
+            0,
+            4,
+            8
+          ],
+          [
+            0,
+            6,
+            7
+          ],
+          [
+            1,
+            3,
+            5
+          ],
+          [
+            1,
+            4,
+            9
+          ],
+          [
+            1,
+            4,
+            0
+          ],
+          [
+            1,
+            5,
+            0
+          ],
+          [
+            2,
+            6,
+            4
+          ],
+          [
+            3,
+            1,
+            5
+          ],
+          [
+            3,
+            1,
+            7
+          ],
+          [
+            4,
+            6,
+            9
+          ],
+          [
+            5,
+            1,
+            10
+          ],
+          [
+            5,
+            2,
+            6
+          ],
+          [
+            5,
+            4,
+            1
+          ],
+          [
+            5,
+            6,
+            2
+          ],
+          [
+            6,
+            2,
+            9
+          ],
+          [
+            6,
+            5,
+            6
+          ]
+        ],
+        "exact": 34,
+        "returned": null,
+        "trial": 24,
+        "vertices": 7,
+        "witness": [
+          [
+            1,
+            4,
+            0
+          ],
+          [
+            0,
+            6,
+            7
+          ],
+          [
+            5,
+            2,
+            6
+          ],
+          [
+            6,
+            5,
+            6
+          ],
+          [
+            5,
+            1,
+            10
+          ],
+          [
+            1,
+            3,
+            5
+          ]
+        ]
+      }
+    ]
+  },
+  "claim": "Exact specialized classical completion and standard quantum-search corollary. No practical advantage or novelty certification.",
+  "conjunctive_counterexample": {
+    "incorrect_OR_relaxation": 1,
+    "obstruction": [
+      {
+        "component": [
+          "x",
+          "y",
+          "z"
+        ],
+        "core": "x",
+        "witness": {
+          "x": "xyANDz"
+        }
+      }
+    ],
+    "true_optimum": 2
+  },
+  "cycle_example": {
+    "admitted": true,
+    "certificate": {
+      "a": "a_base",
+      "b": "b_from_a",
+      "r": "join"
+    },
+    "optimum": 11
+  },
+  "decision_sha256": "0d2bfdd33435644738ce8c95f28d6070c92090cca42836f6642ae49353669263",
+  "finite": {
+    "admitted": 635,
+    "cyclic_admitted": 231,
+    "direct_representative_assignments": 10965,
+    "fixed_activation_checks": 1463,
+    "fixed_representative_assignments": 55593,
+    "graphs": 770,
+    "infeasible_admitted": 126,
+    "rejected": 135,
+    "scale_checks": 59
+  },
+  "implicit_families": [
+    {
+      "activations": [
+        {
+          "activated_optional": 0,
+          "cost": 80
+        },
+        {
+          "activated_optional": 4,
+          "cost": 84
+        },
+        {
+          "activated_optional": 2,
+          "cost": 82
+        }
+      ],
+      "classes": 13,
+      "implicit_table_peak": 1,
+      "n": 4,
+      "old_conditional_minima": 16,
+      "old_root_price_count": 81,
+      "optimum": 80,
+      "scope": "Optimum from independent-component formula, not activation enumeration or a hardness claim."
+    },
+    {
+      "activations": [
+        {
+          "activated_optional": 0,
+          "cost": 6560
+        },
+        {
+          "activated_optional": 8,
+          "cost": 6568
+        },
+        {
+          "activated_optional": 4,
+          "cost": 6564
+        }
+      ],
+      "classes": 25,
+      "implicit_table_peak": 1,
+      "n": 8,
+      "old_conditional_minima": 256,
+      "old_root_price_count": 6561,
+      "optimum": 6560,
+      "scope": "Optimum from independent-component formula, not activation enumeration or a hardness claim."
+    },
+    {
+      "activations": [
+        {
+          "activated_optional": 0,
+          "cost": 43046720
+        },
+        {
+          "activated_optional": 16,
+          "cost": 43046736
+        },
+        {
+          "activated_optional": 8,
+          "cost": 43046728
+        }
+      ],
+      "classes": 49,
+      "implicit_table_peak": 1,
+      "n": 16,
+      "old_conditional_minima": 65536,
+      "old_root_price_count": 43046721,
+      "optimum": 43046720,
+      "scope": "Optimum from independent-component formula, not activation enumeration or a hardness claim."
+    },
+    {
+      "activations": [
+        {
+          "activated_optional": 0,
+          "cost": 1853020188851840
+        },
+        {
+          "activated_optional": 32,
+          "cost": 1853020188851872
+        },
+        {
+          "activated_optional": 16,
+          "cost": 1853020188851856
+        }
+      ],
+      "classes": 97,
+      "implicit_table_peak": 1,
+      "n": 32,
+      "old_conditional_minima": 4294967296,
+      "old_root_price_count": 1853020188851841,
+      "optimum": 1853020188851840,
+      "scope": "Optimum from independent-component formula, not activation enumeration or a hardness claim."
+    }
+  ],
+  "library": {
+    "networkx_version": "3.6.1",
+    "scope": "Optional exact branching comparator; not a native e-graph extractor."
+  },
+  "public": [
+    {
+      "activation_calls": 65536,
+      "admitted": true,
+      "choices": {
+        "0": "0.0",
+        "1": "1.2",
+        "2": "2.2",
+        "26": "26.2",
+        "27": "27.2",
+        "4": "4.2",
+        "5": "5.2",
+        "7": "7.3"
+      },
+      "classes": 17,
+      "component_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2
+      ],
+      "core": 17,
+      "cost": 1205,
+      "direct_assignments": 45,
+      "direct_self_pruning": false,
+      "mandatory_core": [
+        "7"
+      ],
+      "nodes": 89,
+      "obstructions": []
+    },
+    {
+      "activation_calls": 64,
+      "admitted": true,
+      "choices": {
+        "0": "0.0",
+        "1": "1.2",
+        "2": "2.2",
+        "26": "26.2",
+        "27": "27.2",
+        "4": "4.2",
+        "5": "5.2",
+        "7": "7.3"
+      },
+      "classes": 16,
+      "component_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "core": 12,
+      "cost": 1205,
+      "direct_assignments": 45,
+      "direct_self_pruning": true,
+      "mandatory_core": [
+        "0",
+        "1",
+        "2",
+        "4",
+        "5",
+        "7"
+      ],
+      "nodes": 24,
+      "obstructions": []
+    }
+  ],
+  "public_source": {
+    "bytes": 17477,
+    "git_blob_sha": "0a6fdaa6432a55b7c49001bd83531835efc6a1af"
+  },
+  "steiner": {
+    "graphs": 360,
+    "representative_assignments": 10580
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "base_commit": "d07e5cf6e660069486049ab87b3cc2dfea1a06c4",
+  "branch": "research/sharing-core-publication",
+  "date": "2026-09-25",
+  "external_code_imported": false,
+  "external_optional_package": {
+    "comparison": "479/480 agree; one exception on a feasible cost-34 graph; exact counterexample retained; no outside contact",
+    "modified": false,
+    "observed_version": "3.6.1",
+    "package": "networkx"
+  },
+  "input_scope": "Seeded structural graphs and unchanged inherited public SmoothE calibration, not large native extraction benchmarks. Input semantic equivalence not established by graph optimization.",
+  "original_code": [
+    "branching.py",
+    "checks.py",
+    "steiner_baseline.py",
+    "verify.py"
+  ],
+  "raw_data_access_attempt": {
+    "connector_read": "available",
+    "execution_download": "failed DNS and download cache access; not processed",
+    "url": "https://raw.githubusercontent.com/cornell-zhang/SmoothE/8de74ef2b53aabbb35898400cb5eb890d9a07a54/dataset/diospyros/vector_pairwise_mac_root_23.json"
+  },
+  "references": [
+    {
+      "doi": "10.6028/jres.071b.032",
+      "role": "Established optimum branchings"
+    },
+    {
+      "doi": "10.1002/net.3230070103",
+      "role": "Established efficient arborescence algorithm"
+    },
+    {
+      "arxiv": "2208.02590",
+      "role": "Primary arborescence implementations and algorithm comparison"
+    },
+    {
+      "doi": "10.1137/100794560",
+      "role": "Directed Steiner parameterized classical literature"
+    },
+    {
+      "doi": "10.1145/3689801",
+      "role": "Classical structural extraction"
+    },
+    {
+      "arxiv": "2408.17042v2",
+      "role": "Cyclic monotone circuits and acyclicity-aware extraction"
+    },
+    {
+      "arxiv": "quant-ph/0005055",
+      "role": "Standard quantum search, not claimed original"
+    }
+  ],
+  "verification_scope": "Prior price-spectrum verifier rerun; new default and optional tests rerun. No independent replay of older budget/sharing/sorting/long benchmarks."
+}

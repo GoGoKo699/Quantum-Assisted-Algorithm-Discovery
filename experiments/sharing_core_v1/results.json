@@ -1,0 +1,79 @@
+{
+  "claims_not_established": [
+    "novelty",
+    "useful_quantum_advantage",
+    "physical_speedup",
+    "large_native_extractor_comparison"
+  ],
+  "coupled_toy": {
+    "exact": 7,
+    "scope": "Illustrative weights; not a real performance improvement.",
+    "upstream_greedy_core": 8
+  },
+  "cycle_obstruction": {
+    "correct_optimum": 10,
+    "invalid_activation_value": 0
+  },
+  "public_calibration": {
+    "DP_states": 276,
+    "classes": 18,
+    "core": [
+      "0",
+      "1",
+      "2",
+      "27",
+      "3",
+      "37",
+      "4",
+      "40",
+      "45",
+      "5",
+      "6",
+      "7"
+    ],
+    "exact_choices": {
+      "0": "0.0",
+      "1": "1.2",
+      "2": "2.2",
+      "26": "26.2",
+      "27": "27.2",
+      "4": "4.2",
+      "5": "5.2",
+      "7": "7.3"
+    },
+    "exact_cost_scaled1000": 1205,
+    "exhaustive_assignments_after_pruning": 45,
+    "greedy_choices": {
+      "0": "0.0",
+      "1": "1.2",
+      "2": "2.2",
+      "26": "26.2",
+      "27": "27.2",
+      "4": "4.2",
+      "5": "5.2",
+      "7": "7.3"
+    },
+    "greedy_cost_scaled1000": 1205,
+    "nodes": 91,
+    "optional_core": 11,
+    "pruned_classes": 16,
+    "pruned_nodes": 24,
+    "pruned_support_acyclic": true,
+    "reachable_classes_before_pruning": 17,
+    "scope": "Original source greedy core with a separate input adapter; not full optimized SmoothE, e-boost or a hard case.",
+    "source": {
+      "bytes": 17477,
+      "git_blob_sha": "0a6fdaa6432a55b7c49001bd83531835efc6a1af"
+    }
+  },
+  "random_structural_tests": {
+    "DP_states": 10409,
+    "acyclic_graphs": 1192,
+    "brute_force_assignments": 40205,
+    "cyclic_graphs": 908,
+    "graphs": 2100,
+    "infeasible_graphs": 310,
+    "largest_core": 7,
+    "outcome_sha256": "4c9940fdce7968038219993fb58121ebdd01addc8e54fd5384e1ebddd51bac62"
+  }
+}

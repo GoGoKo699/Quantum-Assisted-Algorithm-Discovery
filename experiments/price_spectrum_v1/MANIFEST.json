@@ -1,0 +1,38 @@
+{
+  "expected_reports": {
+    "circuit_results.json": "c643fb4cdf25b8b2623059008dd62895396d60824f6a883c88fcc03f0a90e6bb",
+    "results.json": "e68937a752fb5b10e04c87250f55dc6a0d7459b47e04952250d4f81f89ed7ac1"
+  },
+  "schema": 1,
+  "scope": "Exact new source, inherited dependencies and generated-report digests. Original LICENSE unchanged.",
+  "sha256": {
+    "LICENSE": "a92600540b1ab7a18301e2632a29334b3df227ad836e88df9967d69e3c86db66",
+    "experiments/budget_grounding_v1/MANIFEST.json": "9ddea701a455525e189a3dfd68fa8b3228d5daef11c7b91bfdfe53aea81e9039",
+    "experiments/budget_grounding_v1/README.md": "7d1badb529473e8f7487180076a5b0120d223d557861449c5c418b8c97fcf835",
+    "experiments/budget_grounding_v1/budget.py": "848fbb2b4e09591e61fa446f9f1058e217f388a7a00cfefc20f68a521a0e8717",
+    "experiments/budget_grounding_v1/checks.py": "efd653d93293cadfc8311cb4c660f02a41c7ffa8256330aac9570d3408ef6d83",
+    "experiments/budget_grounding_v1/circuit.py": "c9d4f4d02a6662a38dbbf4f2501bd9f3d5f30825fbe3157e0933c795592a44cd",
+    "experiments/budget_grounding_v1/circuit_results.json": "be84d9fa766dc9456b8c33d0c93d923aa235c12e29c1ddd8c60c0f03a68ed279",
+    "experiments/budget_grounding_v1/results.json": "35305b22d2f6873c973a204409f86a91961b66f40d4dac8e3617c7fd647a5b61",
+    "experiments/budget_grounding_v1/verify.py": "56b19635ede927ab7eb21e35be867ac212312f559faa209b421d90e1fd08430b",
+    "experiments/price_spectrum_v1/README.md": "b4c7133b7bb4f053d7700aea6de4ab3a2865d722a2a3e24446792f462a34c442",
+    "experiments/price_spectrum_v1/checks.py": "13ce16ebce47cbd4818da7bd3e089c8df2ecbccafa63b60b730fa1d4746323c2",
+    "experiments/price_spectrum_v1/indexed_circuit.py": "6fed3eaf7c5ddf8815dced68501c2060c17b23f9f8eaecd4de7a1eed4fc7b10a",
+    "experiments/price_spectrum_v1/spectrum.py": "b6c2367137af9d13efbc59800cbd2b1e3d457a4a2545dc72f7e8831f1de6e471",
+    "experiments/price_spectrum_v1/verify.py": "b47b2a6f4485db59d594f06cb26117d815ab76cff0538fed25255933eba4b28d",
+    "experiments/sharing_core_v1/MANIFEST.json": "560ef2f70c7f2af8dae38a70cea9d9d00fee88e6c305bf2b2ab4dac7f6836570",
+    "experiments/sharing_core_v1/PROVENANCE.json": "7d056966fd2ffb551cace2a4e270876e5beac4509aa77ab0c7260c17bb5ffa27",
+    "experiments/sharing_core_v1/README.md": "9f26cc542427a10cf9e1a3569a610494912d15f7b1672dd3300b54b84e7057b6",
+    "experiments/sharing_core_v1/checks.py": "59e2f8b0b42baadcece1b95722309b7ef6f41a452765488e54e630782937da26",
+    "experiments/sharing_core_v1/core.py": "7f9423d3589ac1608f8f634110efbe54cdd8952dc317a5b816aba96532f8240c",
+    "experiments/sharing_core_v1/observations.json": "78e69b4a0cad6894ee5986bf938078b6916d9968d4690d8f36512060ed382e34",
+    "experiments/sharing_core_v1/public_graph.py": "dc3ac7a02e1b6f4d3f52fe449f204d8533cc2a401bb1e9771033aea77159b650",
+    "experiments/sharing_core_v1/results.json": "103efd5d7219a639cee5b9e81c1d7fa197b07a4b61aabd212b0d6ea85486241c",
+    "experiments/sharing_core_v1/vendor/LICENSE-APACHE-2.0": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "experiments/sharing_core_v1/vendor/NOTICE": "16e09046353e2231de393fc54227eea16b5293e06f156f1ec9ff19372d73674d",
+    "experiments/sharing_core_v1/vendor/greedy_core.py": "5db13fbfc2c61a86b2d78ffeae8b4a0bcb22e8866b7dd40a436182f378aadfe6",
+    "experiments/sharing_core_v1/verify.py": "389c7a2823bd32eafa394baeed18c468238ec6452af9e7def66cb7ff34443e82",
+    "publication/PRICE_SPECTRUM_THEOREM.tex": "efd423a125dad9d09481bf87c56f98bd940a6ad0a3a569d8e66f3473667f4781",
+    "publication/PROGRESS_03.md": "34e29092400f66d8b6feed8b682c6d11e97492b3beacd05149d5d3950d037362"
+  }
+}
