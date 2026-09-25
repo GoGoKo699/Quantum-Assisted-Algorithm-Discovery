@@ -1,0 +1,5 @@
+Source: cornell-zhang/SmoothE, commit 8de74ef2b53aabbb35898400cb5eb890d9a07a54.
+Original authors: Yaohui Cai and the SmoothE contributors; source license Apache-2.0.
+The required source definitions in greedy_core.py are extracted/transcribed, with algorithm methods unchanged. CLI, package imports and unrelated result utilities are omitted.
+The public_graph.py dataset transcription is attributed to the same pinned repository and license; the original source byte hash is verified.
+See PROVENANCE.json for scope and the bundled LICENSE-APACHE-2.0.

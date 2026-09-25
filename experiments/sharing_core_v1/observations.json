@@ -1,0 +1,14 @@
+[
+  {
+    "name": "upstream_greedy_core_original_graph",
+    "seconds": 0.00029099899995799205
+  },
+  {
+    "name": "sharing_core_DP_pruned_graph",
+    "seconds": 0.006215813000039816
+  },
+  {
+    "name": "exhaustive_pruned_graph",
+    "seconds": 0.00043278400005419826
+  }
+]

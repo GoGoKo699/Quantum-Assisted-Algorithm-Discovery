@@ -1,0 +1,41 @@
+{
+  "base_commit": "b87d9efb4fadd5bc533a90148cdb929ca5492245",
+  "base_repository": "GoGoKo699/Quantum-Assisted-Algorithm-Discovery",
+  "concurrency": "Additive e-graph branch only. Sorting-completion main work order and historical experiments preserved.",
+  "date": "2026-09-25",
+  "license_scope": "Independent code MIT (original Ruge Lin root license unchanged); vendor/greedy_core.py and source data retain Apache-2.0 attribution. Apache text is bundled.",
+  "literature": [
+    "https://doi.org/10.1145/3689801",
+    "https://arxiv.org/abs/2408.17042",
+    "https://arxiv.org/abs/quant-ph/0005055",
+    "https://arxiv.org/abs/2508.13020"
+  ],
+  "new_evidence": "2100 seeded structural cases compared with exhaustive representative enumeration (40205 assignments); all 1192 acyclic cases independently checked with activation formula. These are not exhaustive all-graph cases and not semantic e-graph certificates.",
+  "not_established": [
+    "novelty",
+    "best classical complexity",
+    "strong native extraction comparison",
+    "gate-level reversible implementation",
+    "physical resource estimates",
+    "new useful classical routine",
+    "useful quantum advantage"
+  ],
+  "novelty_audit": "Targeted search and primary-source comparison began; no exhaustive novelty audit completed. Failure to find this exact phrasing is not evidence of priority.",
+  "prior_checks_rerun": "Supplied egraph_intake_v1 verifier only. No sorting-completion, filter, or other historical long checks rerun.",
+  "upstream": {
+    "commit": "8de74ef2b53aabbb35898400cb5eb890d9a07a54",
+    "graph": {
+      "bytes": 17477,
+      "classification": "Exact JSON byte reconstruction from transcribed tuples verified by Git blob SHA; source class labels retained; integer cost scaling by 1000.",
+      "git_blob_sha": "0a6fdaa6432a55b7c49001bd83531835efc6a1af",
+      "path": "dataset/diospyros/simple_vec_add_root_7.json"
+    },
+    "greedy": {
+      "classification": "Transcribed required definitions: CostSet, FasterGreedyDagExtractor, UniqueQueue and ExtractionResult constructor/choose. Algorithm methods unchanged; imports, CLI, full result utilities and GPU/data-loader dependencies omitted. Independent input adapter. NOT full native SmoothE or e-boost.",
+      "git_blob_sha": "58d18d4ce0596989da5cf8bd8ab5192add074103",
+      "path": "src/dag_greedy.py"
+    },
+    "license": "Apache-2.0",
+    "repository": "cornell-zhang/SmoothE"
+  }
+}
