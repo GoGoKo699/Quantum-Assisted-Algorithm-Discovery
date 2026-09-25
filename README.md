@@ -1,53 +1,37 @@
 # Quantum-Assisted Algorithm Discovery
 
-**Can a circuit-model quantum computer discover a useful reusable classical method more efficiently than a serious classical discovery process?**
+**Can a circuit-model quantum computer discover a useful reusable classical method more efficiently than a serious classical discovery process?** The resulting method should run classically. Compactness and reuse alone do not establish quantum advantage.
 
-The final method should run classically. Compactness and reuse can make discovery worthwhile, but neither establishes a quantum discovery advantage.
+**Status: exploratory. No useful quantum advantage, new sorting/multiplication record, or deployed faster routine is established.**
 
-**Status: exploratory. No useful quantum advantage, new multiplication identity, or deployed faster routine is established.**
+## Current investigation
 
-## Current research decision
+The [sorting-completion successor](experiments/sorting_completion_v1/README.md) examines a provisional unsupplied target: an 18-input sorting network with at most ten layers, if one exists. The checked primary sources retain a 10--11 depth gap. This is a structural target, not yet a workload with established practical benefit and a strong-classical discovery-cost comparison.
 
-The latest [eleven-bank filter synthesis screen](experiments/depth2_cover_v1/README.md) is complete in its declared bounded, positive-odd shift/add model. It determines all nondominated binary-operation-count/arithmetic-depth pairs, including the two 15x15 banks omitted from the first screen. The largest bank has a target-only 25-operation, depth-three certificate. The whole new classical screen took about 0.27 seconds in one local run, not a portable or cross-solver benchmark.
+Exact classical prefix reduction leaves only 243/928 Boolean states after six layers for pinned 18/28-input reference networks. An independent incremental native-Z3 encoding then searches for a suffix while retaining classical counterexamples and learned solver information. It is not the published optimized MiniSat or SorterHunter implementation.
 
-**These eleven count/depth tasks are retired as quantum-advantage candidates.** The result does not rule out other synthesis workloads, bit-area or physical-timing objectives, or quantum-assisted algorithm discovery. Do not add constraints just to make the existing classical method fail.
+The fixed six-layer 18-input prefix received a native UNSAT response for a four-layer completion even without symmetry restrictions; no independently checked UNSAT proof is supplied, and no global impossibility is inferred. Earlier-prefix cases remain UNKNOWN. A known-feasible 28-input control also times out, so those timeouts are not hardness evidence. A recovered eleven-layer control has 80 comparators versus 78 supplied. Its verification accounts for only about 0.214% of measured work; accelerating only that stage cannot yield a meaningful advantage for that run.
 
-The implementation combines a small first-layer helper coverage problem for depth two with exact depth-aware helper search for the remaining cases. Classical structure removes the apparent difficulty. Covering, signed-digit depth bounds, and helper saturation are not advertised as new general principles. No quantum circuit was compiled in this successor.
+The next milestone is a strong native classical completion baseline and an execution-relevant output criterion, not another isolated quantum verifier or unpriced oracle. See the [work order](work_orders/CURRENT.md), [claim ledger](STATUS.md), and [source/measurement provenance](experiments/sorting_completion_v1/PROVENANCE.json).
 
-The planned native SAT-CMM/RPAG/jMCM comparison remains incomplete: package retrieval/execution was unavailable here. Our code is not their solver. That limitation does not make the explicitly solved eleven cases hard.
+## Verify the successor
 
-## Read and verify
-
-- [Latest derivation, full Pareto table, and limitations](experiments/depth2_cover_v1/README.md)
-- [Current continuation contract](work_orders/CURRENT.md)
-- [Claim ledger](STATUS.md)
-- [New mathematical input and access provenance](experiments/depth2_cover_v1/PROVENANCE.json)
-- [Historical provenance](PROVENANCE.md)
-
-From the repository root, with Python 3.10 or later:
+With Python 3.10 or later:
 
 ```bash
-python experiments/depth2_cover_v1/verify.py
+python experiments/sorting_completion_v1/verify.py
 ```
 
-This regenerates complete reports in temporary storage, checks 1,536 independent tiny-circuit decisions and 972 helper portfolios, and verifies 15 exact integer certificates plus 5,760 signed input evaluations. It uses only the standard library. Generate the full report, including all circuits and failed lower-budget counts, with:
+The standard-library checks cover 1,211 exact prefix comparisons, 152 independently enumerated completion decisions, known-network certificates and the recovered suffix. The optional command additionally runs the native Z3 C shared library on all 152 small decisions:
 
 ```bash
-python experiments/depth2_cover_v1/run_screen.py --output /tmp/new-filter-screen.json
+python experiments/sorting_completion_v1/verify.py --solver
 ```
 
-Existing output files are not overwritten. Do not use Python `-O` or `-OO`.
+All generated data go to temporary paths. Never use Python -O/-OO. Recorded benchmark timings and timeout/model outcomes are observations, not deterministic expectations.
 
-## Earlier evidence, preserved
+## Preserved earlier evidence
 
-The original [guided flip-graph design](docs/current-design.md), [target-closure normal form](docs/target-closure-normal-form.md), [unique-helper search](experiments/unique_helpers_v1/README.md), and [first filter screen](experiments/filter_mcm_v1/README.md) remain available. Earlier raw/guided quantum resource estimates apply only to their original constructions, not these new algorithms.
+The [eleven-bank filter count/depth screen](experiments/depth2_cover_v1/README.md) is complete within its declared bounded model. These small tasks remain retired as quantum-advantage candidates; the current turn reran its default verifier successfully. The older guided-search, target-closure, unique-helper and first-filter experiments remain unchanged in their versioned directories. Consult their notes for verification scope and dependencies. Old quantum resource figures apply only to their old constructions.
 
-Their verifiers remain `python verify.py`, `python verify_target_closure.py`, `python experiments/unique_helpers_v1/verify.py`, and `python experiments/filter_mcm_v1/verify.py`. Consult the versioned notes for optional C++ or native-Z3 requirements and actual historical verification scope. The latest turn reran the supplied previous filter default verifier and the new checks; it did not rerun every historical experiment.
-
-## Research objective, not a platform commitment
-
-Matrix multiplication, linear-map synthesis and filter banks are testbeds. The next substantive result must start from an independently valuable, unsupplied routine and a credible classical discovery shortfall. It must compare the cost of obtaining a qualifying routine, not inflate difficulty through unnecessary optimality proofs or weak search representations. Physical area, latency and fanout constraints require their own models; arithmetic-depth results are not clock-frequency claims.
-
-## License
-
-[MIT](LICENSE), Copyright (c) 2026 Ruge Lin. The original license and historical source/result files remain unchanged. All upstream source notices are retained where applicable; new coefficient data are attributed mathematical transcriptions, not imports of upstream solver code.
+The project is not committed to sorting, filters, matrix multiplication, QML or a hardware platform. The target remains a useful classical output and a defensible quantum advantage in obtaining it. All historical source/result bytes and the original [MIT license](LICENSE), Copyright (c) 2026 Ruge Lin, are preserved.

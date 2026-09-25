@@ -1,0 +1,15 @@
+{
+  "schema": 1,
+  "sha256": {
+    "PROVENANCE.json": "e1cf08a11bcb8ca7da80556397ca77bc18b729c96fff8a89509d13b0f3303e6e",
+    "README.md": "8ea1990e91a7b98da358386aaec6177340b37784d87adaf1e02b9a5db4956dd7",
+    "checks.py": "54ac91a8b4087d394afec98bc694e5e7ec03535706bf071c32fb35d41b758fc6",
+    "completion.py": "91becf8e34ae4ef3f75a781ff8193e9f0e98dd7ad2cd3eb4868fe8aff42629c6",
+    "expected.json": "3023e4d815679d56c06463b114bc63b006faea012136ae1c673adb73905e92e0",
+    "networks.json": "dedee20b11dd921eea7db2976579e4cf4d3ce13f97bdcaeeff75454b3b383b33",
+    "observations.json": "352c63ec76bab968c9013a7709dcfbb580bf7dc4a2501a70a642daadf4461a89",
+    "prefix.py": "b1024de304bdfbffbe6343145c7baff022e11df77ebec50c902b10b63b5b8fbc",
+    "smt_native.py": "d716fe986c699d77388627a26908b1acbf69b63933904cb83773a4ac7e9f2bb5",
+    "verify.py": "602be3971ac399a6d6249cb82eb0d69f5a46b4eab651626b9584558001d51a57"
+  }
+}
