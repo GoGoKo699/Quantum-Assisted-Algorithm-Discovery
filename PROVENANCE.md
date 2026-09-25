@@ -29,3 +29,11 @@ https://github.com/dronperminov/FastMatrixMultiplication/blob/b28490ca14c884c339
 This is mathematical coefficient transcription, not import of the authors' solver. Output factors were transposed to the row-major convention. No advertised addition count is adopted. The independent C++ ablation is not the published native CPU/GPU solver. The known identity is a reference/calibration case, not this project's discovery.
 
 Inherited literature pointers are listed in `docs/current-design.md`; repository initialization is not a fresh literature or novelty audit.
+
+## Target-closure successor, 25 September 2026
+
+New work is isolated in `experiments/target_closure_v1/`. The 18 original imported files are unchanged. Source paths and classifications are in `provenance/target-closure-sources.json`; successor file hashes are in `provenance/target-closure-manifest.json`.
+
+`trylogical/cn122_add55` was read through the GitHub connector at commit `34949f9ce50a89a5ad6b47a17f5834ad5a87a2fb`. Named synthesizer functions are transcribed into a local extracted module, not claimed as a whole-file exact import. Its sparse mathematical data are transcribed into a compact representation and verified by integer coefficient equations. Both upstream MIT notices are retained; the root Ruge Lin license is unchanged.
+
+The new verifier runs in a disposable copy and compares complete deterministic outputs. The native BFS core is instrumented for state counts without changing its candidate order or reachability semantics. Counts of BFS states and closure firings measure different primitives and are not a runtime speedup factor. The entire upstream CLI, other CPU/GPU/SAT heuristic solvers, and current global records were not reproduced. Full historical trajectories were not rerun during this successor.

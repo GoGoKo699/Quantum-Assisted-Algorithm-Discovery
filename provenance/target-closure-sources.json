@@ -1,0 +1,53 @@
+{
+  "date": "2026-09-25",
+  "paper": "https://arxiv.org/abs/2607.28676v1",
+  "upstream_repository": "trylogical/cn122_add55",
+  "upstream_commit": "34949f9ce50a89a5ad6b47a17f5834ad5a87a2fb",
+  "files": {
+    "experiments/target_closure_v1/vendor/upstream_dependency.py": {
+      "upstream_path": "tools/synthesize_cn122_add55.py",
+      "upstream_blob": "abfeddcf7a19a3722832b2d171bd09f5d9bbbdc9",
+      "transfer": "Named function bodies transcribed into a local module with local header/imports. Not a whole-file byte-identical import.",
+      "functions": [
+        "require",
+        "basis",
+        "add_vectors",
+        "projective",
+        "unique_targets",
+        "operation_for_result",
+        "dependency_options",
+        "auxiliary_candidates",
+        "options_using_auxiliary",
+        "reachable_path"
+      ]
+    },
+    "experiments/target_closure_v1/cn122_source.json": {
+      "upstream_path": "external/FastMatrixMultiplication/schemes/results/addition_reduced_ZT/3x3x3_m23_cr58_cn122_ZT_reduced.json",
+      "upstream_blob": "30ee08fc06cd8cbd7486dab6ab8092eebdf4ef9f",
+      "transfer": "Semantic mathematical data transcription: sparse dictionaries converted to [index,value] arrays. Exact integer tensor checked. Not byte-identical.",
+      "original_origin": "dronperminov/FastMatrixMultiplication at 98ba522db92b74f1f8c561a78038ff3091356d73"
+    },
+    "experiments/target_closure_v1/vendor/LICENSE": {
+      "upstream_path": "LICENSE",
+      "upstream_blob": "be367403e2d8094272a75e9e4876ea65b32a3e18",
+      "transfer": "Exact license text; Git blob verified"
+    },
+    "experiments/target_closure_v1/vendor/Perminov-MIT.txt": {
+      "upstream_path": "THIRD_PARTY_LICENSES/Perminov-MIT.txt",
+      "upstream_blob": "f1fb41e8cb26f1974bae251719f42ab344c38492",
+      "transfer": "Exact license text; Git blob verified"
+    }
+  },
+  "not_reproduced": [
+    "Full upstream command-line application",
+    "Full native C++ or GPU heuristic solver",
+    "Current global record determination",
+    "Any quantum hardware or complete coherent helper-search circuit"
+  ],
+  "own_code": [
+    "probe.py excluding imported named functions",
+    "neighborhood.py",
+    "verify_target_closure.py",
+    "new documentation and manifests"
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "layers": [
+    {
+      "canonical_states_sha256": "8134513d6eb35a32f6299fe4ac76c505fcc3fca63178910e2927b9f1b0be715b",
+      "distance": 1,
+      "lower_bound_histogram": {
+        "56": 14,
+        "57": 16
+      },
+      "not_excluded_at_54": 0,
+      "states": 30,
+      "tensor_equations_checked": 21870
+    },
+    {
+      "canonical_states_sha256": "f48ec341771bc770a1424ba0a628c4bc9d3e42d87ca91334d561a5d2b504d33e",
+      "distance": 2,
+      "lower_bound_histogram": {
+        "57": 84,
+        "58": 222,
+        "59": 62
+      },
+      "not_excluded_at_54": 0,
+      "states": 368,
+      "tensor_equations_checked": 268272
+    }
+  ],
+  "radius": 2,
+  "root": {
+    "factors": [
+      {
+        "directions": 12,
+        "factor_lower_bound": 13,
+        "floor_impossible": true
+      },
+      {
+        "directions": 13,
+        "factor_lower_bound": 14,
+        "floor_impossible": true
+      },
+      {
+        "directions": 13,
+        "factor_lower_bound": 14,
+        "floor_impossible": true
+      }
+    ],
+    "total_lower_bound": 55
+  },
+  "scope": "Fixed oriented integer tensor; one/two legal integer-ternary flips, signs and term permutations canonicalized; not all rank-23 algorithms or basis changes.",
+  "tensor_equations_checked": 290142,
+  "total_nonroot_states": 398
+}

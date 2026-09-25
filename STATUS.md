@@ -1,5 +1,31 @@
 # Claim ledger
 
+## Target-closure successor, 25 September 2026
+
+**Current candidate:** helper-only exact linear-map synthesis. Further guided-coin compilation is paused pending a worthwhile target and a stronger whole-process comparison. Historical results below remain unchanged.
+
+### Verified in the successor
+
+- Published zero/one-helper dependency-search functions transcribed, attributed and compared against monotone closure using the same candidate order and first hit. This is not the whole upstream application or native CPU/GPU solver.
+- Exact reconstruction of the known 13+14+28=55-addition circuit and all 729 integer multiplication equations; no new identity.
+- 16,384 finite BFS/closure comparisons, 45 integer and 42 binary helper-normal-form comparisons against unrestricted tiny circuit enumeration.
+- All 398 nonroot states within a precisely defined two-flip integer-ternary neighborhood excluded from a local 54-addition threshold by exact lower bounds; 290,142 tensor equations checked. Not a global rank-23 lower bound.
+- Both new deterministic output files reproduced byte-for-byte; preserved default guided checks rerun. Historical quick/full search benchmarks were not rerun in this successor.
+
+### Derived, limited to the stated model
+
+- With free copying/signs and unlimited live storage, a circuit with `d+k` gates can be sought by target closure and at most `k` helper choices. Sign equivalence does not identify arbitrary scalar multiples.
+- A finite branching bound and polynomial per-node integer arithmetic. The fixed-`k` polynomial has an exponent depending on `k`; no FPT claim.
+- Candidate binary helper-choice tree for an application of established quantum-backtracking theory. No compiled coherent predicates or completed quantum resource/advantage estimate.
+
+### Still open
+
+- Independent novelty audit of the helper parameterization.
+- A valuable non-calibration synthesis task and current record/basis-cost audit; 55 is a historical fixed-tensor reference, not a latest global claim.
+- Comparison with native heuristic/SAT/memoized/parallel classical discovery and an execution-relevant output metric.
+- A complete quantum implementation and advantage; none established.
+
+
 ## Verified in this checkpoint
 
 - Known public 3x3 rank-23 coefficients satisfy 729 integer tensor identities; their GF(2) reduction also checks.

@@ -1,0 +1,54 @@
+{
+  "files": {
+    "docs/target-closure-normal-form.md": {
+      "bytes": 13060,
+      "sha256": "66b6b92914e4428c9f0d5d2043c9bd665bf84846d573b546f0b324b1563153e6"
+    },
+    "experiments/target_closure_v1/README.md": {
+      "bytes": 5350,
+      "sha256": "682c58cadd981eee1d20f44625c9128c9de669204350e73f89eca5f4a4ff0224"
+    },
+    "experiments/target_closure_v1/cn122_source.json": {
+      "bytes": 6307,
+      "sha256": "8b08b3b661854f947e1bda77225dcf94f175a6ea8a191b680b8f07c47b985c44"
+    },
+    "experiments/target_closure_v1/neighborhood.py": {
+      "bytes": 4764,
+      "sha256": "8b5a4d9332bda74c6bef779b96913ea10512a178419d854a6b5fe920dc999cb4"
+    },
+    "experiments/target_closure_v1/neighborhood_results.json": {
+      "bytes": 1300,
+      "sha256": "c0e99e6b4c16414dce16ef9421623577321e39073676d66c84dc332dc2ec6c59"
+    },
+    "experiments/target_closure_v1/probe.py": {
+      "bytes": 17435,
+      "sha256": "43cf5d975095bd53b525a0e1bb3e534f87248181d3efa826594633c179e04f50"
+    },
+    "experiments/target_closure_v1/results.json": {
+      "bytes": 18471,
+      "sha256": "4ac1067b2505cfbe55a925f52dd6a72506bd9f8aaf5bc991683a9c27bba3171d"
+    },
+    "experiments/target_closure_v1/vendor/LICENSE": {
+      "bytes": 1068,
+      "sha256": "fbc8a49d050ae3893c179841f0f2de74923b15e16b195fdc087f41eca657668b"
+    },
+    "experiments/target_closure_v1/vendor/Perminov-MIT.txt": {
+      "bytes": 1072,
+      "sha256": "6fb12f5da62f0da3a305708e94993e9aaa4209a191498ca677fc14e97017ed51"
+    },
+    "experiments/target_closure_v1/vendor/upstream_dependency.py": {
+      "bytes": 7301,
+      "sha256": "39587174d957e229f5e8d0a15c3b28faa98c7cfaf27fde813cefbb07e3f961da"
+    },
+    "provenance/target-closure-sources.json": {
+      "bytes": 2260,
+      "sha256": "48f6a79c965ef9a4d7030c9c6602d31ea8584adf54a2084d4126f3db95e83e74"
+    },
+    "verify_target_closure.py": {
+      "bytes": 3144,
+      "sha256": "c05e27059ff6a87a8155bf82537eac567c795a71093ed6f0864744a00b794823"
+    }
+  },
+  "schema": 1,
+  "scope": "Successor exact classical synthesis checkpoint. Not an upstream import assertion or an advantage certificate."
+}

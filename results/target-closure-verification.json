@@ -1,0 +1,36 @@
+{
+  "date": "2026-09-25",
+  "base_commit": "b219ab89c5c05371619d4236e08862fc4fcff9a6",
+  "commands_rerun": [
+    "python verify.py",
+    "python verify_target_closure.py"
+  ],
+  "passed": true,
+  "scope": {
+    "old_import_files_unchanged": 18,
+    "new_manifest_files": 12,
+    "deterministic_outputs_reproduced": [
+      "experiments/target_closure_v1/results.json",
+      "experiments/target_closure_v1/neighborhood_results.json"
+    ],
+    "closure_comparisons": 16384,
+    "integer_normal_form_comparisons": 45,
+    "binary_normal_form_comparisons": 42,
+    "reference_tensor_equations": 729,
+    "nonroot_neighbor_states": 398,
+    "neighbor_tensor_equations": 290142
+  },
+  "not_rerun": [
+    "Historical --quick or --full C++ search trajectories",
+    "Full upstream synthesis CLI",
+    "Native heuristic CPU/GPU solvers"
+  ],
+  "claims_not_established": [
+    "Quantum advantage",
+    "New multiplication identity",
+    "Practical execution speedup",
+    "Complete quantum resource estimate",
+    "Current global addition record"
+  ],
+  "root_license_blob": "e17a781bf47c4aadf18b68fc593846a1193b86c1"
+}
