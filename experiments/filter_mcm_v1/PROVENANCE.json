@@ -1,0 +1,30 @@
+{
+  "date": "2026-09-25",
+  "repository_base": "GoGoKo699/Quantum-Assisted-Algorithm-Discovery@e55a1d7609f9495a81653afd589bc42311831846",
+  "coefficient_source": {
+    "repository": "Rammbock9000/sat_mcm",
+    "commit": "7a0705a5a699a748d7421405b2635d312c55e08d",
+    "path": "benchmark/inputs/mcm/mcm.m",
+    "blob_sha": "88bcde50a2ab8aa0c4d591a9d1f1e74909957410",
+    "selection": "First nine named coefficient matrices, excluding the two 15x15 banks",
+    "classification": "Mathematical data transcription. No upstream source code imported or executed. Names describe upstream benchmark filters, not deployment evidence."
+  },
+  "native_backend": {
+    "observed_version": "Z3 4.13.3.0",
+    "entry": "Native Z3 C shared library via a newly written ctypes interface",
+    "encoding": "Independent bounded QF_BV shift-add encoding, not SAT-MCM/SAT-CMM",
+    "timeout_ms": 4000,
+    "threads": "No parallel search configured",
+    "timing_scope": "SMT-LIB ingestion plus solving; excludes Python formula construction and any hardware mapping",
+    "limitations": "One deterministic seed per query. SAT certificates checked independently. UNSAT claims are native solver responses; no independently checked UNSAT proof for the published cases. Unknown is not UNSAT. Timings and timeout outcomes are not guaranteed portable."
+  },
+  "solver_access_boundary": "Author README labels SAT-MCM deprecated and directs to SAT-CMM. The successor landing page was checked, but neither the current successor nor native RPAG/jMCM was built or benchmarked in this turn.",
+  "literature": [
+    {"title":"Bit-Level Optimized Constant Multiplication Using Boolean Satisfiability","authors":"N. Fiege, M. Kumm, P. Zipf","doi":"10.1109/TCSI.2023.3327814","data_doi":"10.48662/daks-21","classification":"Prior SAT/bit-cost methodology and benchmark source"},
+    {"title":"Pipelined adder graph optimization for high speed multiple constant multiplication","authors":"M. Kumm, P. Zipf, M. Faust, C.-H. Chang","doi":"10.1109/ISCAS.2012.6272072","classification":"Prior timing/pipeline-aware synthesis; not reproduced"},
+    {"title":"Multiple Constant Multiplication Optimizations for Field Programmable Gate Arrays","author":"M. Kumm","doi":"10.1007/978-3-658-13323-8","classification":"Established physical cost models and classical alternatives"},
+    {"title":"Decompose, Optimize, and Reconstruct: Very Large Constant Multiplication at Scale","arxiv":"2605.23998","classification":"Recent decomposition-based classical work; abstract-level inspection, not reproduced"}
+  ],
+  "original_code": "All code in this successor independently written. Root MIT license remains unchanged. Native Z3 is not bundled.",
+  "verification": "Previous supplied unique_helpers_v1 archive verifier rerun successfully. This successor reproduces its own deterministic outputs and independently checks all 384 tiny bounded SMT decisions. No full historical benchmark or remote target-closure rerun this turn."
+}

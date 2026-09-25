@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "sha256": {
+    "PROVENANCE.json": "215a197191c583d1d088c4515d5ad6d1e6885be70d465ac9cdf64dfa167b4282",
+    "README.md": "8e62647fcace2a1ee07a28ef33c0bbcb1b2400ff39fe1c258a921ab8b111e6d7",
+    "cases_observations.json": "0f68ed9c22e886ebd2cf42691d12dd27c09643d8d03a67f79d8003e8d64cf85b",
+    "checks.py": "1104b296802ce14d2dae073210aafa17f59c7282e9ce90d7c27950a81da9a94c",
+    "depth_probe.py": "44c460d9d8b8962cfbaea29c5c2cb94929312d188ecf1ce1c1e3e93f6f4c1c7d",
+    "depth_results.json": "70f869f3b1d3072a51fa6cd50a712f1f4b552e82fc89895e10edf79a050d6131",
+    "expected_reports.json": "62d333b33c35fb1df6be6a340b7f35e770ba9cb4ffbdd3ae3001899962f2f834",
+    "mcm_smt.py": "ab7460482118ce70d4a7f165208269ae70f137256679b5f1be81c84bef7d774f",
+    "published_coefficients.json": "47114b941d49b9b30ac76bc4f7f50d374831466fb471399b3cd23f1e84fb915b",
+    "run_cases.py": "f70faa73e6244b4dacec88e41a2e3c37a55d01254a925ce0dd02693af0f00461",
+    "shift_closure.py": "cc09927140b073b504737ba316de214c42965a60fedd0d72e324c36a63006259",
+    "smt_native.py": "d716fe986c699d77388627a26908b1acbf69b63933904cb83773a4ac7e9f2bb5",
+    "verify.py": "6b2c18100a7e639ffce27cb72f3ec0669bbe1e0cf8e3e034c0b02dff8f6ad5f1"
+  }
+}
