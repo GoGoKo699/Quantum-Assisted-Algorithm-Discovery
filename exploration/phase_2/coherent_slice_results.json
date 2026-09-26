@@ -1,0 +1,48 @@
+{
+  "clean_workspace_bits": 2,
+  "conditional_output_distribution": {
+    "(1, 0)": "19/96",
+    "(1, 1)": "19/96",
+    "(1, 2)": "19/96",
+    "(1, 3)": "5/24",
+    "(1, 4)": "19/96"
+  },
+  "direct_classical_core_sampler": {
+    "11": "1/6",
+    "12": "1/6",
+    "13": "1/6",
+    "14": "1/6",
+    "3": "1/6",
+    "7": "1/6"
+  },
+  "full_random_bits": 8,
+  "full_tapes": 256,
+  "influential_context_control": {
+    "correct_outer": [
+      "1/8",
+      "7/8"
+    ],
+    "incorrectly_frozen_outer": [
+      "1/2",
+      "1/2"
+    ],
+    "joint_total_variation": "3/8"
+  },
+  "marker_basis_states_checked": 16,
+  "one_grover_iteration_success": "27/32",
+  "prior_acceptance": "3/8",
+  "relevant_random_bits": 4,
+  "resource_scope": "Four search bits plus two marker work bits in the local marker only; no full gate/depth or physical count.",
+  "satisfying_full_tapes": 96,
+  "satisfying_slice_labels": [
+    3,
+    7,
+    11,
+    12,
+    13,
+    14
+  ],
+  "scope": "Exact toy semantics and Grover control; not a new primitive, LLM run or advantage.",
+  "sliced_vs_full_total_variation": "0",
+  "unused_random_bits_deferred": 4
+}
