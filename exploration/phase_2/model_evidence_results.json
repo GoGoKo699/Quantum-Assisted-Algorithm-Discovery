@@ -1,0 +1,157 @@
+{
+  "joint_conditioning": {
+    "accepted_counts": [
+      1,
+      3
+    ],
+    "latent_tapes_per_model": 16,
+    "models": 2,
+    "one_grover_iteration_success": "25/32",
+    "posterior": [
+      "1/4",
+      "3/4"
+    ],
+    "prior_evidence": "1/8",
+    "separate_normalization_tv": "1/4",
+    "separately_normalized_model_weights": [
+      "1/2",
+      "1/2"
+    ]
+  },
+  "nuisance_factor": {
+    "cases": [
+      {
+        "evidence_probability": "1/8",
+        "model_posterior": [
+          "1/4",
+          "3/4"
+        ],
+        "noise_bits": 0
+      },
+      {
+        "evidence_probability": "1/16",
+        "model_posterior": [
+          "1/4",
+          "3/4"
+        ],
+        "noise_bits": 1
+      },
+      {
+        "evidence_probability": "1/32",
+        "model_posterior": [
+          "1/4",
+          "3/4"
+        ],
+        "noise_bits": 2
+      },
+      {
+        "evidence_probability": "1/64",
+        "model_posterior": [
+          "1/4",
+          "3/4"
+        ],
+        "noise_bits": 3
+      },
+      {
+        "evidence_probability": "1/128",
+        "model_posterior": [
+          "1/4",
+          "3/4"
+        ],
+        "noise_bits": 4
+      },
+      {
+        "evidence_probability": "1/256",
+        "model_posterior": [
+          "1/4",
+          "3/4"
+        ],
+        "noise_bits": 5
+      },
+      {
+        "evidence_probability": "1/512",
+        "model_posterior": [
+          "1/4",
+          "3/4"
+        ],
+        "noise_bits": 6
+      }
+    ],
+    "eighty_bit_noise_case": {
+      "evidence_probability": "1/9671406556917033397649408",
+      "posterior": [
+        "1/4",
+        "3/4"
+      ],
+      "unnecessary_rejection_cost_multiplier": "1208925819614629174706176",
+      "unnecessary_square_root_cost_multiplier": "1099511627776"
+    },
+    "full_tapes_checked": 4064
+  },
+  "scope": "Source-derived easy kernel and exact finite diagnostics; no native Pluck, LLM, quantum hardware, or advantage test.",
+  "source_calibration": {
+    "dataset_blob": "8dd1275a589e83d9d2df9e95f5ca0de7f4314782",
+    "exact_likelihoods": [
+      "84903936/152587890625",
+      "2871160404443136/1490116119384765625",
+      "1755155390976/3814697265625",
+      "879230976/3814697265625"
+    ],
+    "factorization_checks": 2600,
+    "joint_likelihood": "376187042518801969118793269219857150557290496/3308722450212110699485634768279851414263248443603515625",
+    "joint_likelihood_decimal": 1.136955571763615e-10,
+    "likelihood_decimals": [
+      0.0005564264349696,
+      0.001926803131039594,
+      0.46010345481201254,
+      0.000230485124972544
+    ],
+    "mixture_masks_per_check": 16,
+    "path": "data/figure5/out/fuzz-datasets/2024-11-13/04-07-50/dataset.json",
+    "ref": "4258adf926055f4e2415c33025ad04da0b5e312d",
+    "repository": "pluck-lang/PluckArtifact.jl",
+    "semantics": "Copy position j with probability 4/5; otherwise independent Geometric(1/5) on nonnegative integers. Same probabilities for caps strictly above observed values. This does not reproduce upstream fuel/timeouts.",
+    "task": "000",
+    "training_examples": [
+      [
+        1,
+        3,
+        0,
+        4
+      ],
+      [
+        1,
+        2,
+        11,
+        4
+      ],
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        1,
+        2,
+        0,
+        7
+      ]
+    ],
+    "variant_comparison": {
+      "copy_probabilities": [
+        "1/5",
+        "4/5"
+      ],
+      "equal_prior_posterior": [
+        "1646643271871297392485849/116228677886416342403589593",
+        "114582034614545045011103744/116228677886416342403589593"
+      ],
+      "posterior_decimals": [
+        0.014167271811183019,
+        0.985832728188817
+      ],
+      "scope": "Illustrative restricted two-model family, not the original synthesis grammar."
+    }
+  }
+}
