@@ -1,0 +1,81 @@
+{
+  "capacity": {
+    "maximum_gap_over_bound": 0.986152806467634,
+    "maximum_incoming_over_bound": 0.9995317049727822,
+    "random_unitaries": 72,
+    "uniform_proposal_example": [
+      {
+        "exact_gap": "1/4",
+        "ordinary_gap": 0.2500000000000001,
+        "states": 8,
+        "universal_gap_upper": 0.2857142857142857
+      },
+      {
+        "exact_gap": "1/8",
+        "ordinary_gap": 0.125,
+        "states": 16,
+        "universal_gap_upper": 0.13333333333333333
+      },
+      {
+        "exact_gap": "1/16",
+        "ordinary_gap": 0.06249999999999989,
+        "states": 32,
+        "universal_gap_upper": 0.06451612903225806
+      },
+      {
+        "exact_gap": "1/32",
+        "ordinary_gap": 0.03125,
+        "states": 64,
+        "universal_gap_upper": 0.031746031746031744
+      }
+    ]
+  },
+  "coherence_control": {
+    "coherent_success": 0.9613189697265625,
+    "dimension": 16,
+    "incoherent_success": 0.0625,
+    "iterations": 3,
+    "scope": "Known Grover control, not an innovation."
+  },
+  "numpy_version": "2.3.5",
+  "random_tape": {
+    "base_law": [
+      "1/2",
+      "1/4",
+      "1/8",
+      "1/8"
+    ],
+    "correct_output_law": [
+      "2/9",
+      "1/3",
+      "1/9",
+      "1/3"
+    ],
+    "double_weighting_total_variation": "2/9",
+    "incorrectly_double_weighted_law": [
+      "4/9",
+      "1/3",
+      "1/18",
+      "1/6"
+    ],
+    "maximum_marginal_residual": 1.1102230246251565e-16,
+    "maximum_stationarity_residual": 2.7755575615628914e-17,
+    "multiplicities": [
+      8,
+      4,
+      2,
+      2
+    ],
+    "objects": 4,
+    "proposal_matrices_checked": 12,
+    "scores": [
+      1,
+      3,
+      2,
+      6
+    ],
+    "tapes": 16
+  },
+  "scope": "Finite algebra diagnostics only; no LLM, learned proposal, quantum hardware, or speedup.",
+  "seed": 2026092604
+}
