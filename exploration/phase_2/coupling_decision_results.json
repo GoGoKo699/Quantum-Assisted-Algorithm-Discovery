@@ -1,0 +1,100 @@
+{
+  "coupling": {
+    "classical_two_tape_checks": 104976,
+    "distinct_generators": 81,
+    "equal_law_zero_return": 90,
+    "equal_output_laws": 639,
+    "exact_return_circuit_checks": 6561,
+    "iid_no_failure_certificate": {
+      "classical_paired_runs": 59,
+      "delta": 0.05,
+      "earlier_generic_pure_state_return_tests": 1197,
+      "return_tests_using_lifted_state_bound": 30,
+      "scope": "One-sided soundness for a fixed candidate, fresh iid validation. Trial counts are not gate or runtime counts.",
+      "tau": 0.05
+    },
+    "largest_slack": "1",
+    "ordered_generator_pairs": 6561,
+    "output_values": 3,
+    "scope": "All ternary-output generators on four equiprobable tapes; phase-free, tape-retaining implementations only.",
+    "tape_values": 4
+  },
+  "decision": {
+    "deterministic_policies_per_comparison": 4,
+    "exact_comparisons": 13120,
+    "joint_distributions": 6560,
+    "utility_tables": 2,
+    "zero_mass_outcome_cases": 160
+  },
+  "joint_query": {
+    "illustrative_net_values": {
+      "AB": "9/10",
+      "noisy_target": "7/10"
+    },
+    "matching_one_and_two_variable_marginals": 10,
+    "queries": {
+      "A": {
+        "answers": 2,
+        "exact_model": {
+          "baseline": "1/2",
+          "information_value": "0",
+          "value_after": "1/2"
+        },
+        "product_approximation": {
+          "baseline": "1/2",
+          "information_value": "0",
+          "value_after": "1/2"
+        }
+      },
+      "AB": {
+        "answers": 4,
+        "exact_model": {
+          "baseline": "1/2",
+          "information_value": "1/2",
+          "value_after": "1"
+        },
+        "product_approximation": {
+          "baseline": "1/2",
+          "information_value": "0",
+          "value_after": "1/2"
+        }
+      },
+      "B": {
+        "answers": 2,
+        "exact_model": {
+          "baseline": "1/2",
+          "information_value": "0",
+          "value_after": "1/2"
+        },
+        "product_approximation": {
+          "baseline": "1/2",
+          "information_value": "0",
+          "value_after": "1/2"
+        }
+      },
+      "noisy_target": {
+        "answers": 2,
+        "exact_model": {
+          "baseline": "1/2",
+          "information_value": "1/4",
+          "value_after": "3/4"
+        }
+      },
+      "nuisance": {
+        "answers": 2,
+        "exact_model": {
+          "baseline": "1/2",
+          "information_value": "0",
+          "value_after": "1/2"
+        },
+        "product_approximation": {
+          "baseline": "1/2",
+          "information_value": "0",
+          "value_after": "1/2"
+        }
+      }
+    },
+    "scope": "Small explicit parity model; exact enumeration is the correct classical solution, not a quantum workload."
+  },
+  "scope": "Exact source-aware audit and decision-meaning checks. No learned model, native solver, quantum execution, or advantage measurement."
+}
