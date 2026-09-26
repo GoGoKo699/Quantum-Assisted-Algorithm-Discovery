@@ -1,0 +1,13 @@
+{
+  "expected_result_sha256": "84c7381cb2d60e9090f6382598656fc00aac71b12bf5b1fa9ef810146d2eed6f",
+  "schema": 1,
+  "scope": "New source/protocol/summary only. Dataset loaded from the installed scikit-learn bundle; no upstream solver code or images imported.",
+  "sha256": {
+    "PROTOCOL.md": "86bfe4ad28f593dadc14292af73e5040c1a4d4bfdd0f94f12e5768bf6392ce92",
+    "check.py": "b48b7ad4e45c041d751219c16147d5de6e0c44472e58d060a1c9a70ed1a07f37",
+    "deploy.py": "d682e252edb9b6d350e01bc6937072fb45409be812d86c15d19c7d33e17e191b",
+    "policy_d4.json": "53b1b417e82351708a13d125fe6844f01ec2d1dd67829c5207d132d78625aa5f",
+    "summary.json": "0e133ed984be4ee096d0fbc13c8da8ede7c0d4b93d9e459bb7983fb7e58d7768",
+    "verify.py": "1ab3c5c100ff1998fe966970cb8bb73fa60177b3b2ea9f488d7413f781433c1f"
+  }
+}

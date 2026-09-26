@@ -1,0 +1,93 @@
+{
+  "no": {
+    "no": {
+      "no": {
+        "no": {
+          "label": 6
+        },
+        "query": 1,
+        "yes": {
+          "label": 2
+        }
+      },
+      "query": 2,
+      "yes": {
+        "no": {
+          "label": 5
+        },
+        "query": 14,
+        "yes": {
+          "label": 0
+        }
+      }
+    },
+    "query": 10,
+    "yes": {
+      "no": {
+        "no": {
+          "label": 5
+        },
+        "query": 15,
+        "yes": {
+          "label": 1
+        }
+      },
+      "query": 9,
+      "yes": {
+        "no": {
+          "label": 4
+        },
+        "query": 13,
+        "yes": {
+          "label": 6
+        }
+      }
+    }
+  },
+  "query": 6,
+  "yes": {
+    "no": {
+      "no": {
+        "no": {
+          "label": 2
+        },
+        "query": 2,
+        "yes": {
+          "label": 3
+        }
+      },
+      "query": 9,
+      "yes": {
+        "no": {
+          "label": 7
+        },
+        "query": 14,
+        "yes": {
+          "label": 2
+        }
+      }
+    },
+    "query": 5,
+    "yes": {
+      "no": {
+        "no": {
+          "label": 1
+        },
+        "query": 1,
+        "yes": {
+          "label": 9
+        }
+      },
+      "query": 9,
+      "yes": {
+        "no": {
+          "label": 4
+        },
+        "query": 13,
+        "yes": {
+          "label": 8
+        }
+      }
+    }
+  }
+}

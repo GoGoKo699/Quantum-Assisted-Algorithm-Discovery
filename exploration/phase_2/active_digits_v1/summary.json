@@ -1,0 +1,250 @@
+{
+  "correctness_controls": {
+    "full_trees_evaluated": 17280,
+    "labelings_checked": 40,
+    "scope": "Small binary control, exact integer accuracy. Not a performance experiment."
+  },
+  "data": {
+    "corpus_uint8_row_sha256": "68aea062d35a127749050fa0e52dca09d6569ac08092c925610e0954e172dde2",
+    "dataset": "sklearn bundled UCI optical digits test subset",
+    "examples": 1797,
+    "feature_uint8_sha256": "5ee20f17ab49c8875caa57890c9e9223c38dba24429c8f6c11a23ed4cc5ca8d1",
+    "query": "row-major nonoverlapping 2x2 patch sum >= 32",
+    "query_count": 16,
+    "split_scope": "One deterministic within-class split; not unseen-writer validation.",
+    "test_examples": 602,
+    "test_indices_sha256": "167b39af2a008c1b8712e37272f7ef2e5cd50a1fa1b8407ccafb60ea0616662a",
+    "train_examples": 1195,
+    "train_indices_sha256": "dde868c6c2968deba3c49eb4d4d1ab21df84f78ea301b6531a8e292fc2f0ef44"
+  },
+  "full_signature_training_ceiling": 916,
+  "observations": {
+    "fit_timings": [
+      {
+        "budget": 1,
+        "cart_fit_seconds": 0.002553143000000091,
+        "exact_fit_seconds": 0.0011572450000016943,
+        "static_fit_seconds": 0.0004833739999980935
+      },
+      {
+        "budget": 2,
+        "cart_fit_seconds": 0.0014726429999996071,
+        "exact_fit_seconds": 0.0018094360000020515,
+        "static_fit_seconds": 0.003871384000007083
+      },
+      {
+        "budget": 3,
+        "cart_fit_seconds": 0.0013176719999989928,
+        "exact_fit_seconds": 0.014305666000012707,
+        "static_fit_seconds": 0.023981635000012602
+      },
+      {
+        "budget": 4,
+        "cart_fit_seconds": 0.002779909999986785,
+        "exact_fit_seconds": 0.056377789999999095,
+        "static_fit_seconds": 0.06089179999997896
+      }
+    ],
+    "numpy": "2.3.5",
+    "setup_and_controls_seconds": 0.12122788700000342,
+    "sklearn": "1.8.0",
+    "timing_scope": "One local serial run; imports excluded, controls/data included separately. Not portable fixtures or hardware forecasts."
+  },
+  "policies": [
+    {
+      "budget": 1,
+      "cart": {
+        "leaves": 2,
+        "max_queries_test": 1,
+        "query_nodes": 1,
+        "test_correct": 117,
+        "test_queries_total": 602,
+        "training_correct": 229,
+        "training_queries_total": 1195
+      },
+      "exact": {
+        "dynamic_programming": {
+          "cache_hits": 3,
+          "constant_skips": 3,
+          "distinct_subsets": 27,
+          "dynamic_states": 27,
+          "pure_states": 1,
+          "split_candidates": 13
+        },
+        "leaves": 2,
+        "max_queries_test": 1,
+        "query_nodes": 1,
+        "test_correct": 119,
+        "test_queries_total": 602,
+        "training_correct": 237,
+        "training_queries_total": 1195
+      },
+      "nonadaptive": {
+        "decoder": [
+          3,
+          6
+        ],
+        "queries": [
+          9
+        ],
+        "test_correct": 119,
+        "training_correct": 237
+      }
+    },
+    {
+      "budget": 2,
+      "cart": {
+        "leaves": 4,
+        "max_queries_test": 2,
+        "query_nodes": 3,
+        "test_correct": 213,
+        "test_queries_total": 1204,
+        "training_correct": 426,
+        "training_queries_total": 2390
+      },
+      "exact": {
+        "dynamic_programming": {
+          "cache_hits": 279,
+          "constant_skips": 117,
+          "distinct_subsets": 263,
+          "dynamic_states": 277,
+          "pure_states": 15,
+          "split_candidates": 274
+        },
+        "leaves": 4,
+        "max_queries_test": 2,
+        "query_nodes": 3,
+        "test_correct": 213,
+        "test_queries_total": 1204,
+        "training_correct": 426,
+        "training_queries_total": 2390
+      },
+      "nonadaptive": {
+        "decoder": [
+          3,
+          9,
+          7,
+          4
+        ],
+        "queries": [
+          5,
+          9
+        ],
+        "test_correct": 197,
+        "training_correct": 415
+      }
+    },
+    {
+      "budget": 3,
+      "cart": {
+        "leaves": 8,
+        "max_queries_test": 3,
+        "query_nodes": 7,
+        "test_correct": 311,
+        "test_queries_total": 1806,
+        "training_correct": 609,
+        "training_queries_total": 3585
+      },
+      "exact": {
+        "dynamic_programming": {
+          "cache_hits": 3282,
+          "constant_skips": 1614,
+          "distinct_subsets": 1348,
+          "dynamic_states": 1548,
+          "pure_states": 74,
+          "split_candidates": 2407
+        },
+        "leaves": 8,
+        "max_queries_test": 3,
+        "query_nodes": 7,
+        "test_correct": 324,
+        "test_queries_total": 1806,
+        "training_correct": 642,
+        "training_queries_total": 3585
+      },
+      "nonadaptive": {
+        "decoder": [
+          0,
+          5,
+          3,
+          9,
+          6,
+          6,
+          7,
+          8
+        ],
+        "queries": [
+          5,
+          6,
+          9
+        ],
+        "test_correct": 289,
+        "training_correct": 588
+      }
+    },
+    {
+      "budget": 4,
+      "cart": {
+        "leaves": 16,
+        "max_queries_test": 4,
+        "query_nodes": 15,
+        "test_correct": 362,
+        "test_queries_total": 2408,
+        "training_correct": 719,
+        "training_queries_total": 4780
+      },
+      "exact": {
+        "dynamic_programming": {
+          "cache_hits": 18018,
+          "constant_skips": 11025,
+          "distinct_subsets": 4183,
+          "dynamic_states": 5438,
+          "pure_states": 184,
+          "split_candidates": 11712
+        },
+        "leaves": 16,
+        "max_queries_test": 4,
+        "query_nodes": 15,
+        "test_correct": 367,
+        "test_queries_total": 2408,
+        "training_correct": 763,
+        "training_queries_total": 4780
+      },
+      "nonadaptive": {
+        "decoder": [
+          0,
+          5,
+          7,
+          9,
+          7,
+          4,
+          7,
+          4,
+          0,
+          5,
+          3,
+          9,
+          6,
+          6,
+          2,
+          8
+        ],
+        "queries": [
+          5,
+          6,
+          9,
+          14
+        ],
+        "test_correct": 340,
+        "training_correct": 669
+      }
+    }
+  ],
+  "results_sha256": "84c7381cb2d60e9090f6382598656fc00aac71b12bf5b1fa9ef810146d2eed6f",
+  "scope": "Classical policy-discovery screen on real small data. No quantum advantage or Action-BED reproduction.",
+  "software": {
+    "numpy": "2.3.5",
+    "python": "3.13.5",
+    "sklearn": "1.8.0"
+  }
+}
