@@ -1,0 +1,82 @@
+{
+  "exhaustive": {
+    "arithmetic": "fractions.Fraction",
+    "boundary_factorizations": 640,
+    "marginal_comparisons": 1538,
+    "observation_sequences": 254,
+    "path_probability_comparisons": 21844
+  },
+  "explaining_away": {
+    "independent_approximation_equal_one_probability": "1/2",
+    "joint_total_variation": "1/2",
+    "posterior_equal_one_probability": "1",
+    "posterior_marginals": [
+      "1/2",
+      "1/2"
+    ],
+    "prior_marginals": [
+      "1/2",
+      "1/2"
+    ],
+    "scope": "Elementary two-bit example, classically trivial."
+  },
+  "likelihood_filter": [
+    {
+      "posterior": [
+        "1/17",
+        "16/17"
+      ],
+      "prior": [
+        "1/2",
+        "1/2"
+      ],
+      "success_probability": "17/32"
+    },
+    {
+      "posterior": [
+        "1/5",
+        "4/5"
+      ],
+      "prior": [
+        "4/5",
+        "1/5"
+      ],
+      "success_probability": "1/4"
+    }
+  ],
+  "public_hmm": {
+    "backward_transition_terms": 196,
+    "compiled_conditional_transition_entries": 196,
+    "eleventh_hidden_state_probability": "20199637085987779999584745641668536194508897742394762001233/31869577300532224378676731286659666147791757423327054723381",
+    "eleventh_hidden_state_probability_decimal": 0.6338219329206618,
+    "evidence_decimal": 1.2624840248137385e-10,
+    "exact_evidence": "31869577300532224378676731286659666147791757423327054723381/252435489670723777731753140890491593495426059234887361526489257812500",
+    "filtered_eleventh_probability_decimal": 0.6636916625343868,
+    "forward_transition_terms": 196,
+    "hidden_histories": 1125899906842624,
+    "inverse_evidence": 7920892307.112843,
+    "inverse_sqrt_evidence": 88999.39498172357,
+    "note": "Counts are elementary recurrence terms, not timings or gate counts. Input transition probabilities have finite rational descriptions. No full 50-state-path enumeration or native Pluck run was performed.",
+    "observation_pattern": "all True",
+    "observations": 50,
+    "source_blob": "644473d86d870fece95850b07bfc88bafb78fd4e",
+    "source_commit": "2ac3400e24d7fa67d87f3ef43265bda2f311e1bc",
+    "source_path": "programs/hmm.pluck",
+    "source_repository": "pluck-lang/Pluck.jl",
+    "transition": [
+      [
+        "2/5",
+        "3/5"
+      ],
+      [
+        "3/5",
+        "2/5"
+      ]
+    ],
+    "true_emission": [
+      "2/5",
+      "9/10"
+    ]
+  },
+  "scope": "Exact small-model inference and interface checks. No quantum speedup, learned model, native Pluck benchmark, or factorial-HMM implementation is established."
+}
