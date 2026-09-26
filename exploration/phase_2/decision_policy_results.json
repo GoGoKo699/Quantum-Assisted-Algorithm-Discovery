@@ -1,0 +1,66 @@
+{
+  "accessible_information": {
+    "optimum_from_Y": "1/2",
+    "optimum_if_R_is_also_revealed": "1",
+    "retained_randomness_state_overlap": "0",
+    "scope": "Revealing R changes the observation protocol. Orthogonal purifications do not make Y informative.",
+    "visible_answer": "Y = H XOR R; R is not reported",
+    "visible_conditional_laws": [
+      [
+        "1/2",
+        "1/2"
+      ],
+      [
+        "1/2",
+        "1/2"
+      ]
+    ]
+  },
+  "binary": {
+    "conditional_laws": 35,
+    "model_pairs": 1225,
+    "output_alphabet": 4,
+    "policies_per_pair": 16,
+    "probability_denominator": 4,
+    "regret_checks": 19600,
+    "scope": "Complete small rational family, not all probability models."
+  },
+  "compatible_policy": {
+    "scope": "Elementary classical decoder suffices; no learning hardness claimed.",
+    "values": {
+      "copy": {
+        "always_zero": "1/2",
+        "return_not_y": "0",
+        "return_y": "1"
+      },
+      "invert": {
+        "always_zero": "1/2",
+        "return_not_y": "1",
+        "return_y": "0"
+      },
+      "noisy_copy": {
+        "always_zero": "1/2",
+        "return_not_y": "1/4",
+        "return_y": "3/4"
+      }
+    }
+  },
+  "paired_comparison": {
+    "decision_value_gap": "1/128",
+    "independent_variance": "16383/32768",
+    "new_value": "129/256",
+    "old_value": "127/256",
+    "paired_variance": "255/16384",
+    "payoff_disagreement_probability": "1/64",
+    "scenarios": 256,
+    "scope": "Known finite table, exactly solvable. Variances are not measured runtime improvements.",
+    "variance_ratio": "5461/170"
+  },
+  "scope": "Exact decision-policy semantics and fair-information controls only; no quantum advantage.",
+  "sequential": {
+    "best_value": "1",
+    "design_action_pairs": 128,
+    "exact_forward_posterior_agreements": 128,
+    "scope": "Finite policy verification, not an adaptive-design benchmark."
+  }
+}
