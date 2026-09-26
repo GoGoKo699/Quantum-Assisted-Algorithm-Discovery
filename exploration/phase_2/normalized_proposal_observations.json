@@ -1,0 +1,102 @@
+{
+  "asymmetric_unitary_control": {
+    "paired": {
+      "detailed_balance_residual": 0.0,
+      "proposal_asymmetry": 0.0,
+      "stationarity_residual": 0.0,
+      "transition": [
+        [
+          0.0,
+          0.5,
+          0.5
+        ],
+        [
+          0.25,
+          0.25,
+          0.5
+        ],
+        [
+          0.125,
+          0.25,
+          0.625
+        ]
+      ]
+    },
+    "target": [
+      "1/7",
+      "2/7",
+      "4/7"
+    ],
+    "wrong": {
+      "detailed_balance_residual": 0.2857142857142857,
+      "proposal_asymmetry": 1.0,
+      "stationarity_residual": 0.14285714285714285,
+      "transition": [
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          0.25,
+          0.0,
+          0.75
+        ]
+      ]
+    },
+    "wrong_stationary": [
+      "1/6",
+      "1/6",
+      "2/3"
+    ]
+  },
+  "constrained_generation_control": {
+    "exact_first_token": [
+      "99/100",
+      "1/100"
+    ],
+    "locally_masked_first_token": [
+      "1/2",
+      "1/2"
+    ],
+    "total_variation": "49/100"
+  },
+  "maximum_residuals": {
+    "detailed_balance": 5.551115123125783e-17,
+    "inverse_identity": 0.0,
+    "row_normalization": 6.661338147750939e-16,
+    "stationarity": 1.1102230246251565e-16,
+    "symmetry": 0.0,
+    "unitarity": 8.881784197001252e-16
+  },
+  "numpy_version": "2.3.5",
+  "scope": "Algebraic controls only: no quantum speedup, LLM execution, training, mixing-time, or hardware claim.",
+  "seed": 20260926,
+  "state_dependent_control": {
+    "proposal": [
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "warning": "Per-current-state choice invalidates forward/inverse symmetrization in general."
+  },
+  "target_cases": 96,
+  "unitaries": 48
+}
