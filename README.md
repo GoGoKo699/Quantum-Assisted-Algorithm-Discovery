@@ -1,68 +1,63 @@
 # Quantum-Assisted Algorithm Discovery
 
 **Can quantum computation discover a useful reusable classical method more
-cheaply than a strong classical alternative?** The resulting method should run
-on ordinary computers and address a need that exists independently of this project.
+cheaply than a strong classical alternative?** The output should run on ordinary
+computers and address a need that exists independently of this project.
 
 **Status: exploratory. No useful quantum discovery advantage is established.
 Manuscript preparation remains on hold.**
 
-## Current task: useful computation first
+## Current application test: battery-interface reaction simulation
 
-Identify a documented real computational bottleneck, the classical method that
-would help, and why quantum discovery might overcome the obstacle to obtaining
-it. The [current work order](work_orders/CURRENT.md) requires an evidence-backed
-application case before substantial development of another mathematical mechanism.
+The [application case](exploration/phase_3/APPLICATION_CASE_02.md) screens accelerator
+kernels, weather-model radiation, and reactive molecular simulators. One bounded
+feasibility lead is selected: a classical energy/force evaluator for initial
+electrolyte decomposition at lithium-metal interfaces, potentially trained on
+selected quantum-computed electronic reference values. Later trajectories would
+run entirely classically.
 
-A candidate needs a named workflow or user community, a deployment interface,
-realistic correctness or accuracy requirements, and a strong classical comparison.
-Its output should matter without a quantum label. A domain name, small matrix,
-compact certificate, or improved symbolic count does not establish that benefit.
-A real application may justify theoretical work; immediate production deployment
-or a hardware demonstration is not a prerequisite.
+The useful workflow is documented, but the quantum advantage is not. This is
+learning a reusable classical simulator, not a new symbolic algorithm or a
+one-off chemical energy prediction. Quantum-generated training references for
+classical potentials are already prior work.
 
-No replacement application has yet been selected. The next deliverable is a
-concrete problem case and a discriminating calculation, not a new framework.
-
-## Parked operator candidate
-
-The [first phase-3 mechanism screen](exploration/phase_3/MECHANISM_SCREEN_01.md)
-contains a conditional regularized-Gram construction and ideal row-query analysis.
-It is preserved as exploratory evidence, **not the active lead**. It has not
-identified a useful source family or established an advantage over strong
-classical alternatives. Its finite-precision and predecessor audits are deferred
-until an application case warrants them. This is a priority decision, not a
-mathematical refutation or a claim that the construction has no possible use.
-
-The existing finite algebra controls remain available:
+Crucially, a March 2026 paper already supplies strong classical correlated
+calculations for this chemistry. The comparison cannot be made only against an
+inaccurate inexpensive functional. The [work order](work_orders/CURRENT.md) requires
+one matched-input cost-and-accuracy assessment before model training, a large
+chemistry campaign, or more general theory.
 
 ```sh
-python experiments/operator_compilation_v1/verify.py
+python experiments/application_case_v1/verify.py
 ```
 
-They do not simulate amplitude estimation or quantum gates. They were not rerun
-for this documentation-only priority change.
+Python 3.10+, standard library only. This replays selected published numbers and
+simple sensitivity/electron-accounting calculations. It is not a chemistry,
+quantum-circuit, or performance benchmark. No published coordinates or model
+weights have been downloaded, and no useful new simulator has been constructed.
 
-## Project organization and retained evidence
+## Parked and independent work
 
-Scientific phase 3 uses the existing working branch,
-`research/prx-quantum-phase2`; no branch was renamed or merged. See the
-[canonical project map](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/main/PROJECT_MAP.md)
-and the governing [parent charter](exploration/phase_2/CHARTER.md).
-The default branch is the public entry point, not a merged copy of all research.
+The [first phase-3 operator construction](exploration/phase_3/MECHANISM_SCREEN_01.md)
+remains parked. Its conditional argument and finite algebra verifier are preserved;
+its existence does not establish usefulness or give it priority over applications.
 
 [Algebraic-Loop-Certificates](https://github.com/GoGoKo699/Algebraic-Loop-Certificates)
 and [Sparse-Weil-Reconstruction](https://github.com/GoGoKo699/Sparse-Weil-Reconstruction)
-have independent projects and repositories. Their further development belongs
-there, not as the default continuation here. Neither replaces the parent goal.
+are independent projects. Their further development belongs there, not as the
+default continuation here. Neither replaces the parent's goal.
 
-The [selected-count theorem](exploration/phase_2/ORDINARY_QUERY_THEOREM_AUDIT_28.md)
-and [reconstruction audit](exploration/phase_2/RECONSTRUCTION_PROOF_REVIEW_29.md)
-remain supporting historical records. The
-[source-aware descent comparison](exploration/phase_2/SOURCE_AWARE_DESCENT_27.md)
-remains closed. Historical next steps do not override the current work order.
+## Organization and evidence
 
-[STATUS.md](STATUS.md) separates current decisions from retained claims.
-Proofs, experiment code/results, manifests, third-party notices, and the original
-[MIT license](LICENSE), Copyright (c) 2026 Ruge Lin, are unchanged. Only the parent
-repository is writable in this project context.
+Scientific phase 3 uses the existing branch `research/prx-quantum-phase2`.
+The [canonical project map](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/main/PROJECT_MAP.md)
+and [parent charter](exploration/phase_2/CHARTER.md) govern the exploration.
+The default branch is an entry point, not a merged copy of later research.
+
+[STATUS.md](STATUS.md) distinguishes the current checkpoint from historical claims.
+The [source-aware descent comparison](exploration/phase_2/SOURCE_AWARE_DESCENT_27.md)
+remains closed; retained reconstruction proofs do not reopen it. Earlier proofs,
+experiment sources/results, manifests, notices, and the original [MIT license](LICENSE),
+Copyright (c) 2026 Ruge Lin, are unchanged. Only the new application arithmetic
+check was run for this checkpoint; root and historical suites were not rerun.
+Only the parent repository may be modified in this project context.
