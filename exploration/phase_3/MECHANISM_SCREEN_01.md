@@ -4,217 +4,171 @@
 The new scientific phase uses the existing working branch; no branch is renamed or merged.
 The [parent charter](../phase_2/CHARTER.md) and [project map](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/main/PROJECT_MAP.md) still govern the objective.
 
-**Decision:** investigate quantum compilation of a small classical operator. The first calculation replaces sparse-row selection by a dense, low-dimensional matrix. A conditional exact-arithmetic construction and finite algebra checks are recorded below. No finite-precision circuit theorem, practical speedup, or publication-priority claim is established. Manuscript preparation remains on hold.
+**Decision:** investigate quantum compilation of a small classical operator. The first calculation replaces sparse-row selection by a dense, low-dimensional matrix. We have a conditional exact-arithmetic argument and finite algebra checks, not a finite-precision circuit theorem, practical speedup, or priority claim. Manuscript preparation remains on hold.
 
-## 1. Three mechanisms, one selected calculation
+## 1. Three mechanisms screened
 
-| Mechanism | Reusable output | Strongest immediate objection | Decision |
+| Mechanism | Reusable output | Immediate objection | Decision |
 |---|---|---|---|
-| Compile a spectral surrogate | A small matrix used for later energies or linear solves | Existing quantum sparsification already does this; access costs and classical sampling can remove the apparent advantage | Pursue one access-cost calculation, not a new application claim |
-| Discover symmetry or reduced coordinates | A smaller classical evaluator | Finding coordinates is not the same as constructing an inexpensive residual evaluator | Park the generic version; do not reopen the closed Boolean-table comparison |
-| Train quantumly, predict classically | A compact classical predictor | Some relevant advantages concern streaming memory rather than unrestricted classical discovery time | Retain as a reserve under an explicitly stated access/resource model |
+| Compile a spectral surrogate | A small matrix for later energies or solves | Existing quantum methods; access costs and classical sampling | Pursue one access-cost calculation |
+| Discover symmetry or coordinates | A smaller evaluator | Coordinates need not supply a cheap residual evaluator | Park the generic version |
+| Train quantumly, predict classically | A compact predictor | Memory separation is not unrestricted classical time separation | Reserve, with its access model explicit |
 
-Apers and de Wolf [1] already construct explicit graph sparsifiers quantumly. Thus classical output and reuse are precedents, not our contribution. Apers and Gribling [2] extend spectral approximation to tall matrices. Their Section 2 explicitly accounts for QRAM of size sqrt(N) poly(d); Section 3.2.3 supplies random-oracle access using a query-budget-sized data structure. Source-computed rows alone do not remove that internal memory. Straightforward serial QRAM simulation does not preserve their sublinear time guarantee; this observation is not a lower bound against better implementations.
+Apers and de Wolf [1] already output explicit graph sparsifiers quantumly; classical output and reuse are not new here. Apers and Gribling [2] extend spectral approximation to tall matrices. Their Section 2 explicitly accounts for QRAM of size sqrt(N) poly(d), and Section 3.2.3 provides random-oracle access through a query-budget-sized data structure. Source-computed rows do not remove that internal memory. Straightforward serial QRAM simulation does not preserve the sublinear time guarantee; this is not a lower bound against better implementations.
 
-The hidden-subgroup compression construction [3] includes subgroup information and values on coset representatives. A compact group description alone need not supply a compact evaluator. For the earlier exact Boolean Fourier-dimension model, [Note 15](../phase_2/CLASSICAL_QUOTIENT_RECONSTRUCTION_AUDIT_15.md) already records a classical reconstruction of both coordinates and residual table. Neither observation excludes all useful symmetry reductions.
+Hidden-subgroup compression [3] includes subgroup information and coset-representative values. For our earlier exact Boolean Fourier-dimension model, [Note 15](../phase_2/CLASSICAL_QUOTIENT_RECONSTRUCTION_AUDIT_15.md) already records classical reconstruction of coordinates and residual table. Neither observation excludes every useful symmetry reduction.
 
-The 2026 oracle-sketching preprint [4] is directly relevant to classical deployment: it constructs classical predictors for sparse test inputs. Its key comparisons include memory restrictions and sample access. Those statements cannot be relabeled as an unrestricted classical time separation for the present explicit-source problem. Its full proof corpus was not audited here.
+The 2026 oracle-sketching preprint [4] constructs classical predictors for sparse test inputs. Its key comparisons involve memory and sample access; they cannot be relabeled as an unrestricted time separation for our explicit-source task. Its full proof corpus was not audited here.
 
-## 2. Proposed output and honest input model
+## 2. Input and output
 
-Both designers receive the same finite classical row-generating program C and parameters N, d, lambda > 0, and a justified bound R. On index i, C returns a rational vector a_i in R^d, with norm at most R. Define the fixed positive-definite matrix
+Both designers receive the same finite classical program C. On index i it returns a rational vector a_i in R^d. Parameters N, d, lambda > 0, and a justified bound ||a_i|| <= R are supplied. The fixed target is
 
 $$
 G=\lambda I+\sum_{i=1}^{N}a_i a_i^T.
 $$
 
-The desired classical output is a d-by-d matrix H satisfying
+Compile a classical d-by-d matrix H with
 
 $$
 G\preceq H\preceq(1+\epsilon)G,
 \qquad 0<\epsilon\leq1.
 $$
 
-Here X <= Y in Loewner order means Y-X is positive semidefinite. The output is dense and contains O(d^2) numbers; it is NOT a sparse subset of rows. Low d is therefore part of the prospective useful regime, not a hidden claim of dimension-independent readout.
+Loewner order X <= Y means Y-X is positive semidefinite. The output contains O(d^2) numbers and is dense, NOT a sampled subset of rows. Low d is part of the prospective useful regime. No singular, unregularized extension is claimed.
 
-The proposed quantum implementation must reversibly evaluate C, uncompute its workspace, and implement the arithmetic and flag rotations described below. The classical competitor may inspect C, simplify the sum, choose a different representation, sample nonuniformly, or bypass compilation. A stored arbitrary N-row input does not receive free coherent access. Producing or checking R, if costly, also belongs in the accounting.
+The quantum implementation must reversibly evaluate C, uncompute workspace, and pay for arithmetic and rotations. Arbitrary stored N-row inputs do not receive free coherent access. Any costly construction or validation of R counts. The classical competitor may inspect C, simplify the sum, choose another representation, sample nonuniformly, or bypass compilation.
 
-This checkpoint separates two claims:
+**Two levels:** the matrix argument below is exact arithmetic conditional on scalar estimates. Standard amplitude estimation supplies an ideal coherent-arithmetic row-query bound. A complete finite-bit circuit and its gate/space costs remain unproved. No useful source family has yet been selected.
 
-* The matrix argument is exact arithmetic, conditional on additive estimates of specified scalar energies.
-* Standard amplitude estimation gives a row-query bound in the ideal coherent-arithmetic model. A complete finite-bit implementation and its gate/space cost remain a next task.
+## 3. Matrix contraction
 
-A positive lambda is explicitly part of the selected regularized problem. No singular, unregularized extension is claimed. The source family and downstream application have not yet been selected.
-
-## 3. The short mechanism
-
-Start with a known upper bound H on G. In coordinates scaled by H, the unknown matrix is bounded by the identity. Estimate that small matrix to constant additive accuracy, add a safety margin, and transform back. This improves the upper bound by a constant factor. Repeat until the bound is close enough, then perform one accurate final round.
-
-The quantum step estimates scalar energies. It does not maintain an N-entry random inclusion table or coherently navigate a large learned data structure. Only the current small matrix and scalar estimates are retained between rounds. This avoids the particular random-oracle dependency discussed above, but does not by itself establish a finite-gate implementation or application advantage.
-
-## 4. Exact matrix contraction
-
-Suppose G <= H and factor H=W W^T with W invertible. Let
+Start with G <= H and factor H=W W^T. Then
 
 $$
-M=W^{-1}G W^{-T}.
+M=W^{-1}G W^{-T},\qquad 0\prec M\preceq I.
 $$
 
-Then 0 < M <= I. Assume a symmetric estimate E obeys
-
-$$
-\|E-M\|_2\leq\tau.
-$$
-
-Set
+Given symmetric E with ||E-M||_2 <= tau, set
 
 $$
 H_{\mathrm{new}}=W(E+\tau I)W^T.
 $$
 
-Since -tau I <= E-M <= tau I, congruence gives the complete invariant
+Because -tau I <= E-M <= tau I, congruence proves
 
 $$
 G\preceq H_{\mathrm{new}}\preceq G+2\tau H.
 $$
 
-This proof does not assume that G and H commute. It also shows that the safety shift cannot simply be omitted.
-
+No commutativity is assumed. The safety shift cannot simply be omitted.
 Initialize
 
 $$
-H_0=(\lambda+NR^2)I,
-\qquad c_0=1+NR^2/\lambda.
+H_0=(\lambda+NR^2)I,\qquad c_0=1+NR^2/\lambda.
 $$
 
-Then G <= H_0 <= c_0 G. With tau=1/8, an envelope H_j <= c_j G updates by
+Thus G <= H_0 <= c_0 G. With tau=1/8, the envelope updates by c_{j+1}=1+c_j/4. After K=ceil(log_4 c_0) rounds (zero if c_0=1),
 
 $$
-c_{j+1}=1+c_j/4.
+c_K=\frac43+4^{-K}\left(c_0-\frac43\right)\leq\frac73<3.
 $$
 
-For K=ceil(log_4 c_0) rounds (zero if c_0=1),
+One final round at tau=epsilon/6 gives
 
 $$
-c_K=\frac43+4^{-K}\left(c_0-\frac43\right)
-\leq\frac73<3.
-$$
-
-A final round with tau=epsilon/6 consequently returns
-
-$$
-G\preceq H_{\mathrm{out}}
-\preceq G+\frac{\epsilon}{3}H_K
+G\preceq H_{\mathrm{out}}\preceq G+\frac{\epsilon}{3}H_K
 \preceq(1+\epsilon)G.
 $$
 
-These are conditional deterministic inequalities, not statements that a numerical estimate certifies its own error.
+Interpretation: scale by the current upper bound, estimate the bounded small matrix, add a safety margin, and scale back. Constant-accuracy rounds improve the bound; only the last round needs the requested accuracy.
 
-## 5. Obtaining the small matrix from quantum estimates
+## 4. Scalar quantum estimates
 
-For a unit vector v define the data contribution
+For a unit vector v, the data energy is
 
 $$
 z_v=\sum_i(v^T W^{-1}a_i)^2.
 $$
 
-On a successful previous history, each summand lies in [0,1], and z_v <= 1, because
+On a successful preceding history, each summand is in [0,1] and z_v <= 1, since the normalized data Gram matrix is at most M <= I. Prepare a uniform index, compute the scaled squared projection, rotate a flag with that success probability, and uncompute. Its probability is p_v=z_v/N <= 1/N. Pad with zero rows to a power of two less than 2N when needed. Clamp probabilities to [0,1] on arbitrary histories; this is inactive on histories used in the proof.
+
+The Brassard-Hoyer-Mosca-Tapp estimate [5] obeys, with constant success probability,
 
 $$
-W^{-1}\left(\sum_i a_i a_i^T\right)W^{-T}\preceq M\preceq I.
+|\widehat p_v-p_v|\leq
+\frac{2\pi\sqrt{p_v(1-p_v)}}{T}+\frac{\pi^2}{T^2}.
 $$
 
-Prepare a uniform index register, compute the row and its scaled squared projection, and rotate a flag with that value as its success probability. Uncompute the row workspace. The flag probability is p_v=z_v/N <= 1/N. Non-power-of-two N can be padded with zero rows to a power of two less than 2N. For all possible, including failed, histories, clamp the flag probability to [0,1]; clamping is inactive on the histories used in the proof.
-
-The Brassard-Hoyer-Mosca-Tapp bound [5] gives, with constant success probability,
-
-$$
-|\widehat p_v-p_v|
-\leq \frac{2\pi\sqrt{p_v(1-p_v)}}{T}+\frac{\pi^2}{T^2}.
-$$
-
-Thus the additive error in N times the estimate is at most
+Therefore the additive error in N times the estimate is at most
 
 $$
 \frac{2\pi\sqrt N}{T}+\frac{\pi^2N}{T^2}.
 $$
 
-An additive eta estimate of z_v needs O(sqrt(N)/eta) coherent row evaluations in this ideal model. Independent repetitions and a median reduce the failure probability logarithmically. Small probabilities, not a generic O(1/eta) additive bound applied blindly to the mean, are essential to this accounting.
+Estimating z_v within eta costs O(sqrt(N)/eta) coherent row evaluations in the ideal model. Repetition and a median amplify confidence. Exploiting the small probability is essential; blindly estimating the mean to additive eta/N would give a worse bound.
 
-The known contribution lambda v^T W^{-1}W^{-T}v is added classically. Estimate the directions e_j and (e_j+e_k)/sqrt(2) for j<k. The polarization identity is
+Add the known contribution lambda v^T W^{-1}W^{-T}v classically. Estimate directions e_j and v_jk=(e_j+e_k)/sqrt(2). Polarization gives
 
 $$
 M_{jk}=v_{jk}^T Mv_{jk}-\frac{M_{jj}+M_{kk}}2.
 $$
 
-If each directional estimate has error at most eta, diagonal errors are at most eta and off-diagonal errors at most 2 eta. A symmetric matrix with these entrywise bounds has operator norm at most 2d eta. Choose eta=tau/(2d). There are d(d+1)/2 directional estimates per round.
-
-The resulting conditional row-query bound is
+Directional errors at most eta give diagonal error at most eta and off-diagonal error at most 2 eta. The symmetric error matrix has norm at most 2d eta. Set eta=tau/(2d); there are d(d+1)/2 estimates per round. Consequently the conditional row-query bound is
 
 $$
-\widetilde O\!\left(
- d^3\sqrt N\left(K+\epsilon^{-1}\right)
-\right),
+\widetilde O\!\left(d^3\sqrt N\left(K+\epsilon^{-1}\right)\right).
 $$
 
-where the tilde hides logarithmic confidence and padding factors. More explicitly, amplify each of the (K+1)d(d+1)/2 estimates to failure at most delta divided by that count. Union bound the conditional failures along successful histories. This handles adaptively chosen H without assuming independence of entire rounds. Abort if a failed numerical round gives a non-positive-definite proposed H. Not aborting is not a correctness certificate.
+Amplify each of the (K+1)d(d+1)/2 estimates to failure at most delta divided by that count. A union bound on conditional failures along successful histories handles adaptive H; entire rounds need not be independent. Abort if a failed round proposes a non-positive-definite H. Not aborting is not a correctness certificate.
 
-Only the current d-by-d matrix, its factor, the row workspace, and scalar-estimation workspace are needed in the ideal description. There is no random string indexed by all N rows. Dependence on d is deliberately crude and not claimed competitive with the dimension dependence of [2].
+The ideal description retains only the small matrix, its factor, scalar estimates, and row/estimation workspace. No random string is indexed by all N rows. Dependence on d is crude and not claimed competitive with [2]. This is a different construction, not a completed removal of QRAM from the published sampling algorithm.
 
-### What is not proved by that formula
+### Finite-precision boundary
 
-The formula counts row queries, not elapsed time or fault-tolerant gates. Finite precision for W, its inverse, the projections, flag rotations, and final matrix storage must be charged. In particular, implementing an ideal flag to a fixed absolute error is not automatically enough: p_v is of order 1/N, and coherent implementation error accumulates over T calls. A valid circuit proof must budget those errors and show that the required bits and reversible workspace do not reintroduce a large access cost. Lambda may be small, so its bit length and the conditioning of intermediate arithmetic cannot be ignored.
+Row queries are not elapsed time or fault-tolerant gates. Charge factorization, inverse computation, projections, flag rotations, and output storage. The probabilities are at most 1/N and implementation error accumulates through coherent calls. A fixed absolute flag error is not automatically sufficient. A circuit proof must budget precision, including small lambda, and show that the required bits and reversible workspace preserve the intended resource bound. No such circuit, scalar amplitude estimator, or QRAM hardware was implemented here.
 
-No QRAM hardware, quantum circuit, or scalar amplitude estimator was implemented in this checkpoint. This is an alternative construction to audit, not a claim to have already removed QRAM from the published algorithm.
+## 5. Classical use and the comparison
 
-## 6. Why the output is reusable, and what reuse does not prove
-
-For an already supplied b in R^d, let x=G^{-1}b and y=H_out^{-1}b. The generalized eigenvalues lie between 1 and 1+epsilon, hence
+For an already supplied nonzero b in R^d, set x=G^{-1}b and y=H_out^{-1}b. Conjugate by G^(1/2); the eigenvalues of S=G^(-1/2)H_out G^(-1/2) lie in [1,1+epsilon]. Bounding S^{-1}-I gives
 
 $$
-\frac{\|y-x\|_G}{\|x\|_G}
-\leq\frac{\epsilon}{1+\epsilon}
+\frac{\|y-x\|_G}{\|x\|_G}\leq\frac{\epsilon}{1+\epsilon}.
 $$
 
-for nonzero b. This follows by conjugating with G^(1/2) and bounding S^{-1}-I for S=G^(-1/2) H_out G^(-1/2). On the same spectral-success event it holds for every b, including subsequently chosen b. Factoring the small output once permits entirely classical later solves. Ordinary finite-precision solve costs and additional solve error still count.
+On the same spectral-success event this holds for every b, including later chosen b. Factor the small output once, then solve classically. Finite-precision solve cost and error still count. If b=A^T y for a newly supplied N-entry label vector, acquiring b is an additional task. One compiled matrix does not automatically handle changed rows, weights, or lambda.
 
-This does NOT make a new N-entry label vector free to process. If b=A^T y for a newly supplied long vector y, acquiring b is an additional task. Nor does one compiled matrix automatically cover changing rows, weights, or lambda.
+With R_use deployments at common use cost U, compare P_Q+R_use U against P_C+R_use U and classical bypasses. Reuse cannot change the sign of P_Q-P_C. It supports usefulness, not a discovery advantage by itself.
 
-For R_use deployments with the same classical use cost U, quantum compilation costs P_Q+R_use U. A classical competitor may pay P_C+R_use U or bypass compilation altogether. Increasing reuse cannot change the sign of P_Q-P_C. Therefore reuse supports usefulness but supplies no discovery advantage by itself.
+Classical baselines include source-level identities, exact accumulation, importance/leverage sampling [6], low-coherence sampling, and direct downstream algorithms. For example, if lambda >= NR^2/epsilon, the supplied bound already makes (lambda+NR^2)I a valid output with no row queries. A source-visible rare exception is not a hidden-search workload. Worst-case OR-style row-query lower bounds do not establish hardness for the explicit program C.
 
-## 7. Strong classical objections and stopping conditions
+**Next bounded work:** audit finite-precision circuit costs and the closest QRAM-free, classical-output covariance/Gram predecessors. Then select at most one useful source-generated fixed-operator family and test the strongest classical route. Do not build a general framework or large benchmark first. If the construction is already known, attribute and use it; the parent's complete advantage comparison remains the question.
 
-The immediate baselines are source-level algebra, exact accumulation of G, classical importance/leverage sampling [6], and application-specific solvers. For example, if lambda >= NR^2/epsilon, the known matrix (lambda+NR^2)I already meets the one-sided target without inspecting any row. A source that visibly lists a rare exceptional row is also not a hidden-search workload.
+## 6. Checks actually run
 
-A useful source family must survive classical methods that sample rows more intelligently than uniformly, exploit low coherence, use known matrix identities, or compute the desired downstream answer without reconstructing G. The OR-style worst-case row-query lower bound in arbitrary matrices does not establish hardness for an explicit program C. No source family has cleared this comparison yet.
+The standard-library [verifier](../../experiments/operator_compilation_v1/verify.py) checks exact rational finite controls: 45 congruence cases (30 noncommuting), 45 final relative bounds, 180 right-hand-side inequalities, nine polarization identities, 15 scalar schedules, and 12 sufficient amplitude-budget inequalities. Nine negative controls show that omitting the safety shift can violate the invariant.
 
-**Next bounded task:** audit the conditional construction's finite-precision and circuit costs, alongside a focused predecessor search for QRAM-free, classical-output covariance/Gram approximation. Then choose at most one useful, source-generated fixed-operator family and test its strongest classical route. Do not build a general sparsification framework or a large benchmark first. If prior work already supplies the same construction, attribute and reuse it; usefulness and the complete comparison remain the parent's question.
-
-## 8. Checks actually run
-
-The standard-library [finite algebra verifier](../../experiments/operator_compilation_v1/verify.py) uses exact rational arithmetic. It checks 45 congruence cases, including 30 noncommuting cases; 45 final relative bounds; 180 right-hand-side inequalities; nine polarization identities; 15 scalar contraction schedules; and 12 sufficient amplitude-budget inequalities. Nine negative controls confirm that omitting the safety shift can break the upper-bound invariant.
-
-These are small deterministic checks of the written algebra, not a quantum simulation, amplitude-estimation run, full numerical implementation, proof-assistant verification, or benchmark. The verifier was run twice successfully; its refusal to run under Python -O was also checked. It writes no files.
+These are not quantum simulations, amplitude-estimation runs, benchmarks, proof-assistant verification, or a full numerical implementation. The verifier passed twice; its -O refusal was checked. It writes no files.
 
 ```sh
 python experiments/operator_compilation_v1/verify.py
 ```
 
 Verified source SHA256: `edd913c220344e94eb45508d87c8f24cd7750312ea1daf6be22b4c9bde391345`.
-The root and historical experiment verifiers were not rerun; none of their sources or fixtures changed. Full checkout failed on DNS; the GitHub connector was used for repository access. No upstream implementation was imported or executed.
+Root and historical verifiers were not rerun; their code and fixtures are unchanged. Full checkout failed on DNS; repository access used the GitHub connector. No upstream implementation was imported or executed.
 
-## 9. Sources and inspection limits
+## 7. Sources and inspection limits
 
-[1] S. Apers and R. de Wolf, *Quantum Speedup for Graph Sparsification, Cut Approximation and Laplacian Solving*, arXiv:1911.07306v4; SIAM J. Comput. 51(6), 2022. Inspected Theorem 1 and computational-model discussion; primary PDF screenshots checked. https://arxiv.org/abs/1911.07306
+[1] S. Apers and R. de Wolf, *Quantum Speedup for Graph Sparsification, Cut Approximation and Laplacian Solving*, arXiv:1911.07306v4; SIAM J. Comput. 51(6), 2022. Theorem 1 and model discussion inspected; primary PDF screenshots checked. https://arxiv.org/abs/1911.07306
 
-[2] S. Apers and S. Gribling, *Quantum speedups for linear programming via interior point methods*, arXiv:2311.03215v3, 30 January 2026. Inspected Section 2, Theorem 3.1, and the repeated-halving/random-oracle construction, including Lemmas 3.10-3.12. PDF pages 13 and 19 visually checked. https://arxiv.org/abs/2311.03215
+[2] S. Apers and S. Gribling, *Quantum speedups for linear programming via interior point methods*, arXiv:2311.03215v3, 30 January 2026. Section 2, Theorem 3.1, repeated halving and Lemmas 3.10-3.12 inspected. PDF pages 13 and 19 visually checked. https://arxiv.org/abs/2311.03215
 
-[3] *Information compression via hidden subgroup quantum autoencoders*, arXiv:2306.08047v3. Inspected the oracle/compression interface and coset-representative output; no native experiment reproduced. https://arxiv.org/abs/2306.08047
+[3] *Information compression via hidden subgroup quantum autoencoders*, arXiv:2306.08047v3. Oracle/compression interface and coset-representative output inspected; no experiment reproduced. https://arxiv.org/abs/2306.08047
 
-[4] J. Zhao et al., *Exponential quantum advantage in processing massive classical data*, arXiv:2604.07639v1, April 2026. Inspected introductory models, oracle sketching, classical readout, and stated classical-memory comparisons. This was not an audit of all 144 pages or a new verification of its theorems. https://arxiv.org/abs/2604.07639
+[4] H. Zhao et al., *Exponential quantum advantage in processing massive classical data*, arXiv:2604.07639v1, April 2026. Introductory models, oracle sketching, classical readout, and stated memory comparisons inspected; not a full 144-page proof audit. https://arxiv.org/abs/2604.07639
 
-[5] G. Brassard, P. Hoyer, M. Mosca, A. Tapp, *Quantum Amplitude Amplification and Estimation*, arXiv:quant-ph/0005055, Theorem 12. This is the source of the scalar-estimation primitive, not a new primitive proposed here. https://arxiv.org/abs/quant-ph/0005055
+[5] G. Brassard, P. Hoyer, M. Mosca, A. Tapp, *Quantum Amplitude Amplification and Estimation*, arXiv:quant-ph/0005055, Theorem 12. Source of the standard scalar primitive. https://arxiv.org/abs/quant-ph/0005055
 
-[6] M. B. Cohen et al., *Uniform Sampling for Matrix Approximation*, arXiv:1408.5099. Primary abstract and its use in [2] inspected. Classical row sampling must be permitted; no native baseline was run. https://arxiv.org/abs/1408.5099
+[6] M. B. Cohen et al., *Uniform Sampling for Matrix Approximation*, arXiv:1408.5099. Primary abstract and its use in [2] inspected; no native classical baseline was run. https://arxiv.org/abs/1408.5099
 
-Additional keyword searches for prior QRAM-free spectral/covariance constructions produced substantial irrelevant results and do not constitute an exhaustive novelty search. The contraction and its proposed composition are internally derived here; priority, optimality, and significance remain unassessed. Both classical spin-offs and all historical evidence remain separate and unchanged.
+Additional keyword searches produced substantial irrelevant results and are not an exhaustive novelty audit. The contraction and proposed composition are internally derived here; priority, optimality, and significance remain unassessed. Both classical spin-offs and all historical evidence remain separate and unchanged.
