@@ -1,59 +1,63 @@
-# Quantum-Assisted Algorithm Discovery — exploration phase 2
+# Quantum-Assisted Algorithm Discovery
 
-**Active branch: `research/prx-quantum-phase2`. Target: PRX Quantum.
-Manuscript: on hold.**
+**Parent exploration: quantum discovery of useful reusable classical methods.**
+The resulting method should run on ordinary computers, and its discovery must
+survive comparison with strong classical alternatives.
 
-The parent project asks whether quantum computation can acquire compact
-structural information that enables a useful reusable classical method.
-A distinct classical reconstruction theorem has emerged from that exploration;
-it is not itself an established new quantum advantage.
+**Status: exploratory. No useful quantum discovery advantage is established.
+Manuscript preparation remains on hold.**
 
-Start with the [phase-2 charter](exploration/phase_2/CHARTER.md),
-[proof audit and separation decision](exploration/phase_2/RECONSTRUCTION_PROOF_REVIEW_29.md),
-and [current work order](work_orders/CURRENT.md).
+## Current organization
 
-## Audited mathematical result
+This is the active working branch, `research/prx-quantum-phase2`. Start with the
+[canonical project map](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/main/PROJECT_MAP.md), the
+[phase-2 charter](exploration/phase_2/CHARTER.md), and the
+[current work order](work_orders/CURRENT.md). The default branch supplies the
+public entry point; it does not contain all phase-2 research.
 
-For every finite field and genus g>=32, set h=g-2. The true Jacobian counts at
-indices 1..h and the even indices through 2h determine the Weil polynomial and
-permit a polynomial-bit-time reconstruction. This uses h+ceil(h/2)<2g selected
-ordinary counts, not the first h+ceil(h/2) counts. No twist oracle is required.
+Two classical results now have independent projects and repositories:
+[Algebraic-Loop-Certificates](https://github.com/GoGoKo699/Algebraic-Loop-Certificates) and
+[Sparse-Weil-Reconstruction](https://github.com/GoGoKo699/Sparse-Weil-Reconstruction). Their handoffs are complete at the
+project-organization level. Their further development belongs in those projects,
+not as the default continuation here. Neither replaces the parent's outstanding
+quantum-discovery objective.
 
-The [theorem in Note 28](exploration/phase_2/ORDINARY_QUERY_THEOREM_AUDIT_28.md)
-survives a fresh internal proof derivation, explicit rational bit-size bounds,
-and an independently checked irreducible degree-64 2-Weil-polynomial control.
-No theorem parameter was changed by the audit. This is not external peer review,
-proof-assistant verification, minimum-query optimality or an unconditional
-publication-priority claim. The decoder receives true counts; successful rounding
-is not an input-authentication certificate.
+The next parent research decision is a candidate mechanism and a decisive comparison
+under the charter. This organizational reset selects no new application, restarts
+no historical experiment, and begins no manuscript.
+
+## Retained reconstruction result
+
+The [selected-count theorem in Note 28](exploration/phase_2/ORDINARY_QUERY_THEOREM_AUDIT_28.md)
+and [internal proof audit in Note 29](exploration/phase_2/RECONSTRUCTION_PROOF_REVIEW_29.md)
+remain supporting historical records. The proof, exact decoder, audit fixtures,
+provenance, and research scope are also maintained in the separate
+[Sparse-Weil-Reconstruction project](https://github.com/GoGoKo699/Sparse-Weil-Reconstruction). Consult that project for subsequent
+classical reconstruction work and its current assessment.
+
+The parent copies are not a second active development track. Historical requests
+inside numbered notes to create that repository describe an earlier checkpoint;
+the repository now exists. An internal proof audit is not external peer review,
+query optimality, input authentication, or a quantum advantage.
+
+To reproduce the retained checks, follow their experiment documentation:
 
 ```sh
 python experiments/reconstruction_audit_v1/verify.py
 python experiments/all_field_reconstruction_v1/verify.py
 ```
 
-## Separation decision
+## Boundaries and preserved evidence
 
-The classical result now warrants a focused mathematical project under the
-proposed name `Sparse-Weil-Reconstruction`. No new repository has been created;
-owner creation and separate access are pending. Its initial scope is finite
-selected cyclic-resultant reconstruction, exact bit complexity, and predecessor
-comparison. The parent retains the theorem as a supporting component while
-preserving its independent quantum-discovery objective.
-
-The general quantum zeta algorithm remains prior work. The [source-aware descent
-comparison](exploration/phase_2/SOURCE_AWARE_DESCENT_27.md) remains closed: known
-splitting and reuse allow the ordinary route the same smaller-field backend
-calls as the twist route. The reconstruction theorem does not reopen that claim
+The general quantum zeta algorithm remains prior work. The
+[source-aware descent comparison](exploration/phase_2/SOURCE_AWARE_DESCENT_27.md)
+remains closed: the reconstruction theorem does not reopen that resource claim
 or supply an all-field quantum order-acquisition implementation.
 
-## Preserved evidence
+[STATUS.md](STATUS.md) distinguishes the current organization from the inherited
+claim ledger. Numbered notes, experiment sources/results, manifests, third-party
+notices, and the sharing-core branch remain preserved. This documentation-only
+update reran no experimental verifier and introduces no scientific result.
 
-All earlier experiment sources, reports and third-party notices are unchanged.
-The five current predecessor verifiers and the new audit verifier passed.
-Historical root and 164-curve suites were not rerun. `main` and
-`research/sharing-core-publication` are unchanged. The inherited [claim ledger](STATUS.md)
-concerns earlier investigations; current decisions are in the numbered notes.
-No native point-counting application, quantum circuit or hardware was run.
-
-Original [MIT license](LICENSE), Copyright (c) 2026 Ruge Lin, unchanged.
+Only the parent repository is writable in this project context. The original
+[MIT license](LICENSE), Copyright (c) 2026 Ruge Lin, is unchanged.
