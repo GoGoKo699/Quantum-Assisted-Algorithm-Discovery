@@ -1,0 +1,11 @@
+{
+  "schema": 1,
+  "sha256": {
+    "README.md": "96830e209b8fb0d33cf91e422f11f8320d09f15dc552587fae7aa3c92864b268",
+    "REPORT.json": "a42e52df6255fc812f64325b81c2a36701ae3cf68ebe20221a0b5f4fdbf4eb14",
+    "SOURCES.md": "e4d6bbc9ede447632e1ce2b18e99fefa8efabc0a8d2c8c9aae05e41b4d2062e7",
+    "checks.py": "92a52149a5bf11ea102effe9d6f492083e462088e87800d295ec5de463bf39f6",
+    "cost.py": "699f07d15e43c056bb81f14656e8f1504e7840fd757fd5336fa7d8097ae58eff",
+    "verify.py": "65f46d83bc7a7ad97513304e43c577dcd2619356c673fa8e2ac44fba0ffe1ac9"
+  }
+}
