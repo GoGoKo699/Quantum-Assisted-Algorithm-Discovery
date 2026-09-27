@@ -3,53 +3,57 @@
 **Active branch: `research/prx-quantum-phase2`. Target: PRX Quantum.
 Manuscript: on hold.**
 
-Can quantum processing discover compact classical information that supports a
-useful reusable method? The current provisional application is an exact Weil
-polynomial, which specifies a known classical counting recurrence. The general
-polynomial-time quantum zeta algorithm is prior work; no practical quantum
-advantage or publication-ready new quantum algorithm is established here.
+The parent project asks whether quantum computation can acquire compact
+structural information that enables a useful reusable classical method.
+A distinct classical reconstruction theorem has emerged from that exploration;
+it is not itself an established new quantum advantage.
 
-Read the [phase-2 charter](exploration/phase_2/CHARTER.md),
-[all-field reconstruction theorem and audit](exploration/phase_2/ORDINARY_QUERY_THEOREM_AUDIT_28.md),
+Start with the [phase-2 charter](exploration/phase_2/CHARTER.md),
+[proof audit and separation decision](exploration/phase_2/RECONSTRUCTION_PROOF_REVIEW_29.md),
 and [current work order](work_orders/CURRENT.md).
 
-## Current mathematical candidate
+## Audited mathematical result
 
-For genus g>=32 over EVERY finite field, put h=g-2. The exact ordinary Jacobian
-counts at degrees 1..h and the even degrees through 2h suffice to reconstruct
-the Weil polynomial in polynomial bit time. This is h+ceil(h/2)<2g selected
-cardinality requests, with maximum requested degree 2g-4. For genus 32 it means
-45 counts through degree 60, not the first 45 counts.
+For every finite field and genus g>=32, set h=g-2. The true Jacobian counts at
+indices 1..h and the even indices through 2h determine the Weil polynomial and
+permit a polynomial-bit-time reconstruction. This uses h+ceil(h/2)<2g selected
+ordinary counts, not the first h+ceil(h/2) counts. No twist oracle is required.
 
-The decoder uses more of the already available low-degree data for Mobius
-cancellation and rounds coefficients using Newton's congruence information.
-Certified, range-reduced rational logarithms handle small fields. This removes
-the previous large-field hypothesis from this high-genus RECONSTRUCTION theorem;
-it does not supply a new small-field/characteristic-two quantum group backend.
-The underlying proof ingredients are prior work. Publication priority of the
-precise combined statement remains unresolved after a focused source comparison.
+The [theorem in Note 28](exploration/phase_2/ORDINARY_QUERY_THEOREM_AUDIT_28.md)
+survives a fresh internal proof derivation, explicit rational bit-size bounds,
+and an independently checked irreducible degree-64 2-Weil-polynomial control.
+No theorem parameter was changed by the audit. This is not external peer review,
+proof-assistant verification, minimum-query optimality or an unconditional
+publication-priority claim. The decoder receives true counts; successful rounding
+is not an input-authentication certificate.
 
 ```sh
+python experiments/reconstruction_audit_v1/verify.py
 python experiments/all_field_reconstruction_v1/verify.py
 ```
 
-The executable checks reconstruct supplied Weil polynomials, not newly counted
-curves. The [source-aware comparator](exploration/phase_2/SOURCE_AWARE_DESCENT_27.md)
-still rules out the earlier twist-specific resource claim: an equally prepared
-ordinary route may use the same smaller-field computations. The new theorem does
-not reopen that closed comparison or prove minimum-query optimality.
+## Separation decision
 
-## Preserved work and limitations
+The classical result now warrants a focused mathematical project under the
+proposed name `Sparse-Weil-Reconstruction`. No new repository has been created;
+owner creation and separate access are pending. Its initial scope is finite
+selected cyclic-resultant reconstruction, exact bit complexity, and predecessor
+comparison. The parent retains the theorem as a supporting component while
+preserving its independent quantum-discovery objective.
 
-The preceding descent, reconstruction-comparator, translation-cost and
-subgroup-stopping verifiers remain in their versioned directories. Their source
-and report bytes are unchanged. `main` and `research/sharing-core-publication`
-retain earlier investigations. The inherited [claim ledger](STATUS.md) covers
-those earlier branches; current decisions are in the numbered notes and work order.
+The general quantum zeta algorithm remains prior work. The [source-aware descent
+comparison](exploration/phase_2/SOURCE_AWARE_DESCENT_27.md) remains closed: known
+splitting and reuse allow the ordinary route the same smaller-field backend
+calls as the twist route. The reconstruction theorem does not reopen that claim
+or supply an all-field quantum order-acquisition implementation.
 
-No new spinoff is opened. The next step is an independent proof-and-priority audit
-of the all-field reconstruction statement, not a general arithmetic compiler or
-a threshold-optimization exercise. Historical licenses and evidence are preserved.
-The separate classical spinoff is not developed or counted as quantum evidence.
+## Preserved evidence
+
+All earlier experiment sources, reports and third-party notices are unchanged.
+The five current predecessor verifiers and the new audit verifier passed.
+Historical root and 164-curve suites were not rerun. `main` and
+`research/sharing-core-publication` are unchanged. The inherited [claim ledger](STATUS.md)
+concerns earlier investigations; current decisions are in the numbered notes.
+No native point-counting application, quantum circuit or hardware was run.
 
 Original [MIT license](LICENSE), Copyright (c) 2026 Ruge Lin, unchanged.

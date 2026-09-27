@@ -1,79 +1,74 @@
-# Current task: independently audit the all-field reconstruction candidate
+# Current task: separate the audited reconstruction result from quantum discovery
 
-Active branch: `research/prx-quantum-phase2`. Target: **PRX Quantum**.
-Manuscript remains **on hold**. Read the phase-2 charter and
-`exploration/phase_2/ORDINARY_QUERY_THEOREM_AUDIT_28.md`.
+Active branch: `research/prx-quantum-phase2`. Manuscript preparation remains on hold.
+Read the phase-2 charter and `exploration/phase_2/RECONSTRUCTION_PROOF_REVIEW_29.md`.
+The parent quantum objective and its existing working target are unchanged.
 
-## Scope
+## What the internal audit establishes
 
-Modify only Quantum-Assisted-Algorithm-Discovery. Preserve other branches,
-LICENSE and historical experiment/source/report bytes. Do not merge the previous
-sharing-core PR, revive its manuscript, or modify the separate classical spinoff.
-The broader aim remains useful compact structural information obtained quantumly
-from an explicit input, with classical execution afterwards. Zeta is provisional.
+Note 28's g>=32, all-q>=2 supplied-count reconstruction theorem survived a fresh
+proof derivation, numerical bit-size audit and an independently constructed
+irreducible polynomial control. Its sparse query set, genus threshold and promises
+are unchanged. The proof uses attributed Mobius/Newton ingredients; the new result
+is the selected-data guarantee with a deterministic polynomial-bit-time decoder.
 
-## New precise candidate
+Explicit bounds now cover input sizes, logarithm range-reduction exponents,
+series lengths and intermediate rational operand sizes. An irreducible degree-64
+2-Weil control passes exact class/irreducibility checks, independent resultant
+replay and reconstruction. This is an internal audit, not external peer review
+or a machine-checked proof. It supplies no curve-realizability theorem.
 
-For every integer field-size parameter q>=2 and genus g>=32, put h=g-2.
-A reciprocal integral Weil polynomial of degree 2g is reconstructible from
-ordinary cyclic resultants at D_h={1,...,h} union {2,4,...,2h} in polynomial time
-in g and log q. Thus h+ceil(h/2)<2g selected exact-count requests suffice and
-maximum degree is 2g-4. For actual curves this includes every finite field and
-does not require hyperellipticity or physical twist access.
+A deliberate one-unit corruption of the last supplied count is accepted by the
+decoder and detected by subsequent exact resultant replay. This is not a failure
+of the promised-input theorem. Do not present reconstruction acceptance or
+successful endpoint divisions as authentication of a curve's true orders.
 
-The proof uses k_n=max(2,floor(h/n)) in the published normalized Mobius formula.
-Every needed count remains in D_h. A three-case rational envelope proves the
-error in S_n/n is below 1/3 uniformly for g>=32 and q>=2. Newton's known residue
-information enables coefficient rounding; the final two coefficients come from
-the inherited endpoint equations. Range reduction of each rational logarithm
-is included, giving a polynomial-bit-time decoder at small q.
+## Repository separation is now justified
 
-The primary statements inspected do not subsume this exact bound, but publication
-priority is NOT established. The same classical/quantum reconstruction ingredients
-are prior work. Do not call an absent matching search result a novelty proof.
-No optimality or all-field genus-3..31 theorem is supplied. Threshold 32 is only
-a sufficient constant, not an intrinsic transition or a proposed next target.
+A focused classical reconstruction-theory project is warranted. The user is
+asked to create `GoGoKo699/Sparse-Weil-Reconstruction` and provide its link.
+No new repository has been created or modified in this checkpoint. Existing
+write authorization remains confined to Quantum-Assisted-Algorithm-Discovery;
+establish the new project context and access before importing anything there.
 
-## Next decisive audit
+The proposed initial import should preserve the tested Note-28 decoder/report,
+its full proof and source comparison, and Note 29's audit and fixture. Record
+source commit and byte hashes before refactoring. Preserve the root MIT license
+and all applicable notices. Do not transfer unrelated experimental history or
+claim that the new project has an established quantum speedup.
 
-Audit the new theorem independently of its implementation: analytic tail bounds,
-Newton-residue rounding, integer endpoints, polynomial bit complexity and the
-precise Weil/reciprocity promise. Seek an actual predecessor with the same or
-stronger finite selected-query guarantee; distinguish it from infinite-sequence
-uniqueness, generic palindromic results and initial-consecutive-sequence conjectures.
-A correction should preserve historical records and explicitly identify the
-scope of any changed claim rather than silently editing expected evidence.
+The separate mathematical scope is sparse cyclic-resultant reconstruction of
+integral q-Weil polynomials: theorem, numerical bit complexity, exact decoder,
+and rigorous relation to prior results. Priority remains qualified: the inspected
+primary statements do not subsume the exact bound, but the search is not exhaustive.
+An external response, publication acceptance or journal status is not claimed.
+Manuscript drafting remains a later step, not automatic after repository creation.
 
-The right publication object, if the statement survives, is a reconstruction
-query theorem. It is not another twist-schedule comparison or a numerical gate
-speedup. A separate reconstruction-theory repository becomes appropriate only
-when the independent audit supports a distinct worthwhile research programme.
-No new repository is requested by this checkpoint. Do not let code volume or
-an available implementation task determine that decision.
+## Parent-project direction
 
-## Boundaries that still govern the quantum project
+Retain the theorem as a supporting classical component and keep the main goal:
+useful compact information that is materially cheaper to obtain quantumly, with
+comparable inputs, preprocessing, reuse, error handling and strong classical
+alternatives. Do not continue classical reconstruction extensions indefinitely
+inside the parent once the separate project is established.
 
-The theorem receives TRUE cardinalities. It does not authenticate supplied data,
-construct a curve, or perform quantum order finding. In particular the previous
-large-field generator/arithmetic restrictions are not removed. Kedlaya's actual
-order-acquisition Proposition 11 has its own field-extension condition. An
-all-field reconstruction theorem is not automatically an all-field implementation
-with fewer than 2g complete quantum invocations.
+Note 27's closed comparison remains binding. Known quadratic descent and reuse
+let an ordinary source-aware route invoke exactly the same smaller-field backend
+calls as the twist route. The new theorem does not reopen that resource claim,
+resolve generic first-g+1 cyclic-resultant reconstruction, or remove the prior
+quantum generator/arithmetic conditions in small fields. No automatic general
+arithmetic compiler or benchmark campaign follows from the mathematical spinoff.
 
-Keep Note 27's closed source-aware comparison: known quadratic splitting and
-reuse let the ordinary route execute the same underlying calls as the signed
-route. The new result does not reopen that claimed advantage. All classical
-competitors receive the same decoder and may bypass group orders altogether.
-Retain the preceding stopping, backend and resource-accounting restrictions.
+## Evidence and permissions
 
-## Verification actually performed
+Run the new `python experiments/reconstruction_audit_v1/verify.py` and the five
+preceding current verifiers as applicable. All six passed this round; expected
+reports and prior source bytes remain unchanged. The new verifier pins its audited
+source dependency and regenerates the exact report in temporary storage.
+Historical root and 164-curve suites were not rerun. Full checkout failed on DNS;
+GitHub connector access worked. No native curve counter, quantum circuit, hardware,
+paid computation, outside contact or unattended work occurred.
 
-Run `python experiments/all_field_reconstruction_v1/verify.py` for the new
-source-hash and exact-report checks. Seven supplied Weil controls recover 489
-coefficients and 227 traces; they are not asserted to be curve Jacobians.
-The uniform proof is not inferred from finite tests. All four preceding current
-verifiers passed unchanged from the mounted Note-27 checkpoint. Historical root
-and 164-curve suites were not rerun; full checkout failed on DNS. No native point
-counter, quantum circuit, hardware, paid computation or external contact ran.
-No unattended work, unrelated merge, repository administration or submission is
-authorized. Manuscript preparation remains on hold.
+Preserve `main`, the sharing-core branch, historical files and LICENSE. Modify no
+other repository in this project context. No unrelated merge, administration change,
+public release tag, submission or manuscript revival is authorized.

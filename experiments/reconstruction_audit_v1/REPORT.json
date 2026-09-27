@@ -1,0 +1,35 @@
+{
+  "circulant_resultants_checked": 45,
+  "exact_Bareiss_divisions": 589310,
+  "final_principal_minors": [
+    [
+      53878129518221399497625990881,
+      18446744073709551616
+    ],
+    [
+      11617861891648002055223595949889,
+      18446744073709551616
+    ]
+  ],
+  "g": 32,
+  "independent_power_sums": 30,
+  "irreducibility_modulus": 7,
+  "irreducible_real_degree": 32,
+  "irreducible_weil_degree": 64,
+  "known_curve_or_abelian_realization": "not asserted",
+  "legal_numerical_displacement_runs": 4,
+  "max_input_bits": 1921,
+  "max_log_terms": 13,
+  "one_corrupted_count_accepted_by_decoder": true,
+  "polynomial_sha256": "0a2d8159918bc397f07a57ba6c92ac7404f5f1b3b58ced5ca6fd55c9545ab4ea",
+  "positive_principal_minors_checked": 64,
+  "proved_input_bit_cap": 1985,
+  "proved_log_term_cap": 49,
+  "q": 2,
+  "quantum_or_native_curve_computation": "not executed",
+  "reconstructed_coefficients": 65,
+  "same_corruption_detected_by_resultant_replay": true,
+  "schema": 1,
+  "scope": "Internal proof rederivation and independently generated exact controls; not external peer review.",
+  "theorem_threshold_unchanged": 32
+}
