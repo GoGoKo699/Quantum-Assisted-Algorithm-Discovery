@@ -1,76 +1,62 @@
-# Current task: resume the parent quantum-discovery exploration
+# Current task: audit the small-operator quantum compiler
 
-**Organization reset: 27 September 2026.** Active branch:
+27 September 2026. Scientific phase 3 uses the existing branch
 `research/prx-quantum-phase2`. Manuscript preparation remains on hold.
 
-Read the [canonical project map](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/main/PROJECT_MAP.md) and
-[phase-2 charter](../exploration/phase_2/CHARTER.md) first. This work order supersedes
-the earlier request to create a reconstruction repository. It does not supersede
-historical mathematical statements, source comparisons, or evidence boundaries.
+Read the [project map](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/main/PROJECT_MAP.md),
+[parent charter](../exploration/phase_2/CHARTER.md), and
+[phase-3 mechanism screen and conditional derivation](../exploration/phase_3/MECHANISM_SCREEN_01.md).
 
-## Completed handoffs
+## Current lead
 
-[Algebraic-Loop-Certificates](https://github.com/GoGoKo699/Algebraic-Loop-Certificates) and
-[Sparse-Weil-Reconstruction](https://github.com/GoGoKo699/Sparse-Weil-Reconstruction) now have their own projects and repositories.
-Their ongoing classical science, software, tutorials, and eventual manuscript work
-belong there. Their scientific and publication status is maintained there, not
-asserted complete by this handoff.
+A classical program generates N bounded d-dimensional rows. The proposed quantum
+computation compiles the fixed regularized Gram matrix into a small dense classical
+operator. Later energies and solves use that operator without quantum hardware.
+This is not sparse-row selection, a singular-matrix theorem, or a new label-vector
+processing algorithm. No useful explicit-source quantum advantage is established.
 
-The parent retains references, provenance, and supporting results. Do not extend
-classical reconstruction or loop certificates here merely because an extension is
-available. A use of either result must serve an explicit parent-level quantum
-mechanism and a complete comparison. No writes to either spin-off are authorized
-in this project context.
+The exact matrix invariant and ideal scalar-estimation query bound are written.
+Small exact rational controls pass. A complete finite-precision circuit bound,
+publication-priority assessment, and a useful workload with a strong classical
+comparison remain open. Avoid claiming that the published sparsification algorithm
+has already been made QRAM-free: the present proposal is a different construction.
 
-## Parent question and next decision
+## Next bounded work
 
-Can quantum computation obtain useful compact information that enables a reusable
-classical method materially more efficiently than strong classical alternatives?
-The next research decision is to choose a short mechanism sketch and its most
-discriminating calculation or source check under the charter. Record the useful
-output, quantum-specific step, strongest obvious classical response, and likely
-hidden cost before building more infrastructure.
+1. Audit finite precision: row generation and reversal, the small matrix factor and
+   inverse, rare flag probabilities, rotations, adaptive errors, output rounding,
+   and final classical solve error. Count gates and workspace rather than only
+   row queries. Preserve the upper-bound invariant with explicit safety margins.
+2. Check the closest prior classical-output covariance/Gram and QRAM-free quantum
+   approximation methods. The amplitude-estimation primitive is standard; no
+   priority claim follows from the present bounded search.
+3. Select at most one useful source-generated fixed-operator family. Compare
+   source inspection, analytic accumulation, classical sampling/importance scores,
+   and direct downstream computation. Reject examples made hard only by hiding
+   source-visible information or restricting classical memory. Include input,
+   bound construction, discovery, certification, extraction, and reuse costs.
 
-This organization reset does not select a new application or start an experiment.
-It does not automatically restart sorting, filters, e-graphs, or reconstruction.
-No useful quantum discovery advantage is currently established. Do not let a
-tractable spin-off substitute for the main question.
+Do not build a general solver, a random-oracle data structure, or a large benchmark
+before these questions justify it. The other two screened mechanisms are reserves,
+not simultaneous active implementation projects.
 
-Any subsequent candidate comparison must include matched inputs, preprocessing,
-coherent access, discovery, certification, extraction, errors, reuse, and the best
-legitimate classical route to the same benefit. No isolated oracle or square-root
-search bound suffices without the complete application-specific comparison.
+## Evidence and continuation boundaries
 
-## Scientific boundaries that remain binding
+Run `python experiments/operator_compilation_v1/verify.py` for the new finite
+algebra checks. It is not a quantum simulation or full implementation. At this
+checkpoint it passed twice; its -O rejection was checked. Root and historical
+verifiers were not rerun because their source and fixtures were unchanged.
+Execute additional applicable checks when later changes warrant them and report
+exactly what was run. Use temporary outputs; do not execute assertion-dependent
+research code under -O/-OO.
 
-[Note 27](../exploration/phase_2/SOURCE_AWARE_DESCENT_27.md)'s source-aware descent
-comparison remains closed. The ordinary route can reuse the same smaller-field
-backend calls as the twist route. The reconstruction theorem does not reopen that
-claim or remove quantum generator/arithmetic conditions.
+Both classical spin-offs own their further development. Do not extend or modify
+them from this project. Phase-2 Note 27's source-aware descent comparison stays
+closed; Notes 28 and 29 remain unchanged supporting records, with their true-count
+promise and authentication/novelty limitations intact. Historical next steps do
+not create parallel active tasks.
 
-[Note 28](../exploration/phase_2/ORDINARY_QUERY_THEOREM_AUDIT_28.md) and
-[Note 29](../exploration/phase_2/RECONSTRUCTION_PROOF_REVIEW_29.md) remain unchanged
-supporting records. The decoder has a promised true-count input; successful decoding
-is not count authentication. Internal proof and implementation checks are not an
-external review, minimum-query theorem, curve-realizability result, or unconditional
-publication-priority claim.
-
-Historical "next steps" in numbered notes and earlier work orders describe their
-checkpoints, not a parallel active agenda. Earlier negative findings are not
-silently reopened. New research should use a versioned successor when needed and
-preserve the prior evidence.
-
-## Verification and authority
-
-This is a documentation-only reset. No experiment, native application, quantum
-circuit, or hardware run was performed. No scientific verifier was rerun. For
-later scientific changes, execute the applicable verifiers, including the root
-`python verify.py` for its historical scope when applicable, and report exactly
-what was and was not rerun. Use temporary outputs and never Python `-O` or `-OO`.
-
-Preserve historical proofs, sources, reports, manifests, notices, and LICENSE.
-The reset updates entry-point documentation on `main` and this branch only; it
-merges no research branch and leaves `research/sharing-core-publication` untouched.
-Modify no other repository. No manuscript revival, submission, external contact,
-paid computation, unattended work, release tag, or administration change is
-part of this task.
+Preserve prior proofs, sources, reports, manifests, notices, and LICENSE. Modify
+only Quantum-Assisted-Algorithm-Discovery. No manuscript revival, outside contact,
+paid computation, unattended work, submission, release, branch merge, or repository
+administration change is part of this work order.
