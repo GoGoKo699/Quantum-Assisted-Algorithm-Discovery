@@ -1,0 +1,16 @@
+{
+  "dependency": {
+    "git_blob": "1103a78f1c434dbdae8db1f47456700a76405136",
+    "path": "../translation_cost_v1/cost.py",
+    "sha256": "699f07d15e43c056bb81f14656e8f1504e7840fd757fd5336fa7d8097ae58eff"
+  },
+  "schema": 1,
+  "sha256": {
+    "README.md": "683e1748c7f38b607c98276a4097e571ebc95400320737bec5d881e9343398a9",
+    "REPORT.json": "31cbaa2bfe28a18b687f7c1afa865c437605d1584f89c55bcd5e3d4fb4cbb11e",
+    "SOURCES.md": "c743a8ae2068deb58973593e046f48d34eaf1f03dc99cf289a8d9ae9fa8de3f5",
+    "checks.py": "b261c64cdebd18a823e0b5aec594523e5e03ef0c39b4fd085b48951eaa067f5d",
+    "transcripts.py": "6eda90bb1fd61f84a0b1115cd68547742cfe423f9221147561b379848b43b693",
+    "verify.py": "9d9b2557bb22dd0232d7d9f37d9cb562e7a0993e0828bc569046e6077025663a"
+  }
+}

@@ -1,0 +1,334 @@
+{
+  "cost_asymmetry_control": {
+    "plain": 12,
+    "signed": 8004
+  },
+  "genus_one_two_controls": 2,
+  "genus_ten": {
+    "formal_ratios_not_speedups": {
+      "formal_inversion_term": {
+        "denominator": 4402040322,
+        "numerator": 55077219601
+      },
+      "formal_polynomial_term": {
+        "denominator": 663022566,
+        "numerator": 4158599215
+      },
+      "full_translations": {
+        "denominator": 152818614,
+        "numerator": 265458395
+      }
+    },
+    "g": 10,
+    "h": 8,
+    "homogeneous_sensitivity_not_gate_counts": [
+      {
+        "limit": {
+          "denominator": 1,
+          "numerator": 1
+        },
+        "plain": 12,
+        "power": 0,
+        "ratio": {
+          "denominator": 1,
+          "numerator": 1
+        },
+        "signed": 12
+      },
+      {
+        "limit": {
+          "denominator": 3,
+          "numerator": 5
+        },
+        "plain": 88,
+        "power": 1,
+        "ratio": {
+          "denominator": 13,
+          "numerator": 22
+        },
+        "signed": 52
+      },
+      {
+        "limit": {
+          "denominator": 1,
+          "numerator": 3
+        },
+        "plain": 900,
+        "power": 2,
+        "ratio": {
+          "denominator": 8,
+          "numerator": 25
+        },
+        "signed": 288
+      },
+      {
+        "limit": {
+          "denominator": 3,
+          "numerator": 17
+        },
+        "plain": 10864,
+        "power": 3,
+        "ratio": {
+          "denominator": 16,
+          "numerator": 97
+        },
+        "signed": 1792
+      },
+      {
+        "limit": {
+          "denominator": 1,
+          "numerator": 11
+        },
+        "plain": 143460,
+        "power": 4,
+        "ratio": {
+          "denominator": 66,
+          "numerator": 797
+        },
+        "signed": 11880
+      }
+    ],
+    "plain_common_backend": {
+      "calls": 12,
+      "formal_inversion_term": 35249420544640000,
+      "formal_polynomial_term": 13307517488000000,
+      "full_translations": 265458395,
+      "initial_translations": 134867595,
+      "max_accumulator_bits": 6404
+    },
+    "plain_degrees": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      10,
+      12,
+      14,
+      16
+    ],
+    "q": 1000003,
+    "signed_common_backend": {
+      "calls": 12,
+      "formal_inversion_term": 2817305806080000,
+      "formal_polynomial_term": 2121672211200000,
+      "full_translations": 152818614,
+      "initial_translations": 76629054,
+      "max_accumulator_bits": 3204
+    },
+    "signed_curve_degrees": [
+      1,
+      3,
+      5,
+      7
+    ],
+    "signed_twist_degrees": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ]
+  },
+  "homogeneous_cost_checks": 640,
+  "independent_determinant_checks": 24,
+  "malformed_controls": 10,
+  "polynomial_controls": [
+    {
+      "calls_each": 2,
+      "factor_traces": [
+        -413,
+        -240,
+        -67
+      ],
+      "g": 3,
+      "q": 65537
+    },
+    {
+      "calls_each": 3,
+      "factor_traces": [
+        -384,
+        -211,
+        -38,
+        135
+      ],
+      "g": 4,
+      "q": 65537
+    },
+    {
+      "calls_each": 5,
+      "factor_traces": [
+        -355,
+        -182,
+        -9,
+        164,
+        337
+      ],
+      "g": 5,
+      "q": 65537
+    },
+    {
+      "calls_each": 6,
+      "factor_traces": [
+        -326,
+        -153,
+        20,
+        193,
+        366,
+        -462
+      ],
+      "g": 6,
+      "q": 65537
+    },
+    {
+      "calls_each": 8,
+      "factor_traces": [
+        -297,
+        -124,
+        49,
+        222,
+        395,
+        -433,
+        -260
+      ],
+      "g": 7,
+      "q": 65537
+    },
+    {
+      "calls_each": 9,
+      "factor_traces": [
+        -268,
+        -95,
+        78,
+        251,
+        424,
+        -404,
+        -231,
+        -58
+      ],
+      "g": 8,
+      "q": 65537
+    },
+    {
+      "calls_each": 11,
+      "factor_traces": [
+        -239,
+        -66,
+        107,
+        280,
+        453,
+        -375,
+        -202,
+        -29,
+        144
+      ],
+      "g": 9,
+      "q": 65537
+    },
+    {
+      "calls_each": 12,
+      "factor_traces": [
+        -210,
+        -37,
+        136,
+        309,
+        482,
+        -346,
+        -173,
+        0,
+        173,
+        346
+      ],
+      "g": 10,
+      "q": 65537
+    },
+    {
+      "calls_each": 14,
+      "factor_traces": [
+        -181,
+        -8,
+        165,
+        338,
+        -490,
+        -317,
+        -144,
+        29,
+        202,
+        375,
+        -453
+      ],
+      "g": 11,
+      "q": 65537
+    },
+    {
+      "calls_each": 15,
+      "factor_traces": [
+        -152,
+        21,
+        194,
+        367,
+        -461,
+        -288,
+        -115,
+        58,
+        231,
+        404,
+        -424,
+        -251
+      ],
+      "g": 12,
+      "q": 65537
+    },
+    {
+      "calls_each": 17,
+      "factor_traces": [
+        -123,
+        50,
+        223,
+        396,
+        -432,
+        -259,
+        -86,
+        87,
+        260,
+        433,
+        -395,
+        -222,
+        -49
+      ],
+      "g": 13,
+      "q": 65537
+    },
+    {
+      "calls_each": 18,
+      "factor_traces": [
+        -94,
+        79,
+        252,
+        425,
+        -403,
+        -230,
+        -57,
+        116,
+        289,
+        462,
+        -366,
+        -193,
+        -20,
+        153
+      ],
+      "g": 14,
+      "q": 65537
+    }
+  ],
+  "schema": 1,
+  "scope": "Transcript equivalence and conditional reconstruction; no new curve, order-finder, circuit or benchmark.",
+  "supplied_polynomial_reconstructions_each_route": 12,
+  "transcript_roundtrips": 128
+}
