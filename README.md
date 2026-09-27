@@ -4,41 +4,44 @@
 Manuscript: on hold.**
 
 Can circuit-model quantum computation discover compact classical information
-that supports a useful reusable method? The provisional task is an exact local
-Weil polynomial for an explicitly specified odd-degree hyperelliptic curve.
-It supplies a known classical recurrence for later extension counts; the recurrence
-itself is not a newly discovered algorithm. The general quantum zeta capability
-is prior work. No useful quantum/classical crossover is established.
+that supports a useful reusable method? The provisional example is the exact
+local Weil polynomial of an explicit hyperelliptic curve. It supplies the
+coefficients of a known classical counting recurrence; the general quantum
+zeta capability is established prior work, not this project's discovery.
+No useful quantum/classical crossover is established.
 
 Start with the [phase-2 charter](exploration/phase_2/CHARTER.md),
-[matched reconstruction comparison](exploration/phase_2/MATCHED_RECONSTRUCTION_COMPARATOR_26.md),
-and [current scientific work order](work_orders/CURRENT.md).
+[source-aware descent comparison](exploration/phase_2/SOURCE_AWARE_DESCENT_27.md),
+and [current work order](work_orders/CURRENT.md).
 
-## Current result
+## Latest comparison
 
-After the same pruning and endpoint completion, the fresh-twist and ordinary
-base-change routes need the SAME number of cardinality calls. Their exact integer
-transcripts are interconvertible. Twists replace degree-2n base-change queries
-with degree-n queries, not fewer calls than an equally optimized comparator.
-For the genus-ten illustration, both routes use 12 calls, with maximum degrees
-16 and 8 respectively. These are query schedules, not observed speedups.
+The ordinary group-order requests can use the same smaller-field computation
+as the signed/twist route: apply the known identity K_(2n)=K_n*T_n and reuse
+computed values. After this classical preprocessing, the two routes have the
+same underlying curve/twist order calls. Thus Note 26's degree-weighted ratios
+measure a comparison with an **unsplit** ordinary backend, not with every
+source-aware quantum implementation. This is not a classical simulation of
+quantum group-order finding and does not disprove the general quantum capability.
 
-The [general-translation analysis](exploration/phase_2/FAMILY_AND_TRANSLATION_COST_25.md)
-charges exceptional arithmetic, canonical encodings and uncomputation, but remains
-a loose asymptotic construction rather than a compiled circuit. The new matched
-comparison uses the same backend and error allocation on both sides. A substantive
-complete-resource or capability claim is still needed before an implementation
-campaign. The classical method may bypass group orders altogether.
+The [focused diagnostic](experiments/descent_baseline_v1/README.md) tests the call
+normalization and a finite-field counterexample to confusing equality of group
+cardinalities with a direct-product decomposition of quantum group registers.
+The exact reconstruction theorem remains useful; its precise priority in the
+restricted ordinary-query model is a separate, unresolved question.
 
 ```sh
+python experiments/descent_baseline_v1/verify.py
 python experiments/reconstruction_comparator_v1/verify.py
 python experiments/translation_cost_v1/verify.py
 python experiments/subgroup_stop_v1/verify.py
 ```
 
-These verify exact diagnostics, not quantum hardware. The [subgroup-stopping rule](exploration/phase_2/SUBGROUP_CERTIFIED_STOPPING_24.md)
-also remains available: accept only a unique multiple of a computed subgroup size
-in the rigorous ambient interval. All deductions are available to classical methods.
+These are exact component checks, not quantum-hardware or native application
+benchmarks. [General-translation arithmetic](exploration/phase_2/FAMILY_AND_TRANSLATION_COST_25.md)
+and [subgroup-certified stopping](exploration/phase_2/SUBGROUP_CERTIFIED_STOPPING_24.md)
+remain preserved supporting results. All allowed deductions and source information
+must be available to the classical competitor, which may bypass group orders.
 
 ## Preserved work
 
@@ -46,8 +49,8 @@ in the rigorous ambient interval. All deductions are available to classical meth
 Sorting, arithmetic synthesis and e-graph results are background evidence, not
 compulsory Phase-2 targets. The inherited [claim ledger](STATUS.md) concerns those
 earlier investigations; current decisions are in the work order and numbered
-notes. Historical source, result and third-party license files are unchanged.
+notes. Historical sources, results and third-party notices remain unchanged.
 The separate Algebraic-Loop-Certificates project is not developed or counted as
-quantum-advantage evidence here.
+quantum-advantage evidence here. No further spinoff is currently requested.
 
 Original [MIT license](LICENSE), Copyright (c) 2026 Ruge Lin, unchanged.

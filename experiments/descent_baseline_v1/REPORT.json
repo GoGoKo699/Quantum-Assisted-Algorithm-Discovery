@@ -1,0 +1,96 @@
+{
+  "base_twist_not_fresh": {
+    "extended_base_twist_order": 32,
+    "fresh_twist_order": 20
+  },
+  "elliptic_control": {
+    "base_order": 8,
+    "curve": "y^2=x^3-x over F_5",
+    "extension_model": "F_5[s]/(s^2-2)",
+    "natural_subgroup_intersection": 4,
+    "quadratic_extension_order": 32,
+    "quantum_state_factorization": "NOT established; the groups are not isomorphic",
+    "sum_subgroup_order_by_intersection_formula": 8,
+    "twist": "y^2=x^3+x; nonsquare d=2",
+    "twist_order": 4,
+    "two_torsion_extension": 4,
+    "two_torsion_product": 16
+  },
+  "genus_ten_plan": {
+    "common_backend_leaves": [
+      [
+        "K",
+        1
+      ],
+      [
+        "T",
+        1
+      ],
+      [
+        "T",
+        2
+      ],
+      [
+        "K",
+        3
+      ],
+      [
+        "T",
+        3
+      ],
+      [
+        "T",
+        4
+      ],
+      [
+        "K",
+        5
+      ],
+      [
+        "T",
+        5
+      ],
+      [
+        "T",
+        6
+      ],
+      [
+        "K",
+        7
+      ],
+      [
+        "T",
+        7
+      ],
+      [
+        "T",
+        8
+      ]
+    ],
+    "h": 8,
+    "leafwise_backend_ratio": "1 exactly when settings and leaf data agree",
+    "leaves_each_route": 12,
+    "max_leaf_degree_each_route": 8,
+    "original_requests": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      10,
+      12,
+      14,
+      16
+    ],
+    "products_to_materialize_original_requests": 8
+  },
+  "malformed_controls": 10,
+  "matched_h_values": 64,
+  "nonempty_request_subsets": 255,
+  "scalar_product_checks": 3136,
+  "schema": 1,
+  "scope": "Classical task normalization and one finite-field nonsplitting control; no quantum experiment."
+}
