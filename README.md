@@ -1,37 +1,71 @@
 # Quantum-Assisted Algorithm Discovery
 
-**Can a circuit-model quantum computer discover a useful reusable classical method more efficiently than a serious classical discovery process?** The resulting method should run classically. Compactness and reuse alone do not establish quantum advantage.
+**Can a circuit-model quantum computer discover a useful reusable classical method
+more efficiently than a strong classical discovery process?** The resulting method
+should run classically. Compactness and reuse alone do not establish quantum advantage.
 
-**Status: exploratory. No useful quantum advantage, new sorting/multiplication record, or deployed faster routine is established.**
+**Status: continuing exploration. No useful quantum discovery advantage is established.
+Manuscript preparation is on hold.**
 
-## Current investigation
+## Start here
 
-The [sorting-completion successor](experiments/sorting_completion_v1/README.md) examines a provisional unsupplied target: an 18-input sorting network with at most ten layers, if one exists. The checked primary sources retain a 10--11 depth gap. This is a structural target, not yet a workload with established practical benefit and a strong-classical discovery-cost comparison.
+Read the [project map](PROJECT_MAP.md) for the objective, independent spin-offs,
+branch roles, and continuation boundaries. The [active parent work order](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/research/prx-quantum-phase2/work_orders/CURRENT.md)
+and [phase-2 charter](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/research/prx-quantum-phase2/exploration/phase_2/CHARTER.md) govern the ongoing exploration.
 
-Exact classical prefix reduction leaves only 243/928 Boolean states after six layers for pinned 18/28-input reference networks. An independent incremental native-Z3 encoding then searches for a suffix while retaining classical counterexamples and learned solver information. It is not the published optimized MiniSat or SorterHunter implementation.
+The active working branch is `research/prx-quantum-phase2`. This default branch is
+the public entry point and retains earlier evidence; it is not a merged copy of
+all later research. Sorting, filters, matrix multiplication, and reconstruction
+are not mandatory directions for the next step.
 
-The fixed six-layer 18-input prefix received a native UNSAT response for a four-layer completion even without symmetry restrictions; no independently checked UNSAT proof is supplied, and no global impossibility is inferred. Earlier-prefix cases remain UNKNOWN. A known-feasible 28-input control also times out, so those timeouts are not hardness evidence. A recovered eleven-layer control has 80 comparators versus 78 supplied. Its verification accounts for only about 0.214% of measured work; accelerating only that stage cannot yield a meaningful advantage for that run.
+## Two independent classical spin-offs
 
-The next milestone is a strong native classical completion baseline and an execution-relevant output criterion, not another isolated quantum verifier or unpriced oracle. See the [work order](work_orders/CURRENT.md), [claim ledger](STATUS.md), and [source/measurement provenance](experiments/sorting_completion_v1/PROVENANCE.json).
+| Project | Work now owned by that project |
+|---|---|
+| [Algebraic-Loop-Certificates](https://github.com/GoGoKo699/Algebraic-Loop-Certificates) | Classical loop certificates, reusable summaries, and verification integration |
+| [Sparse-Weil-Reconstruction](https://github.com/GoGoKo699/Sparse-Weil-Reconstruction) | Exact selected-data reconstruction of Weil polynomials, proof, and decoder |
 
-## Verify the successor
+Both have their own projects and repositories. Their further development belongs
+there. They retain value on their own terms, but neither substitutes for the
+parent's quantum-discovery objective. The parent keeps provenance and supporting
+references rather than a duplicate development agenda.
 
-With Python 3.10 or later:
+## What the parent must establish
 
-```bash
+A candidate needs a useful classical output, a genuine quantum role in obtaining
+it, and a complete comparison against strong classical alternatives. Account for
+preparation, discovery, certification, extraction, error handling, and later use.
+A classical competitor may obtain the same benefit without reproducing the proposed
+quantum pipeline. The [charter](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/research/prx-quantum-phase2/exploration/phase_2/CHARTER.md) sets the detailed standard.
+
+## Preserved evidence and reproduction
+
+The [sorting-completion experiment](experiments/sorting_completion_v1/README.md),
+[eleven-bank filter screen](experiments/depth2_cover_v1/README.md), and older guided,
+target-closure, and filter experiments remain available in their versioned
+directories. They are retained checkpoints, not the default next task. Their
+scientific claims and limitations are unchanged. The older sections of the
+[claim ledger](STATUS.md) and [guided-search design](docs/current-design.md) are
+historical records, not competing current work orders.
+
+For the preserved sorting-completion checks, with Python 3.10 or later:
+
+```sh
 python experiments/sorting_completion_v1/verify.py
 ```
 
-The standard-library checks cover 1,211 exact prefix comparisons, 152 independently enumerated completion decisions, known-network certificates and the recovered suffix. The optional command additionally runs the native Z3 C shared library on all 152 small decisions:
+The optional native-Z3 check is:
 
-```bash
+```sh
 python experiments/sorting_completion_v1/verify.py --solver
 ```
 
-All generated data go to temporary paths. Never use Python -O/-OO. Recorded benchmark timings and timeout/model outcomes are observations, not deterministic expectations.
+See each experiment's README for its verification scope and dependencies. Generated
+data belong in temporary paths. Never use Python `-O` or `-OO` for assertion-dependent
+checks. Historical timing and timeout observations are not deterministic expectations;
+old quantum resource figures apply only to their original constructions.
 
-## Preserved earlier evidence
-
-The [eleven-bank filter count/depth screen](experiments/depth2_cover_v1/README.md) is complete within its declared bounded model. These small tasks remain retired as quantum-advantage candidates; the current turn reran its default verifier successfully. The older guided-search, target-closure, unique-helper and first-filter experiments remain unchanged in their versioned directories. Consult their notes for verification scope and dependencies. Old quantum resource figures apply only to their old constructions.
-
-The project is not committed to sorting, filters, matrix multiplication, QML or a hardware platform. The target remains a useful classical output and a defensible quantum advantage in obtaining it. All historical source/result bytes and the original [MIT license](LICENSE), Copyright (c) 2026 Ruge Lin, are preserved.
+This organizational update reran no experimental verifier and introduces no new
+scientific result. All experiment sources, reports, proof notes, manifests,
+third-party notices, and the original [MIT license](LICENSE), Copyright (c) 2026
+Ruge Lin, are preserved.
