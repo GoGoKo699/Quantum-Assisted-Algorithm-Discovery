@@ -1,5 +1,40 @@
 # Claim ledger
 
+## Current checkpoint: application-first screen, 28 September 2026
+
+The [application case](exploration/phase_3/APPLICATION_CASE_02.md) selects one bounded
+feasibility lead: learning a reusable classical reactive simulator for initial
+battery-interface chemistry, potentially using quantum-generated electronic
+references. A real workflow and deployment interface are documented. No quantum
+advantage, novel simulator, electronic-structure result, or battery-performance
+improvement has been established. The generic architecture is prior work.
+
+A March 2026 primary study already computes strong classical correlated references
+for EC on lithium clusters. The poor performance of PBE does not establish a
+quantum need. Replaying earlier molecular rate data gives a PBE/CC rate ratio of
+about 67 million but a CC/hybrid ratio of about 1.97; neither is a computational
+speedup. Surface static barriers and finite-temperature rates remain distinct.
+
+The [current work order](work_orders/CURRENT.md) calls for one pinned, matched-input
+cost/accuracy comparison against modern classical chemistry. Published raw geometry
+and model packages were not obtained. A proposed Li40+EC calibration is deliberately
+classically accessible, not a quantum-hard target. No large campaign was started.
+
+The new standard-library arithmetic verifier passed twice, rejected six invalid
+inputs, and refused -O. It checks transcribed scalar arithmetic, illustrative
+energy-to-rate sensitivity, and explicit electron counting only. No electronic,
+MD, force-field, quantum-circuit, or performance run occurred. Root and historical
+research verifiers were not rerun. The operator stays parked; both spin-offs and
+all earlier scientific evidence remain unchanged.
+
+## Earlier status records
+
+The prior status document is retained below. Its statements that no application
+was selected describe the earlier priority reset, not the current bounded lead.
+Earlier technical next steps do not create parallel work orders.
+
+---
+
 ## Current decision: usefulness before mechanism development, 27 September 2026
 
 **The small-operator candidate is parked.** Its application case was not
