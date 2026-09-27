@@ -1,0 +1,10 @@
+{
+  "schema": 1,
+  "sha256": {
+    "README.md": "07d13c3201e5326549a517a7948b0e7b77841dca1a42390835b93c8c3cd30ad6",
+    "REPORT.json": "4f848fdc93cbace74cf39d80c7d7c1e467b67c0f44b58b3675da46e1d9d58d91",
+    "checks.py": "66d76c50a992a73996a22e758aa63bbfe632743c1eef5ed067592b18c73dd6c3",
+    "subgroup.py": "ffce48b68e2e1e88d5d137abac4a9d9cc03817cfc6daaaf8a8c8bbb2be7d0bb2",
+    "verify.py": "95fe9cf8497afce5431be13ce4d3d217ab63028214df0bf40be15a4eb956d9d1"
+  }
+}

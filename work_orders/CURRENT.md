@@ -1,67 +1,70 @@
-# Current task: useful quantum advantage, with an originality and feasibility gate
+# Current task: residual period-finding cost on a justified useful family
 
-Target: **PRX Quantum**. Manuscript preparation remains **on hold**.
-Read `exploration/phase_2/CHARTER.md`. No submission deadline is imposed.
+Active branch: `research/prx-quantum-phase2`. Target: **PRX Quantum**.
+Manuscript preparation remains **on hold**. No submission deadline is imposed.
+Read `exploration/phase_2/CHARTER.md` and notes 21 through 24.
 
-## Project boundary
+## Boundary and inherited capability
 
-Algebraic-Loop-Certificates is a separate project. Do not develop its classical
-certificate software here or count its progress as quantum-advantage evidence.
-Preserve historical sources, results, other branches and the original LICENSE.
-The current project pursues a consequential circuit-model quantum capability,
-with comparable source information, AI assistance, preprocessing and reuse for
-the classical competitor. That competitor may bypass our intermediate objects.
+Modify only Quantum-Assisted-Algorithm-Discovery. Preserve `main`, other research
+branches, historical source/results and LICENSE. Algebraic-Loop-Certificates is a
+separate project; its progress is not quantum-advantage evidence. Do not merge the
+previous sharing-core PR or revive its manuscript as part of this continuation.
 
-## Current assessment
+The compact-input algebraic strategy stays open. Zeta compilation is provisional,
+not the selected manuscript contribution. Preserve the rank-aware generation,
+retained-register character phases, control recycling, initial-order reuse, exact
+reconstruction and transfer limitations of notes 21-22. Note 23 permits bounded
+classical noncyclic completion after element-order acquisition; it does not claim
+a new quantum/group-structure primitive or an established useful advantage.
 
-Read `exploration/phase_2/ZETA_ORIGINALITY_AND_RANK_AWARE_COST_21.md` and its
-predecessors 18 through 20. The compact-input algebraic strategy remains open;
-zeta compilation is a provisional implementation candidate, not the selected
-manuscript contribution.
+## Latest accepted inference
 
-The new audit identifies the twist logarithm exactly with the two-term Mobius
-combination in Kedlaya's reconstruction. Do not claim a new inversion principle.
-Priority of the smaller-field query schedule remains unresolved. Low-genus
-special formulas remain legitimate and sometimes stronger comparators.
+Read `exploration/phase_2/SUBGROUP_CERTIFIED_STOPPING_24.md`.
+For any supplied elements with checked exact orders, apply bounded completion to
+H, the subgroup they actually generate. Its size M divides the ambient size N.
+Accept N only when the original rigorous interval [L,U] contains one multiple of
+M. Incomplete sampling is not, by itself, a correctness failure for this accepted
+branch. A completed subgroup calculation alone must never be returned as N.
 
-The current implementation outline uses the Jacobian's rank bound to shorten
-generating lists, joint character-phase estimation with a retained group register,
-a recycled control qubit, and reuse of the initial order-recovery tuples in the
-relation sample bank. These are standard tools with explicit error budgets.
-They are not an established new quantum advantage or full resource estimate.
+Try the cheaper order-lcm divisor test first. Retain declared acquisition and
+completion limits, exact factor/order verification, inconclusive outcomes and
+the full fallback. A valid group implementation and valid ambient bounds remain
+premises. This does not establish termination or make the fallback deterministic.
 
-The new report counts controlled GENERAL Jacobian translations for one explicit,
-nonoptimized backend. It leaves their full elementary-gate cost and workspace
-symbolic. Parameter tables are not a large-curve run or a quantum/classical
-crossover. A large upper bound proves neither practical feasibility nor
-infeasibility; a reduced schedule alone does not establish significant novelty.
+The cost caveat is material: with d=[G:H] and c_H=M/exp(H), the completion parameter
+floor(U/exp(H)) scales as d*c_H when U/N is bounded, not just c_H. A smaller sampled
+subgroup need not lower total cost. Give the classical competitor the same rule,
+subgroup algorithms, source information, batching, preprocessing and reuse.
 
 ## Next discriminating work
 
-Specify an independently justified curve family and the exact invariant or other
-output it needs. Inspect or execute the appropriate strong classical algorithm
-and determine what dominates its cost. In parallel, derive a conservative bound
-for the general controlled-translation implementation actually needed by the
-quantum schedule. Keep field characteristic, extension degree, genus, batching,
-special structure and allowed preprocessing explicit.
+Specify an independently justified curve family and exact invariant or reusable
+output. Inspect or execute its appropriate strong classical point-counting route
+and identify the residual dominant cost after the available deductions. In
+parallel, derive a conservative cost for the controlled GENERAL Jacobian
+translations required by the retained quantum schedule. Keep characteristic,
+extension degree, genus, special structure, all repeated calls and fallback costs
+explicit. A mathematical consumer is sufficient; an industrial one is not required.
 
-The purpose is to decide whether a defensible complete-resource or capability
-contribution exists. Do not start a general arithmetic compiler or another series
-of tiny curve enumerations simply because those are convenient tasks. A mathematical
-consumer can suffice; an industrial customer is not mandatory. A new workflow
-is allowed but must justify its benefit independently of user approval or the
-journal target. Do not manufacture a workload solely to disable classical methods.
-If the zeta candidate does not earn a contribution, retain the broader compact-input
-algebraic direction rather than weaken the comparison.
+Do not build another stopping wrapper, generic arithmetic library or census of
+tiny curves/groups merely because it is feasible. These exact stopping questions
+are now resolved at the present abstraction. New work should decide the complete
+resource/capability question, or identify a genuinely better compact-input route.
+The classical method may bypass our intermediate objects entirely.
 
-## Reproducibility and claims
+## Reproduction and limits
 
-The latest source checks and parameter report are in the supplied conversation
-checkpoint `Quantum_Discovery_Zeta_Feasibility_Assessment.zip`. Its source is not
-represented as committed production code. The new verifier and the preceding
-curve-generator verifier passed unchanged expectations. No native large-field
-point counter, elementary-gate quantum circuit, quantum hardware, or root historical
-verifier was run. Mathematical bounds and finite tests have distinct evidential roles.
+Run `python experiments/subgroup_stop_v1/verify.py` for the new diagnostic. It
+checks committed source hashes and regenerates the exact report in temporary
+storage. Preserve expected evidence; do not edit it just to make changed code pass.
+The independent finite controls do not demonstrate quantum advantage.
+
+The earlier exponent-cofactor archive was located but could not be materialized;
+its 164-curve suite was not rerun. The new source is independently written and
+committed, not mislabeled as an archive import. No native large-curve counter,
+quantum order finder, elementary-gate circuit, hardware experiment or historical
+root verifier was executed for note 24. Report those limits explicitly.
 
 No manuscript revival, submission, outside contact, paid computation, unattended
-work, previous-PR merge or repository administrative change is authorized.
+work, unrelated-branch merge or repository administrative change is authorized.

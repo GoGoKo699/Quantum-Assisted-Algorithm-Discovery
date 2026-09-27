@@ -1,0 +1,140 @@
+{
+  "budget_control": {
+    "divisor": 2,
+    "reason": "C=520 exceeds cap=64",
+    "route": "completion-budget",
+    "status": "inconclusive"
+  },
+  "census": {
+    "accepted": 2045,
+    "accepted_after_subgroup_completion": 392,
+    "accepted_proper_subgroup": 1016,
+    "ambient_interval_checks": 3310,
+    "generating_lists": 662,
+    "inconclusive": 1265,
+    "nonminimal_orders_rejected": 1236,
+    "proper_subgroup_lists": 404,
+    "subgroup_completions": 1986
+  },
+  "examples": {
+    "proper_subgroup_certifies_eight": {
+      "cardinality": 8,
+      "completion": {
+        "cofactor_bound": 5,
+        "cosets": 2,
+        "digit_table_entries": 2,
+        "exponent": 2,
+        "membership_tests": 5,
+        "skipped_primes": [],
+        "subgroup_order": 4
+      },
+      "divisor": 4,
+      "multiplier": 2,
+      "route": "subgroup-divisor",
+      "status": "accepted"
+    },
+    "same_samples_wide_interval": {
+      "completion": {
+        "cofactor_bound": 6,
+        "cosets": 2,
+        "digit_table_entries": 2,
+        "exponent": 2,
+        "membership_tests": 5,
+        "skipped_primes": [],
+        "subgroup_order": 4
+      },
+      "divisor": 4,
+      "first_multiplier": 1,
+      "last_multiplier": 3,
+      "route": "subgroup-divisor",
+      "status": "inconclusive"
+    }
+  },
+  "family_count": 11,
+  "large_controls": [
+    {
+      "ambient_size": 2541748224,
+      "e": 20,
+      "group_calls": {
+        "addition": 29489,
+        "equality": 2226,
+        "negation": 1989
+      },
+      "result": {
+        "cardinality": 2541748224,
+        "completion": {
+          "cofactor_bound": 26,
+          "cosets": 8,
+          "digit_table_entries": 2,
+          "exponent": 105906176,
+          "membership_tests": 101,
+          "skipped_primes": [
+            101
+          ],
+          "subgroup_order": 847249408
+        },
+        "divisor": 847249408,
+        "multiplier": 3,
+        "route": "subgroup-divisor",
+        "status": "accepted"
+      }
+    },
+    {
+      "ambient_size": 2665216185729024,
+      "e": 40,
+      "group_calls": {
+        "addition": 99359,
+        "equality": 4246,
+        "negation": 4009
+      },
+      "result": {
+        "cardinality": 2665216185729024,
+        "completion": {
+          "cofactor_bound": 26,
+          "cosets": 8,
+          "digit_table_entries": 2,
+          "exponent": 111050674405376,
+          "membership_tests": 101,
+          "skipped_primes": [
+            101
+          ],
+          "subgroup_order": 888405395243008
+        },
+        "divisor": 888405395243008,
+        "multiplier": 3,
+        "route": "subgroup-divisor",
+        "status": "accepted"
+      }
+    },
+    {
+      "ambient_size": 2930436186745861119487770624,
+      "e": 80,
+      "group_calls": {
+        "addition": 360299,
+        "equality": 8286,
+        "negation": 8049
+      },
+      "result": {
+        "cardinality": 2930436186745861119487770624,
+        "completion": {
+          "cofactor_bound": 26,
+          "cosets": 8,
+          "digit_table_entries": 2,
+          "exponent": 122101507781077546645323776,
+          "membership_tests": 101,
+          "skipped_primes": [
+            101
+          ],
+          "subgroup_order": 976812062248620373162590208
+        },
+        "divisor": 976812062248620373162590208,
+        "multiplier": 3,
+        "route": "subgroup-divisor",
+        "status": "accepted"
+      }
+    }
+  ],
+  "malformed_order_controls": 8,
+  "schema": 1,
+  "scope": "Exact supplied-group controls; no curve or quantum sampler, no native benchmark."
+}
