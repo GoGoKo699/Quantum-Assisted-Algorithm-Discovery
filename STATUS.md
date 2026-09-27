@@ -1,5 +1,31 @@
 # Claim ledger
 
+## Current decision: usefulness before mechanism development, 27 September 2026
+
+**The small-operator candidate is parked.** Its application case was not
+established before technical extension became the work order. The conditional
+argument and finite algebra checks remain unchanged, but their existence does not
+justify continuing that direction. This is a research-priority decision, not a
+mathematical refutation, new correctness audit, or claim of universal uselessness.
+
+The [current work order](work_orders/CURRENT.md) instead requires an evidence-backed
+case for a real computational need, a useful reusable classical output, and a
+plausible quantum discovery mechanism tested against strong classical alternatives.
+A domain label is not an application case. No replacement application has yet
+been selected, and no useful quantum discovery advantage is established.
+
+This update changes documentation only. No external application audit, scientific
+verifier, experiment, benchmark, or quantum circuit was run for it. No manuscript
+or new spin-off was started. Historical tests below are not fresh verification.
+
+## Retained checkpoints
+
+Everything below this separator is retained from the preceding status document.
+Its descriptions of the operator as selected, and of technical audits as next,
+are historical and are superseded by the decision above and the live work order.
+
+---
+
 ## Latest parent checkpoint: phase 3, 27 September 2026
 
 The [mechanism screen and conditional operator argument](exploration/phase_3/MECHANISM_SCREEN_01.md)
