@@ -1,5 +1,38 @@
 # Claim ledger
 
+## Current project status: 27 September 2026
+
+**One active parent exploration; two independent classical spin-offs.**
+Follow the [canonical project map](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/main/PROJECT_MAP.md)
+and [active parent work order](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/research/prx-quantum-phase2/work_orders/CURRENT.md).
+The parent's useful quantum-discovery advantage remains unestablished, and
+manuscript preparation remains on hold.
+
+[Algebraic-Loop-Certificates](https://github.com/GoGoKo699/Algebraic-Loop-Certificates)
+and [Sparse-Weil-Reconstruction](https://github.com/GoGoKo699/Sparse-Weil-Reconstruction)
+now have their own projects and repositories. Their ongoing classical development
+belongs there. Their handoffs are complete at the organizational level, not a claim
+that their scientific or publication assessment is complete.
+
+Later phase-2 scientific evidence remains in the
+[numbered research notes](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/tree/research/prx-quantum-phase2/exploration/phase_2).
+The retained reconstruction result is a supporting classical component, not an
+established new quantum advantage. Its spin-off does not reopen the closed
+source-aware descent comparison.
+
+## Reading the retained historical ledger
+
+Everything below the separator is the retained earlier ledger. Its headings
+"Latest" and "Still required", and references to "this turn" or "the latest turn",
+describe their original checkpoints, not the current work order. In particular,
+the sorting screen is not automatically the next task. Earlier evidence and
+negative findings remain valid within their stated scopes.
+
+This documentation-only reset reran no experimental verifier and introduced no
+scientific result. Historical verification claims below are not new reruns.
+
+---
+
 ## Latest: sorting-completion workload screen, 25 September 2026
 
 **Provisional target:** an unsupplied 18-input depth-ten sorting network. Existence, implementation-level benefit and quantum discovery advantage are not established. This is not a return to the retired small filter tasks.
