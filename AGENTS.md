@@ -19,6 +19,21 @@ work orders are historical records. Their uses of "current", "next", or a pendin
 spin-off creation do not override the project map and active work order. Consult
 PROVENANCE.md and the relevant source/experiment documentation before reusing evidence.
 
+## Useful computation before substantial mechanism development
+
+Begin with a documented need that exists outside this project, a concrete useful
+classical output, and a plausible quantum role in obtaining it. Name the workflow,
+required quality, deployment interface, and strongest classical alternative.
+Do not choose an abstract construction first and attach a broad application label
+afterward. A tractable theorem or a small test family is not sufficient evidence
+of usefulness. Small models are welcome when they expose a mechanism for the real
+problem rather than replace it. Immediate deployment is not required.
+
+The first phase-3 operator candidate is parked for lack of an established
+application case. Its finite-precision audit is not the current task. Preserve
+its note and checks; revive it only if the same usefulness standard applied to a
+fresh candidate is met. This is not a refutation or a new spin-off mandate.
+
 ## Preserve scientific and comparison boundaries
 
 The objective is a useful reusable classical output discovered more efficiently
@@ -45,7 +60,7 @@ For scientific changes, run the applicable verifiers, including `python verify.p
 for its historical scope when applicable, and record what was actually rerun.
 For documentation-only changes, check links, branch routing, and the diff; do not
 claim an experimental rerun. Use temporary paths for generated data and benchmarks.
-Never run assertion-dependent code under `-O` or `-OO`.
+Never run assertion-dependent code under -O or -OO.
 
 Keep commits scoped. Update current status and the active work order when evidence
 or ownership changes; distinguish new findings from retained historical claims.
