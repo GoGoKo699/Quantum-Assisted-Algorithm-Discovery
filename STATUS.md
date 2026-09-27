@@ -1,5 +1,37 @@
 # Claim ledger
 
+## Current checkpoint: reference/protocol audit, 28 September 2026
+
+The [reference audit](exploration/phase_3/REFERENCE_ACCESS_AUDIT_03.md) located the
+static cluster paper's public Zenodo deposit, published 26 August 2026. Its ZIP
+preview lists the needed Li40 geometries and energy data. Transfer into the
+runtime failed: archive/member hashes, coordinates and Hamiltonians were not
+processed. Public availability must not be confused with successful local import.
+
+Supplement S3 and the ORCA 6.0 manual correct the matched AFQMC/ORCA model:
+neutral Li40+EC has 154 correlated electrons with C/O cores frozen. The earlier
+74-electron value used additional hypothetical Li-core freezing and is not that
+published convention. Integer spherical-basis accounting gives 1436 full spatial
+functions, 1430 after six core orbitals are removed; an untapered occupation
+encoding then uses 2860 system qubits. This is not a minimum or a gate estimate.
+Small HCI trial spaces in the paper do not define its full AFQMC calculation.
+
+The molecular dynamics precedent trains its molecular CCSD(T) model without
+force labels. Energy-only learning is an alternative to cost explicitly, not a
+surface-accuracy result. No matched runtime comparison or useful quantum discovery
+advantage has been established. The [work order](work_orders/CURRENT.md) retains
+one battery-interface feasibility test; the old operator stays parked.
+
+This checkpoint performed source/protocol inspection and integer accounting only.
+No new verifier, Hamiltonian construction, electronic/MD/quantum run or benchmark
+was added or executed. Historical suites were not rerun. Earlier code, fixtures,
+notes, the two spin-offs and the license remain unchanged.
+
+Everything below is retained historical status. Earlier access and proposed-core
+statements do not override the current audit or live work order.
+
+---
+
 ## Current checkpoint: application-first screen, 28 September 2026
 
 The [application case](exploration/phase_3/APPLICATION_CASE_02.md) selects one bounded
