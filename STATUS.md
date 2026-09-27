@@ -1,6 +1,32 @@
 # Claim ledger
 
-## Current project status: 27 September 2026
+## Latest parent checkpoint: phase 3, 27 September 2026
+
+The [mechanism screen and conditional operator argument](exploration/phase_3/MECHANISM_SCREEN_01.md)
+select small classical-operator compilation for the next bounded investigation.
+The existing branch name is unchanged. No useful quantum discovery advantage is
+established; manuscript preparation remains on hold.
+
+Written in exact arithmetic: an upper-bound contraction for a regularized Gram
+matrix, its final relative approximation and all-right-hand-side solve consequence,
+and an ideal amplitude-estimation row-query calculation. This construction keeps
+a small dense matrix rather than a random table indexed by all input rows.
+A finite-precision circuit implementation, complete gate cost, priority assessment,
+and useful explicit-source workload defeating strong classical alternatives have
+NOT been established. Compact output and reuse are not an advantage certificate.
+
+The new standard-library verifier passed twice: 45 congruence controls (30
+noncommuting), 45 final relative controls, 180 solve inequalities, nine polarization
+identities, 15 scalar schedules, 12 amplitude-budget inequalities, and nine negative
+controls for omitting the safety shift. Its -O rejection was checked. These are
+exact rational finite algebra checks, not quantum simulations or benchmarks.
+Root and historical verifiers were not rerun; their files are unchanged.
+
+The [work order](work_orders/CURRENT.md) requires finite-precision/access-cost and
+predecessor audits, followed by at most one source-generated application comparison.
+No spin-off extension, large benchmark, or manuscript was started.
+
+## Organization reset: 27 September 2026
 
 **One active parent exploration; two independent classical spin-offs.**
 Follow the [canonical project map](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/main/PROJECT_MAP.md)
@@ -28,8 +54,9 @@ describe their original checkpoints, not the current work order. In particular,
 the sorting screen is not automatically the next task. Earlier evidence and
 negative findings remain valid within their stated scopes.
 
-This documentation-only reset reran no experimental verifier and introduced no
-scientific result. Historical verification claims below are not new reruns.
+The earlier documentation-only reset reran no experimental verifier and introduced
+no scientific result. Its scope is distinct from the phase-3 checkpoint above.
+Historical verification claims below are not new reruns.
 
 ---
 
