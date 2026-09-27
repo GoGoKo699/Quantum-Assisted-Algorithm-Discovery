@@ -1,81 +1,81 @@
-# Current task: establish a real computational need before extending a mechanism
+# Current task: a matched battery-interface feasibility comparison
 
-27 September 2026. Scientific phase 3 uses the existing working branch
-`research/prx-quantum-phase2`. Manuscript preparation remains on hold.
+28 September 2026. Active branch: `research/prx-quantum-phase2`.
+Scientific phase 3; manuscript remains on hold.
 
-Read the [project map](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/main/PROJECT_MAP.md)
-and the governing [parent charter](../exploration/phase_2/CHARTER.md).
+Read the [project map](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/main/PROJECT_MAP.md),
+[parent charter](../exploration/phase_2/CHARTER.md), and
+[application case 02](../exploration/phase_3/APPLICATION_CASE_02.md).
 
-## Decision: the small-operator candidate is parked
+## Selected application, not an established quantum advantage
 
-The parent seeks a useful reusable classical method whose discovery benefits
-materially from quantum computation. Mathematical tractability is not sufficient
-reason to select a research direction.
+Investigate a reusable classical energy/force evaluator for initial electrolyte
+chemistry at lithium-metal interfaces. Quantum computation would supply selected
+expensive electronic references offline; subsequent simulation would be classical.
+This is learning a reusable simulator, not a newly discovered symbolic algorithm,
+a one-off energy prediction, or quantum inference at every trajectory step.
 
-The [first phase-3 operator construction](../exploration/phase_3/MECHANISM_SCREEN_01.md)
-has no identified useful source family, demonstrated deployment benefit, or
-complete strong-classical comparison. Its technical audits were placed before
-establishing that need. They are no longer the active task. Preserve the note
-and finite algebra verifier unchanged; this decision neither disproves the
-conditional argument nor establishes its correctness, novelty, or uselessness.
-No new repository or publication track follows from it.
+An external application need and an existing software interface are documented.
+The quantum-reference-to-classical-potential architecture is prior work. No new
+quantum method, novel force field, useful advantage, or battery-performance
+improvement is established. The kernel and weather screens are not parallel tasks.
+The old Gram/operator candidate remains parked and unchanged.
 
-## Next deliverable: an evidence-backed application case, not another theorem
+## The classical comparison must include the March 2026 work
 
-Investigate a small number of computational needs that exist independently of
-this project, then select at most one for a discriminating research calculation.
-The case must answer the following questions with primary application sources,
-actual software or benchmark interfaces where available, and explicit unknowns:
+Vo et al., arXiv:2603.22139v1, already provide correlated classical calculations
+for EC on lithium clusters and identify a competitive hybrid functional. Kundu
+et al., arXiv:2509.14067v1, already provide classical learned reactive potentials.
+Do not use poor PBE predictions or the size of the electronic Hilbert space as
+proof that useful chemistry needs a quantum computer. AFQMC and FEMION are
+classical methods, despite the word quantum in their terminology.
 
-1. **Who needs the computation, and what is the bottleneck?** Name the actual
-   workflow, required outputs, relevant sizes, accuracy or correctness conditions,
-   and evidence that current methods leave a consequential problem. A domain
-   label such as climate, medicine, or energy is not evidence. Distinguish a
-   bottleneck in discovering a routine from a bottleneck in executing it.
-2. **What useful classical method would be delivered?** Specify the reusable
-   artifact, its deployment interface, and a benefit that would matter even
-   without the quantum label. Compare at equal required quality. A smaller
-   symbolic expression, query bound, or matrix is not automatically a runtime,
-   memory, reliability, energy, or scientific-capability improvement.
-3. **Why might quantum discovery change the situation?** Identify the actual
-   discovery obstacle and a plausible quantum-specific mechanism. Allow source
-   inspection, existing libraries, heuristics, preprocessing, parallelism, and
-   direct classical ways to obtain the same benefit. Record access, precision,
-   verification, extraction, and total discovery costs; do not posit a free
-   oracle or weaken the classical competitor to manufacture an advantage.
+The replayed molecular rate ratios are physical predictions, not computational
+speedups. The newer static barrier data are not finite-temperature surface rates.
+Their cross-method spread is not a certified error bound. Finite-size, environment,
+model, and trajectory uncertainty must be distinguished from electronic precision.
 
-The opening test is: would an existing community have a reason to use this
-classical output even if its method of discovery were not mentioned? This tests
-usefulness, not whether classical discovery is easy. Reuse does not itself prove
-that quantum discovery is cheaper. A useful outcome can also be a capability
-currently out of reach, provided the case for its feasibility is explicit.
+## Next bounded task
 
-At the selection stage, a sourced need and a falsifiable mechanism are required,
-not a completed speedup proof, production deployment, or hardware demonstration.
-Use a short derivation or modest experiment to resolve the leading uncertainty.
-A small example should expose a mechanism for the real task, not replace that
-task. Do not launch a large simulation, general framework, full circuit audit,
-or manuscript before the application case warrants it.
+Use one published neutral Li40+EC cluster as a proposed classically accessible
+calibration, not as a manufactured hard instance. First seek the actual public
+coordinates and method inputs through supporting deposits and cited source papers.
+The data statements inspected so far did not supply a downloaded package; do not
+invent coordinates or label a new geometry as the published one. No outside
+contact is authorized.
 
-The operator candidate may return only if it meets the same application standard
-as a fresh idea. Existing algebra earns no priority. The earlier symmetry and
-predictor sketches are not automatically promoted. This correction selects no
-new application and makes no claim that one has already passed the standard.
+For a pinned instance, establish charge, spin, basis, frozen cores, orbital count,
+classical approximation/error evidence and actual resource evidence where
+available. The explicit Li/C/O 1s-frozen convention gives 166 total and 74
+correlated electrons; it does not establish orbital count or active-space adequacy.
+Compare a fully charged quantum per-geometry calculation, including initial-state
+overlap/preparation, with the strongest applicable classical route at required
+observable accuracy. Do not borrow gate counts from a different molecule.
 
-## Evidence and continuation boundaries
+Determine whether electronic improvements could change a useful prediction beyond
+finite-size, solvent/voltage, sampling and model uncertainty. Select an observable
+appropriate to the pathway: a non-metastable reactant cannot be assigned an
+ordinary activated rate without justification. The factor-two/300 K energy
+sensitivity in the note is illustrative, not a required community tolerance.
 
-This is a research-priority/documentation change only. No new theorem, external
-application audit, experiment, quantum circuit, benchmark, or scientific verifier
-run is claimed. Prior test statements remain historical. For later scientific
-changes, run applicable verifiers and state exactly what was and was not run.
-Use temporary outputs and never run assertion-dependent code under -O/-OO.
+Only a defensible per-instance comparison justifies analyzing the number of
+reference geometries, training, validation, and total reusable-model preparation.
+Classical active learning, embeddings, hybrid functionals, source knowledge and
+direct observable computation must be permitted. A few accurate training energies
+are not a useful general evaluator. Do not begin a large chemistry campaign,
+model training, or generic theorem development before this comparison warrants it.
 
-Both classical spin-offs own their further development. Do not extend or modify
-them from this project. Phase-2 Note 27's source-aware descent comparison stays
-closed; Notes 28 and 29 retain their true-count promise and limitations. Earlier
-notes' next steps do not create parallel active tasks.
+## Evidence and boundaries
 
-Preserve proofs, code, source data, reports, manifests, notices, and LICENSE.
-Modify only Quantum-Assisted-Algorithm-Discovery. No manuscript revival, outside
-contact, paid computation, unattended work, submission, release, branch merge,
-or repository administration change is authorized by this work order.
+`python experiments/application_case_v1/verify.py` passed twice; -O rejection was
+checked. It replays selected published numbers, derives sensitivity and electron
+accounting, and rejects six invalid inputs. It is not an electronic-structure,
+molecular-dynamics, quantum-circuit, or performance test. No weights, coordinates,
+or upstream implementation were imported. Root/historical suites were not rerun.
+
+Both classical spin-offs own their further development. No writes there are
+allowed. Phase-2 Note 27's source-aware comparison remains closed. Preserve old
+proofs, code, data, reports, manifests, notices, and LICENSE. Historical next steps
+do not override this work order. Modify only Quantum-Assisted-Algorithm-Discovery.
+No manuscript revival, external contact, paid or unattended work, submission,
+release, branch merge, or repository administration change is authorized.
