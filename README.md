@@ -3,77 +3,77 @@
 **Can circuit-model quantum computation produce information that makes a useful
 computation materially more effective than strong classical alternatives?**
 
-Direct samples may themselves be useful outputs. Models and possible quantum
-integration come before software, datasets and hardware implementation. Essential
-input, accuracy and output costs remain explicit. See [AGENTS.md](AGENTS.md).
+Direct samples may themselves be useful outputs. Mathematical models and possible
+quantum integration come before software, datasets and hardware implementation.
+Essential input, accuracy and output costs remain explicit. See [AGENTS.md](AGENTS.md).
 
 **Status: exploratory. No useful quantum advantage is established.
 Manuscript preparation remains on hold.**
 
-## Current result: retain near resonances, eliminate only the faster sector
+## Current conclusion: smooth spectral compression is valid, but not a free speedup
 
-[Resonance window 19](exploration/phase_3/RESONANCE_WINDOW_19.md) extends the
-slow-response analysis to an entire band of low operator frequencies. A Hermitian
-static Schur generator retains their finite-frequency and first-order couplings.
-A continuous-total-variation bound controls the resulting Lorentzian-broadened
-spectral law, including its tails. It does not require a minimum nonzero frequency,
-a separation between neighboring frequencies at the cutoff, or the earlier parity-
-cancellation condition. A response-weighted refinement follows the retained
-observable's coupling to eliminated modes rather than counting those modes.
+[Smooth response 20](exploration/phase_3/SMOOTH_RESPONSE_COMPRESSION_20.md) avoids
+sharp spectral-band classification by applying a bounded polynomial to the full
+response generator. The construction preserves spectral probabilities, approximately
+retains the relevant frequencies, and pays explicitly for changes to the high-
+frequency tail. A simple total-variation bound uses the collective response's
+known second moment and the same Lorentzian linewidth and output bins.
 
-This is a model-reduction result, NOT a gap-independent quantum algorithm.
-The inverse on the discarded sector is conditioned by the chosen cutoff, but a
-sharp projector onto the retained band can itself be expensive to implement.
-The note separates internal spacings, discarded inverse conditioning, and cutoff-
-edge resolution. Standard QSVT and downfolding are prior methods, and the generic
-construction need not beat the direct linewidth-matched sampler. The same reduced
-model is a classical comparator whose preparation can be reused across samples.
+No smallest spectral spacing or cutoff-edge gap is required. This is a positive
+spectral law, not a postselected filtered state or a smooth function silently
+substituted for an orthogonal projector in the preceding Schur argument.
 
-The [current work order](work_orders/CURRENT.md) asks whether a justified smooth or
-response-weighted construction can avoid artificial cutoff resolution while
-preserving positive spectral probabilities. Its complete symbolic cost must be
-compared with direct quantum sampling and adequate classical methods. No molecule,
-new dataset, native solver, large sweep or additional spin-off is the next step.
+The complete generic cost does not improve the leading direct-sampling query
+scaling: the reduction in encoded bandwidth is offset by the cost per transformed
+block call. This limitation is already recognized in spectral-amplification
+literature. It is not an impossibility theorem for the spin model, structured
+encodings or other quantum sampling methods. The result is a completed comparison,
+not a reason to build another filter compiler or classical spin-off.
 
-## Reproduce the bounded mathematical check
+The [current work order](work_orders/CURRENT.md) returns to the physical interaction
+structure: how much spatially connected information is needed for the collective
+response at the requested linewidth? The next test is a positive finite-window
+construction with controlled cross-correlation and boundary errors, then a matched
+classical/local-quantum comparison. No such locality guarantee is claimed yet.
+
+## Reproduce the mathematical controls
 
 ```sh
-OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python experiments/resonance_window_v1/verify.py
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python experiments/smooth_response_v1/verify.py
 ```
 
-Python 3.10+ and NumPy. The [report](experiments/resonance_window_v1/REPORT.json)
-records three fixed small spin chains and three block controls, Schur/resolvent
-identities, moment and response-weighted bounds, and negative controls. The final
-checker ran twice with identical output; -O/-OO was rejected. These are floating-
-point diagnostics, not interval certificates, experimental spectra, quantum
-hardware, scaling measurements or timing comparisons. Continuous claims follow
-from the written proof. No older scientific verifier was rerun or file changed.
-No upstream code or experimental data was imported.
+Python 3.10+ and NumPy. The [report](experiments/smooth_response_v1/REPORT.json)
+contains fixed 2/4/6-spin checks of spectral weights, moments and bounded maps,
+plus negative and invalid-input controls. The efficient general amplification
+polynomial is a cited prior construction, not numerically synthesized here.
+The checker ran twice with identical JSON; -O/-OO was rejected. These are
+floating-point mathematical diagnostics, not experimental spectra, circuits,
+performance tests or interval certificates. No older verifier was rerun.
 
-## Retained quantum and classical alternatives
+## Retained alternatives and organization
 
 [Model comparison 15](exploration/phase_3/SPECTRAL_MODEL_STRUCTURE_15.md) retains
-the direct linewidth-matched quantum sampler and exact classical limits.
+the direct linewidth-matched quantum sampler and classical limits.
 [Spectral boundary 16](exploration/phase_3/SPECTRAL_BOUNDARY_16.md) retains the
-classical Lanczos certificate. [Exchange memory 17](exploration/phase_3/EXCHANGE_MEMORY_17.md)
-and [slow-sector sampling 18](exploration/phase_3/SLOW_SECTOR_SAMPLING_18.md) retain
-the projected-memory and isolated-zero-sector constructions with their assumptions.
-Their bounds are not silently transferred to the enlarged resonance window.
-Classical recursion, effective models, tensor networks and direct inference remain
-legitimate competitors. Direct samples do not have to become a classical program.
+classical observable-recursion certificate.
+[Exchange memory 17](exploration/phase_3/EXCHANGE_MEMORY_17.md),
+[slow-sector sampling 18](exploration/phase_3/SLOW_SECTOR_SAMPLING_18.md), and
+[resonance window 19](exploration/phase_3/RESONANCE_WINDOW_19.md) retain their
+distinct approximations and access assumptions. Their conclusions are not
+silently transferred to the new frequency map.
 
-Classical probability/climate exploration remains open. Its missing packet gates
-only the empirical test in [Audit 13](exploration/phase_3/CONTINUATION_INFORMATION_13.md).
-Manthan remains paused, battery/operator routes remain parked, and
+Classical probability/climate exploration remains open. Missing climate files
+block only the empirical test in [Audit 13](exploration/phase_3/CONTINUATION_INFORMATION_13.md).
+Manthan remains paused; battery/operator routes remain parked.
 [Algebraic-Loop-Certificates](https://github.com/GoGoKo699/Algebraic-Loop-Certificates)
 and [Sparse-Weil-Reconstruction](https://github.com/GoGoKo699/Sparse-Weil-Reconstruction)
 remain independent projects owning their further development.
 
 Scientific phase 3 uses `research/prx-quantum-phase2`. The original
 [project map](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/main/PROJECT_MAP.md)
-and [charter](exploration/phase_2/CHARTER.md) are subject to the explicit direct-output
-and model-first extensions. `main` remains an entry point, not a merged copy of
-later work. [STATUS.md](STATUS.md) records claims and pinned historical ledgers.
-Phase-2 Note 27 remains closed. Prior research, notices and the original
+and [charter](exploration/phase_2/CHARTER.md) are subject to the direct-output and
+model-first extensions. `main` is an entry point, not a merged copy of later work.
+[STATUS.md](STATUS.md) records current claims and pinned historical ledgers.
+Earlier notes, data, code, reports, third-party notices and the original
 [MIT license](LICENSE), Copyright (c) 2026 Ruge Lin, are preserved.
 Only this parent repository may be modified in the project context.
