@@ -1,94 +1,79 @@
 # Claim ledger
 
-## Current decision: model-first exploration, 28 September 2026
+## Current checkpoint: model-level spectral construction, 28 September 2026
 
-The owner requests that every example be examined primarily through its
-mathematical model and possible quantum integration before actual implementation.
-The [work order](work_orders/CURRENT.md) and [AGENTS.md](AGENTS.md) now put model,
-output law, shared access, quantum operation, symbolic cost/error comparison and
-one structural test before a specific dataset or native software benchmark.
+[Note 15](exploration/phase_3/SPECTRAL_MODEL_STRUCTURE_15.md) compares the two open
+model families and develops finite-linewidth spectral sampling. Classical dynamics
+remain open, with direct trajectory sampling as a baseline for distribution
+outputs. Direct samples and model-first analysis remain authorized. No useful
+quantum advantage, physical prediction improvement or publication priority is
+established by this checkpoint.
 
-This changes the research sequence, not the scientific results. Direct samples
-remain allowed. Physical motivation, useful accuracy and strong classical
-comparators remain required, but a complete experimental calibration or hardware
-implementation is not an entry condition for model-level exploration. Essential
-preparation, conditioning, normalization and precision costs cannot be declared
-free merely because detailed engineering is deferred.
+### Mathematical claims and their scope
 
-Two mechanism families remain open: finite-resolution many-body spectral response,
-and probability evolution or conditioning for classical dynamical systems. The
-next deliverable is a bounded model-level analysis, not a new simulator, circuit
-compiler or data-acquisition campaign. The missing climate packet blocks only
-its empirical sibling test. No new model-level separation, algorithmic novelty,
-useful quantum advantage or application improvement is established.
+For an explicitly supplied homonuclear isotropic-spin Hamiltonian and collective
+raising observable, the note specifies the normalized high-temperature correlation
+measure and a Lorentzian-broadened bin-output contract. This is not arbitrary NMR
+pulse output, absolute intensity or a full open-system model.
 
-Only current guidance/documentation changed. Primary spectral-sampling and
-Koopman-von Neumann abstracts were rechecked; no new data, numerical calculation,
-quantum circuit, native package, benchmark or scientific-verifier run occurred.
-Earlier code, fixtures, proofs, reports and notes remain unchanged. The preceding
-status is pinned at [pre-model-first checkpoint](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/31f35e8162cbc9e0481ba70b60ac9f445670855c/STATUS.md).
+An easily factorized geometric clock and the vectorized observable state yield a
+dithered Fourier measurement with a finite Poisson kernel. The limiting wrapped
+law is Lorentzian; truncation, wrapping and digital-offset bounds specify its
+approximation. Controlled evolution time O(log(1/epsilon)/gamma) concerns the
+chosen broadened output, not exact energy gaps. Coefficient access, preparation,
+simulation precision, repetitions and inference costs are not suppressed. Prior
+spectral-sampling and tapering algorithms are attributed. Novelty and optimality
+of the displayed composition remain unassessed.
 
-## Retained scientific checkpoint: open sampling screen 14
+Classical comparisons include an exact commuting-model sampler, a uniform-offset
+symmetry limit, a coarse-line bound and a resolvent perturbation certificate.
+Deleting isotropic bonds of total absolute coupling J_cut changes the broadened
+law by at most J_cut/(2 gamma) in total variation. A supplied small-component
+partition gives a classical mixture construction when that bound is adequate.
+The single-line sufficient bound is proportional to offset variance/gamma^2.
+The fourth spectral moment exposes a term J_ij^2(delta_i-delta_j)^2; it is a
+moment of the unbroadened measure, not the heavy-tailed Lorentzian spectrum.
+A solvable two-spin control makes the linewidth dependence of a secular
+approximation explicit. These are not lower bounds on all classical methods.
 
-[Screen 14](exploration/phase_3/OPEN_SAMPLING_SCREEN_14.md) retains climate
-continuation selection and opens a distinct bounded check of direct many-body
-spectral sampling, initially for an NMR consumer. The missing climate data gate
-that experiment, not the entire parent exploration. No specific NMR compound or
-useful quantum cost advantage is established. Direct sample outputs remain allowed.
+The [work order](work_orders/CURRENT.md) selects an observable-specific classical
+compression/error analysis at the required linewidth, not a data or implementation
+campaign. A candidate separation must survive restricted-state, tensor-network,
+cluster, direct correlation and task-equivalent output methods. Failure of the
+simple sufficient bounds is not itself a quantum opportunity certificate.
 
-Primary non-quantum-computing application work documents spectral fitting and
-parametrized nuclear-spin models. Direct spectral quantum samplers and quantum-
-assisted NMR inference are already prior work. The checkpoint restates their
-normalized high-temperature spectral law and analytically checks a vectorized
-energy-gap representation, including the conjugate second register. A simple
-W-state/Bell-state identity prepares the collective-X observable state without
-an unknown ground state. These are standard identities, not novel algorithms,
-optimality results or experimental demonstrations.
+### Executed verification
 
-The target normalized correlation shape is distinct from absolute intensity or
-an arbitrary signed/complex pulse signal. Finite-time phase estimation, instrument
-response, polarization, relaxation and parameter acquisition all need appropriate
-modeling and costs. A useful consumer may need only a resolution-limited spectrum
-or fitted parameters, not the full microscopic sampling distribution.
+The NumPy checker passed twice with identical output under single-threaded BLAS;
+-O/-OO refusal was checked. Five fixed systems of at most four spins verify
+25 moment formulas, 15 secular-law checks, 15 cut bounds, 15 coarse-line bounds
+and five observable-state identities. Additional controls cover eight two-spin
+cases, a disconnected mixture, the required complex transpose, three geometric
+clocks, uniform-clock mismatch, and six Cauchy-tail bounds. The
+[report](experiments/spectral_structure_v1/REPORT.json) records the actual scope.
 
-Two substantive classical precedents remain explicit: restricted-state and tensor-
-network NMR methods can handle some protein-scale experiments, and Fourier-based
-classical methods solve the specified harmonic vibronic-spectrum task associated
-with Gaussian boson sampling. Neither generalizes to every spectrum; neither may
-be ignored by comparing only against dense-state enumeration.
+These are complex128 numerical diagnostics at tolerance 2e-10. They support the
+written algebra but do not replace its proofs or certify continuous-law bounds
+from finite quadrature. No experimental spectrum, native NMR package, climate
+model, compiled circuit, hardware, performance benchmark or inference run occurred.
+No source dataset or upstream implementation was imported. Earlier verifiers were
+not rerun; their source, fixtures and reports are unchanged.
 
-Screen 14 originally proposed choosing a measured NMR instance next. That ordering
-is superseded by the model-first decision above; its physical and classical
-comparison caveats remain. The climate sibling test remains defined in Audit 13
-and can resume if its source packet becomes available. No new climate upload or
-array analysis is claimed.
-
-## Screen 14 execution scope, not a fresh rerun
-
-Primary abstracts/HTML, selected PDF text and the QuantumNMR repository README
-were inspected. PDF screenshot attempts failed; no plot/table numbers were
-interpreted or digitized. The recent arXiv:2609.17102 NMR hardware result was
-surfaced only at indexed-primary-abstract level; its difficulty and cost claims
-were not verified. It is not an advantage claim for this project.
-
-Analytic identities were checked, but no numerical model, native NMR package,
-quantum circuit, spectrum fit, performance benchmark or scientific verifier ran.
-No scientific code, source data or new diagnostic framework was added. The changes
-were the source-backed exploration note and documentation routing. Historical
-scientific sources and reports are unchanged and were not rerun.
+Primary model, algorithm and comparison literature was inspected. Relevant PDF
+text was available, but screenshots failed; no figure/table numbers supplied an
+application result. The source search was bounded, not an exhaustive novelty audit.
 
 ## Preserved historical evidence
 
-The pre-screen status and all its evidence links remain at the pinned
-[pre-screen checkpoint](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/400403deb37e86e8f4b6f5a5d2e6721463bd6d27/STATUS.md).
-[Audit 13](exploration/phase_3/CONTINUATION_INFORMATION_13.md) retains the climate
-access limitations and classical score-envelope comparator. Notes 11-12 and their
-finite-law diagnostics are unchanged; local correctness is not a validated
-climate sampler or a proof of useful acceleration.
+The full preceding ledger is pinned at the
+[pre-derivation checkpoint](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/8134a253d94d6fd2218971c41fb54d5be51214fc/STATUS.md),
+which preserves earlier source and evidence links. Old current/next headings are
+checkpoint records, not competing work orders. No earlier research note, proof,
+code, dataset or report was rewritten.
 
-Manthan stays paused, battery/operator candidates remain parked, both classical
-spin-offs remain independent, and Phase-2 Note 27 stays closed. Manuscript
-preparation remains on hold. Previous notes, code, reports, fixtures, licenses
-and third-party rights are preserved. Only Quantum-Assisted-Algorithm-Discovery
-is modified; no external contact, paid/unattended computation, release, branch
-merge, new repository or administration change is authorized.
+Climate analysis remains open; the six-file sibling packet was not acquired.
+Manthan is paused, battery/operator candidates are parked, both classical spin-offs
+are independent, and Phase-2 Note 27 is closed. Manuscript preparation remains
+on hold. The original license and third-party rights are preserved. Only this
+parent repository is modified; no contact, paid/unattended work, release, merge,
+new repository or administration change occurred.
