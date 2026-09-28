@@ -7,70 +7,64 @@ computers and meet a need that exists independently of this project.
 **Status: exploratory. No useful quantum discovery advantage is established.
 Manuscript preparation remains on hold.**
 
-## Current decision: the battery route is parked
+## Current sampling contract: examples become verified classical logic
 
-The [interfacial-reference study](exploration/phase_3/INTERFACIAL_REFERENCE_DECISION_06.md)
-completed the bounded search for a useful quantum-reference task in salt-dependent
-battery gas formation. Relevant classical mechanisms and experiments were found,
-but a supported connection from improved electronic references to the required
-prediction was not established. The selected candidate is therefore parked rather
-than expanded into a general battery-modeling program.
+The [new contract](exploration/phase_3/SAMPLING_TO_VERIFIED_LOGIC_08.md) investigates
+quantum-produced examples in Boolean functional synthesis: learn candidate logic
+from valid input/output examples, formally check and repair it, then deploy the
+verified program classically. This refines the [sampling opening](exploration/phase_3/USEFUL_SAMPLING_07.md)
+without changing the classical-only deployment objective.
 
-This is not a claim that batteries are unimportant, that classical chemistry
-solves every relevant problem, or that quantum chemistry cannot help. It is a
-decision about the evidence for this particular parent-project route. A more
-precise bare-cluster energy is not the demonstrated useful output. The decision
-note records the concrete reaction candidate inspected, alternatives, source
-access limits, and conditions for reopening.
+The classical consumer already exists in Manthan. A published classical experiment
+shows that replacing its sample source changes complete synthesis performance.
+This is an application precedent, not our benchmark or evidence of quantum advantage.
+The inspected current implementation already uses CMSGen and strong preprocessing;
+those capabilities must remain in the comparator.
 
-The [current work order](work_orders/CURRENT.md) returns to application/mechanism
-selection. Each candidate must connect a classically deployable output, a real
-discovery bottleneck, a quantum mechanism, and the strongest adequate classical
-route before substantial implementation. No replacement application has yet been
-selected. The project is not committed to chemistry or any earlier testbed.
+The first explicit quantum producer uses standard weighted amplitude amplification.
+Its bound beats rejection sampling, not automatically modern SAT samplers. With
+identical complete training-batch laws, the learner behaves identically in law;
+only acquisition cost can improve. Different quantum laws must instead beat
+classical sources of equally useful examples. Uniform satisfying pairs need not
+give uniform input coverage, and sample validity is not final-program correctness.
 
-## Retained battery calibration
+The [work order](work_orders/CURRENT.md) calls for one native, instrumented
+sample-source comparison on an application-derived instance before substantial
+quantum implementation. No native Manthan/CMSGen run, useful new circuit,
+quantum-resource estimate or industrial performance improvement is established.
+A benchmark filename alone does not validate a deployed application.
 
-The [physical-relevance study](exploration/phase_3/PHYSICAL_RELEVANCE_05.md) records
-the independent experimental motivation and the missing environment connection.
-The [archive replay](exploration/phase_3/ARCHIVE_REPLAY_04.md) preserves the verified
-732-geometry/30-table calibration, published-number reconstruction, and bounded
-transfer diagnostic. These are fixed-molecule cluster-size scans, not a reactive
-training dataset or a working-battery validation.
+## Executed checks
 
-With a local copy of `paper_data.zip` from the authors' [Zenodo deposit](https://zenodo.org/records/22116355),
-DOI 10.5281/zenodo.22116355, the historical analysis can be replayed:
+Python 3.10+, standard library only:
 
 ```sh
-python experiments/reference_archive_v1/verify.py --archive /path/to/paper_data.zip
+python experiments/sampling_synthesis_v1/verify.py
 ```
 
-Python 3.10+, standard library only. The checker reads without extracting or
-modifying the ZIP. The [saved report](experiments/reference_archive_v1/REPORT.json)
-records its prior execution. Raw coordinates/source tables are not redistributed
-or relicensed. The [core audit](exploration/phase_3/REFERENCE_ACCESS_AUDIT_03.md)
-retains the matched 154-correlated-electron convention and its limitations.
+The [report](experiments/sampling_synthesis_v1/REPORT.json) records finite logical
+and exact ideal-amplitude checks, including zero-success and easy-preprocessing
+controls. These are diagnostic checks, not native synthesis, noisy/gate-level
+simulation, a sampling-speed benchmark or an application result. Historical
+scientific suites were not rerun; their source and reports are unchanged.
 
-The latest checkpoint inspected primary literature and selected supplementary
-figures. It added no scientific code and ran no electronic calculation, molecular
-trajectory, quantum circuit, training, performance benchmark, or scientific
-verifier. Historical source/results remain unchanged.
+## Parked work and organization
 
-## Scope and organization
-
-The [operator candidate](exploration/phase_3/MECHANISM_SCREEN_01.md) remains parked.
+The [battery route](exploration/phase_3/INTERFACIAL_REFERENCE_DECISION_06.md) and
+[small-operator candidate](exploration/phase_3/MECHANISM_SCREEN_01.md) remain parked.
+The [battery archive replay](exploration/phase_3/ARCHIVE_REPLAY_04.md), source,
+report and uploaded archive are retained; no new upload is needed.
 [Algebraic-Loop-Certificates](https://github.com/GoGoKo699/Algebraic-Loop-Certificates)
 and [Sparse-Weil-Reconstruction](https://github.com/GoGoKo699/Sparse-Weil-Reconstruction)
-are independent projects and own their further development. Neither replaces the
-parent's quantum-discovery objective.
+are independent projects and own their further development.
 
 Scientific phase 3 uses `research/prx-quantum-phase2`. The
 [project map](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/main/PROJECT_MAP.md)
 and [parent charter](exploration/phase_2/CHARTER.md) govern the exploration.
 `main` is the public entry point, not a merged copy of later research.
-[STATUS.md](STATUS.md) separates current decisions from retained evidence;
-older next steps do not create parallel work orders. The
-[source-aware descent comparison](exploration/phase_2/SOURCE_AWARE_DESCENT_27.md)
-remains closed. Historical proofs, code, reports, notices and the original
+[STATUS.md](STATUS.md) gives current claims and a pinned historical ledger;
+older next steps do not create parallel work orders. Phase-2
+[Note 27](exploration/phase_2/SOURCE_AWARE_DESCENT_27.md) remains closed.
+Historical proof notes, code, data, reports, third-party notices and the original
 [MIT license](LICENSE), Copyright (c) 2026 Ruge Lin, are preserved.
 Only the parent repository may be modified in this project context.
