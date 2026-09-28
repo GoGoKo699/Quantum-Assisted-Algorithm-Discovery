@@ -1,93 +1,88 @@
-# Current task: response-relevant resonances and the cost of effective spectral sampling
+# Current task: remove artificial cutoff resolution without changing the sampled response
 
 28 September 2026. Active branch: `research/prx-quantum-phase2`.
 Scientific phase 3; manuscript preparation remains on hold.
 
-Read [slow-sector sampling 18](../exploration/phase_3/SLOW_SECTOR_SAMPLING_18.md),
-[exchange memory 17](../exploration/phase_3/EXCHANGE_MEMORY_17.md), and
+Read [resonance window 19](../exploration/phase_3/RESONANCE_WINDOW_19.md),
+[slow-sector sampling 18](../exploration/phase_3/SLOW_SECTOR_SAMPLING_18.md), and
 [model comparison 15](../exploration/phase_3/SPECTRAL_MODEL_STRUCTURE_15.md).
-Mathematical models and quantum integration precede implementation. Direct samples
-remain permitted; no learned classical program or quantum-free deployment is required.
+Models and quantum integration precede implementation. Direct samples remain
+permitted; no learned classical program or quantum-free deployment is required.
 
-## Completed conditional reduction, not a quantum-classical separation
+## Completed mathematical result and its limit
 
-Let Pi project onto all operators commuting with the exchange Hamiltonian H_0,
-L_0=[H_0,.], and D=[V,.]. When Pi D Pi=0, the leading slow generator is d^2 A,
-A=-Pi D L_0^+ D Pi. This Pi is not the rank-one observable projector of Note 17.
-Reflection-pure energy eigenspaces suffice for the first-order cancellation, but
-reflection symmetry alone does not. Opposite-parity degeneracy is an explicit
-exception. No arbitrary-size parity-purity theorem was proved for the uniform chain.
+Keep all unperturbed operator frequencies within [-kappa,kappa] in P, not only
+the exact zero sector. For L=L_0+E with ||E||<=e<kappa, the discarded block
+B=QLQ has ||B^-1||<=1/(kappa-e). The static Schur generator
+K=PLP-PLQ B^-1 QLP is Hermitian and retains first-order resonant couplings.
+Its positive spectral law in the original observable, broadened by the SAME
+gamma and then binned, approximates the full response under Note 19's continuous
+TV bound. Both distributions' tails are included, not silently discarded.
 
-For a nonzero-frequency gap lower bound g, ||D||<=v_*, e=|d|v_* and e/g<=1/8,
-the exact physical and effective Cauchy(gamma)-broadened laws differ in TV by at
-most min(1, 2e/g+2e^3/(g^2 gamma)). The invariant-graph proof includes observable
-state dressing, not just energy errors. It assumes neither short-memory decay nor
-one-line response. The bound is sufficient and conservative; failure is not hardness.
+The bound uses a chosen response window, cross-block coupling, and the observable's
+unbroadened second moments. Its sharper form weights the retained dynamics by
+how much it reaches the eliminated modes. Neither the smallest nonzero frequency
+nor a gap at the cutoff is an assumption of the approximation theorem. The even
+spin chain has ||L o||=|d|, so the full moment is not an extensive n^2 d^2 estimate.
+First-order cancellation and all-size reflection parity purity are unnecessary
+for this enlarged model. Near resonances are retained, not declared negligible.
 
-A acts inside energy blocks as a commutator with the usual second-order H_2.
-Single irreducible spin multiplets have scalar-plus-quadratic magnetization shifts;
-multiple irreducible copies require matrix-valued coefficients. This is a serious
-classical effective-spectrum comparator, with coefficient acquisition charged.
-A completely solved maximum-spin sector contributes (n+1)(n+2)/(3*2^n) of the
-response, so it cannot replace the full high-temperature spectrum as n grows.
+The quantum ACCESS question remains separate. A sharp spectral projector constructed
+from L_0 may require a margin at kappa. Standard QSVT inverse operations then depend
+on the discarded scale beta=kappa-e. These are different costs. No gap-independent
+quantum sampler, useful quantum-classical separation, or practical speedup is
+established. The generic product block-encoding upper bound may be worse than
+ordinary direct spectral sampling. Note 18's removal of inverse-d powers cannot
+be transferred automatically because K now contains finite-frequency and first-
+order dynamics. A smaller operator norm is not a free better-normalized block encoding.
 
-An ideal QSVT construction implements the zero-sector projector, signed inverse
-and products from explicit doubled-register Pauli block encodings. A linewidth-
-matched spectral measurement of A, rescaled by d^2, gives the effective physical
-law directly. It is not a sample of the memory law followed by an unjustified map.
-For gamma=c d^2/J, the sufficient query budget loses the inverse-d power of the
-straightforward direct quantum route but retains inverse-gap and size factors.
-This is NOT a best-classical comparison, arbitrary fast forwarding, a gate/runtime
-estimate or a novelty claim. Effective-Hamiltonian quantum algorithms are prior work.
+## Next bounded mathematical calculation
 
-## Next bounded mathematical task
+Investigate one smooth or response-weighted alternative to sharp-band membership,
+with the same supplied spin model, collective observable, linewidth and bin law.
+Derive the actual positive output law and the error from the transition region.
+A smooth filter is not an orthogonal projector: do not substitute it into the
+Schur proof unchanged. Initial spectral weight near a cutoff is not by itself
+a bound on later coupling through that region. Preserve the small-denominator
+warning from Note 17.
 
-Determine whether the global minimum-gap cost can be replaced by a justified
-response-specific treatment of near resonances for the same uniform even chain.
-No size-independent gap is available by assumption: a one-magnon calculation
-already gives the upper bound g_n<=J[1-cos(pi/n)], and other spacings can be smaller.
-An upper bound or a floating-point gap estimate is not the lower-bound promise
-needed by an inverse/filtering algorithm. Obtaining that promise also has a cost.
+Alternatively, an explicitly symmetry-accessible retained space can avoid spectral
+classification, but derive its adequacy for this family and charge its access.
+Do not assume the full conserved sector or a list of its eigenvectors is free.
+The deliverable is a correctness-and-cost statement for one construction, not a
+new framework, extra toy census, hardware compilation or experimental campaign.
 
-Choose one route: retain the relevant near-resonant modes explicitly in an enlarged
-slow sector, or regularize L_0^+ with a bounded function and derive a response-level
-error. Show which matrix elements and spectral weights enter, preserve the output
-law, and account for projector/filter access. Do not simply discard small weights:
-Note 17 shows how they can matter at a shrinking resolved linewidth. An arbitrary
-energy-window partition and the change in the observable require their own bounds.
+Compare the complete symbolic budget with Note 15's direct linewidth-matched
+sampler AND with a strong classical reduction. Include normalization, filter
+accuracy, inverses, coefficient access, state and clock preparation, repeated
+samples and output arithmetic. Classical acquisition of an effective model can
+be amortized. Failure of one truncation or a large retained dimension is not an
+all-classical lower bound. A mathematically valid reduction that offers no cost
+improvement should be recorded as such, not expanded indefinitely.
 
-Keep first-order couplings if the zero-sector cancellation cannot be justified.
-Do not infer thermodynamic scaling, mixing, memory decay or all-classical hardness
-from the four finite controls. The useful output remains normalized broadened
-collective response at shared gamma/bins, not an unnecessarily exact line list.
-Distinguish the fixed-n weak-field limit from large n and fixed physical linewidth.
+Schur/downfolding, QSVT, and spectral sampling are prior methods. The March 2026
+quantum effective-Hamiltonian paper has related complementary-resolvent machinery;
+the scoped distinction is our high-temperature operator spectral law versus its
+small reference-space eigenproblem, not an established priority claim.
 
-Compare with classical symmetry reduction, sampling of effective coefficients,
-recursion, restricted operators, tensor networks and projection-free approaches.
-Classical effective-model acquisition may be reused across many samples. Quantum
-queries must be converted to coefficient-access/preparation gates and repeated-shot
-costs before a practical claim. The direct sampler of Note 15 remains available
-without the inverse-gap promise; a limitation of this reduction does not close it.
+## Executed checks and preserved evidence
 
-No data acquisition, molecule selection, native package, large numerical sweep,
-quantum compiler or third classical spin-off is the next step. Small computations
-may check the derivation, not substitute for its proof or an application comparison.
+`OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python experiments/resonance_window_v1/verify.py`
+ran twice with identical JSON; -O/-OO refusal was checked. Three fixed spin chains
+(n=2,4,6) and three small block controls give six binned comparisons; 15 each of
+Schur, correction and resolvent identities and self-energy bounds; six moment and
+dressing-exposure controls; coupled tiny-frequency and cutoff-edge cases; a
+wrong-first-order negative control; and six invalid parameter rejections.
 
-## Executed evidence and preservation
-
-`OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python experiments/slow_sector_v1/verify.py`
-ran twice with identical JSON; -O/-OO refusal was checked. Fixed 2/4/6/8-spin
-systems check the conserved overlap, 98 parity/multiplet blocks, effective
-commutator identities and the solved-sector formula. Four binned 2/4-spin cases,
-four abstract invariant graphs, six path-Laplacian identities, negative controls
-and four invalid linewidths are recorded. These are complex128 mathematical checks
-at tolerance 3e-9, not interval certificates, a QSVT circuit, measured spectra,
-timing, a proof of arbitrary-size parity purity or a useful speedup. Continuous
-bounds follow from the written proof. No previous scientific suite was rerun.
+These are complex128 diagnostics at tolerance 3e-8, not interval certification,
+a growth law, quantum circuit, empirical spectrum or timing. Continuous-TV
+statements follow from the written proof. No previous verifier was rerun and
+no upstream code or dataset was imported. Primary methods were inspected, including
+one successful Feshbach-page screenshot; other stated screenshot attempts failed.
 
 Climate/dynamics remain open; missing climate records block only their empirical
-test. Manthan is paused, battery/operator routes parked, both spin-offs independent,
-and Phase-2 Note 27 closed. Preserve earlier research, data, code, reports, licenses
-and third-party rights. Only Quantum-Assisted-Algorithm-Discovery may be modified.
-No contact, paid/unattended work, manuscript revival, release, merge, new repository
-or administration change is authorized.
+test. Manthan remains paused, battery/operator routes parked, both spin-offs
+independent, and Phase-2 Note 27 closed. Preserve earlier notes, proofs, code,
+reports, data, licenses and third-party rights. Modify only Quantum-Assisted-
+Algorithm-Discovery. No outside contact, paid/unattended work, manuscript revival,
+release, merge, new repository or administration change is authorized.
