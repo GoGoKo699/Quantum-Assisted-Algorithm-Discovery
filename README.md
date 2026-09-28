@@ -10,59 +10,68 @@ input, accuracy and output costs remain explicit. See [AGENTS.md](AGENTS.md).
 **Status: exploratory. No useful quantum advantage is established.
 Manuscript preparation remains on hold.**
 
-## Current model-level step: distinguish response time from memory time
+## Current mathematical result: sample the slow response without assuming short memory
 
-[Exchange memory 17](exploration/phase_3/EXCHANGE_MEMORY_17.md) studies the
-alternating-offset interacting-spin family from Notes 15-16. The measured collective
-mode couples to a known staggered mode. An exact projected-memory representation
-expresses the full spectral response through one memory resolvent. This uses
-established projection/continued-fraction methods, not a newly invented framework.
+[Slow-sector sampling 18](exploration/phase_3/SLOW_SECTOR_SAMPLING_18.md) identifies
+the second-order response of the alternating-offset spin family. Under an explicit
+first-order cancellation and a nonzero-frequency gap condition, a reduced generator
+retains the resolved spectral structure. An invariant-graph argument bounds the
+continuous total-variation error, including changes in the measured observable's
+state and weights. This does not assume fast memory decay or replace the spectrum
+by one line.
 
-The projected generator equals the ordinary doubled spin generator plus two
-reflections about easily specified sublattice observable states. That provides
-an explicit quantum integration without a supplied projected-eigenbasis oracle.
-Preparation, controlled evolution, inverses, coefficient access, precision and
-shots still count. A memory-frequency sample is not automatically a physical
-response sample; the transformation between the two is stated explicitly.
+The generator is a product of the conserved-sector projector, perturbation and
+signed inverse of the exchange generator. Standard quantum singular value
+transformation can construct those operations from explicit block encodings,
+without enumerating a classical eigenbasis. Spectral measurement and rescaling
+then give direct samples of the effective response. At linewidth proportional
+to d^2/J, the stated query budget has no inverse power of d, but retains important
+size and inverse-gap factors. This compares with a straightforward direct quantum
+construction, not the best classical algorithm. It is not a compiled circuit,
+practical speedup, generic fast forwarding or a priority claim.
 
-A conditional finite-window certificate bounds when the memory can be replaced
-by a single broadened line. A justified short memory could reduce the maximum
-simulation time needed for that approximation. Short memory has NOT been proved
-for the growing chain, and reduced circuit depth is not a total-cost advantage.
-Finite closed systems recur; fast initial curvature is insufficient evidence.
+A matching classical second-order representation is also explicit. Its coefficients
+must be acquired, but that work can be amortized across many samples. The solved
+maximum-spin sector illustrates the reduction and contributes a shrinking fraction
+of the full high-temperature response; it cannot stand in for that response.
+Reflection symmetry alone does not prove the required cancellation in the presence
+of opposite-parity degeneracy. No all-size nondegeneracy theorem is established.
 
-An exact resolved two-spin limit catches a misleading shortcut: a small memory
-contribution can have a large effect when the required linewidth resolves it.
-A corrected, equally simple classical two-line model nevertheless succeeds in
-that limit. The example is a mathematical control, not a hard workload or an
-application claim. The [current work order](work_orders/CURRENT.md) asks whether
-low-frequency memory in the many-spin family admits an effective slow-mode
-reduction, with all small-gap and resolution assumptions retained.
+The [current work order](work_orders/CURRENT.md) asks whether a justified treatment
+of response-relevant near resonances can avoid a global minimum-gap penalty.
+An analytic upper bound already shows that the global gap cannot be assumed
+size-independent. Neither its smallness nor a failed approximation proves
+classical hardness. No data download, molecule selection or large simulation
+is the next step.
 
-## Other side of the comparison
+## Retained quantum and classical alternatives
 
-[Model comparison 15](exploration/phase_3/SPECTRAL_MODEL_STRUCTURE_15.md) supplies
+[Exchange memory 17](exploration/phase_3/EXCHANGE_MEMORY_17.md) gives an exact
+rank-two quantum implementation of projected memory, its conditional one-line
+certificate and a resolved two-spin warning. The new slow-sector route does not
+require a memory-decay hypothesis or convert a memory sample into a response
+sample through an unproved map.
+
+[Model comparison 15](exploration/phase_3/SPECTRAL_MODEL_STRUCTURE_15.md) retains
 the direct linewidth-matched quantum sampler and exact classical limits.
-[Spectral boundary 16](exploration/phase_3/SPECTRAL_BOUNDARY_16.md) supplies a
-classical Lanczos-truncation certificate and local-Pauli construction cost.
-Neither a failed sufficient bound nor a large operator space proves classical
-hardness. Recursion, effective models, tensor networks and direct inference remain
-legitimate competitors. Classical preprocessing may be reused across many draws.
-The quantum method is not required to learn a classical program first.
+[Spectral boundary 16](exploration/phase_3/SPECTRAL_BOUNDARY_16.md) retains the
+classical Lanczos-truncation certificate. Recursion, effective models, tensor
+networks and direct inference remain legitimate competitors. The quantum method
+is not required to learn a classical program first.
 
 ## Executed mathematical checks
 
 ```sh
-OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python experiments/exchange_memory_v1/verify.py
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python experiments/slow_sector_v1/verify.py
 ```
 
-Python 3.10+ and NumPy. The [report](experiments/exchange_memory_v1/REPORT.json)
-contains small projection/reflection, memory-resolvent, finite-window and dimer
-controls. It is not a measured spectrum, large-chain scaling result, compiled
-circuit or performance benchmark. The checker passed twice with identical output;
--O/-OO was rejected. Continuous guarantees follow from the written proofs, not
-finite numerical bins. No older verifier was rerun; its files remain unchanged.
-No experimental data or upstream implementation was imported.
+Python 3.10+ and NumPy. The [report](experiments/slow_sector_v1/REPORT.json) contains
+fixed 2/4/6/8-spin symmetry and effective-generator controls, finite-bin comparisons,
+small invariant-graph controls and path-Laplacian identities. It is not a measured
+spectrum, arbitrary-size theorem, interval certificate, QSVT circuit or timing
+benchmark. The final checker ran twice with identical output; -O/-OO was rejected.
+Continuous guarantees follow from the written proofs. No older verifier was rerun
+and no upstream implementation, experimental spectrum or climate data was imported.
 
 ## Open mechanisms and preserved evidence
 
@@ -72,7 +81,7 @@ application context. Classical probability evolution remains open. The
 [climate contract](exploration/phase_3/HEATWAVE_SAMPLING_CONTRACT_11.md),
 [segment construction](exploration/phase_3/SEGMENT_SELECTION_12.md), and
 [continuation audit](exploration/phase_3/CONTINUATION_INFORMATION_13.md) remain
-available; missing data gate only their specific empirical test.
+available; missing data gate only their empirical test.
 
 Manthan [profiling/encoding](exploration/phase_3/SAMPLING_ENCODING_AUDIT_09.md)
 remain paused; [battery](exploration/phase_3/INTERFACIAL_REFERENCE_DECISION_06.md)
