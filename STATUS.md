@@ -1,5 +1,40 @@
 # Claim ledger
 
+## Current checkpoint: physical-relevance decision, 28 September 2026
+
+The [physical-relevance study](exploration/phase_3/PHYSICAL_RELEVANCE_05.md) anchors
+one validation target in an independent cell experiment: changing LiPF6 to LiODFB
+in the same EC:EMC solvent mixture changes ethylene evolution and inactive-lithium
+formation. The experimental contrast is already known; reproducing it is not a
+new discovery. An eventual useful classical model must predict a condition not
+used in fitting, or deliver equally useful predictions at lower total cost.
+
+**Decision: repair the physical model before quantum resource estimation.** The
+fixed isolated Li40+EC input has no salt or justified effective environment/history
+dependence and cannot, through more precise solution alone, distinguish that
+intervention. This is a missing-input/model connection, not a quantitative proof
+that environmental error dominates electronic error. Initial bond breaking and
+constrained-path rates are not outlet-gas branching fractions.
+
+The [work order](work_orders/CURRENT.md) requires examining an existing classical
+interfacial description and exposing at most one electronic reference that changes
+a useful prediction. No larger bare-cluster calculation, general interphase
+framework, training campaign or quantum resource estimate is warranted yet.
+If no such reference can be justified, park this application. No quantum advantage,
+validated simulator or battery-performance improvement is established.
+
+This checkpoint inspected primary literature, selected PDF figures and supplement
+material. A local read rechecked the original ZIP digest and two Li40 member hashes
+and compositions. No new scientific code or verifier was added. The full archive
+checker and historical suites were not rerun; no electronic, MD, quantum, timing
+or training calculation was performed. Earlier proofs, code, data, reports,
+licenses and both classical spin-offs remain unchanged.
+
+Everything below is retained historical status. Its prior next-step descriptions
+do not override the physical-relevance decision and live work order.
+
+---
+
 ## Current checkpoint: executed archive replay, 28 September 2026
 
 The [archive replay](exploration/phase_3/ARCHIVE_REPLAY_04.md) verifies the original
