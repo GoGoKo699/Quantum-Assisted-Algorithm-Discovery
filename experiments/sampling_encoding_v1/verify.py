@@ -159,7 +159,7 @@ def z3_queries(groups, gates):
     c = '(and '+' '.join(clauses)+')'
     d = '(and '+' '.join(definitions)+')'
     outcomes=[]
-    for left,right in [(c,d),(d,c]:
+    for left,right in [(c,d),(d,c)]:
         cfg=z.Z3_mk_config(); ctx=z.Z3_mk_context(cfg); z.Z3_del_config(cfg)
         try:
             command=common+f'(assert (and {left} (not {right})))\n(check-sat)\n'
