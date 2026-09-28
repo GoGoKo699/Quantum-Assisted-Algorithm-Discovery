@@ -1,0 +1,54 @@
+{
+  "conditioning_error_control": {
+    "conditional_TV": "1/100",
+    "event_mass": "1/1000",
+    "raw_TV": "1/100000"
+  },
+  "cost_sensitivity": [
+    {
+      "A_or_inverse_calls_per_accepted_sample": 15.070160634460718,
+      "equal_call_cost_plus_replay": 16.07016063446072,
+      "max_coherent_call_cost_over_classical_path": {
+        "1": 6.569273042360154,
+        "10": 0.5972066402145595,
+        "100": 0.0
+      },
+      "p_assumed": 0.01,
+      "rounds": 7,
+      "speed_ratio_vs_rejection_at_equal_call_cost": 6.222713156056501,
+      "success_per_attempt": 0.9953444003575992
+    },
+    {
+      "A_or_inverse_calls_per_accepted_sample": 49.021660483862526,
+      "equal_call_cost_plus_replay": 50.021660483862526,
+      "max_coherent_call_cost_over_classical_path": {
+        "1": 20.37874666299526,
+        "10": 2.019515435071602,
+        "100": 0.18359231227923656
+      },
+      "p_assumed": 0.001,
+      "rounds": 24,
+      "speed_ratio_vs_rejection_at_equal_call_cost": 19.991339558242167,
+      "success_per_attempt": 0.999558144631399
+    },
+    {
+      "A_or_inverse_calls_per_accepted_sample": 157.00009312377188,
+      "equal_call_cost_plus_replay": 158.00009312377188,
+      "max_coherent_call_cost_over_classical_path": {
+        "1": 63.687860313033276,
+        "10": 6.363053550627088,
+        "100": 0.6305728743864681
+      },
+      "p_assumed": 0.0001,
+      "rounds": 78,
+      "speed_ratio_vs_rejection_at_equal_call_cost": 63.291101937302926,
+      "success_per_attempt": 0.999999406855308
+    }
+  ],
+  "cost_table_assumptions": "Known p, first-peak schedule; no reflection/marking/validation/tuning overhead; rho=1 for displayed speed; g=1,10,100 are hypothetical quality-matched classical gains, NOT measured gains.",
+  "invalid_probabilities_rejected": 5,
+  "naive_tilt_conditional_TV_negative_control": "1/6",
+  "scope": "Artificial finite-law controls and analytic cost sensitivities only; no climate data or simulator run.",
+  "status": "pass",
+  "tilt_correction_and_nested_cost_cases": 12
+}
