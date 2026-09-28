@@ -1,90 +1,91 @@
-# Current task: test the useful cost of joint short-continuation selection
+# Current task: inspect real sibling continuations before quantum costing
 
 28 September 2026. Active branch: `research/prx-quantum-phase2`.
 Scientific phase 3; manuscript remains on hold.
 
-Read [segment selection 12](../exploration/phase_3/SEGMENT_SELECTION_12.md),
-the [heatwave contract](../exploration/phase_3/HEATWAVE_SAMPLING_CONTRACT_11.md),
-and the [direct-sampling scope](../exploration/phase_3/DIRECT_SAMPLING_FORECASTS_10.md).
-Direct samples remain allowed; no learned classical program or quantum-free
-execution requirement is reintroduced. The selected consumer remains the CESM
-France conditional summer histories and circulation diagnostics, not a current
-weather forecast or a claim of validated real-world climate improvement.
+Read [continuation-information audit 13](../exploration/phase_3/CONTINUATION_INFORMATION_13.md),
+[segment selection 12](../exploration/phase_3/SEGMENT_SELECTION_12.md), and the
+[heatwave contract](../exploration/phase_3/HEATWAVE_SAMPLING_CONTRACT_11.md).
+Direct quantum samples remain allowed. Classical-program construction and
+quantum-free deployment are not reintroduced.
 
-## Completed bounded derivation
+## Current finding and access boundary
 
-For stored prefixes h_i of weight w_i and a short kernel K_i, joint conditioning
-with score g_i produces Q(i,dy) proportional to w_i K_i(dy) g_i(y). Selecting parent
-and continuation jointly retains the parent weight w_i E_K g_i without estimating
-every parent normalizer. A standard quantum rejection/amplification implementation
-is specified. It still needs coherent restart access and segment propagation;
-no CESM oracle or circuit implementation exists.
+The published CESM France experiment supplies the sample-consuming application.
+Its recorded five-day selection scheme and archive description identify a way
+to test within-checkpoint continuation diversity. Raw and effective genealogical
+records are different: only original next-segment children, before the next
+selection, can diagnose comparable sibling variation without survivor bias.
+The exact script/index/perturbation semantics have NOT been inspected.
 
-This local law is not exact full-season sampling from a finite random population.
-Fixed positive guides define a sequentially tilted path law. Terminal inverse-guide
-weights undo that change of measure at the exact-distribution level. An additional
-construction with independent ordinary pilot-score means gives unbiased
-unnormalized full-path expectations at finite population size in the ideal model.
-Its ratios remain biased at finite sample size, and descendants are not mutually
-independent. The proof relies on fixed guides and conditional independence of
-pilots and accepted children; adaptive-guide or noisy-circuit variants are not proved.
+The original France resampling archive and scripts are still absent from the
+runtime. Runtime DNS and separate download attempts failed; web metadata worked.
+A matching GitHub source search and Zenodo-plugin search did not provide an
+alternative transfer. Do not claim any measured within-parent variance,
+acceptance rate, native runtime, memory budget or quantum advantage.
 
-Pilots, their variance and replicate costs count. Amplified success frequency is
-not the original normalizer; classical alive-filter trial-count formulas cannot
-use quantum attempt counts unchanged. The primitive, adapted particle framework
-and weighting ingredients are established methods, not claimed novel results.
-No useful climate advantage is established.
+Audit 13 lists the minimal six-file packet and the authors' recorded MD5 values.
+Obtain these original files by a working transfer or user upload. No further
+battery upload is needed. The climate packet is about 13.3 MB plus small scripts;
+full field-composite archives and a new CESM run are not needed for the initial
+inspection. Listed checksums are not verified archive/member hashes until read.
 
-## Next application-specific test; no further toy census
+## One stronger comparator to retain
 
-Use the existing France five-day selection/perturbation protocol. Inspect the
-released score/ancestry records and source semantics to distinguish variation
-between unrelated parents from variation among legitimate continuations of the
-SAME checkpoint. Determine whether those records support any estimate of the
-latter; do not manufacture repeat trials or infer unobserved variance.
+For the same target Q(i,dy) proportional to w_i K_i(dy) G_i(y), valid per-parent
+score bounds b_i permit classical parent selection proportional to w_i b_i and
+acceptance G_i(y)/b_i. The accepted law is exactly Q. Its acceptance is
+sum_i w_i E_K G_i / sum_i w_i b_i. Quantum selection may use the same improved
+prior. Price construction of the bounds and parent sampling for both methods.
 
-Record what state and accumulated statistics a short coherent continuation must
-load. Establish a defensible score envelope or explicitly bounded positive guide:
-a maximum of observed weights is not a bound on all unseen children. Seasonal
-event probability is not the local selection acceptance probability.
+If G_i(y) >= b_i/R on all allowed continuations, classical rejection takes at
+most R attempts per accepted child, regardless of how different the parent
+scores are. No such bound is currently established for CESM. Observed maxima
+and small observed sibling variance are not certified unseen-continuation bounds.
+This is standard rejection algebra, not a new theorem or an application speedup.
 
-The required deliverable is a task-level budget or a decisive exclusion of this
-implementation: coherent setup/lookup, short propagation/inverse, replay, scoring,
-pilots or another justified normalizer scheme, terminal weights, population
-replication and uncertainty in the requested composite. No arbitrary required
-precision is taken from the illustrative pilot table. Other correct weighting
-schemes may replace the independent pilots if their bias/variance/cost is established.
+## Next bounded execution after data acquisition
 
-Compare with classical joint rejection AND stronger weighted, stratified, cached,
-guided or direct-observable methods. Once scores are computed, classical resampling
-of the explicit list is cheap; do not claim savings in propagation by replacing
-that step alone. With deterministic continuations, compute each distinct prefix
-once and reuse its scored result. Preserve the baseline perturbation law rather
-than introducing convenient extra randomness. Arbitrary small score rescaling
-cannot create a genuine quantum opportunity.
+1. Verify recorded archive/script checksums, inspect scripts without executing
+   them, and establish the exact schema, time indexing and parent direction.
+   Read arrays safely; do not enable untrusted object deserialization merely to
+   make a loader work. Preserve input bytes and their rights.
+2. Reconstruct immediate sibling groups by batch/checkpoint from raw records.
+   Analyze the next five-day interval, before its resampling. Separate genuine
+   perturbations from unperturbed retained members, duplicate records and reused
+   seeds. Do not infer independent draws from filenames or different slot indices.
+3. Replay the actual segment score and report sibling counts and conditional
+   log-score spreads. Variance for singleton or absent groups is unknown, not zero.
+   State the estimand and group weights; prolific ancestors are oversampled and
+   pooled child variance is not original-mixture variance. Keep killed children.
+4. Determine which useful-cost terms the data identify. Scalar scores do not
+   reveal complete restart-state size, coherent propagation cost, global score
+   envelopes, or final circulation-composite variance. Record these unknowns.
+   Do not infer a full quantum cost from a 13.3 MB diagnostics file.
 
-Do not undertake a reversible CESM port, new atmospheric model, large simulation,
-training campaign or additional finite-law demonstration before this useful-cost
-condition is supported. If data access remains blocked, retain the completed
-analytical result and report the specific missing evidence; do not promote a
-hypothetical gate/cost table to application performance. No new repository needed.
+Use independent population replication and the actual terminal weights for any
+supported uncertainty estimate. An empirical guide tuned on these records needs
+held-out validation. A strong classical method may cache, stratify, guide, weight
+or directly estimate the observable; ordinary joint rejection is not its limit.
+Preserve the published perturbation law. Exactness for a declared perturbed kernel
+does not prove its accuracy for unperturbed climate or the physical atmosphere.
 
-## Evidence, access and preserved work
+No more artificial-law census, reversible CESM port, simulator framework, training
+campaign or broad data hunt is the default next step. If the packet remains
+unavailable, retain the completed analysis specification and report the exact
+blocked measurement rather than produce another hypothetical performance table.
 
-`python experiments/segment_selection_v1/verify.py` passed twice with identical
-JSON; -O/-OO refusal was checked. It checks artificial joint-selection laws,
-full-path weighting and finite-population negative controls, including an exact
-32-history pilot enumeration. The report records 1408 nonempty laws, 50 empty
-laws, 5632 ideal-amplitude states, 64 zero-success states and five invalid inputs.
-These are diagnostics, not climate runs, circuit compilation or a benchmark.
+## Evidence and preserved work
 
-Primary methods and metadata were read. Relevant PDF screenshot attempts and
-runtime/web script transfers failed; no figure-derived numbers, new climate-array
-analysis or upstream implementation are claimed. Earlier scientific suites were
-not rerun; all historical sources, fixtures and reports are unchanged.
+Audit 13 performed source inspection and comparator algebra only. No new scientific
+code was added and no scientific verifier, climate-array calculation, quantum
+simulation, forecast or native benchmark was run. Previous diagnostic results
+remain at their dated notes and reports; they were not rerun at this checkpoint.
+The law-correct segment construction and its pilot/finite-population limitations
+remain unchanged. No useful quantum advantage has been established.
 
-Manthan remains paused, battery/operator routes parked, and the two spin-offs
-independent. Phase-2 Note 27 stays closed. The existing battery upload is already
-verified and is not climate data. Preserve rights and provenance. Modify only
-Quantum-Assisted-Algorithm-Discovery. No outside contact, paid/unattended work,
-manuscript revival, submission, release, branch merge or administration change.
+Manthan remains paused, battery/operator routes parked, the two classical spin-offs
+independent, and Phase-2 Note 27 closed. Preserve old notes, code, data, reports,
+manifests, licenses and third-party rights. Modify only Quantum-Assisted-Algorithm-
+Discovery. No outside contact, paid/unattended work, manuscript revival, submission,
+release, branch merge, new repository or administration change is authorized.
