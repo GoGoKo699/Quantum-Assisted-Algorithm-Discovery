@@ -1,55 +1,66 @@
 # Claim ledger
 
-## Current checkpoint: continuation-information audit, 28 September 2026
+## Current checkpoint: open sampling mechanism screen, 28 September 2026
 
-[Audit 13](exploration/phase_3/CONTINUATION_INFORMATION_13.md) identifies which
-published France records could test variation among continuations of the SAME
-checkpoint. Raw pre-next-selection siblings, reconstructed surviving histories,
-and unrelated parents are different populations. The archive metadata identifies
-potential inputs, but their schema, parent indexing and clone semantics have not
-been inspected from script/array bytes. No empirical variance is established.
+[Screen 14](exploration/phase_3/OPEN_SAMPLING_SCREEN_14.md) retains climate
+continuation selection and opens a distinct bounded check of direct many-body
+spectral sampling, initially for an NMR consumer. The missing climate data gate
+that experiment, not the entire parent exploration. No specific NMR compound or
+useful quantum cost advantage is established. Direct sample outputs remain allowed.
 
-A stronger classical comparator is explicit: select parents in proportion to
-w_i b_i for valid bounds b_i on their continuation scores, then reject by
-G_i(y)/b_i. Its successful law is the same joint weighted law as Note 12.
-Tight within-parent bounds can make this inexpensive despite large variation
-between parents. The argument is standard rejection-sampling algebra, not a new
-primitive, speedup or proof that such bounds exist cheaply for CESM. Quantum
-preparation may exploit the same bounds. Observed maxima do not certify them.
+Primary non-quantum-computing application work documents spectral fitting and
+parametrized nuclear-spin models. Direct spectral quantum samplers and quantum-
+assisted NMR inference are already prior work. The checkpoint restates their
+normalized high-temperature spectral law and analytically checks a vectorized
+energy-gap representation, including the conjugate second register. A simple
+W-state/Bell-state identity prepares the collective-X observable state without
+an unknown ground state. These are standard identities, not novel algorithms,
+optimality results or experimental demonstrations.
 
-The local task is now data-gated. Runtime and separate file-download attempts
-failed for the France archive/script; web metadata and primary paper text were
-read. No suitable source mirror or Zenodo connector was found in bounded searches.
-The six-file packet in Audit 13 would permit the next inspection without a new
-model run. The scalar diagnostic archive is not a restart-state or quantum-memory
-specification. Application-specific acceptance, complete cost and final diagnostic
-variance remain unknown. No useful quantum advantage is established.
+The target normalized correlation shape is distinct from absolute intensity or
+an arbitrary signed/complex pulse signal. Finite-time phase estimation, instrument
+response, polarization, relaxation and parameter acquisition all need appropriate
+modeling and costs. A useful consumer may need only a resolution-limited spectrum
+or fitted parameters, not the full microscopic sampling distribution.
 
-## Execution scope
+Two substantive classical precedents remain explicit: restricted-state and tensor-
+network NMR methods can handle some protein-scale experiments, and Fourier-based
+classical methods solve the specified harmonic vibronic-spectrum task associated
+with Gaussian boson sampling. Neither generalizes to every spectrum; neither may
+be ignored by comparing only against dense-state enumeration.
 
-Source inspection and elementary comparator algebra only. No new scientific
-code, array analysis, ensemble, electronic calculation, quantum circuit, native
-timing, training or scientific-verifier execution occurred. A PDF methods-page
-screenshot failed; no figure-derived numbers were used. Documentation checks
-and the repository diff are separate from scientific validation.
+The [work order](work_orders/CURRENT.md) requests one experimentally grounded NMR
+model/output/classical-comparator check. It does not launch a general chemistry
+or simulator project. The climate sibling test remains defined in Audit 13 and
+can resume if its source packet becomes available. No new climate upload or
+array analysis is claimed in this checkpoint.
 
-The [segment construction](exploration/phase_3/SEGMENT_SELECTION_12.md), its checker
-and report are unchanged and were not rerun. The sampler's exact local law does
-not make a finite cloud an exact seasonal sample; pilot variance, ratios,
-genealogy and model/perturbation accuracy remain part of the comparison.
-The [work order](work_orders/CURRENT.md) requests the original records and a
-bounded sibling diagnostic, not further artificial-law enumeration or a CESM port.
+## Executed scope
+
+Primary abstracts/HTML, selected PDF text and the QuantumNMR repository README
+were inspected. PDF screenshot attempts failed; no plot/table numbers were
+interpreted or digitized. The recent arXiv:2609.17102 NMR hardware result was
+surfaced only at indexed-primary-abstract level; its difficulty and cost claims
+were not verified. It is not an advantage claim for this project.
+
+Analytic identities were checked, but no numerical model, native NMR package,
+quantum circuit, spectrum fit, performance benchmark or scientific verifier ran.
+No scientific code, source data or new diagnostic framework was added. The changes
+are the source-backed exploration note and documentation routing. Historical
+scientific sources and reports are unchanged and were not rerun.
 
 ## Preserved historical evidence
 
-The complete preceding ledger is pinned at the
-[pre-information checkpoint](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/298abebe763c4030d697de47d7366ed97710e902/STATUS.md),
-which links earlier evidence. Old current/next headings do not create parallel
-tasks. Direct useful sampling remains authorized; Manthan is paused, battery and
-operator routes parked, the two classical spin-offs independent, and Phase-2
-Note 27 closed. The existing battery upload is not climate data and is not requested
-again. Manuscript preparation remains on hold. Prior notes, code, fixtures,
-reports, licenses and third-party notices remain intact.
+The preceding status and all its evidence links remain at the pinned
+[pre-screen checkpoint](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/400403deb37e86e8f4b6f5a5d2e6721463bd6d27/STATUS.md).
+[Audit 13](exploration/phase_3/CONTINUATION_INFORMATION_13.md) retains the climate
+access limitations and classical score-envelope comparator. Notes 11-12 and their
+finite-law diagnostics are unchanged; local correctness is not a validated
+climate sampler or a proof of useful acceleration.
 
-Only Quantum-Assisted-Algorithm-Discovery is modified. No external contact,
-paid/unattended work, release, branch merge, new repository or administration change.
+Manthan stays paused, battery/operator candidates remain parked, both classical
+spin-offs remain independent, and Phase-2 Note 27 stays closed. Manuscript
+preparation remains on hold. Previous notes, code, reports, fixtures, licenses
+and third-party rights are preserved. Only Quantum-Assisted-Algorithm-Discovery
+is modified; no external contact, paid/unattended computation, release, branch
+merge, new repository or administration change is authorized.
