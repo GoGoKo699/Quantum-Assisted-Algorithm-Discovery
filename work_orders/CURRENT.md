@@ -1,97 +1,93 @@
-# Current task: observable-scale classical compression versus linewidth-matched quantum sampling
+# Current task: determine how much observable complexity survives the linewidth
 
 28 September 2026. Active branch: `research/prx-quantum-phase2`.
 Scientific phase 3; manuscript preparation remains on hold.
 
-Read [model comparison 15](../exploration/phase_3/SPECTRAL_MODEL_STRUCTURE_15.md),
-[AGENTS.md](../AGENTS.md), and the [direct-sampling scope](../exploration/phase_3/DIRECT_SAMPLING_FORECASTS_10.md).
-Mathematical models and their quantum integration come before implementation.
-Direct samples remain allowed; a learned classical program is not required.
+Read [spectral boundary 16](../exploration/phase_3/SPECTRAL_BOUNDARY_16.md),
+[model comparison 15](../exploration/phase_3/SPECTRAL_MODEL_STRUCTURE_15.md),
+and [AGENTS.md](../AGENTS.md). Models and quantum integration precede detailed
+implementation. Direct samples remain permitted; a learned classical program
+or quantum-free deployment is not required.
 
-## Completed model-level comparison
+## Completed mathematical comparison
 
-The classical-dynamics route retains its Koopman-von Neumann representation, but
-must beat direct trajectory sampling, not an explicit probability grid. The
-spectral family now has a concrete finite-resolution quantum construction and
-several strong analytic classical reductions. It is selected for the next bounded
-derivation without closing climate or nonlinear-distribution exploration.
+For exact Lanczos recursion of L=[H,.] from the normalized collective raising
+observable, the retained real tridiagonal matrix T_m and the boundary residual
+b_m determine a sufficient Lorentzian-sampling error certificate. With
+q_m=2 gamma integral_0^infinity exp(-2 gamma t)|[exp(-i T_m t)]_(m,1)|^2 dt,
+the TV error is at most min(1, b_m sqrt(q_m)/(2 gamma), b_m^2 q_m/(2 gamma^2)).
+The discarded spectrum need not be known. The same bound covers common binning.
+The proof specializes established Lanczos quadratic-form/resolvent error machinery;
+no generic new Lanczos method, publication priority or quantum advantage is claimed.
 
-The model is homonuclear spin-1/2 isotropic exchange with inhomogeneous centered
-axial offsets, collective raising observable O=sum S_i^+, and the normalized
-high-temperature correlation spectrum convolved with a Lorentzian of width gamma.
-The output is specified frequency-bin labels at total-variation tolerance epsilon,
-not absolute intensity, an arbitrary pulse signal, or exact microscopic lines.
-Input spin parameters are supplied; deriving them from chemistry is another task.
+This is a sufficient certificate, not a hardness test. Its failure does not prove
+that the approximation is inaccurate or that another classical method fails.
+Numerical recurrence defects, coefficient precision, cancellation in q_m and finite
+output arithmetic need separate error budgets; the executed floating-point checks
+are not interval certificates. Unbroadened spectral moments are not moments of the
+Cauchy-broadened law, which has heavy tails.
 
-An observable-state preparation and a product-state geometric clock give the
-required wrapped Lorentzian law through controlled doubled-register evolution
-and a dithered Fourier measurement. Explicit truncation, wrap and finite-offset
-bounds yield total controlled evolution time O(log(1/epsilon)/gamma). This is
-not a compiled gate count, practical runtime, optimality result or quantum speedup.
-Coefficient access, state/clock preparation, numerical precision, repetitions and
-inference costs count. Spectral sampling and windowed phase estimation are prior
-work; priority for this precise composition has not been assessed exhaustively.
+For a nearest-neighbor chain, terms in L^k O fit within intervals of length k+1,
+although their nonidentity support may contain holes. Through the residual at m,
+at most 3 n 4^m Pauli strings are needed. Local indexing gives an explicit
+O(n poly(m)4^m) arithmetic upper bound for one classical recursion construction.
+This is neither an all-classical lower bound nor a claim that the checker is an
+optimized implementation. Small certificate depth gives a real classical sampler:
+diagonalize T_m, sample its positive line weights, add Cauchy broadening and bin.
+Classical preprocessing can be amortized across all requested samples.
 
-## Structural classical responses that must remain in the comparison
+Collective cross terms are retained by using the full O. A mixture of single-site
+spectra is not generally the same law, even for two spins. The disconnected-block
+mixture of Note 15 is a distinct valid reduction. Keep the exact symmetry, commuting,
+coarse-line, cut, and two-spin limits in the classical comparison.
 
-The commuting SzSz model has an exact local classical frequency sampler. Uniform
-centered fields make the collective spectrum a single line for any isotropic
-coupling graph. A coarse-line approximation is certified when the offset variance
-is small relative to gamma squared. These are observable-specific statements,
-not claims that the full many-body state is simple.
+## Next bounded derivation
 
-Deleting isotropic bonds of total absolute strength J_cut changes the broadened
-spectrum in TV by at most J_cut/(2 gamma). A supplied partition into small components
-therefore permits an explicit classical mixture sampler when this tolerance is
-adequate. Partition construction counts. The certificate is sufficient and
-conservative; its failure is not evidence that the spectrum is classically hard.
-The two-spin solution also shows that a weak-coupling approximation must be checked
-against linewidth, not just the field-to-coupling ratio.
+Study the family with alternating axial offsets delta_i=(-1)^i d on an even
+nearest-neighbor chain, initially with uniform or explicitly bounded couplings.
+This is a structural subfamily of the justified spin model, not a claim of a new
+measured compound or an industrial workload. The broadening and requested bins
+are fixed by the mathematical task; do not loosen them to force tractability.
 
-## Next bounded mathematical derivation
+Determine whether observable-space evolution reaches increasingly extended
+correlations on the linewidth time scale, and what it costs classically to retain
+the information relevant to the spectrum. Use the exact d=0 collective-symmetry
+limit and resolved two-spin formulas as controls. Note 16 already gives the first
+two recursion levels and an all-size sufficient two-line approximation bound.
+Do not treat a failed bound at those levels as evidence of hardness.
 
-Select one physically motivated bounded-degree inhomogeneous coupling family and
-analyze the size of the observable representation actually needed at the requested
-linewidth. Compare a suitable restricted-operator, cluster, Krylov or tensor-network
-approximation with the explicit quantum construction. Work at the same output-law
-or declared-bin tolerance, rather than requiring classical recovery of the full
-many-body state or every exact transition.
+Compare exchange narrowing, a justified secular approximation, further recursion,
+restricted-operator and tensor-network representations. A large Pauli list or
+Lanczos coefficient is evidence about that representation only. The operator-
+growth hypothesis is not a theorem for every observable or this parameter family.
+A useful outcome is a parameter-dependent truncation/scaling statement or a
+specific unresolved obstruction that the direct quantum dynamics can address.
 
-A useful first result is an error bound relating truncation of the evolving
-observable/correlation function to the broadened spectral output, on the time
-scale O(log(1/epsilon)/gamma). State how the required classical representation
-scales with degree, interaction strengths, offset inhomogeneity, time and error.
-The collective observable requires its own spatial/correlation accounting; a
-single-site locality bound must not be copied without checking cross terms.
+Keep Note 15's linewidth-matched quantum sampler as the other side: its controlled
+evolution time is O(log(1/epsilon)/gamma), with explicit preparation, coefficient
+access, simulation precision, clock/readout and repeated-sample costs. It need not
+compute or learn the classical recursion coefficients. Compare complete costs at
+the same spectral-law quality, including the number of requested samples.
 
-Identify a regime where a certified classical reduction suffices, or a specific
-remaining structural obstacle that the quantum representation can address.
-A large connected graph, fourth moment or operator entanglement is not a lower
-bound against all classical algorithms. Keep direct inference, known libraries
-and classical sampling of a task-equivalent distribution available where relevant.
-No positive separation is required in advance, and no universal rejection follows
-from one easy limit. The goal is to expose a possible useful mechanism, not to
-turn the new bounds into another classical spin-off.
+Do not conflate phenomenological Lorentzian broadening with order-dependent
+physical relaxation in prior classical NMR compression results. Apply each result
+only with its assumptions; do not omit physically needed relaxation to create
+complexity. No molecule download, native package, large simulation, new compiler,
+third spin-off or hardware resource campaign is the next step.
 
-Do not make a particular molecule, spectrum download, native package or hardware
-estimate a prerequisite. No simulator, full circuit compiler, large toy census
-or new experiment campaign is the next task. Detailed implementation becomes
-appropriate only when it resolves an identified model-level uncertainty.
+## Executed evidence and preservation
 
-## Evidence and preserved work
+The new NumPy checker ran twice with identical output under one BLAS thread;
+-O/-OO refusal was checked. Three fixed systems of 2, 4 and 6 spins check 36 binned
+comparisons, 74 moment identities, 15 sparse/dense support controls and 108
+resolvent identities, plus nine analytic boundary formulas, three complex-basis
+controls, two negative controls and four invalid linewidths. These are numerical
+mathematical diagnostics, not experimental spectra, compiled circuits or timing.
+The note/report state tolerance and scope. No older scientific suite was rerun.
 
-`python experiments/spectral_structure_v1/verify.py` requires NumPy and Python
-3.10+. The checker ran twice with identical JSON; -O/-OO refusals were checked.
-It uses five fixed systems of at most four spins, one disconnected-mixture and
-complex-transpose control, two-spin formulas, three clock kernels and scalar tail
-bounds. These are double-precision mathematical diagnostics, not experimental
-spectra, compiled quantum circuits or timings. Continuous claims follow from the
-written proofs rather than finite numerical bins. No older verifier was rerun.
-
-No experimental or climate data, model weights or upstream source were imported.
-The climate sibling test remains as specified in Note 13; its missing packet blocks
-that empirical test only. Manthan remains paused, battery/operator routes parked,
-both classical spin-offs independent, and Phase-2 Note 27 closed. Preserve earlier
-proofs, code, data, reports, manifests, licenses and third-party rights.
+Climate/distribution evolution remain open. Missing climate data block only their
+specific empirical test. Manthan stays paused; battery/operator candidates remain
+parked; both classical spin-offs remain independent; Phase-2 Note 27 stays closed.
+Preserve all earlier notes, code, data, reports, licenses and third-party rights.
 Only Quantum-Assisted-Algorithm-Discovery may be modified. No external contact,
 paid/unattended work, manuscript revival, release, merge, new repository or admin change.
