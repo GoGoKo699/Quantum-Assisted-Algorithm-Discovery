@@ -1,60 +1,65 @@
 # Claim ledger
 
-## Current checkpoint: direct extreme-summer sampling, 28 September 2026
+## Current checkpoint: joint short-continuation selection, 28 September 2026
 
-The [task-level comparison](exploration/phase_3/HEATWAVE_SAMPLING_CONTRACT_11.md)
-selects conditional extreme-summer histories and circulation diagnostics in an
-established CESM1.2.2 experiment. This supplies a real sample-consuming research
-workflow. It is climate-model-conditioned risk/mechanism analysis, not today's
-forecast, an operational forecast validation, or a quantum advantage.
+The [segment construction](exploration/phase_3/SEGMENT_SELECTION_12.md) addresses
+the prefix-weight problem in the selected CESM extreme-summer task. Joint
+parent/continuation conditioning produces weights proportional to w_i K_i g_i,
+including the correct parent marginal. It avoids estimating each parent's score
+normalizer separately. The primitive is standard quantum rejection/amplification,
+and the fully adapted particle framework is prior work. No new primitive,
+publication priority, useful quantum speedup or climate prediction is established.
 
-A reference construction uses coherent event computation on random inputs,
-amplitude amplification, measured random input and classical trajectory replay.
-The output law is written, including many-to-one trajectory maps. No wavefunction
-tomography or classical-program discovery is required. No climate model or
-reversible implementation was run; propagation, input preparation, numerical
-semantics, hardware and validation costs remain uninstantiated.
+The exact finite-pool conditional law is not an exact full-season distribution.
+The note derives the sequential guide correction and an independent ordinary-pilot
+construction giving unbiased unnormalized full-path expectations at finite
+population size, conditional on exact local sampling and fixed positive guides.
+Finite self-normalized ratios are not unbiased; genealogy, pilot variance and
+independent population replication determine useful statistical uncertainty.
+No finite-precision climate circuit or quantitative climate variance bound exists.
 
-The executed known-probability sensitivity counts forward/inverse calls and replay.
-All displayed event probabilities, equal-call-cost assumptions and classical gain
-factors are hypothetical. They are not measured climate/hardware results. Strong
-classical importance/splitting methods must be compared at the same diagnostic
-quality, allowing weighted and correlated output with proper uncertainty accounting.
+Cost accounting includes coherent checkpoint access, short propagation and its
+inverse, successful-child replay, pilots, setup and validation. The square-root
+comparison is with same-law rejection, not with the strongest classical genealogy
+or importance method. Known-score resampling and deterministic cached continuations
+are explicit stronger classical responses. Rescaling a guide can make rejection
+arbitrarily harder without changing its target and is not a quantum opportunity.
+Seasonal event rarity cannot be substituted for local acceptance probability.
 
-An exact change-of-measure calculation gives the correction from an exponential
-tilt to the desired conditional tail. Straightforward globally filtered preparation
-followed by inverse-weight rejection yields no extra scaling gain in the analyzed
-nested-amplification recipe. This is not a general lower bound on guided quantum
-preparations. The June 2026 individually-unlikely-outcome sampler has a different
-physical target and access model, not an automatically applicable climate advantage.
+The [work order](work_orders/CURRENT.md) requires one application-specific test of
+five-day continuation variation, correction-weight uncertainty and checkpoint
+access. It does not authorize a reversible CESM port or further artificial-law
+census. The direct-sample scope remains in effect.
 
-The new standard-library checker passed twice with identical JSON: 12 rational
-tilt/correction identities, negative controls, a conditioning-sensitivity example,
-unused-label refinement and the cost table. Five invalid probabilities and -O/-OO
-execution were rejected. These are artificial finite-law controls, not climate,
-quantum hardware, a physical-model error budget, or performance benchmarking.
-The [report](experiments/direct_tail_sampling_v1/REPORT.json) and note contain scope
-and hashes. Historical verifiers were not rerun and their files are unchanged.
+## Executed evidence and limitations
 
-The public climate data inventory was inspected, but runtime downloads failed on
-DNS. No climate archive was imported, checksum-verified or analyzed numerically.
-The note records PDF screenshot failures; no inaccessible figure supplied a new
-numerical result. No raw source data or upstream code was redistributed.
+The new independent standard-library checker passed twice with identical JSON.
+Its 1458 artificial prior/kernel/score cases include 50 empty selection laws.
+The other 1408 produce 5632 exact ideal-amplitude states, including 64 zero-success
+states. Additional controls check parent-first bias, full-path guide correction,
+finite-pool bias, independent-pilot path masses, deterministic caching, guide
+scaling and the original-versus-amplified normalizer distinction. Five invalid
+inputs and -O/-OO execution were rejected. The
+[report](experiments/segment_selection_v1/REPORT.json) contains scope and hypothetical
+cost examples. No climate data, native atmospheric model, gate simulation,
+hardware, training or performance benchmark was run.
 
-## Next decision and preserved evidence
+Primary methods and metadata were inspected. Relevant PDF screenshot attempts
+and climate-script transfers failed; no numerical figure/table interpretation
+was taken from the failed images and no climate source array was acquired.
+Historical scientific verifiers were not rerun; their files are unchanged.
+No upstream implementation was imported or redistributed.
 
-The [work order](work_orders/CURRENT.md) asks for a law-preserving comparison of
-short quantum continuations within a classical rare-event method. Prefix selection
-weights and the cost of obtaining conditional probabilities cannot be omitted.
-No full reversible CESM campaign, new simulator or large toy census is authorized.
-Direct samples remain allowed; classical-program construction is not reimposed.
-No useful sampler, novel quantum primitive or application speedup is established.
+## Preserved historical evidence
 
-The complete prior ledger is pinned at the
-[pre-task checkpoint](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/215c256127998b4aedb56a678b2af5a0a710370a/STATUS.md),
-which retains links to earlier evidence. Historical current/next headings are not
-parallel work orders. Manthan stays paused, battery/operator candidates remain
-parked, both classical spin-offs remain independent, and Phase-2 Note 27 stays closed.
-The original license, upstream rights, old notes, code and reports are preserved.
-Manuscript preparation remains on hold. Only the parent repository is modified;
-no external contact, paid/unattended work, release, merge or administration change.
+The complete preceding ledger is pinned at the
+[pre-segment checkpoint](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/5272b5f70e87fbbd99c731989d1a4a53deb8d342/STATUS.md),
+which retains earlier evidence links. Previous current/next headings are checkpoint
+records, not parallel tasks. Manthan remains paused, battery/operator routes
+parked, and both classical spin-offs independent. Phase-2 Note 27 stays closed.
+The battery upload is already verified and is not climate data. Manuscript
+preparation remains on hold. Historical notes, proofs, code, data, reports,
+licenses and third-party notices are preserved.
+
+Only Quantum-Assisted-Algorithm-Discovery is modified. No external contact,
+paid/unattended work, release, branch merge, new repository or administration change.
