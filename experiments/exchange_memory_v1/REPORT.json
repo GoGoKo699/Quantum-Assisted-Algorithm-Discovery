@@ -1,0 +1,73 @@
+{
+  "certificate_controls": [
+    {
+      "binned_TV_diagnostic": 0.005685098925353516,
+      "bound": 0.3667839838624415,
+      "d": 0.2,
+      "gamma": 0.6,
+      "n": 2,
+      "window": 3.0
+    },
+    {
+      "binned_TV_diagnostic": 0.010128416636581039,
+      "bound": 0.9523792564667232,
+      "d": 0.3,
+      "gamma": 0.6,
+      "n": 4,
+      "window": 3.0
+    },
+    {
+      "binned_TV_diagnostic": 0.0026663903449448967,
+      "bound": 0.2759673292634804,
+      "d": 0.15,
+      "gamma": 0.6,
+      "n": 4,
+      "window": 3.0
+    }
+  ],
+  "counts": {
+    "binned_certificate_checks": 3,
+    "dimer_identity_checks": 24,
+    "memory_symmetry_checks": 45,
+    "projected_generator_checks": 15,
+    "reflection_checks": 9,
+    "spin_resolvent_checks": 45,
+    "truncated_memory_checks": 18,
+    "window_envelope_checks": 153
+  },
+  "dimer_controls": [
+    {
+      "central_bin_error_dropped_memory_perturbation": 0.7963539683525773,
+      "d_over_J": 0.2,
+      "gamma_over_d2_J": 0.1,
+      "memory_zero_pole_mass": 0.03846153846153847,
+      "resummed_TV_bound": 0.16732395447351628
+    },
+    {
+      "central_bin_error_dropped_memory_perturbation": 0.8233640928590644,
+      "d_over_J": 0.1,
+      "gamma_over_d2_J": 0.1,
+      "memory_zero_pole_mass": 0.009900990099009903,
+      "resummed_TV_bound": 0.04183098861837907
+    },
+    {
+      "central_bin_error_dropped_memory_perturbation": 0.8303431369311727,
+      "d_over_J": 0.05,
+      "gamma_over_d2_J": 0.1,
+      "memory_zero_pole_mass": 0.0024937655860349135,
+      "resummed_TV_bound": 0.010457747154594767
+    },
+    {
+      "central_bin_error_dropped_memory_perturbation": 0.8325963352703989,
+      "d_over_J": 0.01,
+      "gamma_over_d2_J": 0.1,
+      "memory_zero_pole_mass": 9.999000099990002e-05,
+      "resummed_TV_bound": 0.00041830988618379064
+    }
+  ],
+  "invalid_inputs_rejected": 5,
+  "limiting_bin_error": 0.8326904300679429,
+  "scope": "Finite complex128 identities and bin checks only; no established short-memory regime, quantum run, or speedup.",
+  "status": "pass",
+  "tolerance": 3e-10
+}
