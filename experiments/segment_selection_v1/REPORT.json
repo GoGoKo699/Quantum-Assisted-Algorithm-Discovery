@@ -1,0 +1,80 @@
+{
+  "cost_assumptions": "Known local mass; first-peak schedule; replay costs one ordinary segment; no setup, lookup, mark, precision or validation overhead. Not a climate timing estimate.",
+  "cost_sensitivity": [
+    {
+      "assumed_local_acceptance": "1/4",
+      "forward_or_inverse_calls_per_child": 3.0,
+      "rho_ceiling_against_same_law_rejection": 1.0,
+      "rounds": 1,
+      "unit_coherent_cost_plus_one_replay": 4.0
+    },
+    {
+      "assumed_local_acceptance": "1/16",
+      "forward_or_inverse_calls_per_child": 7.2816621958381615,
+      "rho_ceiling_against_same_law_rejection": 2.0599692208426337,
+      "rounds": 3,
+      "unit_coherent_cost_plus_one_replay": 8.281662195838162
+    },
+    {
+      "assumed_local_acceptance": "1/100",
+      "forward_or_inverse_calls_per_child": 15.070160634460718,
+      "rho_ceiling_against_same_law_rejection": 6.569273042360154,
+      "rounds": 7,
+      "unit_coherent_cost_plus_one_replay": 16.07016063446072
+    }
+  ],
+  "deterministic_cache_law_checked": true,
+  "finite_pool_expected_high_parent_mass": {
+    "1": "1/2",
+    "2": "5/8",
+    "4": "111/160",
+    "8": "61183/84480"
+  },
+  "guide_rescaling_target_unchanged": true,
+  "hard_score_pilot_examples": [
+    {
+      "local_acceptance": "1/4",
+      "minimum_independent_pilots": 300,
+      "target_conditional_relative_sd": "1/10"
+    },
+    {
+      "local_acceptance": "1/16",
+      "minimum_independent_pilots": 1500,
+      "target_conditional_relative_sd": "1/10"
+    },
+    {
+      "local_acceptance": "1/100",
+      "minimum_independent_pilots": 9900,
+      "target_conditional_relative_sd": "1/10"
+    }
+  ],
+  "independent_pilot_control": {
+    "base_path_mass_checks": 8,
+    "extended_random_histories": 32,
+    "normalizer_omission_detected": true,
+    "recovered_total_mass": "1",
+    "scope": "Unnormalized expectations only; a finite self-normalized ratio is not unbiased."
+  },
+  "invalid_inputs_rejected": 5,
+  "joint_selection": {
+    "empty_selection_laws": 50,
+    "nonempty_selection_laws": 1408,
+    "round_states": 5632,
+    "successful_conditional_laws": 5568,
+    "zero_success_round_states": 64
+  },
+  "normalizer_trap": {
+    "one_round_success": "1",
+    "original_mass": "1/4"
+  },
+  "parent_first_TV": "1/4",
+  "scope": "Artificial finite laws only; no climate or gate simulation.",
+  "status": "pass",
+  "true_high_parent_mass": "3/4",
+  "two_segment_path_control": {
+    "corrected_tail_TV": "0",
+    "event_mass": "13/16",
+    "paths": 8,
+    "uncorrected_tail_TV": "440/3679"
+  }
+}
