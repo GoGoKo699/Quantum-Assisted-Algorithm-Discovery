@@ -9,51 +9,56 @@ Manuscript preparation remains on hold.**
 
 ## Current sampling contract: examples become verified classical logic
 
-The [new contract](exploration/phase_3/SAMPLING_TO_VERIFIED_LOGIC_08.md) investigates
-quantum-produced examples in Boolean functional synthesis: learn candidate logic
-from valid input/output examples, formally check and repair it, then deploy the
-verified program classically. This refines the [sampling opening](exploration/phase_3/USEFUL_SAMPLING_07.md)
-without changing the classical-only deployment objective.
+The [consumer contract](exploration/phase_3/SAMPLING_TO_VERIFIED_LOGIC_08.md) tests
+whether quantum-produced examples can help a classical synthesis pipeline learn,
+repair and formally verify reusable Boolean logic. Manthan provides an existing
+classical consumer. Its sample-source sensitivity is a published precedent, not
+our performance result; modern classical preprocessing and CMSGen must remain
+in the comparison.
 
-The classical consumer already exists in Manthan. A published classical experiment
-shows that replacing its sample source changes complete synthesis performance.
-This is an application precedent, not our benchmark or evidence of quantum advantage.
-The inspected current implementation already uses CMSGen and strong preprocessing;
-those capabilities must remain in the comparator.
+The [latest encoding audit](exploration/phase_3/SAMPLING_ENCODING_AUDIT_09.md) checks
+an actual clause prefix from the supplied USB-named benchmark. It defines 85
+internal bits deterministically. Naively guessing them creates an artificial
+2^-85 uniform-acceptance penalty. A small reversible evaluator removes that
+penalty without changing the uniform conditional law. Classical processing can
+use the same definitions; this is a producer correction, not quantum advantage.
+The circuit counts cover only the prefix, not a complete sampler.
 
-The first explicit quantum producer uses standard weighted amplitude amplification.
-Its bound beats rejection sampling, not automatically modern SAT samplers. With
-identical complete training-batch laws, the learner behaves identically in law;
-only acquisition cost can improve. Different quantum laws must instead beat
-classical sources of equally useful examples. Uniform satisfying pairs need not
-give uniform input coverage, and sample validity is not final-program correctness.
+Native Manthan/CMSGen installation remains incomplete because runtime source
+transfer failed. Available native Z3 checked only the prefix identities. There
+are no native synthesis timings, trained classifier or final verified program.
+The whole benchmark and original signal/application mapping were not verified.
+Its filename is not a substitute for useful workload provenance.
 
-The [work order](work_orders/CURRENT.md) calls for one native, instrumented
-sample-source comparison on an application-derived instance before substantial
-quantum implementation. No native Manthan/CMSGen run, useful new circuit,
-quantum-resource estimate or industrial performance improvement is established.
-A benchmark filename alone does not validate a deployed application.
+The [work order](work_orders/CURRENT.md) retains one instrumented native comparison
+as the next task. It must price the residual sampling problem after legitimate
+classical simplification, learning, repair and checking. No additional small
+logic demonstration is a substitute for that baseline. Identical full training
+batch laws give identical learner behavior in law; useful differences from a
+new law must survive strong classical sample-source substitution.
 
-## Executed checks
+## Reproduce the executed prefix diagnostic
 
-Python 3.10+, standard library only:
+Python 3.10+, standard library; --native additionally requires installed libz3:
 
 ```sh
-python experiments/sampling_synthesis_v1/verify.py
+python experiments/sampling_encoding_v1/verify.py
+python experiments/sampling_encoding_v1/verify.py --native
 ```
 
-The [report](experiments/sampling_synthesis_v1/REPORT.json) records finite logical
-and exact ideal-amplitude checks, including zero-success and easy-preprocessing
-controls. These are diagnostic checks, not native synthesis, noisy/gate-level
-simulation, a sampling-speed benchmark or an application result. Historical
-scientific suites were not rerun; their source and reports are unchanged.
+The [report](experiments/sampling_encoding_v1/REPORT.json) records exact gate checks,
+reversible basis controls and two native equivalence decisions. The
+[provenance and upstream notice](experiments/sampling_encoding_v1/PROVENANCE.md)
+distinguish the transcribed prefix from the unacquired complete source. These are
+not native synthesis, independent UNSAT-proof replay, quantum hardware tests or
+performance benchmarks. Earlier verifiers were not rerun; their files are unchanged.
 
 ## Parked work and organization
 
 The [battery route](exploration/phase_3/INTERFACIAL_REFERENCE_DECISION_06.md) and
-[small-operator candidate](exploration/phase_3/MECHANISM_SCREEN_01.md) remain parked.
-The [battery archive replay](exploration/phase_3/ARCHIVE_REPLAY_04.md), source,
-report and uploaded archive are retained; no new upload is needed.
+[operator candidate](exploration/phase_3/MECHANISM_SCREEN_01.md) remain parked.
+The [battery archive replay](exploration/phase_3/ARCHIVE_REPLAY_04.md) and uploaded
+archive remain available; no new upload is needed.
 [Algebraic-Loop-Certificates](https://github.com/GoGoKo699/Algebraic-Loop-Certificates)
 and [Sparse-Weil-Reconstruction](https://github.com/GoGoKo699/Sparse-Weil-Reconstruction)
 are independent projects and own their further development.
@@ -61,10 +66,9 @@ are independent projects and own their further development.
 Scientific phase 3 uses `research/prx-quantum-phase2`. The
 [project map](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/main/PROJECT_MAP.md)
 and [parent charter](exploration/phase_2/CHARTER.md) govern the exploration.
-`main` is the public entry point, not a merged copy of later research.
-[STATUS.md](STATUS.md) gives current claims and a pinned historical ledger;
-older next steps do not create parallel work orders. Phase-2
-[Note 27](exploration/phase_2/SOURCE_AWARE_DESCENT_27.md) remains closed.
-Historical proof notes, code, data, reports, third-party notices and the original
-[MIT license](LICENSE), Copyright (c) 2026 Ruge Lin, are preserved.
+`main` is the entry point, not a merged copy of later research.
+[STATUS.md](STATUS.md) summarizes claims and links pinned historical ledgers.
+Phase-2 [Note 27](exploration/phase_2/SOURCE_AWARE_DESCENT_27.md) remains closed.
+Earlier proofs, code, data, reports and third-party notices are preserved, as is
+the original [MIT license](LICENSE), Copyright (c) 2026 Ruge Lin.
 Only the parent repository may be modified in this project context.
