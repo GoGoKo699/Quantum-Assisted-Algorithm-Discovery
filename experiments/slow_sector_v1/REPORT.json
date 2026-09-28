@@ -1,0 +1,126 @@
+{
+  "binned_spectral_controls": [
+    {
+      "binned_TV": 8.731854964840607e-05,
+      "d_over_J": 0.01,
+      "gamma_over_d2_J": 4.0,
+      "n": 2,
+      "proved_upper_bound": 0.08000000000000002
+    },
+    {
+      "binned_TV": 2.183455988210431e-05,
+      "d_over_J": 0.005,
+      "gamma_over_d2_J": 4.0,
+      "n": 2,
+      "proved_upper_bound": 0.04000000000000001
+    },
+    {
+      "binned_TV": 1.7428341325120833e-06,
+      "d_over_J": 0.001,
+      "gamma_over_d2_J": 4.0,
+      "n": 4,
+      "proved_upper_bound": 0.40033304448274076
+    },
+    {
+      "binned_TV": 4.3571035715506135e-07,
+      "d_over_J": 0.0005,
+      "gamma_over_d2_J": 4.0,
+      "n": 4,
+      "proved_upper_bound": 0.20016652224137038
+    }
+  ],
+  "chain_controls": [
+    {
+      "conserved_staggered_mass_numeric": 5.004680467665245e-34,
+      "energy_blocks_numeric": 2,
+      "max_spin_response_weight": 0.9999999999999998,
+      "n": 2,
+      "parity_block_max_residual": 2.220446049250313e-16,
+      "smallest_nonzero_energy_difference_over_J": 1.0
+    },
+    {
+      "conserved_staggered_mass_numeric": 1.39637735853812e-31,
+      "energy_blocks_numeric": 6,
+      "max_spin_response_weight": 0.625,
+      "n": 4,
+      "parity_block_max_residual": 1.0799748993139367e-15,
+      "smallest_nonzero_energy_difference_over_J": 0.29289321881345254
+    },
+    {
+      "conserved_staggered_mass_numeric": 6.668417687058937e-31,
+      "energy_blocks_numeric": 20,
+      "max_spin_response_weight": 0.29166666666666646,
+      "n": 6,
+      "parity_block_max_residual": 2.451543751306064e-15,
+      "smallest_nonzero_energy_difference_over_J": 0.034892069402502
+    },
+    {
+      "conserved_staggered_mass_numeric": 2.2575410868650346e-29,
+      "energy_blocks_numeric": 70,
+      "max_spin_response_weight": 0.11718749999999996,
+      "n": 8,
+      "parity_block_max_residual": 3.9306341548456244e-15,
+      "smallest_nonzero_energy_difference_over_J": 0.00047958176617624027
+    }
+  ],
+  "counts": {
+    "bin_normalization": 8,
+    "binned_response_bound": 4,
+    "broken_reflection_control": 1,
+    "collective_conservation": 4,
+    "degenerate_parity_control": 2,
+    "effective_commutator": 12,
+    "effective_remainder_bound": 4,
+    "graph_isometry": 4,
+    "graph_remainder_bound": 4,
+    "graph_size_bound": 4,
+    "ignored_first_order_control": 1,
+    "invariant_graph": 4,
+    "max_spin_effective_formula": 4,
+    "max_spin_response_weight": 4,
+    "mixed_parity_obstruction_detected": 1,
+    "one_magnon_gap_upper_bound": 4,
+    "parity_pure_energy_block": 98,
+    "path_flow_formula": 6,
+    "path_green_formula": 6,
+    "perturbation_domain": 4,
+    "quadratic_multiplet_fit": 98,
+    "reflection_commutation": 4,
+    "reflection_odd_field": 4,
+    "riccati_identity": 4,
+    "single_spin_multiplet": 98,
+    "state_dressing_bound": 4,
+    "zero_block_field": 4,
+    "zero_conserved_overlap": 4
+  },
+  "general_graph_controls": [
+    {
+      "complement_dimension": 2,
+      "effective_norm_error": 2.893717271361071e-06,
+      "norm_error_bound": 0.00010799999999999998,
+      "perturbation_over_gap": 0.03
+    },
+    {
+      "complement_dimension": 2,
+      "effective_norm_error": 9.407540702499975e-05,
+      "norm_error_bound": 0.004000000000000001,
+      "perturbation_over_gap": 0.1
+    },
+    {
+      "complement_dimension": 3,
+      "effective_norm_error": 2.0067868902049846e-06,
+      "norm_error_bound": 0.00010799999999999998,
+      "perturbation_over_gap": 0.03
+    },
+    {
+      "complement_dimension": 3,
+      "effective_norm_error": 7.338523088153191e-05,
+      "norm_error_bound": 0.004000000000000001,
+      "perturbation_over_gap": 0.1
+    }
+  ],
+  "invalid_linewidths_rejected": 4,
+  "scope": "Finite complex128 structural checks, not all-size parity proof, quantum circuit, experiment, or timing.",
+  "status": "pass",
+  "tolerance": 3e-09
+}
