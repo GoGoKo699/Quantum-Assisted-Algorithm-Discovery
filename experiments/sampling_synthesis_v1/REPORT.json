@@ -1,0 +1,27 @@
+{
+  "projection_negative_control": {
+    "all_resolved_by_constant_output": true,
+    "enumerated_sizes": 8,
+    "illustrative_r": 20,
+    "independent_training_samples": 10000,
+    "input_one_probability": "1/1048577",
+    "interpretation": "Deliberately easy diagnostic, not a hard workload.",
+    "probability_input_one_unseen": "0.9905085918590474373941705612655797641079"
+  },
+  "scope": "Finite logical and ideal-amplitude identities only; no native solver or speedup.",
+  "status": "pass",
+  "verification_contract": {
+    "accepted": 1296,
+    "candidates_per_relation": 16,
+    "rejected": 2800,
+    "relations": 256
+  },
+  "weighted_conditioning": {
+    "input_marginal_checks": 7984,
+    "nonempty_relations": 255,
+    "positive_success_states": 1996,
+    "prior_laws": 2,
+    "round_states": 2040,
+    "zero_success_states": 44
+  }
+}
