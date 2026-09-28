@@ -9,49 +9,62 @@ Manuscript preparation remains on hold.**
 
 ## Current application test: battery-interface reaction simulation
 
-The [application case](exploration/phase_3/APPLICATION_CASE_02.md) selects one bounded
-feasibility lead: a classical energy/force evaluator for initial electrolyte
-chemistry at lithium-metal interfaces, potentially trained on selected quantum
-computed electronic references. Later simulations would run classically.
-The generic architecture is prior work; neither a new simulator nor an advantage
-has been established.
+The [application case](exploration/phase_3/APPLICATION_CASE_02.md) investigates a
+classical energy/force evaluator for initial electrolyte chemistry at lithium-metal
+interfaces, potentially constructed using selected quantum electronic references.
+Later simulations would be classical. This generic architecture is prior work;
+no new simulator or advantage has been established here.
 
-The [latest reference audit](exploration/phase_3/REFERENCE_ACCESS_AUDIT_03.md) found
-the authors' August 2026 public geometry/data deposit and corrected the proposed
-matched-core model. The published AFQMC/ORCA convention retains lithium 1s
-correlation: the neutral Li40+EC calibration has 154 correlated electrons, not
-the 74 in the earlier hypothetical lithium-core-frozen model. Electron count,
-basis size and quantum resources are distinct quantities.
+The [latest archive replay](exploration/phase_3/ARCHIVE_REPLAY_04.md) verifies the
+supplied public ZIP, all 732 geometries and 30 tables, and the published Li40
+calibration. It reproduces four corrected barrier estimates at printed precision
+using the paper's supplied PBE surface limit. It also records the distinct PBE
+series, AFQMC trial refinements absent from the ZIP, and an averaging-endpoint
+ambiguity instead of silently mixing them.
 
-A public archive listing is available, but the ZIP has not transferred into the
-execution environment. No coordinates or Hamiltonian have been processed here.
-The [work order](work_orders/CURRENT.md) requires pinning the released inputs and
-comparing the same electronic problem before assigning costs. Modern classical
-chemistry and energy-only model training must both be permitted; the comparison
-cannot rely only on an inaccurate inexpensive functional or on free force labels.
+The numerical geometry sequences grow lithium clusters around fixed molecular
+geometries. They are not a trajectory-training dataset. A retrospective test of
+one Li40 correction transferred to other cluster sizes leaves appreciable
+method-relative discrepancies. A precise isolated energy therefore does not,
+by itself, establish a useful reusable simulator. This does not rule out a
+multi-reference or structured learning approach.
 
-This checkpoint is a source/protocol audit and integer dimension accounting, not
-a chemistry, quantum-circuit or performance benchmark. No new verifier was added.
-For the earlier published-number arithmetic only:
+The [work order](work_orders/CURRENT.md) now asks for an application-relevant
+accuracy and total reference-preparation cost comparison. The archive-access step
+is complete; Hamiltonian coefficients, state preparation, native timings and a
+validated learned model are not. Modern classical chemistry, active learning,
+and energy-only model construction remain legitimate alternatives.
+
+## Reproduce the archive analysis
+
+Obtain the original `paper_data.zip` from the authors' [Zenodo deposit](https://zenodo.org/records/22116355),
+DOI 10.5281/zenodo.22116355. Python 3.10+, standard library only:
 
 ```sh
-python experiments/application_case_v1/verify.py
+python experiments/reference_archive_v1/verify.py --archive /path/to/paper_data.zip
 ```
 
-That historical script retains its explicitly hypothetical Li-core convention;
-its electron count is not the matched published model. Its sources and outputs
-are unchanged and it was not rerun for the latest audit.
+The checker reads without extracting or modifying the ZIP. It checks the pinned
+digest, geometry inventory, selected published arithmetic and malformed inputs.
+Compare its output with the [executed report](experiments/reference_archive_v1/REPORT.json).
+No raw archive, coordinates or full source tables are redistributed here; their
+rights are not replaced by this repository's license.
+
+This checkpoint is data/protocol verification, not an electronic-structure,
+quantum-circuit, molecular-dynamics or performance benchmark. Historical suites
+were not rerun, and their source/results remain unchanged. The earlier
+[core audit](exploration/phase_3/REFERENCE_ACCESS_AUDIT_03.md) still governs the
+matched 154-correlated-electron convention; the older hypothetical 74-electron
+model and small HCI trial spaces are not equivalent electronic problems.
 
 ## Parked and independent work
 
 The [first phase-3 operator construction](exploration/phase_3/MECHANISM_SCREEN_01.md)
-remains parked. Its conditional argument and finite algebra verifier are preserved;
-its existence does not establish usefulness or give it priority over applications.
-
+remains parked, with its note and tests preserved.
 [Algebraic-Loop-Certificates](https://github.com/GoGoKo699/Algebraic-Loop-Certificates)
 and [Sparse-Weil-Reconstruction](https://github.com/GoGoKo699/Sparse-Weil-Reconstruction)
-are independent projects. Their further development belongs there, not as the
-default continuation here. Neither replaces the parent's goal.
+are independent projects and own their further development. Neither replaces
+the parent goal.
 
 ## Organization and evidence
 
@@ -59,10 +72,8 @@ Scientific phase 3 uses the existing branch `research/prx-quantum-phase2`.
 The [canonical project map](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/main/PROJECT_MAP.md)
 and [parent charter](exploration/phase_2/CHARTER.md) govern the exploration.
 The default branch is an entry point, not a merged copy of later research.
-
-[STATUS.md](STATUS.md) distinguishes the current checkpoint from historical claims.
+[STATUS.md](STATUS.md) separates current findings from retained historical claims.
 The [source-aware descent comparison](exploration/phase_2/SOURCE_AWARE_DESCENT_27.md)
-remains closed; retained reconstruction proofs do not reopen it. Earlier proofs,
-experiment sources/results, manifests, notices, and the original [MIT license](LICENSE),
-Copyright (c) 2026 Ruge Lin, are unchanged. Root and historical suites were not
-rerun for the latest audit. Only the parent repository may be modified here.
+remains closed. Earlier research, third-party notices and the original
+[MIT license](LICENSE), Copyright (c) 2026 Ruge Lin, are preserved.
+Only the parent repository may be modified in this project context.
