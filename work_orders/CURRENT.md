@@ -1,93 +1,96 @@
-# Current task: determine how much observable complexity survives the linewidth
+# Current task: low-frequency memory versus effective slow-mode compression
 
 28 September 2026. Active branch: `research/prx-quantum-phase2`.
 Scientific phase 3; manuscript preparation remains on hold.
 
-Read [spectral boundary 16](../exploration/phase_3/SPECTRAL_BOUNDARY_16.md),
-[model comparison 15](../exploration/phase_3/SPECTRAL_MODEL_STRUCTURE_15.md),
-and [AGENTS.md](../AGENTS.md). Models and quantum integration precede detailed
-implementation. Direct samples remain permitted; a learned classical program
-or quantum-free deployment is not required.
+Read [exchange memory 17](../exploration/phase_3/EXCHANGE_MEMORY_17.md),
+[spectral boundary 16](../exploration/phase_3/SPECTRAL_BOUNDARY_16.md), and
+[model comparison 15](../exploration/phase_3/SPECTRAL_MODEL_STRUCTURE_15.md).
+Mathematical models and quantum integration precede implementation. Direct samples
+remain permitted; quantum-free deployment or a learned classical program is not
+required. No useful quantum advantage is established.
 
-## Completed mathematical comparison
+## Completed model-level step
 
-For exact Lanczos recursion of L=[H,.] from the normalized collective raising
-observable, the retained real tridiagonal matrix T_m and the boundary residual
-b_m determine a sufficient Lorentzian-sampling error certificate. With
-q_m=2 gamma integral_0^infinity exp(-2 gamma t)|[exp(-i T_m t)]_(m,1)|^2 dt,
-the TV error is at most min(1, b_m sqrt(q_m)/(2 gamma), b_m^2 q_m/(2 gamma^2)).
-The discarded spectrum need not be known. The same bound covers common binning.
-The proof specializes established Lanczos quadratic-form/resolvent error machinery;
-no generic new Lanczos method, publication priority or quantum advantage is claimed.
+For the even alternating-offset chain, the normalized collective mode o obeys
+L_d o=d v, with v the explicitly known staggered raising mode. Orthogonal projection
+gives B_d=Q L_d Q=L_d-d(|o><v|+|v><o|), and the physical resolvent is
+G_d(z)=1/[z-d^2 F_d(z)], F_d(z)=<v,(z-B_d)^(-1)v>. These are exact projection/Schur
+identities built on established memory-function methods, not a new framework.
 
-This is a sufficient certificate, not a hardness test. Its failure does not prove
-that the approximation is inaccurate or that another classical method fails.
-Numerical recurrence defects, coefficient precision, cancellation in q_m and finite
-output arithmetic need separate error budgets; the executed floating-point checks
-are not interval certificates. Unbroadened spectral moments are not moments of the
-Cauchy-broadened law, which has heavy tails.
+The projected generator is accessible quantumly through L_d plus two reflections
+about known sublattice observable states. Preparing those states requires no
+unknown eigenbasis. Their preparation, inverses, coefficient access, simulation
+normalization, precision and shot counts still cost resources. The mathematical
+identity is not a compiled circuit or demonstrated speedup. Memory spectral
+samples are not themselves physical NMR-response samples.
 
-For a nearest-neighbor chain, terms in L^k O fit within intervals of length k+1,
-although their nonidentity support may contain holes. Through the residual at m,
-at most 3 n 4^m Pauli strings are needed. Local indexing gives an explicit
-O(n poly(m)4^m) arithmetic upper bound for one classical recursion construction.
-This is neither an all-classical lower bound nor a claim that the checker is an
-optimized implementation. Small certificate depth gives a real classical sampler:
-diagonalize T_m, sample its positive line weights, add Cauchy broadening and bin.
-Classical preprocessing can be amortized across all requested samples.
+A finite-window bound on F_d(z)+i kappa gives a sufficient TV certificate for a
+single Lorentzian response of width gamma+d^2 kappa. The certificate accounts for
+the unbroadened second-moment tail and scalar estimation error. Its failure is
+not a hardness test. Short-time curvature does not prove short memory. The optional
+short-time quantum estimate needs an independently justified memory-tail bound;
+otherwise it recovers the linewidth time scale. Finite closed systems recur.
 
-Collective cross terms are retained by using the full O. A mixture of single-site
-spectra is not generally the same law, even for two spins. The disconnected-block
-mixture of Note 15 is a distinct valid reduction. Keep the exact symmetry, commuting,
-coarse-line, cut, and two-spin limits in the classical comparison.
+The exact two-spin control shows that dropping a memory pole of vanishing mass
+can yield an order-one spectral error when linewidth and bins scale as d^2/J.
+At fixed linewidth the discrepancy instead vanishes. A corrected classical
+pair at +/-d^2/J has a proved vanishing error in that same resolved limit.
+This control rejects a naive approximation, not classical effective models and
+not the quantum-sampling direction. It is not an application benchmark.
 
-## Next bounded derivation
+## Next bounded mathematical test
 
-Study the family with alternating axial offsets delta_i=(-1)^i d on an even
-nearest-neighbor chain, initially with uniform or explicitly bounded couplings.
-This is a structural subfamily of the justified spin model, not a claim of a new
-measured compound or an industrial workload. The broadening and requested bins
-are fixed by the mathematical task; do not loosen them to force tractability.
+Remain with the uniform even open chain and the same collective observable.
+Determine the low-frequency structure of the projected memory as a function of
+n, d/J and gamma/J, rather than increasing a numerical Krylov cutoff without a
+structural reason. Keep the uniform-field and exact two-spin limits as controls.
 
-Determine whether observable-space evolution reaches increasingly extended
-correlations on the linewidth time scale, and what it costs classically to retain
-the information relevant to the spectrum. Use the exact d=0 collective-symmetry
-limit and resolved two-spin formulas as controls. Note 16 already gives the first
-two recursion levels and an all-size sufficient two-line approximation bound.
-Do not treat a failed bound at those levels as evidence of hardness.
+A concrete first calculation is the overlap of v with the conserved operator
+sector of L_0=[H_J,.], then the first nonvanishing perturbative/effective coupling
+inside that sector. Establish the spectral and symmetry assumptions used. Do not
+silently assume a size-independent gap to the remaining operator frequencies or
+interchange small d, large n and small gamma limits. Small denominators and their
+cost must remain in the comparison.
 
-Compare exchange narrowing, a justified secular approximation, further recursion,
-restricted-operator and tensor-network representations. A large Pauli list or
-Lanczos coefficient is evidence about that representation only. The operator-
-growth hypothesis is not a theorem for every observable or this parameter family.
-A useful outcome is a parameter-dependent truncation/scaling statement or a
-specific unresolved obstruction that the direct quantum dynamics can address.
+Use this to decide whether the resolved collective response has a compact
+classical slow-mode description, a justified short-memory approximation, or a
+specific residual many-body calculation. A low-rank identity does not ensure
+cheap dynamics; a small perturbation does not guarantee a uniform spectral error.
+Compare with symmetry reduction, perturbative resummation, recursion, restricted
+operators, tensor networks, projection-free memory methods and relevant complex-
+time spectral methods. Best-known upper bounds are not classical lower bounds.
 
-Keep Note 15's linewidth-matched quantum sampler as the other side: its controlled
-evolution time is O(log(1/epsilon)/gamma), with explicit preparation, coefficient
-access, simulation precision, clock/readout and repeated-sample costs. It need not
-compute or learn the classical recursion coefficients. Compare complete costs at
-the same spectral-law quality, including the number of requested samples.
+Retain Note 15's direct linewidth-matched quantum sampler. The projected-memory
+route is an additional quantum integration, not a requirement to fit a classical
+program first. A shorter maximum evolution time is useful only after shots,
+tail/accuracy certification, state access, repeated inference and classical
+alternatives are included. Neither route is favored by ignoring its costs.
 
-Do not conflate phenomenological Lorentzian broadening with order-dependent
-physical relaxation in prior classical NMR compression results. Apply each result
-only with its assumptions; do not omit physically needed relaxation to create
-complexity. No molecule download, native package, large simulation, new compiler,
-third spin-off or hardware resource campaign is the next step.
+No new molecule selection, dataset acquisition, native package, large simulation,
+solver framework, circuit compiler or third spin-off is the next step. An affordable
+calculation may check a derived statement, but finite examples cannot establish
+short memory or thermodynamic scaling. Keep the broader dynamical route open.
 
-## Executed evidence and preservation
+## Execution and preserved evidence
 
-The new NumPy checker ran twice with identical output under one BLAS thread;
--O/-OO refusal was checked. Three fixed systems of 2, 4 and 6 spins check 36 binned
-comparisons, 74 moment identities, 15 sparse/dense support controls and 108
-resolvent identities, plus nine analytic boundary formulas, three complex-basis
-controls, two negative controls and four invalid linewidths. These are numerical
-mathematical diagnostics, not experimental spectra, compiled circuits or timing.
-The note/report state tolerance and scope. No older scientific suite was rerun.
+`OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python experiments/exchange_memory_v1/verify.py`
+passed twice with identical JSON. -O/-OO refusal and five invalid-input controls
+were checked. Three fixed two/four-spin models check projection/reflection and
+resolvent identities, memory symmetry, frequency envelopes, three binned bounds
+and truncated-memory integrals. Four d/J choices check exact dimer formulas,
+the resolved-limit error and the corrected classical pair. The note records hashes.
 
-Climate/distribution evolution remain open. Missing climate data block only their
-specific empirical test. Manthan stays paused; battery/operator candidates remain
-parked; both classical spin-offs remain independent; Phase-2 Note 27 stays closed.
-Preserve all earlier notes, code, data, reports, licenses and third-party rights.
-Only Quantum-Assisted-Algorithm-Discovery may be modified. No external contact,
-paid/unattended work, manuscript revival, release, merge, new repository or admin change.
+These are complex128 diagnostics at tolerance 3e-10, not interval proofs,
+experimental spectra, a quantum run or performance measurements. Continuous bounds
+follow from the written arguments. No prior scientific verifier was rerun and no
+upstream code, measured data or model weights were imported. The relevant primary
+PDF was read as text; its screenshot attempt failed, and no figure supplied a
+numerical result. Priority and fast-memory assumptions remain unestablished.
+
+Climate/dynamics remain open; missing climate files block only their empirical
+test. Manthan is paused, battery/operator candidates remain parked, both classical
+spin-offs remain independent, and Phase-2 Note 27 stays closed. Preserve earlier
+proofs, code, data, reports, manifests, licenses and rights. Modify only Quantum-
+Assisted-Algorithm-Discovery. No outside contact, paid/unattended work, manuscript
+revival, release, merge, new repository or administration change is authorized.
