@@ -1,5 +1,32 @@
 # Claim ledger
 
+## Current checkpoint: interfacial-reference decision, 28 September 2026
+
+**The present battery-simulator route is parked.** The
+[bounded reference study](exploration/phase_3/INTERFACIAL_REFERENCE_DECISION_06.md)
+found relevant classical salt/solvent comparisons, interphase characterization,
+and a concrete computed reaction candidate. It did not establish how improving
+that electronic reference changes the required salt-dependent ethylene prediction.
+No large interphase-modeling, quantum-resource, or training campaign is warranted
+by this candidate's present evidence.
+
+This is a research-selection decision, not a universal claim of classical
+sufficiency or a no-go theorem for quantum chemistry. The experimental motivation
+remains real. The missing reference-to-observable connection and the complete
+quantum comparison remain unestablished. The [work order](work_orders/CURRENT.md)
+returns to parent application/mechanism selection; no replacement is selected.
+
+Primary literature and selected Yang et al. supplementary figures were inspected.
+Full-text access limitations for other sources are recorded. No scientific code,
+new numerical calculation, quantum circuit, model training or scientific-verifier
+run was performed. Repository checks cover documentation and changed paths only.
+All earlier scientific files and both classical spin-offs remain unchanged.
+
+Everything below is retained historical status. Descriptions of battery-model
+repair as the next task are superseded by this decision and the live work order.
+
+---
+
 ## Current checkpoint: physical-relevance decision, 28 September 2026
 
 The [physical-relevance study](exploration/phase_3/PHYSICAL_RELEVANCE_05.md) anchors
