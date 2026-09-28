@@ -1,11 +1,25 @@
 # Research continuation contract
 
+## Current exploratory output contract: direct samples are allowed
+
+On 28 September 2026 the owner proposed direct use of quantum samples, including
+probabilistic prediction of chaotic systems. Read
+[direct-sampling note 10](exploration/phase_3/DIRECT_SAMPLING_FORECASTS_10.md) and the
+live work order. For this investigation, do not require a learned classical
+program or quantum-free deployment. Continued quantum sampling is allowed and
+must be included in the complete cost. This is an explicit extension of the
+original charter, not an assertion that direct sampling met its old condition.
+The requirement for useful outputs, accurate claims and strong classical
+comparison remains. Manthan profiling is paused, not refuted. No useful direct
+sampler or forecasting advantage has yet been established.
+
 ## Read the current project, not an old checkpoint
 
 Read the [canonical project map](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/main/PROJECT_MAP.md), README.md, STATUS.md, and
 work_orders/CURRENT.md first. The active parent research branch is
 `research/prx-quantum-phase2`; the work order on `main` routes to that branch.
-Read its phase-2 charter before selecting the next scientific step.
+Read its phase-2 charter before selecting the next scientific step, subject to
+the explicit output-contract extension above.
 
 Quantum-Assisted Algorithm Discovery is one continuing parent exploration. The
 independent Algebraic-Loop-Certificates and Sparse-Weil-Reconstruction projects
@@ -22,7 +36,7 @@ PROVENANCE.md and the relevant source/experiment documentation before reusing ev
 ## Useful computation before substantial mechanism development
 
 Begin with a documented need that exists outside this project, a concrete useful
-classical output, and a plausible quantum role in obtaining it. Name the workflow,
+output, and a plausible quantum role in obtaining it. Name the workflow,
 required quality, deployment interface, and strongest classical alternative.
 Do not choose an abstract construction first and attach a broad application label
 afterward. A tractable theorem or a small test family is not sufficient evidence
@@ -66,9 +80,10 @@ in language the project owner can assess without specialist chemistry knowledge.
 
 ## Preserve scientific and comparison boundaries
 
-The objective is a useful reusable classical output discovered more efficiently
-with a circuit-model quantum computer. No useful quantum discovery advantage is
-established. No application or device platform is mandated by earlier experiments.
+The original objective is a useful reusable classical output discovered more
+efficiently with a circuit-model quantum computer. The current direct-sampling
+extension is specified above. No useful quantum advantage is established.
+No application or device platform is mandated by earlier experiments.
 Manuscript preparation remains on hold.
 
 Retain strong classical deductions and realistic baselines. Treat seed choice,
