@@ -1,60 +1,48 @@
 # Claim ledger
 
-## Current checkpoint: sampling encoding audit, 28 September 2026
+## Current checkpoint: direct useful sampling, 28 September 2026
 
-The [encoding audit](exploration/phase_3/SAMPLING_ENCODING_AUDIT_09.md) applies the
-[sample-to-verified-logic contract](exploration/phase_3/SAMPLING_TO_VERIFIED_LOGIC_08.md)
-to an inspected prefix of a benchmark shipped with Manthan. Its 376 clauses
-exactly define 85 internal bits from 119 input bits. Guessing the internal bits
-adds a 2^-85 uniform rejection penalty. The fixed-raw-prior Grover calculation
-therefore needs at least 2^41 rounds for half success, but this is NOT a lower
-bound on structured quantum algorithms or the application.
+The [direct-sampling note](exploration/phase_3/DIRECT_SAMPLING_FORECASTS_10.md)
+records an explicit exploratory extension proposed by the owner: quantum samples
+may be consumed directly, without first learning a reusable classical program.
+Quantum use at prediction/sampling time is allowed and must be fully costed.
+This extension supersedes the earlier classical-only deployment restriction for
+this investigation; it does not retrospectively change historical results.
 
-An independent reversible evaluator has 149 X, 132 CX and 129 CCX gates and 23
-clean scratch bits for that prefix. Computing the definitions removes the raw
-penalty and preserves the uniform conditional satisfying-assignment law. This
-uses standard logic and reversible techniques, is equally available to classical
-competitors, and establishes no quantum advantage. Nonuniform dependent-bit
-weights require separate treatment. No complete relation oracle was constructed.
+Chaotic-system ensemble prediction is the application class to examine, with
+physically consistent rare-event scenario generation as the first suggested
+family. No specific model/event pair is yet selected. Existing ensemble forecasting,
+quantum probability-evolution methods and classical rare-event/learned generators
+supply precedents and comparators, not an established quantum advantage here.
 
-The final checker passed twice with identical --native output. It checks 6320
-local truth assignments, 128 forward/inverse basis controls, 10880 single-wire
-faults and four malformed cases. Native Z3 4.13.3.0 returned UNSAT for two
-prefix-equivalence mismatch queries. No independent proof trace was replayed.
-Default mode passed; -O/-OO, a modified fixture and an incorrect complete-source
-file were rejected. Successful --source validation was NOT run. The
-[report](experiments/sampling_encoding_v1/REPORT.json) and
-[provenance](experiments/sampling_encoding_v1/PROVENANCE.md) state the exact scope.
+The output law must match the consumer: future-state samples, correlated paths,
+event-conditioned scenarios and scalar probability estimates are different tasks.
+Encoding a numerical probability vector as amplitudes does not automatically
+sample that probability law. Ordinary independent quantum measurements retain
+ordinary sampling uncertainty. Coherent amplitude estimation is a separate
+possible route and its access costs cannot be replaced by stored sample access.
 
-## Native execution and application gates remain open
+No new algorithm, theorem, sampler, forecast, numerical experiment, quantum
+circuit, native solver run, training, resource estimate or scientific-verifier
+run occurred. The work was primary HTML/abstract inspection and documentation.
+The [work order](work_orders/CURRENT.md) requires a task-level law/mechanism/cost
+comparison before a simulator or broad application campaign.
 
-The native Manthan/CMSGen installation and official smoke test did not run:
-source transfer failed on runtime DNS, and the inspected successful dependency
-workflow returned no artifacts. The available native Z3 checks are not a
-substitute claimed to be Manthan. No sample-source ablation, synthesis-stage
-timing, classifier, full verified program or useful performance result exists.
+## Paused work and historical records
 
-Only a selected source prefix was transcribed and checked. The complete benchmark
-was not acquired and locally hash-verified. Source/application signal mapping is
-unresolved; a USB name does not establish an industrial deployment task. The
-[work order](work_orders/CURRENT.md) requires an instrumented native baseline and
-provenance before further small demonstrations or substantial quantum costing.
-Earlier sampling, root and historical verifiers were not rerun; their sources and
-results are unchanged. No useful quantum discovery advantage is established.
+Native Manthan/CMSGen profiling is paused, not refuted. Its full installation and
+timing comparison remained incomplete. The earlier exact encoding checks are
+preserved and do not constitute a complete native synthesis run. The complete
+preceding status and its evidence links remain at the pinned starting commit:
+[Pre-direct-sampling ledger](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/a71412194e0f4a5cd15937ffe3ab5ed4e67c500a/STATUS.md).
+Older current/next headings describe their checkpoints, not parallel tasks.
 
-## Preserved historical evidence
+The [synthesis contract](exploration/phase_3/SAMPLING_TO_VERIFIED_LOGIC_08.md),
+[encoding audit](exploration/phase_3/SAMPLING_ENCODING_AUDIT_09.md), their code,
+fixtures, reports and upstream notices are unchanged. Battery and operator routes
+remain parked. Both classical spin-offs remain independent. Phase-2 Note 27
+stays closed. Manuscript preparation remains on hold.
 
-The preceding ledger is pinned at
-[pre-encoding checkpoint](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/0e02a52f2e52fb5541018e47c5ba4401ca5ea58d/STATUS.md).
-It in turn links the complete pre-sampling cumulative ledger. Older current/next
-headings describe their original checkpoints and do not create active work orders.
-No old scientific fixture, source, report or proof was changed.
-
-The [sampling opening](exploration/phase_3/USEFUL_SAMPLING_07.md) retains the
-classical-only deployment distinction and direct precedents. The
-[battery route](exploration/phase_3/INTERFACIAL_REFERENCE_DECISION_06.md) and
-[operator candidate](exploration/phase_3/MECHANISM_SCREEN_01.md) remain parked.
-Both classical spin-offs remain independent; Phase-2 Note 27 stays closed.
-Manuscript preparation remains on hold. The original license and upstream
-rights notices remain intact. Only the parent repository is modified; no outside
-contact, paid/unattended work, release, merge or administration change occurred.
+Only Quantum-Assisted-Algorithm-Discovery is modified. The original license and
+third-party rights are preserved. No external contact, paid/unattended work,
+release, branch merge, new repository or administration change occurred.
