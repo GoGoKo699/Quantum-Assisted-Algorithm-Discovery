@@ -1,5 +1,44 @@
 # Research continuation contract
 
+## Model-first exploration for every example
+
+Owner direction, 28 September 2026: focus first on mathematical models and the
+possible quantum integration, rather than actual implementation. This changes
+the order of investigation, not the requirement for useful and honest science.
+It supersedes earlier instructions that make a particular measured dataset,
+native installation, or concrete hardware implementation a prerequisite to
+initial model-level analysis. Preserve the scientific conclusions of those notes.
+
+For each example, start with a concise mathematical specification: an established
+model family and its independently motivated observable; shared classical input
+and access assumptions; the required output law and error criterion; a specific
+quantum representation and operation; the strongest relevant classical approach;
+and the structural parameter regime in which a benefit might survive. Explain
+why a quantum operation produces the requested law rather than only something
+with a similar name. Distinguish an identity or conditional upper bound from a
+separation, a novelty claim, and a demonstrated application improvement.
+
+Use parameterized families before choosing a single demonstration instance.
+Derive a limiting case, reduction, error estimate or symbolic cost comparison
+that can expose the mechanism or an immediate classical shortcut. A missing file
+or unavailable package blocks only the test requiring it, not the investigation.
+Do not create a new framework or large toy census merely to fill the gap.
+
+Keep mathematically essential costs visible from the outset: input/preparation
+access, normalization, success probability, conditioning, resolution, evolution
+time, output size and repeated sampling. Explicitly conditional, symbolic budgets
+are acceptable at this stage; free arbitrary state preparation or an unpriced
+exponentially large oracle is not. Distinguish best-known classical costs from
+proved lower bounds and apply the same useful accuracy to both sides.
+
+Keep a concise primary-source application anchor and physically justified model
+assumptions. Model-first does not mean choosing arbitrary difficult Hamiltonians
+and attaching a domain label. Full experimental calibration, software integration,
+detailed fault-tolerant gate counts and native performance studies come after
+there is a credible structural quantum opportunity. Neither a completed advantage
+proof nor deployment is required to explore that opportunity. Keep alternative
+mechanisms open; a failure in one model or regime is not a universal rejection.
+
 ## Current exploratory output contract: direct samples are allowed
 
 On 28 September 2026 the owner proposed direct use of quantum samples, including
