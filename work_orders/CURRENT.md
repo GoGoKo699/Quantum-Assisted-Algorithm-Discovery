@@ -1,80 +1,89 @@
-# Current task: select a useful discovery bottleneck with a concrete quantum mechanism
+# Current task: useful quantum sampling that leaves a classical method
 
 28 September 2026. Active branch: `research/prx-quantum-phase2`.
 Scientific phase 3; manuscript preparation remains on hold.
 
 Read the [project map](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/main/PROJECT_MAP.md),
-[parent charter](../exploration/phase_2/CHARTER.md), and
-[interfacial-reference decision](../exploration/phase_3/INTERFACIAL_REFERENCE_DECISION_06.md).
+[parent charter](../exploration/phase_2/CHARTER.md), and the
+[useful-sampling opening note](../exploration/phase_3/USEFUL_SAMPLING_07.md).
 
-## Completed bounded investigation: battery candidate parked
+## Direction authorized: sampling as discovery information
 
-The selected salt-dependent gas experiment has a genuine application motivation.
-Relevant classical studies provide solvent/concentration dependence, film
-characterization, and proposed microscopic reactions. A concrete candidate was
-examined: competing ring-opening and B-F-cleavage references for reduced LiDFOB.
-The inspected work did not establish how improving those references would change
-the required cycle-resolved ethylene prediction under the selected conditions.
-Molecular orbital gaps likewise do not supply a film-leakage model by themselves.
+Explore whether a bounded quantum sampling stage can reveal useful structure
+that a classical computer retains as an efficient sampling rule, proposal, or
+update mechanism. The first hypothesis is learning useful collective moves or
+coverage of poorly visited regions, not cloning an arbitrary hard distribution.
+No application, new algorithm, or advantage is yet established.
 
-The decision is to park this battery-simulator route, not extend the present
-investigation into general interphase modeling. No Hamiltonian, full quantum cost,
-model-training campaign, larger bare cluster, or further archive curation is the
-next task. This is not a proof that classical chemistry is sufficient everywhere,
-that no appropriate model exists, or that quantum chemistry is unhelpful.
-The bounded source search and access limitations are recorded in the decision.
+Distinguish direct useful quantum sampling from offline discovery followed by
+classical-only deployment. Both are legitimate scientific questions, but the
+second preserves the parent's current contract. Do not silently replace it with
+a device needed at every subsequent sampling step.
 
-Reopening needs a specific electronic-reference problem with an independently
-justified connection to a useful observable or total preparation cost, a required
-quality, and a strong classical comparator. A credible limited sensitivity and
-validation route can suffice to investigate; neither deployment nor a completed
-quantum-advantage proof is required at entry. More than one reference may be
-appropriate. No new spin-off is warranted by this stopping decision.
+Difficulty of reproducing a full Born distribution does not establish difficulty
+of obtaining its useful consequences. A classical competitor may use a different
+distribution or bypass sampling. Randomness, compact output and reuse alone do
+not establish a quantum advantage. Circuit preparation, parameters, depth, noise,
+measurement and access costs remain explicit.
 
-## Next parent deliverable
+## Direct precedents and constraints
 
-Compare at most three short discovery contracts before choosing the next
-calculation. Each must contain together:
+Layden et al., Nature 619, 282 (2023), use quantum proposals during MCMC.
+Nakano, Okada and Fujii, PRX Quantum 7, 010338 (2026), already train a classical
+neural proposal on QAOA samples. Classical self-learning Monte Carlo and the
+annealer-to-generative-model literature also precede this project. Do not claim
+that this generic architecture is new, or that a spectral-gap improvement over
+uniform proposals proves a useful end-to-end advantage.
 
-1. A reusable classical output that an identified community would value, with
-   its actual deployment interface and a useful correctness/accuracy requirement.
-2. The inputs both designers receive and a documented obstacle to obtaining that
-   output, not merely a statement that the application or state space is large.
-3. A specific quantum mechanism with explicit preparation, access, measurement,
-   extraction, and certification obligations. An unpriced oracle is not a mechanism.
-4. The strongest adequate classical route, including a different construction,
-   approximation, active selection, existing code, or bypass of compilation.
-5. One short source check, derivation, or modest experiment that could discriminate
-   between the proposal and the obvious classical response.
+For a classical Metropolis-Hastings deployment, generate proposals and evaluate
+acceptance ratios using the same learned classical law. Establish support,
+irreducibility and aperiodicity. Correct stationarity is not rapid mixing or
+finite-run correctness; a biased quantum training set is not automatically an
+unbiased target sample set. A first comparison should freeze the learned rule;
+online adaptation needs its own argument.
 
-Usefulness and the quantum opportunity must be considered together. Do not select
-a new domain merely because it matters, then undertake a broad modeling program
-before identifying the quantum-discovery contribution. Conversely, do not revive
-an algebraic construction solely because its next theorem is accessible. Small
-models are acceptable when their role in the actual task is explicit.
+The quantum circuit need not supply a full wavefunction or accurately estimated
+probabilities if the proposed classical extraction genuinely avoids those tasks.
+Do not assume cheap arbitrary state preparation, free postselection, or a general
+ability to learn every hard quantum distribution with a small classical model.
 
-No replacement application has been selected in this checkpoint. Earlier kernel,
-weather, symmetry, and predictor sketches are not automatically promoted. The
-parent remains open to other applications and to mechanisms that prepare useful
-classical information rather than only test more candidates. A quantum computer
-needed at every deployment is a different contract and must not be substituted
-silently for the reusable-classical-output objective.
+## Next bounded deliverable
 
-## Evidence and authority
+Select at most one real sampling workflow together with a concrete circuit/sample
+mechanism. Specify its consumer, input specification shared by both designers,
+useful output quality, deployment interface, and strongest classical alternative.
+A random Ising or SAT instance may be a diagnostic, not evidence of deployment
+value. Do not choose a domain first and start broad modeling before this match.
 
-The latest checkpoint performed primary-source inspection and documentation only.
-No scientific code, numerical experiment, quantum simulation or verifier run was
-added. The repository diff and document routing are checked; that is not scientific
-validation. Do not repeat historical test counts as newly executed evidence.
+The first discriminating comparison is a sample-source substitution test: hold
+the classical learner and deployment task fixed and replace quantum-produced data
+with strong classical data and a task-equivalent classical surrogate. Count data
+production, tuning, training, validation and deployment, not just equal numbers
+of shots or training examples. Permit tempering, appropriate cluster updates,
+learned classical proposals, source inspection and direct downstream algorithms.
+A competitor need not reproduce the quantum distribution to defeat the proposed
+useful advantage.
 
-The uploaded archive is already verified and present; do not request it again.
-[Archive replay 04](../exploration/phase_3/ARCHIVE_REPLAY_04.md), its source/report,
-and the matched 154-electron/core-model caveats remain unchanged. They are
-calibration records, not an active training dataset or application success.
-The operator candidate remains parked. Both classical spin-offs own their further
-development. Phase-2 Note 27's comparison remains closed.
+Measure consumer-relevant error, coverage or validated mixing performance with
+honest finite-time uncertainty. High acceptance, low energy, or raw sample count
+alone is insufficient. Reuse is available to both sides. The first output should
+be one compact task/distribution/compiler/comparator contract and a short
+calculation that can reject it, not a new neural framework or large benchmark.
 
-Preserve prior notes, code, reports, manifests, licenses and third-party rights.
+## Parked work and evidence
+
+The [battery decision](../exploration/phase_3/INTERFACIAL_REFERENCE_DECISION_06.md)
+remains binding. The battery and small-operator candidates are parked; the two
+classical spin-offs remain independent. The uploaded battery archive is already
+verified: do not request it again or make archive curation a new workstream.
+Phase-2 Note 27's comparison remains closed. Older Fourier/coordinate notes are
+historical constraints, not automatically reopened by the sampling perspective.
+
+This opening checkpoint is a primary-source screen and research-direction update.
+No sampling experiment, quantum circuit, model training, performance measurement,
+new scientific code or scientific-verifier run was performed. The short note
+records source-inspection limits; it is not an exhaustive novelty audit.
+Preserve earlier proofs, code, reports, manifests, licenses and third-party rights.
 Modify only Quantum-Assisted-Algorithm-Discovery. No external contact, paid or
 unattended work, manuscript revival, submission, release, branch merge or
 repository administration change is authorized.
