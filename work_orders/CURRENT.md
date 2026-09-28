@@ -1,83 +1,85 @@
-# Current task: directly useful quantum samples for probabilistic prediction
+# Current task: can short quantum continuations improve useful rare-event sampling?
 
 28 September 2026. Active branch: `research/prx-quantum-phase2`.
 Scientific phase 3; manuscript preparation remains on hold.
 
-Read [direct-sampling note 10](../exploration/phase_3/DIRECT_SAMPLING_FORECASTS_10.md),
-the [project map](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/main/PROJECT_MAP.md)
-and the original [parent charter](../exploration/phase_2/CHARTER.md).
+Read the [task and cost screen](../exploration/phase_3/HEATWAVE_SAMPLING_CONTRACT_11.md)
+and [direct-sampling scope](../exploration/phase_3/DIRECT_SAMPLING_FORECASTS_10.md).
+Quantum samples may be consumed directly; do not reimpose classical-program
+construction or quantum-free deployment. The usefulness and full-cost requirements
+remain. The original charter and historical project map are subject to this
+explicit output-contract extension.
 
-## Explicit exploratory extension of the output contract
+## Completed first comparison
 
-The owner proposes consuming quantum samples directly rather than first learning
-a classical program. Investigate this direction with chaotic-system ensemble
-prediction as a possible application. In this exploration, continued quantum use
-at sampling/prediction time is permitted and must be costed. Classical-only
-execution after discovery is NOT a required acceptance condition here. This
-explicit extension takes precedence over that restriction in earlier charters,
-notes and instructions; their historical scientific statements remain intact.
+The selected consumer is extreme-summer scenario histories and circulation
+statistics in the published CESM1.2.2 France experiment. This is model-conditioned
+climate-risk/mechanism analysis, not today's weather forecast or validated future
+risk for a real city. Its control-percentile threshold is not an exact observed
+return period. Classical genealogical sampling already serves this consumer and
+must be compared at matched diagnostic uncertainty, including weights and ancestry.
 
-The broader requirement is unchanged: a useful output at defensible total cost
-and quality against strong classical alternatives. No operational forecast,
-new sampler, useful quantum advantage or selected model/event pair is established.
-The Manthan native-profiling task is paused, not scientifically refuted. Do not
-resume its installation or extend its small diagnostics as the default next step.
+A reference quantum construction computes the event from a complete random-input
+register, amplifies, measures that register, and classically replays the trajectory.
+This avoids tomography, not coherent propagation or replay costs. It has not been
+implemented for CESM. Known-probability cost sensitivities include forward/inverse
+calls and replay but omit additional overhead; their assumed event masses and
+classical improvement factors are not measured climate-performance data.
 
-## Next bounded deliverable
+The global tilt-then-unbias shortcut supplies no extra asymptotic gain when both
+stages are prepared by nested rejection from the original law. This is a narrow
+implementation screen, not a lower bound for genuinely guided preparations or
+quantum dynamics. Individual low-probability outcome filtering (including the
+June 2026 prior paper) is a different task from a physical heatwave threshold.
 
-Identify one consumer that directly uses forecast or rare-event samples and one
-quantum mechanism for that SAME sampling task. The leading family to inspect is
-physically consistent rare-event scenarios for a specified prediction/risk question.
-This is not an instruction to build a weather model or select an arbitrary Lorenz
-example and relabel it an application.
+## Next bounded derivation
 
-Specify the dynamics/model, initial uncertainty or observation-conditioned input,
-time horizon, output meaning, and useful error requirement. Distinguish ordinary
-ensemble samples, event-conditioned scenarios, and scalar probability estimation.
-Long-run climate risk is not a forecast conditional on today's observations.
-A collection of marginal states is not automatically a time-consistent trajectory.
-Biased rare-event samples need a justified weighting/probability procedure.
+Examine one segment-level use of quantum sampling inside a strong classical rare-
+event method. The quantum part should handle a short stochastic continuation,
+not require regenerating a full season in every trial. Retain the same physical
+model, event and useful output. No arbitrary Lorenz benchmark or random circuit
+is an application substitute.
 
-Inspect existing Koopman-von Neumann/Liouville quantum distribution methods as
-possible representations, not completed efficient forecasting algorithms. Show
-that measurement produces the required law: amplitudes proportional to a density
-produce its squared law, not that density. A full physical-state encoding differs
-from amplitude-encoding a vector of field values. No classical or quantum chaotic
-circuit is a valid forecast source merely because it is chaotic.
+First establish the full path law, before any speed estimate. If h is a prefix,
+ordinary prefix draws followed by event-conditioned futures change the joint law:
+under the actual event, prefixes have weights proportional to P(E|h). Account for
+how those probabilities or equivalent weights are obtained and retained. A fixed
+observed prefix defines a different, explicitly conditional prediction task; do
+not silently substitute it for the climate-risk ensemble.
 
-Compare against classical trajectory ensembles, appropriate importance/splitting
-methods and applicable learned generators. Classical competitors need not store
-a full probability grid or imitate the quantum circuit. Price conditioning/input
-preparation, propagation, precision and discretization, postselection, repeated
-sample generation, extraction, correlations, validation and required hardware.
-A hypothetical huge state-space grid is not the classical sampling cost.
+Then compare total preparation, coherent forward/inverse calls, probability or
+weight estimation, numerical accuracy, validation and extraction with the classical
+segment method. Genealogical correlations and finite-particle bias count. Permit
+weighted classical outputs when they meet the consumer's requirements. Do not
+square-root the number of classical particles, assume a free coherent cloning
+oracle, or convert raw extreme counts into an effective independent sample count.
 
-Direct measured samples retain ordinary sampling uncertainty. Amplitude estimation
-can be examined separately for means/probabilities, with its coherent access and
-inverse-operation costs; it is not an ensemble of independent physical scenarios.
-An encoded distribution is not an unlimited free sample bank. Evaluate the full
-cost of the useful output, not only measurement time or sample count.
+The deliverable is a law-preserving segment algorithm and an explicit useful-cost
+condition, or a specific reason the construction cannot provide an improvement.
+An unknown cost remains unknown. No full reversible CESM port, broad simulator,
+training campaign, large census, resource claim or new repository is warranted yet.
+The path-level quantum recipe and rejection-sampling primitives are not claimed new.
 
-The first result should be a short task-law-mechanism-comparator analysis and a
-discriminating calculation. No broad simulator, training campaign or generic
-nonlinearity theorem is warranted yet. Modern classical precedents include GenCast,
-ECMWF AIFS ensembles, and task-appropriate rare-event methods such as TEAMS; none
-is automatically sufficient for every candidate task. Source scope is in Note 10.
+## Evidence and data access
 
-## Preserved work and evidence
+`python experiments/direct_tail_sampling_v1/verify.py` passed twice with identical
+JSON; -O/-OO refusal was checked. The script uses artificial finite laws to verify
+12 tilt/correction identities, negative controls, conditioning sensitivity and
+an explicitly hypothetical cost table. Five invalid probabilities are rejected.
+It is not climate simulation, a quantum circuit run, or a sampling benchmark.
 
-The synthesis [consumer contract](../exploration/phase_3/SAMPLING_TO_VERIFIED_LOGIC_08.md)
-and [encoding audit](../exploration/phase_3/SAMPLING_ENCODING_AUDIT_09.md) remain
-historical evidence. Native Manthan/CMSGen and its full timing comparison were not
-completed. This limitation is not evidence for a direct-sampling advantage.
+The public climate data inventory was inspected, but downloading the two scalar
+archives and resampling script failed on runtime DNS. No climate archive was
+acquired or checksum-verified. Do not claim a native classical gain, reuse the
+old battery archive as climate data, or request another battery upload. A climate
+upload is not needed for this bounded analytical next step.
 
-This checkpoint changes research scope and documentation only. Primary HTML sources
-and abstracts were inspected; no numerical experiment, quantum circuit, ensemble,
-forecast, native solver, scientific verifier or performance test was run.
-Preserve previous proof notes, code, fixtures, reports, manifests and rights.
-The battery and operator routes remain parked; both spin-offs remain independent.
-Phase-2 Note 27 stays closed. The battery upload is already verified and retained.
+Historical scientific verifiers were not rerun; their sources/reports are unchanged.
+The new note records failed PDF screenshot attempts and source scope. Preserve
+prior notes, code, data, reports, manifests, licenses and third-party rights.
+Manthan remains paused; battery and operator candidates remain parked. Both
+classical spin-offs own their further work and Phase-2 Note 27 stays closed.
 
 Modify only Quantum-Assisted-Algorithm-Discovery. No external contact, paid or
-unattended work, manuscript revival, submission, release, new repository, branch
-merge or repository administration change is authorized by this work order.
+unattended work, manuscript revival, submission, release, branch merge, new
+repository or administration change is authorized.
