@@ -1,4 +1,4 @@
-# Current task: test the accuracy and total cost of reusable electronic references
+# Current task: validate physical relevance, then price reusable electronic references
 
 28 September 2026. Active branch: `research/prx-quantum-phase2`.
 Scientific phase 3; manuscript remains on hold.
@@ -8,7 +8,49 @@ Read the [project map](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-D
 [application case](../exploration/phase_3/APPLICATION_CASE_02.md), and
 [executed archive replay](../exploration/phase_3/ARCHIVE_REPLAY_04.md).
 
-## Archive acquisition and calibration are complete
+## Physical relevance is not yet established for the proposed output
+
+The chemistry has a non-quantum-computing research motivation, but that does not
+validate every model of it. The Li40+EC system is a finite, bare-surface calibration
+cut from a larger surface model, not a proposed material expected to operate as a
+50-atom component in a battery. The cluster paper explicitly leaves clusters
+unpassivated and uses finite-size corrections [1]. The dynamics paper explicitly
+identifies solvent, electrode voltage, and electron-transfer dynamics as missing
+physics [2]. These are model boundaries, not electronic solver errors that quantum
+precision automatically removes.
+
+Before substantial Hamiltonian/resource work, complete one short relevance case:
+name the actual interface regime (including electrolyte composition and surface
+state), one useful observable, and the evidence that this observable needs better
+prediction. Support it with primary application research and experimental evidence
+where available. Do not borrow relevance from a different electrode or assume a
+bare-metal model describes an already passivated interface. A transient early-stage
+process may qualify if its connection to the intended use is supported.
+
+State how the selected cluster references would inform that observable, what
+omitted physics could change the conclusion, and what independent test could
+validate or refute the connection. A full working-cell simulation is not required;
+a defensible limited claim is. Required accuracy must follow from the observable,
+not an arbitrary demand for exact energies. More accurate electronic labels earn
+no claimed prediction benefit when that benefit is unsupported at model level.
+A cheaper route at the same adequate accuracy can still be useful.
+
+Current assessment: published calibration verified; useful-interface transfer
+unvalidated; quantum advantage unestablished. If the relevance case cannot be
+supported, park or redirect this candidate instead of developing the cluster into
+a better-looking demonstration. No further archive curation is the default next
+step. No claim of improved battery life, capacity, safety, or commercial deployment
+is warranted by the current evidence.
+
+Sources rechecked 28 September 2026: [1] Vo et al., arXiv:2603.22139v1,
+Introduction/Methods/Conclusion, https://arxiv.org/html/2603.22139v1 ;
+[2] Kundu et al., arXiv:2509.14067v1, Discussion (Section III),
+https://arxiv.org/html/2509.14067v1 . These support the model classification and
+its limitations, not validation of a working battery or a quantum benefit.
+This is a documentation/selection-rule update; no new experimental validation or
+scientific-verifier run is claimed. The scientific record below is retained.
+
+## Archive acquisition and scalar replay are complete
 
 The supplied paper_data.zip matches the recorded Zenodo MD5 and has SHA256
 edc45a55827ed4f07596d7d1e4a5eccc0b736ee77ffe89e40eee7a20a3b28feb.
@@ -44,7 +86,7 @@ sequences. This rejects that simple shortcut at uniformly tight tolerance; it is
 not an error bound against exact truth, a method ranking, or a no-go theorem for
 multiple references, learned corrections, embedding, or quantum-assisted models.
 
-## Next bounded scientific decision
+## Conditional next steps after the relevance case
 
 The parent seeks a useful classical simulator built more effectively with offline
 quantum assistance, not a more precise isolated energy. Establish whether there
@@ -80,11 +122,13 @@ work. No new simulator, quantum advantage or battery improvement is established.
 ## Verification and boundaries
 
 Run `python experiments/reference_archive_v1/verify.py --archive /path/to/paper_data.zip`.
-The final checker passed twice with identical JSON, eight malformed-input controls,
-a modified-archive rejection, and -O/-OO refusals. It reads but does not extract or
-modify the archive. This is data/protocol and arithmetic verification, not chemistry,
-quantum simulation, native timing or force-field training. Historical suites were
-not rerun. Source and report hashes are in the new note.
+At the archive checkpoint, the final checker passed twice with identical JSON,
+eight malformed-input controls, a modified-archive rejection, and -O/-OO refusals.
+It reads but does not extract or modify the archive. This is data/protocol and
+arithmetic verification, not chemistry, quantum simulation, native timing or
+force-field training. Historical suites were not rerun. Source and report hashes
+are in the archive note. None of these tests was rerun for the present documentation
+update; their code and reports are unchanged.
 
 The operator remains parked; both classical spin-offs own their further work.
 Phase-2 Note 27 remains closed. Preserve all old notes, code, data, reports,
