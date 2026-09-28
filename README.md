@@ -3,70 +3,69 @@
 **Can circuit-model quantum computation produce information that makes a useful
 computation materially more effective than strong classical alternatives?**
 
-The [direct-sampling extension](exploration/phase_3/DIRECT_SAMPLING_FORECASTS_10.md)
-allows samples themselves to be useful outputs. They need not first become a
-classical program. Quantum use at sampling time is allowed and fully costed.
+Direct samples may themselves be useful outputs; they need not be converted into
+a classical program. Models and possible quantum integration are examined before
+software, datasets and hardware implementation. Essential access and accuracy
+costs remain explicit. See [AGENTS.md](AGENTS.md).
 
 **Status: exploratory. No useful quantum advantage is established.
 Manuscript preparation remains on hold.**
 
-## Working method: model first, implementation later
+## Current model-level result: sample the spectrum at the required linewidth
 
-For each example, first specify its mathematical model, useful output law,
-quantum entry point, essential access/error costs, and strongest classical
-comparison. Study a physically motivated parameterized family before choosing
-an individual demonstration. A short derivation or structural limiting case
-should establish where quantum integration might help before extensive data
-collection, package installation or hardware engineering.
+[Model comparison 15](exploration/phase_3/SPECTRAL_MODEL_STRUCTURE_15.md) compares
+classical probability evolution with direct interacting-spin spectral sampling.
+The latter supplies the next bounded mathematical task; the dynamics route remains
+open. The model is an established high-temperature nuclear-spin response with
+explicit offsets, isotropic couplings and a specified Lorentzian linewidth.
 
-This ordering does not remove usefulness or allow an unpriced oracle. A concise
-application anchor and explicit model assumptions remain necessary. Exact datasets
-and native implementations are not prerequisites for the initial conceptual test.
-See [AGENTS.md](AGENTS.md) and the [current work order](work_orders/CURRENT.md).
+A geometric quantum clock, controlled energy-gap evolution and a dithered Fourier
+measurement give a linewidth-matched sampling law. The note bounds finite-clock,
+frequency-wrap and digital-offset errors. Controlled evolution time scales as
+O(log(1/epsilon)/gamma), where gamma is linewidth and epsilon is distributional
+accuracy, not inverse microscopic level spacing. This is a symbolic construction,
+not a gate/runtime estimate, optimality statement or new quantum-advantage claim.
+Direct spectral sampling and windowed phase estimation have established precedents.
 
-## Open mechanisms: selection versus direct quantum generation
+The same note supplies classical comparisons at that linewidth: an exact sampler
+for the commuting model, a symmetry-protected single line, a coarse-line error
+bound, and a coupling-cut certificate for reducing the problem to small components.
+Failing these sufficient reductions does not establish classical hardness. The
+interesting parameter is the observable complexity that survives the requested
+resolution, not spin count alone.
 
-The [open sampling screen](exploration/phase_3/OPEN_SAMPLING_SCREEN_14.md) keeps the
-climate continuation test available and opens a separate mechanism check: direct
-sampling of a quantum system's spectral response, with NMR as one motivating
-consumer. A blocked dataset for one implementation does not block the parent
-exploration. Neither mechanism is an established application advantage.
+The [current work order](work_orders/CURRENT.md) asks for an observable-specific
+classical truncation/error analysis on one justified coupling family, compared
+with the explicit quantum sampler. No molecule selection, data transfer, package
+installation, large simulation or full circuit compilation is the next step.
 
-In the climate-conditioning route, quantum selection filters results of a classical
-trajectory calculation. Direct probability evolution is a distinct possibility to
-analyze through the Liouville/Koopman-von Neumann representation in
-[Note 10](exploration/phase_3/DIRECT_SAMPLING_FORECASTS_10.md). In the spectral route,
-quantum many-body evolution produces transition statistics. These representations
-and spectral algorithms already have precedents; their adoption is not a novelty.
+## Executed mathematical checks
 
-The immediate comparison is mathematical: which model structures, resolutions
-and access conditions make the quantum representation useful against adequate
-classical methods? The spectral screen should examine coupling structure,
-observable support and finite resolution, not spin count alone. The dynamics
-screen must compare with trajectory sampling, not only a full probability grid.
-No specific compound, new simulator, separation or positive quantum cost margin
-is selected. A measured instance and native benchmark follow a promising analysis.
+```sh
+python experiments/spectral_structure_v1/verify.py
+```
 
-## Climate investigation retained
+Python 3.10+ and NumPy. The [report](experiments/spectral_structure_v1/REPORT.json)
+records fixed small-matrix, observable-preparation, spectral-moment, classical-law,
+Fourier-kernel and negative controls. It is not a measured NMR spectrum, native
+application benchmark or quantum hardware test. The final checker passed twice
+with identical output; -O/-OO was rejected. Earlier scientific verifiers were
+not rerun, and their sources and reports are unchanged. No upstream code or data
+was imported. The research note distinguishes analytic proofs from finite checks.
 
-The [heatwave task](exploration/phase_3/HEATWAVE_SAMPLING_CONTRACT_11.md),
-[segment construction](exploration/phase_3/SEGMENT_SELECTION_12.md) and
+## Other mechanisms and preserved evidence
+
+The [direct-sampling scope](exploration/phase_3/DIRECT_SAMPLING_FORECASTS_10.md)
+and [earlier spectral screen](exploration/phase_3/OPEN_SAMPLING_SCREEN_14.md)
+remain the application and algorithmic context. The
+[climate contract](exploration/phase_3/HEATWAVE_SAMPLING_CONTRACT_11.md),
+[segment construction](exploration/phase_3/SEGMENT_SELECTION_12.md), and
 [continuation-information audit](exploration/phase_3/CONTINUATION_INFORMATION_13.md)
-remain unchanged. The planned empirical check compares legitimate continuations
-of the same restart state before later selection. The France source packet is
-still missing; no new climate-array analysis, variance estimate or runtime is
-claimed. Its upload gates that empirical check, not model-level exploration.
-
-## Evidence and organization
-
-The model-first update changes priorities and documentation only. No new theorem,
-numerical experiment, native package, quantum circuit, spectrum fit, performance
-benchmark or scientific-verifier run is claimed. The earlier screen's analytic
-identities and source-inspection limits remain in Note 14; they are not new runs.
-[STATUS.md](STATUS.md) records scope and links pinned historical ledgers.
+remain available. Their pending data-specific test does not block model analysis.
+No climate data were acquired or analyzed in this checkpoint.
 
 Manthan [profiling and encoding](exploration/phase_3/SAMPLING_ENCODING_AUDIT_09.md)
-remains paused. The [battery route](exploration/phase_3/INTERFACIAL_REFERENCE_DECISION_06.md)
+remain paused. The [battery route](exploration/phase_3/INTERFACIAL_REFERENCE_DECISION_06.md)
 and [operator candidate](exploration/phase_3/MECHANISM_SCREEN_01.md) remain parked.
 Both [Algebraic-Loop-Certificates](https://github.com/GoGoKo699/Algebraic-Loop-Certificates)
 and [Sparse-Weil-Reconstruction](https://github.com/GoGoKo699/Sparse-Weil-Reconstruction)
@@ -75,9 +74,9 @@ are independent projects and own their further development.
 Scientific phase 3 uses `research/prx-quantum-phase2`. The original
 [project map](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/main/PROJECT_MAP.md)
 and [charter](exploration/phase_2/CHARTER.md) retain their historical objectives;
-Note 10 explicitly extends the output contract and the current work order sets
-the model-first sequence. `main` is an entry point, not a merged copy of later
-work. Phase-2 [Note 27](exploration/phase_2/SOURCE_AWARE_DESCENT_27.md) stays closed.
-Previous proof notes, code, data, reports, upstream rights and the original
-[MIT license](LICENSE), Copyright (c) 2026 Ruge Lin, are preserved.
-Only the parent repository may be modified in this project context.
+Note 10 explicitly permits direct samples and the current work order sets the
+model-first sequence. `main` is an entry point, not a merged copy of later work.
+[STATUS.md](STATUS.md) states current claims and links pinned historical records.
+Phase-2 [Note 27](exploration/phase_2/SOURCE_AWARE_DESCENT_27.md) stays closed.
+Old research, notices and the original [MIT license](LICENSE), Copyright (c) 2026
+Ruge Lin, are preserved. Only the parent repository may be modified here.
