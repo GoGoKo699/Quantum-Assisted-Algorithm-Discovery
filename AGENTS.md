@@ -34,6 +34,36 @@ application case. Its finite-precision audit is not the current task. Preserve
 its note and checks; revive it only if the same usefulness standard applied to a
 fresh candidate is met. This is not a refutation or a new spin-off mandate.
 
+## Physical relevance is a separate requirement
+
+A real molecule or an important application area does not establish that the
+chosen geometry, charge state, environment, reaction, or requested accuracy is
+important. Separate three claims: the domain matters; the computational model
+predicts something useful in that domain; quantum preparation improves the complete
+route to that prediction. Evidence for one is not evidence for the others.
+
+Before substantial resource estimation or model development, identify a concrete
+physical regime and observable, supported by primary application research. Include
+experimental evidence where available, not only quantum-computing demonstrations.
+State what the small benchmark omits and how those omissions will be controlled,
+tested, or reflected in the scope of the result. A transient intermediate may be
+important; it need not be a stable isolable substance. Its relevance must come
+from a supported role in the target process, not computational convenience.
+
+A calibration result remains a calibration result until the application connection
+is supported. Do not relabel a finite bare cluster as a working battery, a trial
+active space as the full electronic problem, or extra energy digits as improved
+physical prediction. Compare against the strongest adequate classical workflow
+at the same useful output quality, including all preparation and validation costs.
+Do not demand unnecessary precision merely to make that workflow fail.
+
+If the physical connection cannot be supported, park or redirect the candidate;
+do not rescue it with a more impressive domain label or further toy calculations.
+This is not a ban on small models, theoretical work, or honest methodological
+benchmarks. Such work alone does not satisfy this parent's application objective.
+When explaining a result, say what was established and what remains unestablished
+in language the project owner can assess without specialist chemistry knowledge.
+
 ## Preserve scientific and comparison boundaries
 
 The objective is a useful reusable classical output discovered more efficiently
