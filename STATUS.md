@@ -1,48 +1,60 @@
 # Claim ledger
 
-## Current checkpoint: direct useful sampling, 28 September 2026
+## Current checkpoint: direct extreme-summer sampling, 28 September 2026
 
-The [direct-sampling note](exploration/phase_3/DIRECT_SAMPLING_FORECASTS_10.md)
-records an explicit exploratory extension proposed by the owner: quantum samples
-may be consumed directly, without first learning a reusable classical program.
-Quantum use at prediction/sampling time is allowed and must be fully costed.
-This extension supersedes the earlier classical-only deployment restriction for
-this investigation; it does not retrospectively change historical results.
+The [task-level comparison](exploration/phase_3/HEATWAVE_SAMPLING_CONTRACT_11.md)
+selects conditional extreme-summer histories and circulation diagnostics in an
+established CESM1.2.2 experiment. This supplies a real sample-consuming research
+workflow. It is climate-model-conditioned risk/mechanism analysis, not today's
+forecast, an operational forecast validation, or a quantum advantage.
 
-Chaotic-system ensemble prediction is the application class to examine, with
-physically consistent rare-event scenario generation as the first suggested
-family. No specific model/event pair is yet selected. Existing ensemble forecasting,
-quantum probability-evolution methods and classical rare-event/learned generators
-supply precedents and comparators, not an established quantum advantage here.
+A reference construction uses coherent event computation on random inputs,
+amplitude amplification, measured random input and classical trajectory replay.
+The output law is written, including many-to-one trajectory maps. No wavefunction
+tomography or classical-program discovery is required. No climate model or
+reversible implementation was run; propagation, input preparation, numerical
+semantics, hardware and validation costs remain uninstantiated.
 
-The output law must match the consumer: future-state samples, correlated paths,
-event-conditioned scenarios and scalar probability estimates are different tasks.
-Encoding a numerical probability vector as amplitudes does not automatically
-sample that probability law. Ordinary independent quantum measurements retain
-ordinary sampling uncertainty. Coherent amplitude estimation is a separate
-possible route and its access costs cannot be replaced by stored sample access.
+The executed known-probability sensitivity counts forward/inverse calls and replay.
+All displayed event probabilities, equal-call-cost assumptions and classical gain
+factors are hypothetical. They are not measured climate/hardware results. Strong
+classical importance/splitting methods must be compared at the same diagnostic
+quality, allowing weighted and correlated output with proper uncertainty accounting.
 
-No new algorithm, theorem, sampler, forecast, numerical experiment, quantum
-circuit, native solver run, training, resource estimate or scientific-verifier
-run occurred. The work was primary HTML/abstract inspection and documentation.
-The [work order](work_orders/CURRENT.md) requires a task-level law/mechanism/cost
-comparison before a simulator or broad application campaign.
+An exact change-of-measure calculation gives the correction from an exponential
+tilt to the desired conditional tail. Straightforward globally filtered preparation
+followed by inverse-weight rejection yields no extra scaling gain in the analyzed
+nested-amplification recipe. This is not a general lower bound on guided quantum
+preparations. The June 2026 individually-unlikely-outcome sampler has a different
+physical target and access model, not an automatically applicable climate advantage.
 
-## Paused work and historical records
+The new standard-library checker passed twice with identical JSON: 12 rational
+tilt/correction identities, negative controls, a conditioning-sensitivity example,
+unused-label refinement and the cost table. Five invalid probabilities and -O/-OO
+execution were rejected. These are artificial finite-law controls, not climate,
+quantum hardware, a physical-model error budget, or performance benchmarking.
+The [report](experiments/direct_tail_sampling_v1/REPORT.json) and note contain scope
+and hashes. Historical verifiers were not rerun and their files are unchanged.
 
-Native Manthan/CMSGen profiling is paused, not refuted. Its full installation and
-timing comparison remained incomplete. The earlier exact encoding checks are
-preserved and do not constitute a complete native synthesis run. The complete
-preceding status and its evidence links remain at the pinned starting commit:
-[Pre-direct-sampling ledger](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/a71412194e0f4a5cd15937ffe3ab5ed4e67c500a/STATUS.md).
-Older current/next headings describe their checkpoints, not parallel tasks.
+The public climate data inventory was inspected, but runtime downloads failed on
+DNS. No climate archive was imported, checksum-verified or analyzed numerically.
+The note records PDF screenshot failures; no inaccessible figure supplied a new
+numerical result. No raw source data or upstream code was redistributed.
 
-The [synthesis contract](exploration/phase_3/SAMPLING_TO_VERIFIED_LOGIC_08.md),
-[encoding audit](exploration/phase_3/SAMPLING_ENCODING_AUDIT_09.md), their code,
-fixtures, reports and upstream notices are unchanged. Battery and operator routes
-remain parked. Both classical spin-offs remain independent. Phase-2 Note 27
-stays closed. Manuscript preparation remains on hold.
+## Next decision and preserved evidence
 
-Only Quantum-Assisted-Algorithm-Discovery is modified. The original license and
-third-party rights are preserved. No external contact, paid/unattended work,
-release, branch merge, new repository or administration change occurred.
+The [work order](work_orders/CURRENT.md) asks for a law-preserving comparison of
+short quantum continuations within a classical rare-event method. Prefix selection
+weights and the cost of obtaining conditional probabilities cannot be omitted.
+No full reversible CESM campaign, new simulator or large toy census is authorized.
+Direct samples remain allowed; classical-program construction is not reimposed.
+No useful sampler, novel quantum primitive or application speedup is established.
+
+The complete prior ledger is pinned at the
+[pre-task checkpoint](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/215c256127998b4aedb56a678b2af5a0a710370a/STATUS.md),
+which retains links to earlier evidence. Historical current/next headings are not
+parallel work orders. Manthan stays paused, battery/operator candidates remain
+parked, both classical spin-offs remain independent, and Phase-2 Note 27 stays closed.
+The original license, upstream rights, old notes, code and reports are preserved.
+Manuscript preparation remains on hold. Only the parent repository is modified;
+no external contact, paid/unattended work, release, merge or administration change.
