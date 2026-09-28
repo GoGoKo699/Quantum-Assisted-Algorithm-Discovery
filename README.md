@@ -3,66 +3,71 @@
 **Can circuit-model quantum computation produce information that makes a useful
 computation materially more effective than strong classical alternatives?**
 
-The original exploration sought reusable classical methods. The current
-[direct-sampling extension](exploration/phase_3/DIRECT_SAMPLING_FORECASTS_10.md)
-also permits quantum samples themselves to be the useful output. Converting them
-into a classical program is not a requirement of this investigation.
+The current [direct-sampling extension](exploration/phase_3/DIRECT_SAMPLING_FORECASTS_10.md)
+allows samples themselves to be the useful output. They need not first become a
+classical program. Quantum use at sampling time is allowed and fully costed.
 
 **Status: exploratory. No useful quantum advantage is established.
 Manuscript preparation remains on hold.**
 
-## Current question: directly useful samples for probabilistic prediction
+## Current direct-sampling task: extreme-summer scenarios
 
-Chaotic-system ensemble prediction is a candidate application class. The desired
-output would be samples of specified possible futures, trajectories, or forecast
-quantities, consumed directly in an existing prediction or risk workflow. This
-would allow quantum use at prediction time, with its cost counted. It is an
-explicit change from the earlier quantum-free deployment requirement.
+The [task and cost screen](exploration/phase_3/HEATWAVE_SAMPLING_CONTRACT_11.md)
+selects histories and circulation diagnostics conditional on extreme summers in
+an established CESM climate-model experiment. Climate researchers already use
+these samples to study extremes. This is model-based climate-risk analysis,
+not a forecast of today's weather or a demonstrated improvement in climate physics.
+Classical importance/splitting methods, with their weights and correlations,
+are the baseline; ordinary rejection sampling is not the only competitor.
 
-The [opening note](exploration/phase_3/DIRECT_SAMPLING_FORECASTS_10.md) connects this
-question to existing ensemble forecasting, Koopman-von Neumann/Liouville quantum
-representations, and classical rare-event and learned forecast generators. These
-are precedents and comparators, not our algorithm or a demonstrated speedup.
-A chaotic quantum circuit does not automatically sample a classical forecast law.
+One explicit quantum reference construction computes an event from a complete
+random-input register, amplifies the successful inputs, measures one, and replays
+the trajectory classically. It delivers a consistent scenario without tomography.
+The coherent propagation, inverse operations and classical replay are not free.
+No CESM quantum circuit, native model run or end-to-end advantage has been built.
 
-The [work order](work_orders/CURRENT.md) calls for one task-level comparison: a
-consumer, physical/model domain, conditioning information, output law, useful
-accuracy, implementable quantum mechanism and strong classical baseline. The
-leading family to inspect is rare-event scenario generation. No particular model
-or event has yet earned selection. No climate simulation campaign is underway.
+The executed cost sensitivity shows how the quantum recipe must compete with a
+quality-matched classical rare-event gain, not merely a huge probability grid.
+Its numerical inputs are illustrative, not measured climate or hardware data.
+A globally prepared exponential tilt followed by an inverse-weight correction
+cannot simply multiply two supposed quantum advantages: the preparation costs
+cancel that extra gain in the analyzed nested-rejection construction.
 
-The comparison must charge preparation, propagation, numerical accuracy, readout,
-repeated sampling and validation. Classical ensembles need not store an entire
-probability grid. Direct quantum samples do not automatically reduce statistical
-sampling error; coherent amplitude estimation is a distinct possible output task.
+The [work order](work_orders/CURRENT.md) now asks whether short quantum stochastic
+continuations can be combined with a classical rare-event method while retaining
+the correct full path weights. No full reversible climate-model port or large
+simulation campaign is the next task. A different guided preparation remains open;
+no broad impossibility result is claimed.
 
-## Paused synthesis work and preserved evidence
+## Executed check and evidence boundaries
 
-The [sample-to-logic contract](exploration/phase_3/SAMPLING_TO_VERIFIED_LOGIC_08.md)
-and [encoding audit](exploration/phase_3/SAMPLING_ENCODING_AUDIT_09.md) remain intact.
-Native Manthan/CMSGen profiling is paused, not refuted. It was not completed;
-the existing small prefix checks are not a full synthesis benchmark.
+```sh
+python experiments/direct_tail_sampling_v1/verify.py
+```
 
-The [battery route](exploration/phase_3/INTERFACIAL_REFERENCE_DECISION_06.md) and
-[operator candidate](exploration/phase_3/MECHANISM_SCREEN_01.md) remain parked.
-The [battery archive replay](exploration/phase_3/ARCHIVE_REPLAY_04.md), source data
-rights and uploaded archive remain unchanged; no new upload is needed.
-[Algebraic-Loop-Certificates](https://github.com/GoGoKo699/Algebraic-Loop-Certificates)
+Python 3.10+, standard library only. The [report](experiments/direct_tail_sampling_v1/REPORT.json)
+contains artificial finite-law controls and a known-probability cost table. It is
+not atmospheric data, quantum hardware, or a sampling-performance benchmark.
+Public climate archive metadata was inspected; runtime download failed. No raw
+climate archive or upstream implementation was imported or redistributed.
+Historical scientific verifiers were not rerun; their source/results are unchanged.
+
+## Preserved work and organization
+
+Manthan [profiling and encoding work](exploration/phase_3/SAMPLING_ENCODING_AUDIT_09.md)
+remains paused, not refuted. The [battery route](exploration/phase_3/INTERFACIAL_REFERENCE_DECISION_06.md)
+and [operator candidate](exploration/phase_3/MECHANISM_SCREEN_01.md) remain parked.
+The uploaded battery archive is already verified; it is not climate data and no
+new upload is needed. [Algebraic-Loop-Certificates](https://github.com/GoGoKo699/Algebraic-Loop-Certificates)
 and [Sparse-Weil-Reconstruction](https://github.com/GoGoKo699/Sparse-Weil-Reconstruction)
-are independent projects and own their further development.
-
-## Scope and organization
+remain independent projects and own their further development.
 
 Scientific phase 3 uses `research/prx-quantum-phase2`. The original
 [project map](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/main/PROJECT_MAP.md)
 and [charter](exploration/phase_2/CHARTER.md) retain their historical objectives;
-Note 10 and the live work order explicitly extend the output contract for this
-investigation. `main` remains an entry point, not a merged copy of later work.
-[STATUS.md](STATUS.md) records the current decision and links historical ledgers.
-Phase-2 [Note 27](exploration/phase_2/SOURCE_AWARE_DESCENT_27.md) remains closed.
-
-This checkpoint is a literature screen and scope/documentation update only.
-No experiment, forecast, quantum circuit, native solver or scientific verifier
-was run. Historical source/results, third-party notices and the original
-[MIT license](LICENSE), Copyright (c) 2026 Ruge Lin, are preserved.
-Only the parent repository may be modified in this project context.
+Note 10 explicitly extends the output contract. `main` is an entry point, not
+a merged copy of later research. [STATUS.md](STATUS.md) records the present
+checkpoint and links pinned historical ledgers. Phase-2
+[Note 27](exploration/phase_2/SOURCE_AWARE_DESCENT_27.md) stays closed.
+Earlier proofs, code, reports, notices and the original [MIT license](LICENSE),
+Copyright (c) 2026 Ruge Lin, are preserved. Only the parent repository may be modified.
