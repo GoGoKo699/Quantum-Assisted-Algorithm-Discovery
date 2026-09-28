@@ -1,0 +1,370 @@
+{
+  "collective_vs_local_negative_control": {
+    "collective_zero_line_mass": 1.0,
+    "local_masses_minus1_0_plus1": [
+      0.2499999999999999,
+      0.4999999999999998,
+      0.2499999999999999
+    ]
+  },
+  "counts": {
+    "analytic_boundary_controls": 9,
+    "complex_basis_checks": 3,
+    "moment_checks": 74,
+    "resolvent_identity_checks": 108,
+    "sparse_support_checks": 15,
+    "spin_bound_checks": 36
+  },
+  "invalid_linewidths_rejected": 4,
+  "numpy_version": "2.3.5",
+  "rows": [
+    {
+      "beta": 0.6,
+      "boundary_mass": 1.0,
+      "finite_bin_TV": 0.129428785321,
+      "gamma": 0.4,
+      "m": 1,
+      "model": "pair",
+      "proven_bound_evaluated_float": 0.75
+    },
+    {
+      "beta": 0.6,
+      "boundary_mass": 1.0,
+      "finite_bin_TV": 0.048645158636,
+      "gamma": 1.0,
+      "m": 1,
+      "model": "pair",
+      "proven_bound_evaluated_float": 0.18
+    },
+    {
+      "beta": 0.6,
+      "boundary_mass": 1.0,
+      "finite_bin_TV": 0.007770201993,
+      "gamma": 3.0,
+      "m": 1,
+      "model": "pair",
+      "proven_bound_evaluated_float": 0.02
+    },
+    {
+      "beta": 1.1,
+      "boundary_mass": 0.346153846154,
+      "finite_bin_TV": 0.170933887917,
+      "gamma": 0.4,
+      "m": 2,
+      "model": "pair",
+      "proven_bound_evaluated_float": 0.808979057445
+    },
+    {
+      "beta": 1.1,
+      "boundary_mass": 0.132352941176,
+      "finite_bin_TV": 0.024384058132,
+      "gamma": 1.0,
+      "m": 2,
+      "model": "pair",
+      "proven_bound_evaluated_float": 0.080073529412
+    },
+    {
+      "beta": 1.1,
+      "boundary_mass": 0.019230769231,
+      "finite_bin_TV": 0.0006320128,
+      "gamma": 3.0,
+      "m": 2,
+      "model": "pair",
+      "proven_bound_evaluated_float": 0.001292735043
+    },
+    {
+      "beta": 0.0,
+      "boundary_mass": 0.098005280199,
+      "finite_bin_TV": 0.0,
+      "gamma": 0.4,
+      "m": 4,
+      "model": "pair",
+      "proven_bound_evaluated_float": 0.0
+    },
+    {
+      "beta": 0.0,
+      "boundary_mass": 0.008824229588,
+      "finite_bin_TV": 0.0,
+      "gamma": 1.0,
+      "m": 4,
+      "model": "pair",
+      "proven_bound_evaluated_float": 0.0
+    },
+    {
+      "beta": 0.0,
+      "boundary_mass": 5.0883151e-05,
+      "finite_bin_TV": 0.0,
+      "gamma": 3.0,
+      "m": 4,
+      "model": "pair",
+      "proven_bound_evaluated_float": 0.0
+    },
+    {
+      "beta": 0.0,
+      "boundary_mass": 0.098005280199,
+      "finite_bin_TV": 0.0,
+      "gamma": 0.4,
+      "m": 4,
+      "model": "pair",
+      "proven_bound_evaluated_float": 0.0
+    },
+    {
+      "beta": 0.0,
+      "boundary_mass": 0.008824229588,
+      "finite_bin_TV": 0.0,
+      "gamma": 1.0,
+      "m": 4,
+      "model": "pair",
+      "proven_bound_evaluated_float": 0.0
+    },
+    {
+      "beta": 0.0,
+      "boundary_mass": 5.0883151e-05,
+      "finite_bin_TV": 0.0,
+      "gamma": 3.0,
+      "m": 4,
+      "model": "pair",
+      "nested_commutator_Pauli_counts_k0_to_k4": [
+        4,
+        4,
+        8,
+        8,
+        8
+      ],
+      "proven_bound_evaluated_float": 0.0
+    },
+    {
+      "beta": 0.612372435696,
+      "boundary_mass": 1.0,
+      "finite_bin_TV": 0.160546363028,
+      "gamma": 0.4,
+      "m": 1,
+      "model": "chain4",
+      "proven_bound_evaluated_float": 0.76546554462
+    },
+    {
+      "beta": 0.612372435696,
+      "boundary_mass": 1.0,
+      "finite_bin_TV": 0.051866109808,
+      "gamma": 1.0,
+      "m": 1,
+      "model": "chain4",
+      "proven_bound_evaluated_float": 0.1875
+    },
+    {
+      "beta": 0.612372435696,
+      "boundary_mass": 1.0,
+      "finite_bin_TV": 0.008074703662,
+      "gamma": 3.0,
+      "m": 1,
+      "model": "chain4",
+      "proven_bound_evaluated_float": 0.020833333333
+    },
+    {
+      "beta": 1.105049018521,
+      "boundary_mass": 0.342716139645,
+      "finite_bin_TV": 0.12998646585,
+      "gamma": 0.4,
+      "m": 2,
+      "model": "chain4",
+      "proven_bound_evaluated_float": 0.808646730262
+    },
+    {
+      "beta": 1.105049018521,
+      "boundary_mass": 0.135174104246,
+      "finite_bin_TV": 0.020868578488,
+      "gamma": 1.0,
+      "m": 2,
+      "model": "chain4",
+      "proven_bound_evaluated_float": 0.082532802249
+    },
+    {
+      "beta": 1.105049018521,
+      "boundary_mass": 0.01997421994,
+      "finite_bin_TV": 0.000627019245,
+      "gamma": 3.0,
+      "m": 2,
+      "model": "chain4",
+      "proven_bound_evaluated_float": 0.001355065876
+    },
+    {
+      "beta": 1.256956138145,
+      "boundary_mass": 0.125527861483,
+      "finite_bin_TV": 0.051327844471,
+      "gamma": 0.4,
+      "m": 4,
+      "model": "chain4",
+      "proven_bound_evaluated_float": 0.556673056054
+    },
+    {
+      "beta": 1.256956138145,
+      "boundary_mass": 0.019073582472,
+      "finite_bin_TV": 0.003051416986,
+      "gamma": 1.0,
+      "m": 4,
+      "model": "chain4",
+      "proven_bound_evaluated_float": 0.015067545865
+    },
+    {
+      "beta": 1.256956138145,
+      "boundary_mass": 0.000175295051,
+      "finite_bin_TV": 6.807273e-06,
+      "gamma": 3.0,
+      "m": 4,
+      "model": "chain4",
+      "proven_bound_evaluated_float": 1.5386413e-05
+    },
+    {
+      "beta": 1.623400023613,
+      "boundary_mass": 0.046367977646,
+      "finite_bin_TV": 0.033726517059,
+      "gamma": 0.4,
+      "m": 6,
+      "model": "chain4",
+      "proven_bound_evaluated_float": 0.381873280455
+    },
+    {
+      "beta": 1.623400023613,
+      "boundary_mass": 0.003809977987,
+      "finite_bin_TV": 0.001034809804,
+      "gamma": 1.0,
+      "m": 6,
+      "model": "chain4",
+      "proven_bound_evaluated_float": 0.00502046064
+    },
+    {
+      "beta": 1.623400023613,
+      "boundary_mass": 4.045542e-06,
+      "finite_bin_TV": 2.60751e-07,
+      "gamma": 3.0,
+      "m": 6,
+      "model": "chain4",
+      "nested_commutator_Pauli_counts_k0_to_k4": [
+        8,
+        8,
+        20,
+        42,
+        88
+      ],
+      "proven_bound_evaluated_float": 5.92318e-07
+    },
+    {
+      "beta": 0.7,
+      "boundary_mass": 1.0,
+      "finite_bin_TV": 0.165405545085,
+      "gamma": 0.4,
+      "m": 1,
+      "model": "staggered6",
+      "proven_bound_evaluated_float": 0.875
+    },
+    {
+      "beta": 0.7,
+      "boundary_mass": 1.0,
+      "finite_bin_TV": 0.0611350552,
+      "gamma": 1.0,
+      "m": 1,
+      "model": "staggered6",
+      "proven_bound_evaluated_float": 0.245
+    },
+    {
+      "beta": 0.7,
+      "boundary_mass": 1.0,
+      "finite_bin_TV": 0.010335123541,
+      "gamma": 3.0,
+      "m": 1,
+      "model": "staggered6",
+      "proven_bound_evaluated_float": 0.027222222222
+    },
+    {
+      "beta": 1.303840481041,
+      "boundary_mass": 0.376923076923,
+      "finite_bin_TV": 0.182135885874,
+      "gamma": 0.4,
+      "m": 2,
+      "model": "staggered6",
+      "proven_bound_evaluated_float": 1.0
+    },
+    {
+      "beta": 1.303840481041,
+      "boundary_mass": 0.164429530201,
+      "finite_bin_TV": 0.032598020901,
+      "gamma": 1.0,
+      "m": 2,
+      "model": "staggered6",
+      "proven_bound_evaluated_float": 0.139765100671
+    },
+    {
+      "beta": 1.303840481041,
+      "boundary_mass": 0.025816649104,
+      "finite_bin_TV": 0.001096853726,
+      "gamma": 3.0,
+      "m": 2,
+      "model": "staggered6",
+      "proven_bound_evaluated_float": 0.002438239082
+    },
+    {
+      "beta": 1.821998219133,
+      "boundary_mass": 0.153864718388,
+      "finite_bin_TV": 0.080416419951,
+      "gamma": 0.4,
+      "m": 4,
+      "model": "staggered6",
+      "proven_bound_evaluated_float": 0.893362018318
+    },
+    {
+      "beta": 1.821998219133,
+      "boundary_mass": 0.028635012783,
+      "finite_bin_TV": 0.006525212156,
+      "gamma": 1.0,
+      "m": 4,
+      "model": "staggered6",
+      "proven_bound_evaluated_float": 0.047529503975
+    },
+    {
+      "beta": 1.821998219133,
+      "boundary_mass": 0.000340888659,
+      "finite_bin_TV": 2.3158302e-05,
+      "gamma": 3.0,
+      "m": 4,
+      "model": "staggered6",
+      "proven_bound_evaluated_float": 6.2868912e-05
+    },
+    {
+      "beta": 2.086542389059,
+      "boundary_mass": 0.062140096772,
+      "finite_bin_TV": 0.053557041293,
+      "gamma": 0.4,
+      "m": 6,
+      "model": "staggered6",
+      "proven_bound_evaluated_float": 0.650164402713
+    },
+    {
+      "beta": 2.086542389059,
+      "boundary_mass": 0.007681793731,
+      "finite_bin_TV": 0.002619679406,
+      "gamma": 1.0,
+      "m": 6,
+      "model": "staggered6",
+      "proven_bound_evaluated_float": 0.016721955749
+    },
+    {
+      "beta": 2.086542389059,
+      "boundary_mass": 1.8918869e-05,
+      "finite_bin_TV": 1.684358e-06,
+      "gamma": 3.0,
+      "m": 6,
+      "model": "staggered6",
+      "nested_commutator_Pauli_counts_k0_to_k4": [
+        12,
+        12,
+        32,
+        80,
+        184
+      ],
+      "proven_bound_evaluated_float": 4.575906e-06
+    }
+  ],
+  "scope": "Double-precision finite mathematical controls only; no experimental spectrum, compiled quantum circuit or timing benchmark.",
+  "status": "pass",
+  "tolerance": 2e-09
+}
