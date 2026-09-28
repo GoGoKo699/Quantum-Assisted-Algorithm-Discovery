@@ -182,14 +182,15 @@ identities or quantum rejection sampling as new primitives.
 ## 5. Rare outcomes and rare harmful events are not identical
 
 Guo et al.'s June 2026 preprint [8] filters outcomes whose individual probabilities
-fall below an unknown threshold, with coherent sampler access. Our event is an
-explicit physical threshold A>=a, irrespective of how likely each detailed
-trajectory label is. Appending unused independent bits makes each outcome label
-less probable without changing heatwave frequency. Filtering individual seed
-probabilities would therefore not solve our task. The new paper is relevant
-prior work, but its query result is not a demonstrated climate algorithm or a
-reason to ignore source-aware classical samplers. Only its stated task and access
-model were screened here, not its complete proof or experimental corpus.
+fall below a supplied threshold without first identifying the rare outcomes,
+using coherent sampler access. Our event is an explicit physical threshold A>=a,
+irrespective of how likely each detailed trajectory label is. Appending unused
+independent bits makes each outcome label less probable without changing heatwave
+frequency. Filtering individual seed probabilities would therefore not solve our
+task. The new paper is relevant prior work, but its query result is not a
+demonstrated climate algorithm or a reason to ignore source-aware classical
+samplers. Only its stated task and access model were screened here, not its
+complete proof or experimental corpus.
 
 Accuracy also matters after conditioning. If approximate and target base laws
 have total-variation distance eta and the same event has target probability p>0,
