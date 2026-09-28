@@ -2,94 +2,76 @@
 
 **Can quantum computation discover a useful reusable classical method more
 cheaply than a strong classical alternative?** The output should run on ordinary
-computers and address a need that exists independently of this project.
+computers and meet a need that exists independently of this project.
 
 **Status: exploratory. No useful quantum discovery advantage is established.
 Manuscript preparation remains on hold.**
 
-## Current application test: battery-interface reaction simulation
+## Current decision: repair the physical model before quantum costing
 
-The [application case](exploration/phase_3/APPLICATION_CASE_02.md) investigates a
-classical energy/force evaluator for initial electrolyte chemistry at lithium-metal
-interfaces, potentially constructed using selected quantum electronic references.
-Later simulations would be classical. This generic architecture is prior work;
-no new simulator or advantage has been established here.
+The [physical-relevance study](exploration/phase_3/PHYSICAL_RELEVANCE_05.md) identifies
+an experimental validation target: electrolyte-dependent ethylene evolution during
+lithium deposition in anode-free cells, accompanied by inactive-lithium formation.
+The experiment changes the salt while retaining the solvent mixture. It supplies
+an independently motivated observable, not a quantum-computing demonstration.
 
-**Physical relevance remains a separate test.** Li40+EC is a finite bare-surface
-calibration model, not a working battery or a proposed 50-atom battery component.
-Published motivation for the chemistry does not establish that a more accurate
-energy for this model improves a useful interfacial prediction. The source studies
-also identify finite-size, solvent, electrode-voltage and electron-transfer issues;
-see the source-backed boundaries in the [work order](work_orders/CURRENT.md).
+Our fixed bare Li40+EC calibration does not encode that intervention. More precise
+energies for the same isolated input do not by themselves predict a salt-dependent
+outcome. A justified salt/interphase-aware description is needed; electronic
+accuracy has not been established as the dominant bottleneck. Initial molecular
+bond breaking is also not the same observable as gas escaping an operating cell.
 
-Before substantial resource or model-development work, identify one actual
-interface regime and useful observable, and explain how the calibration informs
-it despite the omitted physics. If that connection cannot be supported, park or
-redirect the candidate. A calibration success must not be presented as application
-success. No battery-lifetime, capacity, safety or commercial benefit is claimed.
+The [current work order](work_orders/CURRENT.md) requires inspecting an existing
+classical interfacial description and identifying at most one electronic reference
+whose improvement would affect a useful prediction. If that connection cannot be
+supported, park this application. No large simulation, general framework or
+bare-cluster quantum resource campaign is the next task.
 
-The [latest archive replay](exploration/phase_3/ARCHIVE_REPLAY_04.md) verifies the
-supplied public ZIP, all 732 geometries and 30 tables, and the published Li40
-calibration. It reproduces four corrected barrier estimates at printed precision
-using the paper's supplied PBE surface limit. It also records the distinct PBE
-series, AFQMC trial refinements absent from the ZIP, and an averaging-endpoint
-ambiguity instead of silently mixing them.
+The known experimental contrast is a validation requirement, not a new discovery.
+Any eventual reusable classical model must also predict an unfit condition or
+provide equally useful predictions at lower total cost. The generic architecture
+of quantum reference generation followed by classical deployment is prior work.
+No new simulator, battery-lifetime improvement or commercial benefit is claimed.
 
-The numerical geometry sequences grow lithium clusters around fixed molecular
-geometries. They are not a trajectory-training dataset. A retrospective test of
-one Li40 correction transferred to other cluster sizes leaves appreciable
-method-relative discrepancies. A precise isolated energy therefore does not,
-by itself, establish a useful reusable simulator. This does not rule out a
-multi-reference or structured learning approach.
+## Retained calibration and reproduction
 
-Following a supported physical-relevance case, the [work order](work_orders/CURRENT.md)
-requires an application-relevant accuracy and total reference-preparation cost
-comparison. The archive-access step is complete; Hamiltonian coefficients, state
-preparation, native timings and a validated learned model are not. Modern classical
-chemistry, active learning, and energy-only model construction remain legitimate
-alternatives.
+The [archive replay](exploration/phase_3/ARCHIVE_REPLAY_04.md) records the verified
+public ZIP, 732 geometries, 30 data tables, published-number reconstructions and a
+bounded transfer test. These are fixed-geometry cluster-size scans, not a reactive
+training dataset. Calibration integrity does not establish application validity.
 
-## Reproduce the archive analysis
-
-Obtain the original `paper_data.zip` from the authors' [Zenodo deposit](https://zenodo.org/records/22116355),
-DOI 10.5281/zenodo.22116355. Python 3.10+, standard library only:
+With a local copy of `paper_data.zip` from the authors' [Zenodo deposit](https://zenodo.org/records/22116355),
+DOI 10.5281/zenodo.22116355, run:
 
 ```sh
 python experiments/reference_archive_v1/verify.py --archive /path/to/paper_data.zip
 ```
 
-The checker reads without extracting or modifying the ZIP. It checks the pinned
-digest, geometry inventory, selected published arithmetic and malformed inputs.
-Compare its output with the [executed report](experiments/reference_archive_v1/REPORT.json).
-No raw archive, coordinates or full source tables are redistributed here; their
-rights are not replaced by this repository's license.
+Python 3.10+, standard library only. The checker reads without extracting or
+modifying the ZIP. The [saved report](experiments/reference_archive_v1/REPORT.json)
+documents its historical execution. Raw coordinates/source tables are not
+redistributed or relicensed. The [core audit](exploration/phase_3/REFERENCE_ACCESS_AUDIT_03.md)
+still governs the matched 154-correlated-electron convention.
 
-The archive checkpoint is data/protocol verification, not an electronic-structure,
-quantum-circuit, molecular-dynamics or performance benchmark. No scientific tests
-were rerun for the subsequent physical-relevance documentation update. Historical
-source/results remain unchanged. The earlier
-[core audit](exploration/phase_3/REFERENCE_ACCESS_AUDIT_03.md) still governs the
-matched 154-correlated-electron convention; the older hypothetical 74-electron
-model and small HCI trial spaces are not equivalent electronic problems.
+The current relevance study inspected literature and selected PDF figures and
+rechecked the ZIP digest and two geometry members. It did not rerun the full
+archive checker or historical suites, calculate electronic structure, simulate a
+quantum circuit, train a model, or benchmark a speedup.
 
-## Parked and independent work
+## Scope and organization
 
-The [first phase-3 operator construction](exploration/phase_3/MECHANISM_SCREEN_01.md)
-remains parked, with its note and tests preserved.
+The [operator candidate](exploration/phase_3/MECHANISM_SCREEN_01.md) remains parked.
 [Algebraic-Loop-Certificates](https://github.com/GoGoKo699/Algebraic-Loop-Certificates)
 and [Sparse-Weil-Reconstruction](https://github.com/GoGoKo699/Sparse-Weil-Reconstruction)
-are independent projects and own their further development. Neither replaces
-the parent goal.
+are independent projects and own their further development.
 
-## Organization and evidence
-
-Scientific phase 3 uses the existing branch `research/prx-quantum-phase2`.
-The [canonical project map](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/main/PROJECT_MAP.md)
+Scientific phase 3 uses `research/prx-quantum-phase2`. The
+[project map](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/main/PROJECT_MAP.md)
 and [parent charter](exploration/phase_2/CHARTER.md) govern the exploration.
-The default branch is an entry point, not a merged copy of later research.
-[STATUS.md](STATUS.md) separates recorded scientific findings from historical claims;
-the live work order determines the next task.
-The [source-aware descent comparison](exploration/phase_2/SOURCE_AWARE_DESCENT_27.md)
-remains closed. Earlier research, third-party notices and the original
+`main` is the public entry point, not a merged copy of later research.
+[STATUS.md](STATUS.md) separates current decisions from historical evidence;
+previous notes do not create parallel work orders. The
+[source-aware descent comparison](exploration/phase_2/SOURCE_AWARE_DESCENT_27.md)
+remains closed. Historical proofs, code, reports, notices and the original
 [MIT license](LICENSE), Copyright (c) 2026 Ruge Lin, are preserved.
 Only the parent repository may be modified in this project context.
