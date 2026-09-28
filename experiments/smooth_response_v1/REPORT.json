@@ -1,0 +1,79 @@
+{
+  "counts": {
+    "bounded_polynomial_comparisons": 3,
+    "edge_continuity_checks": 8,
+    "invalid_inputs_rejected": 6,
+    "moment_identities": 6,
+    "smooth_cap_comparisons": 6,
+    "spin_models": 3,
+    "translation_checks": 4
+  },
+  "implementation_limit": "The C2 cap is an analytic control, not the logarithmic-accuracy amplification polynomial. Its existence/cost is cited.",
+  "numpy_version": "2.3.5",
+  "rows": [
+    {
+      "analytic_moment_bound": 0.09,
+      "binned_TV_diagnostic": 0.020293417766962907,
+      "core_relative_error": 0.0,
+      "cutoff": 0.5,
+      "d": 0.15,
+      "gamma": 0.008,
+      "n": 2,
+      "response_tail_mass": 0.02108685738942431
+    },
+    {
+      "analytic_moment_bound": 0.2292605752054084,
+      "binned_TV_diagnostic": 0.025744970599532374,
+      "core_relative_error": 0.007,
+      "cutoff": 0.5,
+      "d": 0.15,
+      "gamma": 0.008,
+      "n": 2,
+      "response_tail_mass": 0.02108685738942431
+    },
+    {
+      "analytic_moment_bound": 0.0625,
+      "binned_TV_diagnostic": 0.010911471775514315,
+      "core_relative_error": 0.0,
+      "cutoff": 0.4,
+      "d": 0.1,
+      "gamma": 0.006,
+      "n": 4,
+      "response_tail_mass": 0.011772946856563488
+    },
+    {
+      "analytic_moment_bound": 0.21104461355243567,
+      "binned_TV_diagnostic": 0.013982645422071428,
+      "core_relative_error": 0.007,
+      "cutoff": 0.4,
+      "d": 0.1,
+      "gamma": 0.006,
+      "n": 4,
+      "response_tail_mass": 0.011772946856563488
+    },
+    {
+      "analytic_moment_bound": 0.0576,
+      "binned_TV_diagnostic": 0.0038587135671122345,
+      "core_relative_error": 0.0,
+      "cutoff": 0.5,
+      "d": 0.12,
+      "gamma": 0.01,
+      "n": 6,
+      "response_tail_mass": 0.015064832385425208
+    },
+    {
+      "analytic_moment_bound": 0.16900846016432675,
+      "binned_TV_diagnostic": 0.00605939880340322,
+      "core_relative_error": 0.007,
+      "cutoff": 0.5,
+      "d": 0.12,
+      "gamma": 0.01,
+      "n": 6,
+      "response_tail_mass": 0.015064832385425208
+    }
+  ],
+  "scope": "Fixed small-matrix probability-law controls only; no general QSVT polynomial construction, circuit, experiment or timing.",
+  "status": "pass",
+  "tolerance": 3e-10,
+  "wrong_state_filtering_TV": 0.9153173420323095
+}
