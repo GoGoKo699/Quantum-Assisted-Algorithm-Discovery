@@ -1,5 +1,43 @@
 # Claim ledger
 
+## Current checkpoint: executed archive replay, 28 September 2026
+
+The [archive replay](exploration/phase_3/ARCHIVE_REPLAY_04.md) verifies the original
+supplied ZIP against its recorded MD5 and pins its SHA256 and selected member
+hashes. All 732 geometries and 30 tables were parsed. The Li40 calibration's
+composition is confirmed. Archive acquisition is complete; no further upload
+is needed. Raw archive/geometry/table files are not redistributed here.
+
+The numerical geometry sequences are nested cluster-size scans with fixed EC
+coordinates, not a reactive training set. Four Table II barriers reproduce to
+printed precision using the released method endpoints, the CSV PBE series and
+the paper's supplied rounded 5.6 surface limit. That limit and finite-size transfer
+are not independently validated. The two PBE series differ; parallel AFQMC HCI
+refinements must be attributed separately from the ZIP's older trial values.
+Twelve Table I NPEs reproduce with N=10 included; the strict caption interpretation
+is recorded separately rather than silently changed.
+
+A retrospective one-Li40/PBE correction test leaves mean method-relative
+discrepancies of 1.99, 3.43 and 3.06 kcal/mol over other available cluster sizes.
+This is not a physical-truth error bound, method ranking, learned-model validation,
+or a general rejection of multiple references, embedding or quantum assistance.
+It prevents assuming that one precise reference automatically yields a useful
+classical simulator. The [work order](work_orders/CURRENT.md) requires the joint
+useful-accuracy and total-reference-cost comparison next.
+
+The final new checker passed twice with identical JSON, eight malformed-input
+controls, a modified-archive rejection, and -O/-OO refusals. Source and executed
+report hashes are in the note. No Hamiltonian, SCF/CC/AFQMC calculation, trajectory,
+quantum circuit, timing benchmark or model training was run. Root/historical
+suites were not rerun. No useful quantum advantage is established. The operator
+remains parked, manuscript preparation stays on hold, and both spin-offs remain
+independent. Earlier research code, fixtures, notes and LICENSE are unchanged.
+
+Everything below is retained historical status. Earlier failed-transfer or
+unread-coordinate statements describe their checkpoints, not the current state.
+
+---
+
 ## Current checkpoint: reference/protocol audit, 28 September 2026
 
 The [reference audit](exploration/phase_3/REFERENCE_ACCESS_AUDIT_03.md) located the
