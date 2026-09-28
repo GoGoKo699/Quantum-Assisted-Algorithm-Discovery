@@ -10,59 +10,58 @@ classical program. Quantum use at sampling time is allowed and fully costed.
 **Status: exploratory. No useful quantum advantage is established.
 Manuscript preparation remains on hold.**
 
-## Current test: variation among futures of the same saved state
+## Current exploration: distinguish sample selection from quantum generation
 
-The [climate task](exploration/phase_3/HEATWAVE_SAMPLING_CONTRACT_11.md) concerns
-extreme-summer histories and circulation diagnostics in the published CESM France
-experiment. This is model-conditioned analysis, not an operational forecast.
-The [segment construction](exploration/phase_3/SEGMENT_SELECTION_12.md) gives an
-ideal law-correct joint history/continuation sampler with explicit finite-population
-weights. It has not been implemented for CESM or shown to improve total cost.
+The [open sampling screen](exploration/phase_3/OPEN_SAMPLING_SCREEN_14.md) keeps the
+climate continuation test available and opens a separate mechanism check: direct
+sampling of a quantum system's spectral response, with NMR as the first consumer
+to examine. A blocked dataset for one implementation does not block the parent
+exploration. Neither mechanism is an established application advantage.
 
-The [continuation-information audit](exploration/phase_3/CONTINUATION_INFORMATION_13.md)
-specifies the next empirical test: compare genuinely perturbed children of the
-same checkpoint, over the next segment and before later selection. Large variation
-across unrelated parents is not evidence of this within-parent opportunity.
-A classical comparator can select parents using valid parent-specific score
-bounds and reject only the remaining variation. The quantum producer may exploit
-the same information. Those bounds and their costs remain to be established.
+In the climate route, quantum conditioning selects results of a classical
+trajectory calculation. In the spectral route, quantum many-body evolution itself
+produces transition statistics. Direct spectral sampling and quantum-assisted NMR
+inference already have precedents; adopting their architecture is not a novelty.
 
-The authors' record lists the relevant raw histories, ancestry and scripts, but
-runtime transfers have failed. No sibling variance, score acceptance probability,
-restart-memory budget or timing has been measured. The
-[current work order](work_orders/CURRENT.md) calls for the small original France
-packet specified in Audit 13, not another artificial example or a larger simulator.
-The scalar archive is not a full collection of model restart states.
+The [work order](work_orders/CURRENT.md) now asks for one measured NMR task,
+its supplied spin model and experimental resolution, and the strongest adequate
+classical comparison. High-temperature spin-response preparation can avoid a
+cold ground-state prerequisite in its justified regime, but does not make
+propagation, resolution, measurement or model validation free. Classical methods
+already handle some protein-scale NMR experiments. Spin count and microscopic
+sampling hardness do not establish difficulty of the spectrum the user needs.
+No specific compound, new simulator or positive quantum cost margin is selected.
 
-## Retained diagnostic and evidence
+## Climate investigation retained
 
-```sh
-python experiments/segment_selection_v1/verify.py
-```
+The [heatwave task](exploration/phase_3/HEATWAVE_SAMPLING_CONTRACT_11.md),
+[segment construction](exploration/phase_3/SEGMENT_SELECTION_12.md) and
+[continuation-information audit](exploration/phase_3/CONTINUATION_INFORMATION_13.md)
+remain unchanged. The planned empirical check compares legitimate continuations
+of the same restart state before later selection. The France source packet is
+still missing; no new climate-array analysis, variance estimate or runtime is
+claimed. Its upload is not a prerequisite for the spectral source/comparator check.
 
-Python 3.10+, standard library only. The [saved report](experiments/segment_selection_v1/REPORT.json)
-records earlier finite-law controls, not a climate or quantum-performance run.
-Audit 13 did not rerun this checker or any historical scientific suite. It adds
-source inspection, an elementary comparator calculation and a data-analysis
-specification; no new scientific code, simulation or measured advantage.
+## Evidence and organization
 
-## Preserved work and organization
+The latest checkpoint is primary-source inspection and analytic checking of
+standard spectral/vectorization and state-preparation identities. No numerical
+simulation, native NMR run, quantum circuit, spectral fitting or scientific
+verifier was executed. Earlier scientific sources and reports remain unchanged.
+[STATUS.md](STATUS.md) records scope and links pinned historical ledgers.
 
 Manthan [profiling and encoding](exploration/phase_3/SAMPLING_ENCODING_AUDIT_09.md)
 remains paused. The [battery route](exploration/phase_3/INTERFACIAL_REFERENCE_DECISION_06.md)
 and [operator candidate](exploration/phase_3/MECHANISM_SCREEN_01.md) remain parked.
-The [battery archive replay](exploration/phase_3/ARCHIVE_REPLAY_04.md) and upload
-are retained; that archive is not climate data and no new battery upload is needed.
-[Algebraic-Loop-Certificates](https://github.com/GoGoKo699/Algebraic-Loop-Certificates)
+Both [Algebraic-Loop-Certificates](https://github.com/GoGoKo699/Algebraic-Loop-Certificates)
 and [Sparse-Weil-Reconstruction](https://github.com/GoGoKo699/Sparse-Weil-Reconstruction)
 are independent projects and own their further development.
 
 Scientific phase 3 uses `research/prx-quantum-phase2`. The original
 [project map](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/main/PROJECT_MAP.md)
 and [charter](exploration/phase_2/CHARTER.md) retain their historical objectives;
-Note 10 explicitly extends the output contract. `main` is an entry point, not
-a merged copy of later research. [STATUS.md](STATUS.md) records current claims
-and links pinned historical ledgers. Phase-2
-[Note 27](exploration/phase_2/SOURCE_AWARE_DESCENT_27.md) stays closed.
-Earlier proofs, code, reports, notices and the original [MIT license](LICENSE),
-Copyright (c) 2026 Ruge Lin, are preserved. Only the parent repository may be modified.
+Note 10 explicitly extends the output contract. `main` is an entry point, not a
+merged copy of later work. Phase-2 [Note 27](exploration/phase_2/SOURCE_AWARE_DESCENT_27.md)
+stays closed. Previous proof notes, code, data, reports, upstream rights and the
+original [MIT license](LICENSE), Copyright (c) 2026 Ruge Lin, are preserved.
+Only the parent repository may be modified in this project context.
