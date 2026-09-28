@@ -311,7 +311,7 @@ Proof: m_k=<O,L^k O>/||O||_F^2. Exchange annihilates O;
 L O=sum_i delta_i Si^+. Next,
 L^2 O=sum_i delta_i^2 Si^+ + sum_edges J_ij(delta_i-delta_j)
 (Si^+ Sj^z-Si^z Sj^+). Distinct one- and two-site strings are Hilbert-Schmidt
-orthogonal. The norm of each pair difference is D/4, versus ||O||_F^2=Dn/2.
+orthogonal. The squared Frobenius norm of each pair difference is D/4, versus ||O||_F^2=Dn/2.
 This gives the displayed coefficient. Spectral-moment methods are longstanding
 magnetic-resonance tools [10,11]; no novelty is assigned to using them here.
 These finite moments are NOT moments of the Cauchy-broadened law, which has heavy
@@ -333,7 +333,8 @@ classical difficulty or a detectable effect at coarse resolution.
 
 ### Two-spin check: weak coupling also depends on linewidth
 
-For two offsets +/-Delta/2 and one J, define R=sqrt(Delta^2+J^2). Exact frequencies
+For two offsets +/-Delta/2 and one J, define R=sqrt(Delta^2+J^2)>0. The R=0
+case is a point mass at zero. For R>0, exact frequencies
 are +/-(R-J)/2 with weight (1+J/R)/4 each and +/-(R+J)/2 with weight (1-J/R)/4 each.
 For Delta>|J| the secular frequencies replace R by Delta and have equal weights.
 Coupling the four labels, then bounding Cauchy translations, gives
