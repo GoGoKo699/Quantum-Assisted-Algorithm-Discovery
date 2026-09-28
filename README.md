@@ -10,91 +10,70 @@ input, accuracy and output costs remain explicit. See [AGENTS.md](AGENTS.md).
 **Status: exploratory. No useful quantum advantage is established.
 Manuscript preparation remains on hold.**
 
-## Current mathematical result: sample the slow response without assuming short memory
+## Current result: retain near resonances, eliminate only the faster sector
 
-[Slow-sector sampling 18](exploration/phase_3/SLOW_SECTOR_SAMPLING_18.md) identifies
-the second-order response of the alternating-offset spin family. Under an explicit
-first-order cancellation and a nonzero-frequency gap condition, a reduced generator
-retains the resolved spectral structure. An invariant-graph argument bounds the
-continuous total-variation error, including changes in the measured observable's
-state and weights. This does not assume fast memory decay or replace the spectrum
-by one line.
+[Resonance window 19](exploration/phase_3/RESONANCE_WINDOW_19.md) extends the
+slow-response analysis to an entire band of low operator frequencies. A Hermitian
+static Schur generator retains their finite-frequency and first-order couplings.
+A continuous-total-variation bound controls the resulting Lorentzian-broadened
+spectral law, including its tails. It does not require a minimum nonzero frequency,
+a separation between neighboring frequencies at the cutoff, or the earlier parity-
+cancellation condition. A response-weighted refinement follows the retained
+observable's coupling to eliminated modes rather than counting those modes.
 
-The generator is a product of the conserved-sector projector, perturbation and
-signed inverse of the exchange generator. Standard quantum singular value
-transformation can construct those operations from explicit block encodings,
-without enumerating a classical eigenbasis. Spectral measurement and rescaling
-then give direct samples of the effective response. At linewidth proportional
-to d^2/J, the stated query budget has no inverse power of d, but retains important
-size and inverse-gap factors. This compares with a straightforward direct quantum
-construction, not the best classical algorithm. It is not a compiled circuit,
-practical speedup, generic fast forwarding or a priority claim.
+This is a model-reduction result, NOT a gap-independent quantum algorithm.
+The inverse on the discarded sector is conditioned by the chosen cutoff, but a
+sharp projector onto the retained band can itself be expensive to implement.
+The note separates internal spacings, discarded inverse conditioning, and cutoff-
+edge resolution. Standard QSVT and downfolding are prior methods, and the generic
+construction need not beat the direct linewidth-matched sampler. The same reduced
+model is a classical comparator whose preparation can be reused across samples.
 
-A matching classical second-order representation is also explicit. Its coefficients
-must be acquired, but that work can be amortized across many samples. The solved
-maximum-spin sector illustrates the reduction and contributes a shrinking fraction
-of the full high-temperature response; it cannot stand in for that response.
-Reflection symmetry alone does not prove the required cancellation in the presence
-of opposite-parity degeneracy. No all-size nondegeneracy theorem is established.
+The [current work order](work_orders/CURRENT.md) asks whether a justified smooth or
+response-weighted construction can avoid artificial cutoff resolution while
+preserving positive spectral probabilities. Its complete symbolic cost must be
+compared with direct quantum sampling and adequate classical methods. No molecule,
+new dataset, native solver, large sweep or additional spin-off is the next step.
 
-The [current work order](work_orders/CURRENT.md) asks whether a justified treatment
-of response-relevant near resonances can avoid a global minimum-gap penalty.
-An analytic upper bound already shows that the global gap cannot be assumed
-size-independent. Neither its smallness nor a failed approximation proves
-classical hardness. No data download, molecule selection or large simulation
-is the next step.
+## Reproduce the bounded mathematical check
+
+```sh
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python experiments/resonance_window_v1/verify.py
+```
+
+Python 3.10+ and NumPy. The [report](experiments/resonance_window_v1/REPORT.json)
+records three fixed small spin chains and three block controls, Schur/resolvent
+identities, moment and response-weighted bounds, and negative controls. The final
+checker ran twice with identical output; -O/-OO was rejected. These are floating-
+point diagnostics, not interval certificates, experimental spectra, quantum
+hardware, scaling measurements or timing comparisons. Continuous claims follow
+from the written proof. No older scientific verifier was rerun or file changed.
+No upstream code or experimental data was imported.
 
 ## Retained quantum and classical alternatives
-
-[Exchange memory 17](exploration/phase_3/EXCHANGE_MEMORY_17.md) gives an exact
-rank-two quantum implementation of projected memory, its conditional one-line
-certificate and a resolved two-spin warning. The new slow-sector route does not
-require a memory-decay hypothesis or convert a memory sample into a response
-sample through an unproved map.
 
 [Model comparison 15](exploration/phase_3/SPECTRAL_MODEL_STRUCTURE_15.md) retains
 the direct linewidth-matched quantum sampler and exact classical limits.
 [Spectral boundary 16](exploration/phase_3/SPECTRAL_BOUNDARY_16.md) retains the
-classical Lanczos-truncation certificate. Recursion, effective models, tensor
-networks and direct inference remain legitimate competitors. The quantum method
-is not required to learn a classical program first.
+classical Lanczos certificate. [Exchange memory 17](exploration/phase_3/EXCHANGE_MEMORY_17.md)
+and [slow-sector sampling 18](exploration/phase_3/SLOW_SECTOR_SAMPLING_18.md) retain
+the projected-memory and isolated-zero-sector constructions with their assumptions.
+Their bounds are not silently transferred to the enlarged resonance window.
+Classical recursion, effective models, tensor networks and direct inference remain
+legitimate competitors. Direct samples do not have to become a classical program.
 
-## Executed mathematical checks
-
-```sh
-OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python experiments/slow_sector_v1/verify.py
-```
-
-Python 3.10+ and NumPy. The [report](experiments/slow_sector_v1/REPORT.json) contains
-fixed 2/4/6/8-spin symmetry and effective-generator controls, finite-bin comparisons,
-small invariant-graph controls and path-Laplacian identities. It is not a measured
-spectrum, arbitrary-size theorem, interval certificate, QSVT circuit or timing
-benchmark. The final checker ran twice with identical output; -O/-OO was rejected.
-Continuous guarantees follow from the written proofs. No older verifier was rerun
-and no upstream implementation, experimental spectrum or climate data was imported.
-
-## Open mechanisms and preserved evidence
-
-The [direct-sampling scope](exploration/phase_3/DIRECT_SAMPLING_FORECASTS_10.md)
-and [spectral screen](exploration/phase_3/OPEN_SAMPLING_SCREEN_14.md) retain the
-application context. Classical probability evolution remains open. The
-[climate contract](exploration/phase_3/HEATWAVE_SAMPLING_CONTRACT_11.md),
-[segment construction](exploration/phase_3/SEGMENT_SELECTION_12.md), and
-[continuation audit](exploration/phase_3/CONTINUATION_INFORMATION_13.md) remain
-available; missing data gate only their empirical test.
-
-Manthan [profiling/encoding](exploration/phase_3/SAMPLING_ENCODING_AUDIT_09.md)
-remain paused; [battery](exploration/phase_3/INTERFACIAL_REFERENCE_DECISION_06.md)
-and [operator](exploration/phase_3/MECHANISM_SCREEN_01.md) candidates remain parked.
+Classical probability/climate exploration remains open. Its missing packet gates
+only the empirical test in [Audit 13](exploration/phase_3/CONTINUATION_INFORMATION_13.md).
+Manthan remains paused, battery/operator routes remain parked, and
 [Algebraic-Loop-Certificates](https://github.com/GoGoKo699/Algebraic-Loop-Certificates)
 and [Sparse-Weil-Reconstruction](https://github.com/GoGoKo699/Sparse-Weil-Reconstruction)
-are independent projects and own their further development.
+remain independent projects owning their further development.
 
 Scientific phase 3 uses `research/prx-quantum-phase2`. The original
 [project map](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/main/PROJECT_MAP.md)
-and [charter](exploration/phase_2/CHARTER.md) are subject to the direct-output and
-model-first extensions. `main` is an entry point, not a merged copy of later work.
-[STATUS.md](STATUS.md) links current claims and pinned historical records.
-Phase-2 [Note 27](exploration/phase_2/SOURCE_AWARE_DESCENT_27.md) stays closed.
-The original [MIT license](LICENSE), Copyright (c) 2026 Ruge Lin, prior research
-and third-party rights remain intact. Only this parent repository is writable.
+and [charter](exploration/phase_2/CHARTER.md) are subject to the explicit direct-output
+and model-first extensions. `main` remains an entry point, not a merged copy of
+later work. [STATUS.md](STATUS.md) records claims and pinned historical ledgers.
+Phase-2 Note 27 remains closed. Prior research, notices and the original
+[MIT license](LICENSE), Copyright (c) 2026 Ruge Lin, are preserved.
+Only this parent repository may be modified in the project context.
