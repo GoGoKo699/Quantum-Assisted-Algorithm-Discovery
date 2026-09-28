@@ -1,0 +1,41 @@
+{
+  "basis_input_controls": 128,
+  "clauses": 376,
+  "clean_scratch_bits": 23,
+  "complete_source_checked": false,
+  "defined_bits": 85,
+  "fixed_Grover_rounds_necessary_for_one_half_success": 2199023255552,
+  "forward_reversible_gates": {
+    "CCX": 129,
+    "CX": 132,
+    "X": 149
+  },
+  "gate_types": {
+    "and": 18,
+    "or": 1,
+    "xor": 66
+  },
+  "input_root_bits": 119,
+  "largest_fanin": 25,
+  "local_truth_assignments_checked": 6320,
+  "malformed_controls": 4,
+  "native": {
+    "gate_equalities_imply_prefix": "unsat",
+    "library": "libz3.so.4",
+    "prefix_implies_gate_equalities": "unsat",
+    "proof_replay": false,
+    "scope": "prefix equivalence only; not Manthan or full formula",
+    "version": "4.13.3.0"
+  },
+  "prefix_sha256": "552172c699638e32fbb5126c11d02916160ec71dfec87d1c397431662a545f15",
+  "raw_uniform_success_upper_bound": "2^-85",
+  "removed_uniform_conditioning_penalty": "2^85 in probability; not an application speedup",
+  "scope": "selected upstream gate-prefix identities; not synthesis, sampling performance or useful advantage",
+  "single_wire_fault_controls": 10880,
+  "source_file_lines": [
+    4,
+    379
+  ],
+  "source_git_blob": "cd6e0043b175df4247368d0e96a8e1020ed603a4",
+  "status": "pass"
+}
