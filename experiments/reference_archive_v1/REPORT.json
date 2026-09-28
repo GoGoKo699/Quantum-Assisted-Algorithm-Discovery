@@ -1,0 +1,141 @@
+{
+  "AFQMC_parallel_overlay": {
+    "archive_N40": "-26.220000000",
+    "paper_HCI_N40": "-21.0",
+    "source": "paper Table III (rounded), NOT ZIP"
+  },
+  "Li40_barriers_kcal_mol": {
+    "PBE_ccpvtz_txt": "8.662765223",
+    "PBE_csv": "8.963901278",
+    "afqmc": "20.770000000",
+    "ccsd": "20.912147401",
+    "dlpno_ccsd-t": "18.870000000",
+    "wB97X-V": "26.457990880"
+  },
+  "Li40_convention": {
+    "ccpVTZ_spherical_functions": 1436,
+    "charge_assumption": 0,
+    "composition": {
+      "C": 3,
+      "H": 4,
+      "Li": 40,
+      "O": 3
+    },
+    "correlated_electrons": 154,
+    "frozen_core_spatial_orbitals_AFQMC_ORCA": 6,
+    "post_core_spatial_orbitals_before_virtual_truncation": 1430,
+    "spin_from_paper": "singlet",
+    "total_electrons": 166
+  },
+  "Table_II_barrier_replay_with_published_PBE_limit_5_6": {
+    "afqmc": {
+      "endpoint_N": 40,
+      "from_released_rows": "17.406098722",
+      "published_rounded": "17.4"
+    },
+    "ccsd": {
+      "endpoint_N": 50,
+      "from_released_rows": "16.006957805",
+      "published_rounded": "16.0"
+    },
+    "dlpno_ccsd-t": {
+      "endpoint_N": 40,
+      "from_released_rows": "15.506098722",
+      "published_rounded": "15.5"
+    },
+    "wB97X-V": {
+      "endpoint_N": 100,
+      "from_released_rows": "17.916873428",
+      "published_rounded": "17.9"
+    }
+  },
+  "Table_I_NPE_replay_including_N10": {
+    "energy_barrier/PBE": "0.340804067",
+    "energy_barrier/afqmc": "1.803768824",
+    "energy_barrier/ccsd": "1.165648794",
+    "energy_barrier/dlpno_ccsd-t": "2.538930148",
+    "parallel/PBE": "0.183958334",
+    "parallel/afqmc": "1.619352899",
+    "parallel/ccsd": "0.835171306",
+    "parallel/dlpno_ccsd-t": "1.076522047",
+    "top/PBE": "0.128928337",
+    "top/afqmc": "1.029618823",
+    "top/ccsd": "0.604439812",
+    "top/dlpno_ccsd-t": "0.850250148"
+  },
+  "archive": {
+    "bytes": 1380526,
+    "data_tables": 30,
+    "files": 763,
+    "manifest_sha256": "ee39fce01c72168b3b75a878d65422f358d5302daad925608e107d9c119ab5f1",
+    "md5": "cf3b3c01508a96749a39442850007f32",
+    "sha256": "edc45a55827ed4f07596d7d1e4a5eccc0b736ee77ffe89e40eee7a20a3b28feb",
+    "xyz_files": 732,
+    "zip_entries": 768
+  },
+  "geometry_sequences": {
+    "parallel": {
+      "Li40_sha256": "2238b73e2a7f55f57f4ad9c77b7da9b2e5c8860a48fb3c2f9880401cdba66096",
+      "distinct_EC_coordinate_sets_in_numerical_sequence": 1,
+      "files": 243,
+      "nested_pairs": 242
+    },
+    "top": {
+      "Li40_sha256": "f6cfb8b3344d7732e7f7272d9d8ceab3d16757a4332a4c5d23229802526ede24",
+      "distinct_EC_coordinate_sets_in_numerical_sequence": 1,
+      "files": 246,
+      "nested_pairs": 242
+    },
+    "transition_state": {
+      "Li40_sha256": "292b85657cad91c071c566366e74072cc38ab55b3f08f93e3d7547bc70f25154",
+      "distinct_EC_coordinate_sets_in_numerical_sequence": 1,
+      "files": 243,
+      "nested_pairs": 242
+    }
+  },
+  "malformed_input_controls_rejected": 8,
+  "reported_AFQMC_Li40_statistical_uncertainty": "1.170000000",
+  "retrospective_single_anchor_PBE_transfer_kcal_mol": {
+    "afqmc": {
+      "anchor_N": 40,
+      "max_absolute_residual": "5.485492017",
+      "mean_absolute_residual": "3.064379776",
+      "other_sizes": 14,
+      "worst_N": 22
+    },
+    "ccsd": {
+      "anchor_N": 40,
+      "max_absolute_residual": "4.213526818",
+      "mean_absolute_residual": "1.986552110",
+      "other_sizes": 19,
+      "worst_N": 30
+    },
+    "dlpno_ccsd-t": {
+      "anchor_N": 40,
+      "max_absolute_residual": "6.578234332",
+      "mean_absolute_residual": "3.428286647",
+      "other_sizes": 14,
+      "worst_N": 12
+    }
+  },
+  "scope": "Archive and arithmetic replay only; not chemistry, force-field validation, runtime, or quantum advantage.",
+  "selected_member_sha256": {
+    "README.md": "fdd12dfab5e28e3b5e33991c358fc905b3b12d9958a1ce8ba5b1043a2ffe772c",
+    "data/energy_barrier_afqmc.txt": "da6e07d2750e2b1d301bfaeb724f0cbfa373a50a05f884913b98594cdaa9a69e",
+    "data/energy_barrier_ccsd.txt": "107fec2802329635fad10c9b6e85089dab092e9c416e22adc48e639ba6271451",
+    "data/energy_barrier_dft.csv": "4ed33ff632c1ad283dc48bdedc0046a6c8afa3958be0a34bd1fa2f88beae2cf6",
+    "data/energy_barrier_dlpno_ccsd-t.txt": "249529cd0a1d232f32aae2459464204a292cc308fd4a95787227a9472191088d",
+    "data/energy_barrier_hf.txt": "7e9066b1aefb6f78701d2b39344c2b77d254f2eb7bf266f3a77e3ed9aaae8c1d",
+    "data/energy_barrier_mp2.txt": "b7dec2426ef1c6b336f033399886ee8a29df70eda4016a39a63d983954b8f64b",
+    "data/energy_barrier_pbe-ccpvtz.txt": "38596dbe7a6acdb2fda49beea33f2a3bc4877a3df923b9456794640db5b0f6fc",
+    "data/energy_barrier_pbe-def2svp.txt": "60b4511d3b6e6823d93adec39c25c702a4f83f2c4e863aa6b7d416a3cef0282f",
+    "data/energy_barrier_rpa_hf.txt": "df80330df9c2d088339c78d7501d3d4eba5d9434a6235cffad18b334da2c4514",
+    "data/energy_barrier_rpa_pbe.txt": "1f3cbceef472c9fb8a07414d009ca33f7a2370f7d036c3b05112959a29ae6f58"
+  },
+  "status": "pass",
+  "strict_caption_NPE_barrier_excluding_N10": {
+    "afqmc": "1.860621174",
+    "ccsd": "1.044606712",
+    "dlpno_ccsd-t": "2.637414903"
+  }
+}
