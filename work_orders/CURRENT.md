@@ -1,79 +1,83 @@
-# Current task: native synthesis profiling with a structure-preserving sample source
+# Current task: directly useful quantum samples for probabilistic prediction
 
 28 September 2026. Active branch: `research/prx-quantum-phase2`.
-Scientific phase 3; manuscript remains on hold.
+Scientific phase 3; manuscript preparation remains on hold.
 
-Read the [project map](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/main/PROJECT_MAP.md),
-[parent charter](../exploration/phase_2/CHARTER.md),
-[consumer contract](../exploration/phase_3/SAMPLING_TO_VERIFIED_LOGIC_08.md), and
-[encoding audit](../exploration/phase_3/SAMPLING_ENCODING_AUDIT_09.md).
+Read [direct-sampling note 10](../exploration/phase_3/DIRECT_SAMPLING_FORECASTS_10.md),
+the [project map](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/main/PROJECT_MAP.md)
+and the original [parent charter](../exploration/phase_2/CHARTER.md).
 
-## Completed diagnostic, not a completed native benchmark
+## Explicit exploratory extension of the output contract
 
-A 376-clause prefix of Manthan's USB-named QDIMACS example exactly defines 85
-internal bits as functions of 119 input bits. Guessing them independently adds
-a factor 2^-85 to uniform acceptance. An independently constructed 410-gate
-reversible evaluator removes that penalty, with 23 clean scratch bits. These
-counts describe only the inspected prefix. The same structure is usable
-classically; the correction is not a useful quantum speedup or a new technique.
+The owner proposes consuming quantum samples directly rather than first learning
+a classical program. Investigate this direction with chaotic-system ensemble
+prediction as a possible application. In this exploration, continued quantum use
+at sampling/prediction time is permitted and must be costed. Classical-only
+execution after discovery is NOT a required acceptance condition here. This
+explicit extension takes precedence over that restriction in earlier charters,
+notes and instructions; their historical scientific statements remain intact.
 
-The uniform prepared-and-conditioned distribution is unchanged. Arbitrary
-nonuniform weights on dependent bits require the induced weights to be retained;
-do not transfer the uniform factor to weighted CMSGen calls. Do not claim that
-this prefix solves the entire formula or that its USB name proves deployment value.
-The complete source file and original signal mapping remain to be checked.
+The broader requirement is unchanged: a useful output at defensible total cost
+and quality against strong classical alternatives. No operational forecast,
+new sampler, useful quantum advantage or selected model/event pair is established.
+The Manthan native-profiling task is paused, not scientifically refuted. Do not
+resume its installation or extend its small diagnostics as the default next step.
 
-Native Manthan/CMSGen installation and its smoke test were NOT completed.
-Runtime Git access failed on DNS, and an inspected successful upstream dependency
-workflow supplied no downloadable artifacts. The already installed native Z3 was
-used only for two prefix-equivalence queries, not as a substitute claimed to be
-Manthan. No synthesis phase timings, trained classifier or final program exist.
+## Next bounded deliverable
 
-## Next bounded execution
+Identify one consumer that directly uses forecast or rare-event samples and one
+quantum mechanism for that SAME sampling task. The leading family to inspect is
+physically consistent rare-event scenarios for a specified prediction/risk question.
+This is not an instruction to build a weather model or select an arbitrary Lorenz
+example and relabel it an application.
 
-Obtain a working native execution environment before adding further small logic
-demonstrations. Pin Manthan and its native dependencies and preserve their notices.
-Do not modify an upstream repository. Run the official smoke test as an installation
-control, not as application or speedup evidence.
+Specify the dynamics/model, initial uncertainty or observation-conditioned input,
+time horizon, output meaning, and useful error requirement. Distinguish ordinary
+ensemble samples, event-conditioned scenarios, and scalar probability estimation.
+Long-run climate risk is not a forecast conditional on today's observations.
+A collection of marginal states is not automatically a time-consistent trajectory.
+Biased rare-event samples need a justified weighting/probability procedure.
 
-For one application-provenance-checked benchmark, retain preprocessing, unique
-extraction, learning, repair and final universal checking. Trace the source
-specification and X/Y meanings. A matching filename in another benchmark collection
-is insufficient to establish an identical instance or deployable output.
+Inspect existing Koopman-von Neumann/Liouville quantum distribution methods as
+possible representations, not completed efficient forecasting algorithms. Show
+that measurement produces the required law: amplitudes proportional to a density
+produce its squared law, not that density. A full physical-state encoding differs
+from amplitude-encoding a vector of field values. No classical or quantum chaotic
+circuit is a valid forecast source merely because it is chaotic.
 
-Measure sample acquisition, learning, repair and checking separately, together
-with time to a verified function and relevant output size/depth. Preserve the
-same classical consumer when changing the sample source. Allow stronger direct
-synthesis and task-equivalent classical examples; do not compare only against
-rejection or a weakened historical sampler. Complete successful source-file hash
-validation before reporting any full-instance run.
+Compare against classical trajectory ensembles, appropriate importance/splitting
+methods and applicable learned generators. Classical competitors need not store
+a full probability grid or imitate the quantum circuit. Price conditioning/input
+preparation, propagation, precision and discretization, postselection, repeated
+sample generation, extraction, correlations, validation and required hardware.
+A hypothetical huge state-space grid is not the classical sampling cost.
 
-For a surviving quantum opportunity, compute deterministic wires rather than
-sample them. Price preparation and its inverse, the residual predicate, reflections,
-finite precision, unknown-success scheduling, all attempts, adaptation, validation
-and output. The prefix circuit is not a whole-oracle resource estimate. If
-preprocessing solves the task, retain that result rather than disabling it.
+Direct measured samples retain ordinary sampling uncertainty. Amplitude estimation
+can be examined separately for means/probabilities, with its coherent access and
+inverse-operation costs; it is not an ensemble of independent physical scenarios.
+An encoded distribution is not an unlimited free sample bank. Evaluate the full
+cost of the useful output, not only measurement time or sample count.
 
-Same-law sample replacement can change acquisition cost, not the learner's law.
-A different sample law needs evidence that its useful learning/repair benefit
-survives a strong classical source substitution and total cost comparison. A
-small raw acceptance probability caused by encoding is not discovery hardness.
-No new algorithm, useful quantum advantage or application result is established.
+The first result should be a short task-law-mechanism-comparator analysis and a
+discriminating calculation. No broad simulator, training campaign or generic
+nonlinearity theorem is warranted yet. Modern classical precedents include GenCast,
+ECMWF AIFS ensembles, and task-appropriate rare-event methods such as TEAMS; none
+is automatically sufficient for every candidate task. Source scope is in Note 10.
 
-## Checks and boundaries
+## Preserved work and evidence
 
-The final `experiments/sampling_encoding_v1/verify.py --native` ran twice with
-identical JSON; default mode passed. Exact structural matching, 6320 local truth
-assignments, 128 reversible basis controls, 10880 single-wire fault controls and
-four malformed cases passed. Z3 4.13.3.0 returned two UNSAT mismatch decisions;
-no independent proof trace was replayed. -O/-OO, an altered fixture and an incorrect
-complete-source file were rejected. Successful optional --source was not run.
-These are prefix diagnostics, not synthesis or timing results. Earlier sampling,
-root and historical suites were not rerun; their code and reports are unchanged.
+The synthesis [consumer contract](../exploration/phase_3/SAMPLING_TO_VERIFIED_LOGIC_08.md)
+and [encoding audit](../exploration/phase_3/SAMPLING_ENCODING_AUDIT_09.md) remain
+historical evidence. Native Manthan/CMSGen and its full timing comparison were not
+completed. This limitation is not evidence for a direct-sampling advantage.
 
-The battery and operator routes remain parked. Both classical spin-offs own their
-further work. Phase-2 Note 27 stays closed. The uploaded battery archive is already
-verified; do not request it again. Preserve previous evidence, licenses and rights.
-Modify only Quantum-Assisted-Algorithm-Discovery. No outside contact, paid or
-unattended work, manuscript revival, submission, release, branch merge or repository
-administration change is authorized. No new repository or spin-off is needed.
+This checkpoint changes research scope and documentation only. Primary HTML sources
+and abstracts were inspected; no numerical experiment, quantum circuit, ensemble,
+forecast, native solver, scientific verifier or performance test was run.
+Preserve previous proof notes, code, fixtures, reports, manifests and rights.
+The battery and operator routes remain parked; both spin-offs remain independent.
+Phase-2 Note 27 stays closed. The battery upload is already verified and retained.
+
+Modify only Quantum-Assisted-Algorithm-Discovery. No external contact, paid or
+unattended work, manuscript revival, submission, release, new repository, branch
+merge or repository administration change is authorized by this work order.
