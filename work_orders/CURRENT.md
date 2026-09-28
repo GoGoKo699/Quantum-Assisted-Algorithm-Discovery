@@ -1,82 +1,80 @@
-# Current task: identify one justified interfacial reference, not a bare-cluster showcase
+# Current task: select a useful discovery bottleneck with a concrete quantum mechanism
 
 28 September 2026. Active branch: `research/prx-quantum-phase2`.
 Scientific phase 3; manuscript preparation remains on hold.
 
 Read the [project map](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/main/PROJECT_MAP.md),
-[parent charter](../exploration/phase_2/CHARTER.md), and the
-[physical-relevance decision](../exploration/phase_3/PHYSICAL_RELEVANCE_05.md).
+[parent charter](../exploration/phase_2/CHARTER.md), and
+[interfacial-reference decision](../exploration/phase_3/INTERFACIAL_REFERENCE_DECISION_06.md).
 
-## Completed decision: repair the physical model first
+## Completed bounded investigation: battery candidate parked
 
-An independent experiment supplies a concrete validation contrast: Cu||LiFePO4
-cells with 1 M LiPF6 versus 1 M LiODFB, both in EC:EMC 3:7 by weight, show different
-ethylene evolution and inactive-lithium accumulation. The source is Xiang et al.,
-Nature Communications 14, 177 (2023), DOI 10.1038/s41467-022-35779-0.
+The selected salt-dependent gas experiment has a genuine application motivation.
+Relevant classical studies provide solvent/concentration dependence, film
+characterization, and proposed microscopic reactions. A concrete candidate was
+examined: competing ring-opening and B-F-cleavage references for reduced LiDFOB.
+The inspected work did not establish how improving those references would change
+the required cycle-resolved ethylene prediction under the selected conditions.
+Molecular orbital gaps likewise do not supply a film-leakage model by themselves.
 
-This is an evolving, electrolyte-covered, electrochemically driven interface,
-not a single EC on neutral bare lithium. The fixed Li40 calibration has no salt
-or justified effective environment input; improving its solver alone does not
-predict the experimental intervention. The published initial ring-opening
-observations are not outlet-gas branching fractions. A constrained slow-path
-rate cannot be divided by a non-metastable first-passage time to obtain a
-competition probability. The decision is model repair, not a numerical proof
-that environmental error dominates electronic error.
+The decision is to park this battery-simulator route, not extend the present
+investigation into general interphase modeling. No Hamiltonian, full quantum cost,
+model-training campaign, larger bare cluster, or further archive curation is the
+next task. This is not a proof that classical chemistry is sufficient everywhere,
+that no appropriate model exists, or that quantum chemistry is unhelpful.
+The bounded source search and access limitations are recorded in the decision.
 
-The empirical salt comparison is already known. Matching it is necessary
-validation, not a new useful discovery. Any eventual classical simulator must
-predict an unfit condition or provide equally useful predictions more cheaply.
-No validated simulator, quantum advantage or battery improvement is established.
+Reopening needs a specific electronic-reference problem with an independently
+justified connection to a useful observable or total preparation cost, a required
+quality, and a strong classical comparator. A credible limited sensitivity and
+validation route can suffice to investigate; neither deployment nor a completed
+quantum-advantage proof is required at entry. More than one reference may be
+appropriate. No new spin-off is warranted by this stopping decision.
 
-## Next bounded task
+## Next parent deliverable
 
-Inspect the strongest existing salt/interphase-aware classical description of
-this contrast. Focus on the competition between interphase-mediated access to
-reactive lithium and the chemistry conditional on reaching it. Do not build a
-new general molecular-simulation framework.
+Compare at most three short discovery contracts before choosing the next
+calculation. Each must contain together:
 
-Determine whether at most one uncertain electronic reference controls a useful
-prediction after solvent, salt, surface history, electron availability and the
-measurement mapping are accounted for. An explicit interfacial configuration or
-a justified embedding is acceptable; supplying a salt label to a fitted wrapper
-without pricing its learning and validation is not a quantum advantage.
+1. A reusable classical output that an identified community would value, with
+   its actual deployment interface and a useful correctness/accuracy requirement.
+2. The inputs both designers receive and a documented obstacle to obtaining that
+   output, not merely a statement that the application or state space is large.
+3. A specific quantum mechanism with explicit preparation, access, measurement,
+   extraction, and certification obligations. An unpriced oracle is not a mechanism.
+4. The strongest adequate classical route, including a different construction,
+   approximation, active selection, existing code, or bypass of compilation.
+5. One short source check, derivation, or modest experiment that could discriminate
+   between the proposal and the obvious classical response.
 
-The deliverable is one specific reference problem with an observable sensitivity,
-matched adequate classical comparator, and a route to testing an unfit condition.
-If no such reference is exposed, park this application instead of launching
-broad interphase modeling. The old Li40 pair remains a calibration tool only.
-No substantial quantum resource estimate, model training, large simulation or
-further archive-curation campaign follows automatically.
+Usefulness and the quantum opportunity must be considered together. Do not select
+a new domain merely because it matters, then undertake a broad modeling program
+before identifying the quantum-discovery contribution. Conversely, do not revive
+an algebraic construction solely because its next theorem is accessible. Small
+models are acceptable when their role in the actual task is explicit.
 
-For the experimental comparison, retain room temperature and the reported
-0.75 mA/cm2, 2.8-3.8 V cell protocol. Full-cell voltage is not anode potential.
-Nondetection is not zero production. Channel assignments, calibration and gas
-transport/consumption must be resolved before absolute yield claims; no numerical
-detection limit or predictive energy tolerance is established. The paper and
-supplement use different ethylene channel labels; preserve that uncertainty.
+No replacement application has been selected in this checkpoint. Earlier kernel,
+weather, symmetry, and predictor sketches are not automatically promoted. The
+parent remains open to other applications and to mechanisms that prepare useful
+classical information rather than only test more candidates. A quantum computer
+needed at every deployment is a different contract and must not be substituted
+silently for the reusable-classical-output objective.
 
-Only a warranted reference may proceed to costing: Hamiltonian representation,
-state preparation/overlap, precision, repetitions, reference multiplicity,
-classical model construction and held-out validation. Allow hybrid functionals,
-local correlation, AFQMC, embedding, energy-only training, active selection and
-direct classical prediction. Do not demand exact energies when they are unnecessary.
+## Evidence and authority
 
-## Preserved evidence and authority
+The latest checkpoint performed primary-source inspection and documentation only.
+No scientific code, numerical experiment, quantum simulation or verifier run was
+added. The repository diff and document routing are checked; that is not scientific
+validation. Do not repeat historical test counts as newly executed evidence.
 
-The [archive replay](../exploration/phase_3/ARCHIVE_REPLAY_04.md) completed the
-732-geometry/30-table audit. The upload is present and pinned; do not request it
-again. Those files are cluster-size scans, not a reactive training set. The
-matched [core convention](../exploration/phase_3/REFERENCE_ACCESS_AUDIT_03.md)
-remains 154 correlated electrons for Li40+EC; a small HCI trial space is not the
-full correlation problem and basis size is not runtime.
+The uploaded archive is already verified and present; do not request it again.
+[Archive replay 04](../exploration/phase_3/ARCHIVE_REPLAY_04.md), its source/report,
+and the matched 154-electron/core-model caveats remain unchanged. They are
+calibration records, not an active training dataset or application success.
+The operator candidate remains parked. Both classical spin-offs own their further
+development. Phase-2 Note 27's comparison remains closed.
 
-This relevance checkpoint inspected primary research and selected PDF figures,
-and locally rechecked only the archive digest and two Li40 member compositions
-and hashes. No electronic, MD, quantum, timing or training calculation was run;
-the full archive and historical verifiers were not rerun. Record future checks
-accurately and preserve all historical source/results and rights notices.
-
-The operator remains parked; both classical spin-offs own their further work.
-Phase-2 Note 27 remains closed. Modify only Quantum-Assisted-Algorithm-Discovery.
-No external contact, paid/unattended work, manuscript revival, submission, release,
-branch merge or repository administration change is authorized.
+Preserve prior notes, code, reports, manifests, licenses and third-party rights.
+Modify only Quantum-Assisted-Algorithm-Discovery. No external contact, paid or
+unattended work, manuscript revival, submission, release, branch merge or
+repository administration change is authorized.
