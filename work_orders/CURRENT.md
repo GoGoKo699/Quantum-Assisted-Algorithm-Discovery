@@ -1,97 +1,93 @@
-# Current task: test a phase-level classical description against physical records
+# Current task: one model-specific quantum-opportunity decision
 
 29 September 2026. Branch: `research/prx-quantum-phase2`.
 Model-first exploration; direct samples permitted; manuscript preparation on hold.
 
-Read [emission memory 26](../exploration/phase_3/EMISSION_MEMORY_26.md),
-[record instrument 25](../exploration/phase_3/RECORD_INSTRUMENT_25.md), and
-[AGENTS.md](../AGENTS.md). No new repository or third spin-off is needed.
+Read [strategic revision 27](../exploration/phase_3/STRATEGIC_REVISION_27.md),
+[emission memory 26](../exploration/phase_3/EMISSION_MEMORY_26.md), and
+[record instrument 25](../exploration/phase_3/RECORD_INSTRUMENT_25.md).
+No new repository, third classical spin-off or implementation campaign is needed.
 
-## Completed distinction: simultaneous occupation versus accumulated photons
+## Decision after revision
 
-In the same driven Ising model, keep all coherent amplitudes with excitation
-number N_e<=q. Its dimension is D_q=sum_{r=0}^q binom(n,r). This is not a
-population approximation or a cap on total emissions; lowering and repeated
-re-excitation continue throughout the original observation horizon.
+Preserve the accumulated proofs, but stop treating another available error bound
+as the reason to continue. Correct quantum implementation, coherent classical
+reductions and finite output-level controls are valuable support. They have not
+established a consequential regime in which quantum sampling improves the complete
+cost. The spectral track remains a quantitative reference; the emitter track is
+one candidate, not an established destination or a result one lemma from completion.
 
-For uniform drive Omega, local decay kappa>0, diagonal interactions, and the
-all-ground initial state, the averaged factorial moments obey
-M_r(t)<=binom(n,r)[|Omega|/kappa*(1-exp(-kappa*t/2))]^(2r).
-This holds for the full and truncated model without factorization or dephasing.
-It does not bound every normalized state conditioned on a rare history.
+Direct samples and model-first investigation remain authorized. Do not require a
+classical program, production dataset, native package, hardware demonstration, or
+universal lower bound against all classical algorithms before exploring a credible
+hypothesis. Conversely, failure of a weak approximation is not that hypothesis.
+Choose the next calculation to decide quantum usefulness, not to enlarge a framework.
 
-A count-lifted Duhamel argument bounds the record-plus-final-state trace distance
-by f_q integral_0^T sqrt(p_q^(q)(t))dt, where
-f_q=|Omega|sqrt((q+1)(n-q))/2 and p_q^(q) is the truncated q-sector population.
-This is a fixed-initial-state bound, NOT an arbitrary-input diamond guarantee.
-It implies TV control of the original site/time-binned record and its coarsenings.
-With lambda=n Omega^2/kappa^2, a sufficient envelope is
-min(1, kappa*T/2*sqrt((q+1)*lambda^(q+1)/q!)); q=n is exactly the full model.
-The controlled dynamics and numerical instrument errors are charged separately.
+## Stronger classical source that must be included
 
-At fixed lambda, kappa*T and tolerance, finite q suffices and gives a polynomial
-classical method. Fixed lambda requires Omega/kappa to scale as n^(-1/2).
-Do not misstate this as fixed-local-drive thermodynamic tractability. The
-conditional-state producer stores D_q amplitudes; sparse or precomputed unitary
-propagation and monitored local damping have explicit costs in Note 26.
+Rose et al., PRE 94,052132 (2016), arXiv:1607.06780, analyze a periodic driven
+Ising chain and two-phase switching in specified regimes. The current open-chain,
+ground-start controls cannot inherit its conclusions without matching the regime,
+boundaries and initial transient.
 
-## Exact renewal and the non-dilute limitation
+Macieszczak et al., PR Research 3,033047 (2021), arXiv:2006.01227v2, Sections V B
+2-4, also relate coarse continuous-measurement records to classical trajectories,
+with scale-separation conditions and within-phase/initial-transient corrections.
+It is insufficient to dismiss this comparator as an averaged-state model. Do not
+replace it by a bare Poisson telegraph process and call failure of that simpler
+process failure of the strongest classical alternative.
 
-In q=1, every photon resets the whole conditional state to vacuum. On a uniform
-open chain, the vacuum, symmetric endpoint excitation, and symmetric interior
-excitation give an exact three-amplitude no-count model. Its waiting times and
-site marks reproduce the q=1 instrument, including repeated photons. This is not
-an assumed global blockade in the original model; use the error certificate
-before replacing that model. Nonuniform q=1 inputs still have at most n+1 states.
+Neither source automatically certifies the entire fine record in TV or makes
+phase/rate extraction inexpensive at arbitrary size. Their supplied parameters,
+stationary states, spectral information and model acquisition must be priced.
 
-For q>=2, a local jump can leave coherent excitation on other sites. A reachable
-first-click expansion and a fixed check show waiting-time-dependent neighboring
-intensity. That alone is not hardness: even independent emitters retain local
-ages and have inexpensive samplers. A large jump rank is not evidence that every
-state is reachable or every amplitude is required by the detector output.
+## Next bounded deliverable
 
-A four-site check separates weak and equal-scale drives. At Omega=0.1,V=kappa=1,
-T=6, q=2 has a proved full-record upper bound 0.018. At Omega=V=kappa=1, q=1 and
-q=2 differ from the exact three-bin dark/bright law by about 0.4966 and 0.1000.
-Those differences are numerical lower diagnostics on finer-record error, not
-all-classical lower bounds; four sites are easy to solve. No advantage is shown.
+Write one short claim sheet for the SAME driven Ising family, containing:
 
-## Next bounded model-level comparison
+1. A physically motivated finite-time emission-activity observable, with graph,
+   boundaries, ground initialization or explicitly charged preparation, parameter
+   regime, horizon, detector bins/coarsening and justified absolute accuracy.
+   A bounded statistic may be the appropriate task. Fine site-resolved histories
+   are not mandatory merely because we can bound them. Any change from the prior
+   full-record task must be explicit, not relabeled as solving its finer law.
+2. Applicability and cost of the strongest adequate classical description at that
+   output: metastable dynamics including within-phase effects, coherent low-
+   excitation trajectories, tensors/clusters, event-driven conditional states and
+   direct-statistic computation as relevant. Include model acquisition and reuse.
+3. One specific costly operation that quantum conditional evolution could improve,
+   and one discriminating derivation or modest calculation. A conditional resource
+   claim with an explicit unresolved assumption is acceptable; a mere exponential
+   state dimension or a crossing of weak upper bounds is insufficient.
 
-Rose et al., PRE 94,052132 (2016), arXiv:1607.06780, give a directly relevant
-classical alternative: two metastable phases with effective classical switching
-in a parameter/time regime of a related finite driven dissipative Ising chain.
-The source has been screened at abstract/publisher level only. Inspect its actual
-assumptions before transferring it to the present model, initialization or detector.
+Focus on the relationship between internal relaxation, phase-switching, detector
+bin and observation times. Do not assume a scale separation, free burn-in, or a
+new gap promise. If a compact model works, determine whether its acquisition is
+also economical before declaring the application easy. Quantum calibration is an
+option to justify, not an advantage assumed by this work order.
 
-Compare the coherent, non-dilute record task with one explicitly stated two-phase,
-hidden-state or cluster description. Determine which temporal/site information
-it reproduces and which remains necessary, with a record-sensitive criterion
-rather than closeness only of the averaged density state. Phase identification,
-transition/emission data, preparation, burn-in and approximation errors all count.
-Keep the original detector law or explicitly state a separately useful coarsening.
-Do not demand arbitrary fine resolution solely to invalidate the classical model.
+Proceed only when the useful output, classical limitation and quantum mechanism
+fit one argument. An adequate cheap classical route ends this emitter candidate's
+priority; retain it as a reference. A specific surviving quantum opportunity earns
+its targeted calculation. If no claim beyond "many-body states might be hard"
+can be stated, broaden mechanisms rather than add another generic certificate,
+raise cutoffs, make detectors arbitrarily fine, or choose an unrelated harder graph.
+No new hidden-state framework or large trajectory study is the next task.
 
-The deliverable is one discriminating model-level comparison, not another generic
-truncation theorem, increasing cutoff census, new simulator or large trajectory
-campaign. A failed two-phase approximation is not all-classical hardness. If no
-specific output-relevant many-body obstacle survives adequate classical models,
-broaden mechanisms rather than endlessly adding certificates. Quantum collision
-sampling from Note 25 remains available with its full record/error cost.
+## Preserved conclusions and evidence
 
-## Executed evidence and preservation
+Note 26's record guarantee is fixed-ground-initial-state, not arbitrary-input
+diamond norm. Its fixed-lambda classical regime requires Omega/kappa~n^(-1/2);
+it is not fixed-local-drive thermodynamic tractability. Its q=1 renewal model
+keeps repeated photons and is not an assumption of global blockade in the target.
+Note 25's full-record quantum instrument and its complete error budget remain.
+All earlier spectral and dynamical conclusions keep their original scopes.
 
-The new NumPy/SciPy checker ran twice identically, rejecting -O/-OO and six invalid
-inputs. One four-site model at two drives gives eight cutoff record/final-state
-comparisons, 160 moment envelopes, 160 drift checks, 28 dissipative identities,
-eight boundary norms and eight jump ranks. Three q=1 reduced-space controls check
-the three-amplitude formula and site-resolved renewal; they are not full larger-
-system simulations. Floating diagnostics are not interval certificates.
-No hardware, native trajectory/tensor package, experimental data, timing study,
-large-system run or old scientific verifier was used. General bounds are proved.
-
-Preserve all old proofs, code, reports, data, licenses and rights. Climate/dynamics
-remain open; Manthan is paused, battery/operator routes parked, both spin-offs
-independent and Phase-2 Note 27 closed. Modify only Quantum-Assisted-Algorithm-
-Discovery. No outside contact, paid/unattended work, manuscript revival, release,
-merge, new repository or administration change is authorized.
+This revision read sources and checked the supplied latest archive/note integrity.
+No scientific verifier, new simulation, benchmark or independent full-proof audit
+was performed. Only documentation/routing changes are part of this checkpoint.
+Keep all earlier proof notes, code, reports, fixtures, source data and rights intact.
+Climate/dynamics remain open; Manthan paused; battery/operator routes parked;
+both spin-offs independent; Phase-2 Note 27 remains closed. Modify only Quantum-
+Assisted-Algorithm-Discovery. No outside contact, paid/unattended work, manuscript
+revival, release, branch merge or repository administration change is authorized.
