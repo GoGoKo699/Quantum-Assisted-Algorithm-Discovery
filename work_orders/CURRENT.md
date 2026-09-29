@@ -1,92 +1,91 @@
-# Current task: physical record laws and a matched classical comparison
+# Current task: conditional many-body memory in physical emission records
 
 29 September 2026. Branch: `research/prx-quantum-phase2`.
-Model-first exploration; direct quantum samples allowed; manuscript on hold.
+Model-first exploration; direct samples allowed; manuscript preparation on hold.
 
-Read [sampling decision 24](../exploration/phase_3/SAMPLING_REGIME_DECISION_24.md)
-and [AGENTS.md](../AGENTS.md). No new repository is needed. Retain the prior
-spectral results; do not convert them into a third classical spin-off.
+Read [record instrument 25](../exploration/phase_3/RECORD_INSTRUMENT_25.md),
+[live sampling decision 24](../exploration/phase_3/SAMPLING_REGIME_DECISION_24.md),
+and [AGENTS.md](../AGENTS.md). No new repository or third spin-off is needed.
+The attached local spectral-cache Note 24 is not the live same-numbered record
+screen. Both are preserved, not silently interchanged. This continues the live task.
 
-## Completed decision and corrected comparison
+## Completed construction
 
-The available spectral arguments do not yet identify a regime that requires
-costly classical response acquisition while admitting cheaper quantum sampling.
-This is not a proof that the model is easy at every resolution. Its direct
-quantum sampler and classical typicality, half-time tensor, recursion, effective
-and positive-window alternatives remain valid quantitative references.
-Do not accumulate more generic spectral certificates as the default task.
+For driven dissipative Ising emitters with local jumps sqrt(kappa_i)|g><e|,
+a product initial state, fixed horizon T and detector bins Delta, lift the jump
+generator to photon counters. A local step applies all transverse rotations,
+all ZZ rotations, and exact monitored amplitude damping, retaining the conditional
+system state and resetting only the ancillary detector qubit. Sum internal-step
+counts into the original detector bins; h=Delta/r is numerical, not the detector
+resolution. Saturated output labels include all later emissions and state updates.
+No record postselection, stationary-state oracle or free burn-in is assumed.
 
-Both producers may cache. A quantum source can supply original samples to a
-classical empirical table; it need not invoke the device for every later draw.
-Standard finite-distribution learning prices the bank. Replayed draws are
-conditionally independent from that table but share its error unconditionally.
-For S original event samples and M replays, variance is
-p(1-p)(S+M-1)/(SM), not p(1-p)/M. This is a statistic-specific calculation, not a
-universal effective-sample-size definition. Do not compare per-draw TV with an
-M-independent-target-draw inference contract. The same caution applies classically.
+With
+C=sum_edges |Vij|(|Omega_i|+|Omega_j|)+4 sum_i |Omega_i|kappa_i
+ +2 sum_edges |Vij|(kappa_i+kappa_j),
+the full record-plus-final-state half-diamond error is at most C T h/4, capped at
+one, for ideal primitives. It bounds record TV and every bounded record statistic.
+The proof uses contractive semigroup product identities on the lifted instrument,
+not a bound after erasing records. At bounded degree C is linear in n for fixed
+rates. The construction uses n system qubits and one recycled ancilla, with
+O((n+edges) T/h) local primitives. Precision, initial state, reset/measurement,
+classical output, repeated histories and detector assumptions still count.
+These are existing collision/trajectory/product-formula ingredients specialized
+and proved here, not a generic simulation novelty or quantum advantage.
 
-## One bounded additional mechanism: monitored interacting emitters
+## Matched classical comparison and actual finding
 
-Use the established driven dissipative Ising model in Note 24, with
-H=Omega sum S_i^x+V sum_neighbors S_i^z S_j^z and local jumps sqrt(kappa) S_i^-.
-Start with a specified product state on a finite bounded-degree graph, prescribed
-finite horizon, and ideal photon-counting instrument. The initial task is not a
-stationary distribution with free burn-in. The Markovian local zero-temperature
-bath is a different model from the earlier closed, infinite-temperature spin trace.
-State the graph, truncation and detector assumptions; no arbitrary Rydberg platform
-is presumed to satisfy them. Existing photon-activity theory motivates this model.
-Experimental excitation-count data are not photon-time records or a validation of
-our proposed detector law.
+Classical quantum-jump methods propagate a 2^n-entry conditional pure state, not
+necessarily a 4^n-entry density operator; event-driven implementations may avoid
+empty steps. Tensors, clusters, symmetries, low-excitation and hidden-state models
+are allowed. A consumer needing only a dark probability may use direct no-count
+evolution rather than full histories. Typicality, spectral clocks and old
+infinite-temperature bounds do not transfer automatically to monitored records.
 
-The quantum entry is successive local system-ancilla interactions, measurements
-and resets, preserving the conditional system state between outputs. Classical
-quantum-jump methods implement the same law by conditional pure-state propagation;
-comparing only against a full density matrix would be artificially weak.
-The framework is prior work, not a new simulation primitive.
+For two emitters Omega=V=kappa=1 initially gg, two detector bins of width 2 give
+P(dark,bright)=0.42439280916. A population adiabatic-elimination extrapolation
+gives 0.30266450416; their event difference is certified above 0.121728304996 by
+rational Taylor bounds. The rate limit is not claimed valid at coherent equal
+scales. Exact independent-emitter renewal is another control. Neither discrepancy
+is a classical hardness result: exact two-emitter propagation solves the model.
+Strong-dephasing controls modify the physical model and are not free operations
+on the target. No large-system intermittency or experiment is demonstrated.
 
-## Next bounded mathematical deliverable
+## Next bounded model-level question
 
-Specify one coarse-grained physical record law and derive the accuracy/cost of a
-local quantum collision or splitting construction for it. A local amplitude-damping
-step is exactly implementable; its full driven continuous-record limit has NOT
-been bounded here. Account for time binning, possible multiple emissions, detector
-labels/efficiency, initial-state error, finite precision and the number of steps.
+In the SAME driven interacting-chain family, determine whether monitoring permits
+an adequate finite conditional-memory, cluster or tensor representation for a
+specified joint temporal record statistic, or whether a concrete response-relevant
+many-body dependency survives. Retain fixed input/initialization, finite horizon,
+detector bins and target error. State which approximation is tested and how its
+error enters the actual record law, not only the averaged density state.
 
-Use the instrument channel that outputs the record AND remaining quantum state.
-Half-diamond error eta_j per step telescopes to record TV at most sum eta_j.
-An error bound on the density channel after erasing the record is insufficient.
-Note 24's two-emitter Kraus mixing gives identical unlabelled dynamics but different
-labelled records; do not change the measured unraveling merely to ease simulation.
+A local emission resets its site but need not factorize the remaining sites.
+Do not assert a renewal process from that reset without proving the conditional
+independence. Strong monitoring may simplify classical propagation; weak monitoring
+may require longer histories to see events. Both costs must remain. Do not infer
+classical hardness from full-vector entanglement or a huge history alphabet.
 
-Compare with a justified classical rate/renewal or conditional-state approximation
-in one coherent-interaction regime. Select a fixed finite-time statistic, such as
-a dark-interval probability or correlations of consecutive count bins, and show
-how the record guarantee controls it. Permit direct evaluation when the consumer
-needs only a few statistics rather than whole histories. An exponentially large
-history alphabet, antibunching, or a failed mean-field approximation is not proof
-of useful quantum advantage. Independent emitters and strong-dephasing rate limits
-are controls, not hard examples. Allow tensors, cluster methods, hidden-state
-models and exact small-sector reductions whenever adequate.
+The result should identify one defensible regime or structural obstruction to a
+specific classical reduction, not produce another generic Trotter theorem, more
+two-emitter examples or an implementation campaign. If no specific opportunity
+survives the adequate classical descriptions, retain the completed result and
+broaden mechanisms. Direct spectral and classical-dynamics alternatives remain open.
 
-The deliverable is a matched law/error and symbolic-cost comparison, not a new
-trajectory framework, large simulation, hardware port, data acquisition campaign
-or assumption of a favorable gap/mixing time. A small diagnostic may verify an
-identity but cannot establish many-body hardness or experimental usefulness.
-Retain uncertainty explicitly and keep other mechanisms available.
+## Evidence and boundaries
 
-## Executed evidence and preservation
+`OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python experiments/record_instrument_v1/verify.py`
+requires Python 3.10+, NumPy and SciPy. The final checker ran twice identically,
+rejected -O/-OO and six invalid inputs. One two-emitter instrument has 81 saturated
+record words and four step refinements; it checks local damping, record/final-state
+Choi bounds, coarse dark maps, rational event bounds and two separate dephasing
+controls. Floating matrix diagnostics are not interval certificates. The general
+law follows from the proof, not extrapolation of the finite check.
 
-The new checker ran twice with identical JSON, rejecting -O/-OO and six invalid
-inputs. It evaluates three analytical spectral-resolution settings, exact cache
-variance through rational binomial enumeration, a standard table-learning budget,
-and a two-emitter Kraus-channel control. It does NOT propagate the listed 20/26/32-
-spin systems, simulate a driven record, compile a quantum circuit, or benchmark
-classical/quantum runtime. Earlier scientific verifiers were not rerun. No upstream
-code or data were imported. Primary proofs/model methods and two PDF pages were
-inspected; the note states the limited source scope and no priority claim.
-
-Preserve all prior notes, proofs, code, reports, data, licenses and third-party
-rights. Climate/dynamics remain open, Manthan paused, battery/operator routes parked,
-both spin-offs independent, and Phase-2 Note 27 closed. Modify only Quantum-Assisted-
-Algorithm-Discovery. No outside contact, paid/unattended work, manuscript revival,
-release, branch merge, new repository or administration change is authorized.
+No sampled quantum shots, laboratory data, native trajectory package, tensor run,
+large-system simulation or performance benchmark was used. No older verifier
+was rerun; no upstream code/data were imported. Primary PDFs supplied model/method
+text but three screenshots failed, with no figure-derived numbers used.
+Preserve all old proofs, code, reports, data, licenses and third-party rights.
+Only Quantum-Assisted-Algorithm-Discovery is writable. No outside contact, paid or
+unattended work, manuscript revival, release, merge or repository administration.
