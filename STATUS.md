@@ -1,70 +1,75 @@
 # Claim ledger
 
-## Current checkpoint: strategic revision, 29 September 2026
+## Current checkpoint: bounded activity estimation, 29 September 2026
 
-[Revision 27](exploration/phase_3/STRATEGIC_REVISION_27.md) reassesses the exploration
-at `4d6204640d70d006ae637ce4c7830a033832a8d5`. The project has scoped quantum
-sampling constructions, classical reductions and finite correctness diagnostics.
-It has not established a useful quantum cost benefit, a central publication result,
-or novelty of the general simulation ingredients. This is a strategic/source
-revision, not a new theorem or an independent full-proof audit.
+[Claim 28](exploration/phase_3/EMISSION_ACTIVITY_CLAIM_28.md) specifies one candidate
+quantum benefit after the strategic revision: estimate a bounded correlation of
+photon counts in successive finite windows. This explicitly narrows the earlier
+full-record output. It is not a complete count-distribution, switching-rate,
+stationary phase or fine-record solution. The bounded transform is chosen here;
+its numerical tolerance is not asserted to be an experimental standard.
 
-**Decision:** preserve the mathematics and stop automatic generic extensions.
-The monitored-emitter family remains one candidate for a bounded model-specific
-usefulness/classical-comparator/quantum-leverage decision. The spectral work remains
-a quantitative reference, and broader mechanisms remain available. Model-first
-analysis and direct outputs remain authorized; neither a dataset nor a universal
-all-classical lower bound is required to investigate an explicit conditional claim.
-No new repository or third classical spin-off is needed.
+For counts K1,K2, s=u/(n kappa Delta) and u=1, the target is
+G=E exp(-s(K1+K2))-E exp(-sK1) E exp(-sK2). An exact absorbing-flag embedding
+retains the three needed Laplace moments as probabilities. The original system
+marginal is unchanged. Intensity and Jensen bounds give Z1,Z2>=exp(-u) and
+Z12>=exp(-2u); these do NOT bound G away from zero. Independent coherent emitters
+can have nonzero G, so this is not an entanglement or hardness witness.
 
-The source comparison is strengthened. Rose et al. (PRE 94,052132, 2016) analyze
-a periodic Ising chain and classical phase switching in a stated regime.
-Macieszczak et al. (PR Research 3,033047, 2021) also relate coarse measurement
-records to classical trajectories and treat within-phase/transient corrections.
-This is not only an averaged-state baseline. It does not automatically certify
-our entire fine ground-start record or make phase/rate extraction cheap at any
-size. Neither a bare two-state Poisson model nor free supplied rates constitutes
-the strongest comparison.
+Known high-accuracy Lindblad algorithms plus standard amplitude estimation give
+~O(1/epsilon) coherent simulator/inverse calls at additive error epsilon, with
+explicit channel bias and failure budgets. One sufficient local-input gate bound
+is ~O((n+edges)(1+Gamma T)/epsilon), Gamma=n|Omega|/2+edges|V|/4+n kappa,
+with accuracy logarithms, coefficient access and coherent workspace charged.
+It is not a compiled resource count or an improved simulation primitive. Retaining
+only two flags does not mean that environmental simulation ancillas can be erased
+before inversion. The method cannot accelerate already measured laboratory data.
 
-The [work order](work_orders/CURRENT.md) now requires one short claim sheet and
-its decisive test. The useful observable, matched classical acquisition/generation
-cost, and a concrete quantum improvement must be stated together. Full record-plus-
-final-state accuracy is a sufficient proof tool, not automatically the consumer's
-minimal need. Any narrower coarsening must be explicitly identified. Failure of
-one approximation, a large Hilbert space, or another passing test does not replace
-the central claim. A small classical representation can still have costly acquisition;
-that possibility must be analyzed, not presumed to favor either side.
+This improves generic sampling precision, not every classical method. Direct
+tilted propagation and a supplied adequate small phase generator can compute the
+same statistic without Monte Carlo. Their acquisition, within-phase corrections,
+initial transient and validation must be costed. The bound ||Ls-L||<=u/Delta makes
+long windows a small tilted perturbation and can favor the classical reduction;
+it is not an all-size metastability theorem. No useful quantum-classical separation,
+new physical prediction or publication novelty is established.
 
-## What was checked in this revision
+The [work order](work_orders/CURRENT.md) asks for the matched acquisition/validation
+cost of that one tilted observable. The source anchor is the periodic Ising family,
+including V/kappa=250,Omega/kappa=50 in Rose et al.'s finite-size study; this is not
+silently transferred to the earlier open/equal-scale examples. Ground initialization,
+finite horizon and physical observation scale remain explicit. A cheap adequate
+classical tilted description ends this claim's priority; no generic flag framework
+or another small-model census is the next task.
 
-Read the live project map, charter, AGENTS, README, STATUS and work order, and the
-latest attached Note 26 and key assumptions. Its local Git blob equals the recorded
-live blob `cb720ec3568554103ad0bcd4e450ab01252085e7`. The supplied latest ZIP passes
-CRC and contains the same note. This is file integrity, not a scientific rerun.
+## Executed evidence and limitations
 
-Read selected primary model and record-metastability text. The 2016 paper's PDF
-page 5 was visually checked; the 2021 paper's relevant text was available, but
-its requested page-18 screenshot failed. No numerical graph values were used and
-no phase boundary was reproduced. The note states the limited inspection scope.
-No complete literature-priority audit or proof audit was performed.
+The new checker ran twice with identical JSON and rejected -O/-OO and six invalid
+inputs. One three-emitter periodic Omega=V=kappa=1,Delta=u=1 control compares the
+flag generator against independent tilted contractions, preserves the physical
+marginal, and verifies jump completeness and normalized probabilities. An exact
+Fraction control distinguishes absorption from parity. Independent coherent
+emitters and an illustrative supplied two-state classical model are positive
+bypass controls, not approximations claimed adequate for the interacting target.
 
-No new scientific code, numerical simulation, experiment, quantum circuit, timing
-benchmark or scientific-verifier run was performed. Only the revision note and
-current documentation/routing change. Earlier proofs, code, reports and data
-are unchanged; their verification claims remain historical.
+Checker SHA256: `67685e9d3d5ccde748aa2d27ae7b13300ca6a883912c191b05b2f9bb860d0d0c`.
+Report SHA256: `2b7d3394d731e0ccdf10e5a7931d9a961568373b40a0eb2ac4e8b60e627e7b44`.
+The [report](experiments/activity_flags_v1/REPORT.json) uses rounded complex128
+diagnostics, not interval certification. General claims follow from the equations
+and cited algorithms, not extrapolation of that control. No amplitude estimation,
+channel-simulation circuit, published metastable-slice calculation, large system,
+experimental data or performance benchmark was executed. No earlier verifier
+was rerun and no upstream code/data imported.
+
+Primary model, metastability, amplitude-estimation and high-accuracy simulation
+sources were inspected to the scope stated in the note. One model PDF page was
+visually checked; other requested screenshots failed, and no graph was digitized.
+This is a bounded source check, not a complete novelty or proof audit.
 
 ## Preserved evidence
 
-The full preceding ledger is pinned at the
-[pre-revision checkpoint](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/4d6204640d70d006ae637ce4c7830a033832a8d5/STATUS.md).
-[Note 26](exploration/phase_3/EMISSION_MEMORY_26.md) retains its fixed-initial-state
-record bound and fixed-collective-drive classical regime, not a fixed-local-drive
-thermodynamic claim. [Note 25](exploration/phase_3/RECORD_INSTRUMENT_25.md) retains
-the full-record quantum construction. All earlier spectral and dynamical results
-keep their own scopes and limitations. Old next steps are dated history.
-
-Climate/dynamics remain open; Manthan paused; battery/operator routes parked;
-both independent spin-offs and Phase-2 Note 27 retain their boundaries. Manuscript
-preparation is on hold. No outside contact, paid/unattended work, release, merge,
-new repository or administration change occurred. Only Quantum-Assisted-Algorithm-
-Discovery is modified; original LICENSE and third-party rights are preserved.
+The preceding ledger and evidence links remain pinned at the
+[pre-claim checkpoint](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/0fcf4d7c979003bc2d2508dfb3cde1c4cf4657af/STATUS.md).
+All earlier proofs, code, reports, licenses and rights are unchanged. Other
+mechanisms remain available; the two spin-offs remain independent. Manuscript
+preparation is on hold. No new repository, contact, paid/unattended work, release,
+merge or administration change is part of this checkpoint. Only the parent is writable.
