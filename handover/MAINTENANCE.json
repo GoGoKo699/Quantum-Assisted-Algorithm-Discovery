@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-29",
+  "repository": "GoGoKo699/Quantum-Assisted-Algorithm-Discovery",
+  "purpose": "Handover organization before a new exploration; no research candidate selected.",
+  "starting_revisions": {
+    "main": {
+      "commit": "7e5d2ba2bfc176086e99eecf62bc10e6aaf53d39",
+      "tree": "4c313b06b7eb55e0756d2a598089aca5b1707ae5"
+    },
+    "research/prx-quantum-phase2": {
+      "commit": "a286ba415b0550db837e9c8144b80c4f21909d82",
+      "tree": "3c2183bff740d4871ea4e6a7011a2b6169c4d8eb"
+    },
+    "research/sharing-core-publication": {
+      "commit": "ebf9bc819963b880643f4bfe370a485798c24697",
+      "policy": "Preserve head unchanged; close obsolete draft PR without merge."
+    }
+  },
+  "navigation_checks": {
+    "status": "pass",
+    "scope": "staged handover Markdown; destinations checked against API-observed path inventory plus new pages; not an exhaustive historical or external-link audit",
+    "pages_checked": 20,
+    "repository_link_occurrences_checked": 202,
+    "new_page_anchors_checked": 5,
+    "phase3_notes_indexed": 31,
+    "experiment_directories_observed": 38,
+    "temporary_sandbox_links": 0,
+    "unclosed_code_fences": 0
+  },
+  "evidence_integrity": {
+    "policy": "No existing scientific note, experiment source, saved report, dataset, manifest, or license is modified or deleted. Directory README additions do not replace scientific payloads.",
+    "LICENSE_blob": "e17a781bf47c4aadf18b68fc593846a1193b86c1",
+    "research_AGENTS_blob_preserved": "47c6140c817924142a7012c24f14b673d597caef",
+    "PROVENANCE_blob_preserved": "7bac7419f9aa53da88fd3c02c1c0753369cc2935",
+    "root_verify_blob_preserved": "9301b1331c6a62ed809cca740715ed03ee866bb8",
+    "root_target_closure_verify_blob_preserved": "9a04f3ddd3750f93088a079ac806d2f19621fcb3",
+    "closeout_30_note_blob_preserved": "0e35766ff08f57296cbc0b10849134fa2722bbc6",
+    "latest_scientific_replay": "One unchanged 29B replay during the preceding Closeout 30, documented in provenance/activity_closeout_30.json; not rerun here."
+  },
+  "alternate_checkpoint_check": {
+    "filename": "Sampling_Regime_Checkpoint_24.zip",
+    "sha256": "dbf7244b3065dcc03246561c2f49399aa8361dfae6cc6730de68f036246d7bfd",
+    "crc": "pass",
+    "three_payloads_match_source_manifest": true,
+    "scientific_code_executed": false,
+    "imported": false,
+    "meaning": "Noncanonical conversation attachment; canonical activity evidence does not depend on it. See ALTERNATE_CHECKPOINTS.md."
+  },
+  "pull_request_maintenance": {
+    "number": 1,
+    "state": "closed",
+    "merged": false,
+    "original_body_and_comments_preserved": true,
+    "historical_notice_added": true,
+    "head_branch_deleted": false
+  },
+  "open_issue_scan": {
+    "ordinary_open_issues": 0,
+    "scope": "GitHub search, excluding pull requests, at handover inspection."
+  },
+  "scientific_verifiers_run": 0,
+  "new_scientific_results": false,
+  "new_exploration_started": false,
+  "not_claimed": [
+    "Exhaustive validation of every historical link or third-party URL",
+    "A fresh installation or complete numerical test run",
+    "Independent proof or novelty audit",
+    "Hosted CI success",
+    "Application validation or quantum advantage"
+  ],
+  "publication_policy": "Manuscript on hold; no release or branch merge.",
+  "changed_markdown_paths": {
+    "main": [
+      "AGENTS.md",
+      "PROJECT_MAP.md",
+      "README.md",
+      "STATUS.md",
+      "docs/README.md",
+      "work_orders/CURRENT.md"
+    ],
+    "research": [
+      "HANDOVER.md",
+      "PROJECT_MAP.md",
+      "README.md",
+      "STATUS.md",
+      "docs/README.md",
+      "experiments/README.md",
+      "exploration/README.md",
+      "exploration/phase_2/README.md",
+      "exploration/phase_3/README.md",
+      "handover/ALTERNATE_CHECKPOINTS.md",
+      "handover/README.md",
+      "handover/REPRODUCING.md",
+      "publication/README.md",
+      "work_orders/CURRENT.md"
+    ]
+  },
+  "postwrite_check": "Compare each final commit with its starting revision: only the declared Markdown and this maintenance record may differ. Verify tree/blob identities before reporting handover complete."
+}

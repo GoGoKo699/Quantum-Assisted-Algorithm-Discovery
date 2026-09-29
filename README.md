@@ -1,74 +1,51 @@
 # Quantum-Assisted Algorithm Discovery
 
-**Can circuit-model quantum computation obtain useful information more effectively
-than strong classical alternatives?** Direct samples and model-first exploration
-are allowed; a learned classical program is optional. Essential access, accuracy,
-output and validation costs remain explicit. See [AGENTS.md](AGENTS.md).
+**Can quantum computation obtain useful information more effectively than strong classical alternatives?**
 
+Research handover · 29 September 2026  
 **No useful quantum advantage is established. Manuscript preparation is on hold.**
 
-## Current checkpoint: activity claim closed, evidence preserved
+This repository preserves a continuing exploration, including unsuccessful and
+inconclusive candidates. Direct quantum samples are permitted outputs; a learned
+classical program is optional. Mathematical models and their quantum integration
+come before implementation, with essential input and accuracy costs retained.
 
-[Closeout 30](exploration/phase_3/ACTIVITY_CLAIM_CLOSEOUT_30.md) completes the
-repository handoff for the two-window emission-covariance proposal. That proposal
-is **not selected for further quantum-advantage development on the present evidence**.
-The classical acquisition thought potentially costly was performed at the specified
-seven-emitter parameter point, and a small tilted contraction reproduced the chosen
-statistic closely. Generic Monte Carlo precision is therefore not an adequate sole
-classical baseline for this example.
+## Start here
 
-This is not a proof that all emitter systems are easy, a full-record accuracy
-claim, or a measured quantum runtime disadvantage. The quantum flag/instrument
-constructions remain conditional references. No replacement application or new
-research task is started in this wrap-up, and no new repository is needed.
-
-## Read the completed comparison
-
-| Evidence | Contents |
+| Read | Purpose |
 |---|---|
-| [Acquisition 29](exploration/phase_3/CLASSICAL_ACTIVITY_ACQUISITION_29.md) | Model acquired from the supplied generator; windows 1, 4, 16; [code](experiments/activity_acquisition_v1/verify.py) and [report](experiments/activity_acquisition_v1/REPORT.json) |
-| [Cross-check 29B](exploration/phase_3/CLASSICAL_ACTIVITY_CROSSCHECK_29B.md) | Separate calculation at windows 1, 5, 20; extra tilted-mode refinement; [code](experiments/activity_acquisition_crosscheck_v1/verify.py) and [report](experiments/activity_acquisition_crosscheck_v1/REPORT.json) |
-| [Closeout decision](exploration/phase_3/ACTIVITY_CLAIM_CLOSEOUT_30.md) | What is established, what is not, and the conditions for reopening |
-| [Import/replay manifest](provenance/activity_closeout_30.json) | Hashes of the previously local 29B payload and the maintenance replay |
+| **[Handover](HANDOVER.md)** | Objective, current decision, evidence map, unresolved questions, and how to resume |
+| [Status](STATUS.md) | What is and is not established; historical ledgers |
+| [Current work order](work_orders/CURRENT.md) | The sole continuation instruction; no new candidate has been selected |
+| [Research index](exploration/phase_3/README.md) | All phase-3 notes, grouped by question rather than filename |
+| [Reproduction guide](handover/REPRODUCING.md) | Branch, environment, verification scope, and safe output handling |
 
-Both evidence sets concern one periodic seven-emitter calibration, with ground
-initialization and no supplied phase rates or fitted photon data. Their observation
-windows are different and must not be relabeled. Results are finite floating-point
-diagnostics, not interval proofs, all-size tractability or experimental validation.
-The closeout retains the original numerical files rather than rewriting history.
+## Latest decision
 
-## Reproduce cross-check 29B
+The two-window emission-covariance lead is **closed on the present evidence**.
+A classical tilted model was acquired from the specified seven-emitter generator
+and checked against full symmetry-reduced propagation. It was not supplied with
+phase rates or fitted to the answer. This removes the proposed acquisition
+obstacle for that calibration; it does not prove all larger emitter systems easy.
 
-```sh
-OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python experiments/activity_acquisition_crosscheck_v1/verify.py
-```
+[Closeout 30](exploration/phase_3/ACTIVITY_CLAIM_CLOSEOUT_30.md) preserves the
+conclusion, both numerical evidence sets, and reopening conditions. Notes
+[29](exploration/phase_3/CLASSICAL_ACTIVITY_ACQUISITION_29.md) and
+[29B](exploration/phase_3/CLASSICAL_ACTIVITY_CROSSCHECK_29B.md) have different
+observation windows and remain separate. No new exploration starts in this handover.
 
-Python 3.10+, NumPy and SciPy. The unchanged checker was replayed once during
-closeout and reproduced its archived report byte-for-byte; its invalid-input
-controls passed and -O/-OO invocations refused execution. Other historical
-scientific verifiers were not rerun. This maintenance replay is not new research,
-a quantum circuit, a larger-system study or a performance comparison.
+## Repository roles
 
-## Continuation and preserved work
+This is the working research branch, `research/prx-quantum-phase2`; its name is
+historical, not a requirement to return to phase 2. The default branch is a public
+entry point, not a merged research copy. The old sharing-core branch is preserved.
+See the [project map](PROJECT_MAP.md) and [working rules](AGENTS.md).
 
-The [current work order](work_orders/CURRENT.md) records the closed checkpoint;
-it no longer requests the completed acquisition. A subsequent continuation starts
-from [Revision 27](exploration/phase_3/STRATEGIC_REVISION_27.md), not by automatically
-increasing emitter count, tightening accuracy or extending the last certificate.
-The parent exploration remains open. Supporting results are not a substitute for
-a useful quantum contribution.
+The independent [Algebraic-Loop-Certificates](https://github.com/GoGoKo699/Algebraic-Loop-Certificates)
+and [Sparse-Weil-Reconstruction](https://github.com/GoGoKo699/Sparse-Weil-Reconstruction)
+projects own their further development. No third spin-off or new repository is needed.
 
-[Claim 28](exploration/phase_3/EMISSION_ACTIVITY_CLAIM_28.md),
-[record instrument 25](exploration/phase_3/RECORD_INSTRUMENT_25.md),
-[emission memory 26](exploration/phase_3/EMISSION_MEMORY_26.md), and earlier spectral
-and dynamical studies keep their original scopes. Climate/dynamics remain open
-alternatives, Manthan paused, and battery/operator routes parked. The two
-independent classical spin-offs own their further development. No third spin-off
-is created, and Phase-2 Note 27 remains closed.
-
-The active research branch is `research/prx-quantum-phase2`. `main` is a public
-entry point, not a merged copy of the research. [STATUS.md](STATUS.md) links current
-claims and pinned history; the [project map](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/main/PROJECT_MAP.md)
-records branch roles and the direct-output/model-first scope. Earlier proofs,
-code, reports, data, third-party rights and the original [MIT license](LICENSE),
-Copyright (c) 2026 Ruge Lin, are preserved. Only this parent repository is writable.
+Scientific notes, code, reports, original [MIT license](LICENSE), and third-party
+rights remain preserved. [Experiments](experiments/README.md) and the historical
+[publication folder](publication/README.md) are evidence, not active work orders.
+This handover is documentation and integrity work, not a scientific rerun or proof audit.

@@ -1,66 +1,52 @@
-# Current state: activity claim closed; no new investigation started
+# Current work order: handover before a new exploration
 
-29 September 2026. Branch: `research/prx-quantum-phase2`.
-Direct useful outputs and model-first exploration remain authorized.
-Manuscript preparation is on hold. No new repository is needed.
+29 September 2026 · `research/prx-quantum-phase2`
 
-Read [Closeout 30](../exploration/phase_3/ACTIVITY_CLAIM_CLOSEOUT_30.md),
-[the current ledger](../STATUS.md), and
+**The previous candidate is closed. No replacement has been selected.**
+This maintenance checkpoint does not initiate a scientific investigation.
+Manuscript preparation remains on hold; no new repository is needed.
+
+## Read first
+
+[Handover](../HANDOVER.md) → [current status](../STATUS.md) →
+[Closeout 30](../exploration/phase_3/ACTIVITY_CLAIM_CLOSEOUT_30.md) →
 [Revision 27](../exploration/phase_3/STRATEGIC_REVISION_27.md).
+[AGENTS.md](../AGENTS.md) supplies the persistent working constraints.
 
-## Completed decision
+## Decision that must not be lost
 
-The standalone two-window emission-covariance advantage proposal of Note 28
-is not selected for further development on the present evidence. The classical
-acquisition requested by the former work order has been completed, not left as
-a future task. Notes 29 and 29B obtain a small tilted contraction from the input
-generator and compare it with full symmetry-reduced propagation at the same
-seven-emitter parameter point. No supplied phase rates, fitted photon data or
-free equilibrium initialization are used. Their numerical scopes are distinct.
+The classical acquisition requested for the seven-emitter two-window covariance
+has been executed. Notes 29 and 29B remain distinct evidence sets; the latter
+is now committed. The result removes the immediate acquisition obstacle for that
+calibration, not every possible emitter problem. The claim is inactive on present
+evidence; do not automatically rerun it, enlarge the ring, tighten its tolerance,
+compile its quantum circuit, or extend its generic certificates.
 
-[Note 29](../exploration/phase_3/CLASSICAL_ACTIVITY_ACQUISITION_29.md) tests
-kappa Delta=1,4,16. [Cross-check 29B](../exploration/phase_3/CLASSICAL_ACTIVITY_CROSSCHECK_29B.md)
-tests 1,5,20 and additionally reacquires tilted modes. Do not relabel or merge
-their rows. Neither is an all-size theorem, interval certificate, full-record
-approximation, experimental result, or quantum/classical runtime comparison.
+## On the next explicit research continuation
 
-The quantum constructions and earlier spectral/emitter results remain conditional
-references. No useful quantum advantage is established. This does not prove that
-all monitored quantum systems are easy. It does remove the justification for
-continuing this particular claim solely from a Monte Carlo precision comparison.
+Start with a bounded comparison of useful mathematical model–mechanism pairs,
+not with the next unresolved lemma of the last model. Join the useful observable,
+concrete quantum operation, full input/accuracy/output costs, strongest adequate
+classical acquisition or bypass, and one decisive falsification test in the same
+proposal. Direct samples are valid outputs. A learned classical program, production
+dataset, hardware demonstration, new quantum primitive, and universal classical
+lower bound are not prerequisites to exploring a credible conditional hypothesis.
 
-## Handoff boundary
+No new candidate is preselected here. A previously closed lead needs a justified
+new regime and a specific bottleneck, not merely a larger state space or finer
+measurement. Preserve negative and inconclusive results. Finish and commit each
+checkpoint's evidence and decision before moving to another candidate.
 
-Do not automatically repeat the acquisition, enlarge the ring, tighten the
-accuracy, compile a quantum circuit, extend a generic certificate, or draft a
-manuscript for this lead. Reopening needs a separately justified useful regime
-and a specific acquisition obstacle; a universal classical lower bound is not
-required, but Hilbert-space size alone is insufficient.
+## Maintenance and evidence
 
-The user's instruction is to finish the repository checkpoint before continuing.
-This closeout imports the previously local 29B note, checker and report with
-[hash provenance](../provenance/activity_closeout_30.json), records the stopping
-decision, and aligns the entry points. No replacement model is selected and no
-new scientific exploration is performed in this maintenance checkpoint.
+The [research index](../exploration/phase_3/README.md) groups archived notes; the
+[reproduction guide](../handover/REPRODUCING.md) distinguishes test scopes and inputs.
+Root verification is not an all-project test. Old “current” headings in scientific
+notes, `docs/`, `publication/`, and prior ledgers are history, not parallel agendas.
+No scientific verifier is rerun by this handover; consult Closeout 30 for the
+latest 29B replay. Do not equate link or hash checks with scientific validation.
 
-When a subsequent continuation is requested, begin with the bounded positive
-model/mechanism comparison in Revision 27. Keep the useful output, genuine
-quantum operation, strongest adequate classical acquisition and one decisive
-test in the same argument. First read the completed closeout; old next-step
-headings are historical, not competing work orders. Future handoffs must land
-the evidence and update the decision before another candidate begins.
-
-## Validation and preservation
-
-During closeout the unchanged 29B verifier was replayed once and reproduced
-its archived report byte-for-byte; its six invalid-input controls passed and
--O/-OO invocations refused execution. Other historical scientific suites,
-including Note 29's verifier, were not rerun. This is not new research or a
-new proof audit. Preserve the original notes, code, reports, data and rights.
-
-Spectral and emitter constructions remain references; climate/dynamics remain
-open alternatives, Manthan paused, battery/operator routes parked, and both
-classical spin-offs independent. Phase-2 Note 27 remains closed. Only
-Quantum-Assisted-Algorithm-Discovery may be modified. No outside contact,
-paid/unattended work, manuscript revival, release, branch merge, new repository
-or administration change is authorized by this closeout.
+Only `GoGoKo699/Quantum-Assisted-Algorithm-Discovery` may be modified. Both classical
+spin-offs are independent. No external contact, paid/unattended work, manuscript
+revival, release, branch merge, or repository administration change follows from
+this instruction. Keep historical scientific files, licenses, and rights intact.
