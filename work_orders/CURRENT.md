@@ -1,90 +1,90 @@
-# Current task: price the response information needed by a classical sampler
+# Current task: decide the sampling regime after pricing classical trace acquisition
 
 29 September 2026. Branch: `research/prx-quantum-phase2`.
 Model-first exploration; direct quantum samples allowed; manuscript on hold.
 
-Read [response readout 22](../exploration/phase_3/RESPONSE_READOUT_22.md),
-[spatial windows 21](../exploration/phase_3/POSITIVE_SPATIAL_WINDOWS_21.md),
-[model comparison 15](../exploration/phase_3/SPECTRAL_MODEL_STRUCTURE_15.md),
-and [spectral boundary 16](../exploration/phase_3/SPECTRAL_BOUNDARY_16.md).
-No new repository is needed. Do not revive a classical-only deployment requirement.
+Read [trace acquisition 23](../exploration/phase_3/TRACE_ACQUISITION_23.md),
+[response readout 22](../exploration/phase_3/RESPONSE_READOUT_22.md), and the
+quantum/spatial constructions in Notes 15 and 21. No new repository is needed.
+The classical comparator is not a renewed classical-program output requirement.
 
-## Completed output-level comparison
+## Completed acquisition budget
 
-The same alternating-offset, scalar-coupled block has collective raising response
-C(t)=<o,exp(-itL)o>. A mismatch in this scalar return amplitude lower-bounds the
-Lorentzian spectral TV by exp(-gamma|t|)|Delta C(t)|/2. For a specified bin task,
-include the additional within-bin and tail correction; arbitrary coarse binning
-can erase a continuous-law witness.
+For O=sum S_i^+ on k spins, random-phase trace estimation of the normalized
+high-temperature correlation has mean-square error at most 2/(R 2^k) for R
+independent GLOBAL Z4 phase vectors. This holds at every time. The collective
+identity Tr[(O^dagger O)^2]=2^k k^2/2 and a Schatten bound establish it without
+assuming mixing, a spectral gap, or a small tensor rank. The same probes may be
+reused across times; errors at different times are not independent.
 
-An exact-rational six-spin d=J control at t=2/J and gamma=J/4 rejects the independent-
-spin and commuting SzSz approximations at 5% TV for explicitly declared fine bins.
-This is not a hard instance or evidence that stronger classical methods fail.
-The small model and tolerance are mathematical controls, not an asserted experimental
-requirement. Rational moment/Taylor witnesses are separate from floating diagnostics.
+With the existing clock weights a_h and A_2=sum a_h^2, the repaired Fourier-bin
+sampler has statistical error at most epsilon_stat with probability >=1-beta
+when R>=max(1,ceil(4 A_2/(2^k beta epsilon_stat^2))). Clock, wrapping, deterministic
+propagation, output arithmetic and the full-chain spatial error remain separate.
+The bound concerns a once-constructed table; repeated draws share its error.
+Do not turn a per-draw guarantee into an M-draw joint guarantee without accounting.
 
-The finite geometric-clock law is a positive Fourier polynomial determined by N-1
-scalar values C(h tau). Approximate values with errors e_h give a constructive
-classical bin sampler: integrate the polynomial, take positive bin parts and
-normalize. The proved readout error is at most sqrt(2 sum_h a_h^2 e_h^2), including
-the possible negativity repair; clock truncation, unwrapping and arithmetic add.
-A second-moment wrap bound avoids resolving every extensive microscopic gap.
+Use the known trace normalization, not a random denominator. Independent phases
+on k individual spins do not satisfy the global-phase variance formula. The
+product-phase counterexample in Note 23 does not prohibit other efficient designs;
+it rules out that particular substitution. Arbitrary global random states are
+not assumed cheaply preparable on quantum hardware.
 
-For d=J, gamma=J/4, tau=0.1/J and N=256, 255 correlation values within 0.002 give
-per-block TV below 0.02834 before arithmetic, independent of block size. This is a
-CONDITIONAL accuracy target, not an executed cheap large-block acquisition. Add
-Note 21's spatial error for a full-chain result. Per-draw and joint M-draw error
-are different. Positivity repair alone does not validate incorrect correlations.
+## A strong classical route now has an explicit symbolic cost
 
-## Strong classical acquisition and remaining uncertainty
+Propagate U(t)r and U(t)Or, contract with O^dagger, and average. Each vector has
+2^k entries, not the 4^k entries of a full operator. Matrix-free H and O actions
+cost O(k 2^k). A sufficient grid/Taylor budget is O(R N k 2^k(q+1)), with
+q=O(W tau+log(N/delta_U)), W>=||H||. Vector accuracy delta_U gives correlation
+error <=6k delta_U. Finite-bit coefficient and rounding errors still count.
+One sequential probe uses O(2^k+N+B) working words plus indexing/workspace.
+This implementation evolves to the FULL last lag; it does not automatically
+inherit half-time evolution from the distinct operator-tensor method in Note 22.
 
-Time splitting is established prior work. C(t)=<u(-t/2),u(t/2)>; because this model's
-L and o are real, C(2s)=u(s)^T u(s). One forward half-time tensor trajectory suffices;
-the contraction is bilinear, not the conserved conjugated norm. A normalized
-vector approximation error delta gives scalar error at most 2delta. This is
-sufficient only: scalar output may remain accurate with larger operator errors.
-Do not use Schmidt rank, a large Pauli list or failed vector truncation as an
-all-classical spectral lower bound. Tensor errors, time-step errors and their
-certification costs must be charged; discarded squared norms cannot simply be
-summed and relabeled as a global amplitude error.
+Random-phase trace methods and dynamical typicality are prior work. A growing
+Hilbert dimension reduces statistical probe count but makes each propagation
+more expensive. The R=1 bound at one specified 26-spin accuracy setting is not
+an executed 26-spin calculation, a spatial-window certificate or a cheap scalar
+query. Actual tensor compression, symmetry reduction and better propagation
+algorithms can improve this classical upper bound. It is not a lower bound.
 
-The key unknown is C_acquire(k,N,{e_h}), not the storage size of the final spectrum.
-The classical route may reuse its acquired scalars and bin table across M draws.
-The direct quantum sampler avoids constructing these classical scalars but repeats
-preparation/evolution/readout. Its cost retains the physical linewidth, coefficient
-access and all accuracy terms. Neither route's displayed upper bound is optimal.
+Classical linked-cluster methods already combine with typicality. Signed
+subtraction can cancel physical boundary errors while amplifying probe noise;
+the quantum/classical positive-mixture bound cannot be copied to such a subtraction.
+No linked-cluster convergence theorem was proved for this collective response.
 
-## Next bounded mathematical task
+## Next bounded decision; do not accumulate more generic readout machinery
 
-For the SAME intermediate d/J~1 family, analyze one controlled way to acquire the
-weighted scalar returns at the required accuracy as gamma/J varies. Prefer a
-translation/symmetry-aware operator recurrence or a half-time tensor contraction
-with an actual response-error bound. Derive the required representation size or
-identify a response-sensitive obstruction to that representation; do not merely
-quote full-vector entanglement growth. Permit direct resolvent, restricted-state,
-effective and alternative sampling methods as competitors.
+For the same intermediate d/J~1 response, give one explicit resolution/sample-count
+comparison using the strongest justified classical option, not dense diagonalization
+alone: typicality/full-time pure-state propagation, half-time operator tensors,
+certified recursion and any valid translation/effective reduction. Compare with
+direct local quantum spectral sampling at the same gamma, bin law and M draws.
+The direct route may avoid classical trace acquisition but repeats state/clock
+preparation, coefficient access, controlled evolution and readout for each draw.
 
-Include preparation once versus repeated samples explicitly. A meaningful result
-would identify a parameter regime where the best justified classical contraction
-is small, or a specific necessary response component that remains expensive for
-it while quantum evolution can retain it. A failed sufficient certificate is not
-hardness. All-size claims must not be extrapolated from the six-spin control.
-No new generic readout framework, further small-size census, data dependency,
-native solver installation, large simulation, or third classical spin-off is the
-next step. The local quantum integration remains active, not refuted.
+Identify the structural reason that any proposed quantum regime survives those
+alternatives. A crossing of nonoptimal upper bounds, a large sufficient spatial
+window, or full-vector entanglement is not an all-classical hardness result.
+Retain uncertainty when necessary. If no specific reason survives, broaden the
+mechanism comparison instead of inventing a difficult molecule or conducting
+more small-size demonstrations. The parent objective is a useful quantum result,
+not another classical approximation project or a new simulator framework.
 
-## Evidence and preservation
+## Executed evidence and preservation
 
-The new checker ran twice with identical JSON under one BLAS thread. It computes
-exact moments through order 80 and rational Taylor enclosures for one six-spin
-block and its two surrogates. Separate complex128 checks cover half-time identities,
-clock/Fourier reconstruction, deterministic correlation perturbations, negativity
-repair and invalid inputs. -O/-OO refusal was checked. No tensor algorithm, quantum
-circuit, measured spectrum, native NMR package or performance run was executed.
-No previous verifier was rerun and no upstream code/data was imported.
+The final NumPy diagnostic ran twice with identical JSON; -O/-OO and six invalid
+inputs were rejected. It actually acquires 255 correlations for ONE ten-spin
+block with eight fixed-seed probes, using matrix-free two-vector propagation.
+A separate magnetization-block diagonalization validates that small calculation.
+Its finite-clock bin TV is about 0.006989, not a high-probability large-block result.
+The other probe-budget rows are analytical evaluations only. Phase-ensemble,
+observable-moment and invalid product-state controls check the proof ingredients.
 
+No native NMR or upstream typicality package, tensor implementation, quantum
+circuit, experimental spectrum, large-block run or timing benchmark was used.
+No prior verifier was rerun; earlier scientific files and rights are unchanged.
 Climate/dynamics remain open; Manthan is paused; battery/operator routes parked;
-both independent spin-offs retain their own projects; Phase-2 Note 27 stays closed.
-Preserve prior proofs, code, reports, data, licenses and rights. Modify only
-Quantum-Assisted-Algorithm-Discovery. No outside contact, paid/unattended work,
-manuscript revival, release, branch merge, new repository or administration change.
+both spin-offs independent; Phase-2 Note 27 closed. Modify only Quantum-Assisted-
+Algorithm-Discovery. No contact, paid/unattended work, manuscript revival, release,
+merge, new repository or administration change is authorized.
