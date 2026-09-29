@@ -2,47 +2,54 @@
 
 **Can quantum computation obtain useful information more effectively than strong classical alternatives?**
 
-**Phase 4: model-first exploration. No useful quantum advantage is established.
+**Phase 4: model-first exploration. No new useful quantum advantage is established.
 Manuscript preparation remains on hold.**
 
-Direct samples are permitted; a reusable classical program is optional. Essential
-preparation, input, accuracy and output costs remain explicit. See [AGENTS.md](AGENTS.md).
+Direct samples are allowed; a reusable classical program is optional. Essential
+preparation, access, accuracy, and output costs remain explicit. See [AGENTS.md](AGENTS.md).
 
-## Current result and decision
+## Current candidate: an implicit graph with a reusable classical output
 
-[Task-matched readout 02](exploration/phase_4/TASK_MATCHED_READOUT_02.md) tests the
-physical-acquisition candidate from [Screen 01](exploration/phase_4/MODEL_MECHANISM_SCREEN_01.md).
-For a supplied signal template and calibrated nuisance shapes, a single chosen
-quadrature per temporal mode reproduces the nuisance-insensitive amplitude
-statistic. Under the stated pure-loss model, squeezed homodyne is less noisy than
-the symmetric two-mode-squeezed Bell scheme at matched photon budgets, even with
-unequal signal/reference losses. Squeezed homodyne is unentangled, not classical light.
+[Implicit Gaussian graph 03](exploration/phase_4/IMPLICIT_GAUSSIAN_GRAPH_03.md)
+examines Gaussian similarity graphs for harmonic label propagation. The input is
+a point table, not a quadratic edge list. A spectral sparsifier is a small classical
+graph reusable across label/energy queries; it does not require later quantum use.
+The known quantum sparsification algorithm is prior work, with explicit coherent
+input and working-memory assumptions.
 
-This does not solve unknown, drifting nuisance inference or refute quantum-dense
-metrology. Calibrating the shapes and controlling the measurement angles can be
-substantial tasks; their costs are not declared free in a real experiment. The
-comparison supplies no new entangled-sensing or general-purpose circuit advantage.
-Physical-source access remains a separate proposed input model, not a replacement
-of the original classical-input objective.
+This candidate has a substantive conditional worst-case classical obstacle from
+closest-pair reductions, not merely a dense-matrix dimension. But broad kernels
+already admit an inexpensive classical sampler, geometric/kernel algorithms can
+be stronger, and the hard bandwidth need not be useful for learning. Neither
+conditional hardness nor an ideal-RAM quantum upper bound establishes a practical
+advantage. Coordinate precision, input loading and coherent memory are priced.
 
-Sensing is retained as a scope-separated reference. The [next work order](work_orders/CURRENT.md)
-returns to the shortlisted graph-sparsification question: useful implicit inputs,
-coherent access and memory costs, and strong classical graph construction. No
-new dataset, simulator, optical instrument or repository is requested.
+The [current task](work_orders/CURRENT.md) targets a specific possible improvement:
+can the existing quantum algorithm use shorter random seeds by proving sparsifier
+correctness instead of emulating an entire independent random output law?
+Bounded-independence sparsification is existing classical theory. Its adaptive
+quantum integration and resulting full memory/time budget are NOT established
+here; reducing random storage would not remove input QRAM.
 
 ## Evidence and navigation
 
 ```sh
-OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python experiments/task_matched_readout_v1/verify.py
+python experiments/implicit_graph_contract_v1/verify.py
 ```
 
-Python 3.10+, SymPy and NumPy. The [saved report](experiments/task_matched_readout_v1/REPORT.json)
-contains exact finite regression identities and six analytic loss/energy controls,
-not physical samples or performance data. Two identical runs; no historical suite
-rerun. The [phase-4 index](exploration/phase_4/README.md), [status](STATUS.md),
-[preserved handover](HANDOVER.md), and [phase-3 archive](exploration/phase_3/README.md)
-retain the decisions and evidence. The activity-covariance lead remains closed.
+Python 3.10+, standard library only. The [report](experiments/implicit_graph_contract_v1/REPORT.json)
+contains exact finite arithmetic controls for the input/accuracy contract, not a
+quantum sparsifier, experimental dataset, hardness test or performance comparison.
+The final checker ran twice identically; no older scientific suite was rerun.
+The general facts are derived or attributed in the note, not inferred from a
+small graph. No new repository or third spin-off is needed.
 
-The research branch name `research/prx-quantum-phase2` is historical. Main remains
-a routing entry. Earlier science, source/report pairs, both independent spin-offs,
-and the original [MIT license](LICENSE) are preserved. Only this parent is writable.
+[Phase-4 index](exploration/phase_4/README.md) · [Status](STATUS.md) ·
+[Handover](HANDOVER.md) · [Phase-3 archive](exploration/phase_3/README.md)
+
+[Readout 02](exploration/phase_4/TASK_MATCHED_READOUT_02.md) remains a separate-input
+sensing reference, not a no-go for unknown-waveform sensing. Electronic stopping
+is a reserve. The emitter activity-covariance closeout remains in force. The active
+branch name `research/prx-quantum-phase2` is historical; main routes to this work.
+Earlier source/report pairs, the two independent spin-offs, and the original
+[MIT license](LICENSE) are preserved. Only this parent repository is writable.

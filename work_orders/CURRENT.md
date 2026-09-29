@@ -1,57 +1,80 @@
-# Current task: useful implicit graphs and fully priced access
+# Current task: test whether sparsifier correctness needs the published random-oracle memory
 
 29 September 2026. Branch: `research/prx-quantum-phase2`.
-Read [Screen 01](../exploration/phase_4/MODEL_MECHANISM_SCREEN_01.md),
-[readout decision 02](../exploration/phase_4/TASK_MATCHED_READOUT_02.md),
+Read [implicit Gaussian graph 03](../exploration/phase_4/IMPLICIT_GAUSSIAN_GRAPH_03.md),
 [AGENTS.md](../AGENTS.md), and the preserved [handover](../HANDOVER.md).
-No new repository is needed. Direct samples remain allowed; manuscripts stay on hold.
+Classically supplied input and reusable output are restored as the active comparison.
+Direct samples remain permitted. Manuscripts stay on hold; no new repository needed.
 
-## Decision carried forward
+## What the model/access check established
 
-The calibrated signal-template task has a task-aligned, squeezed but unentangled
-homodyne comparator. It is not a need for a full joint record. Unequal pure loss
-and both signal/total photon budgets are included; nuisance calibration, angle
-control, temporal correlations and back-action limit the applicability to actual
-unknown-waveform sensing. Do not claim that all sensing is easy, that squeezing
-is classical, or that this affine result solves nonlinear contamination learning.
+The input is an explicit point table and bandwidth; Gaussian similarities define
+an implicit complete graph. A spectral sparsifier is a reusable classical object
+for graph energies and harmonic label queries. Its energy guarantee is not an
+unqualified classifier-accuracy guarantee. An isolated query may bypass the graph.
+Classical and quantum algorithms receive the same point representation.
 
-No useful new entangled acquisition regime or general-purpose circuit role has
-been established. Retain sensing as a separate-input reference, not another
-indefinite metrology program. Do not add generic Gaussian bounds, delayed-query
-restrictions, or finer unknown features merely to evade the task-specific comparator.
+The complete-graph adjacency index is reversible arithmetic. Weight evaluation
+needs coordinate lookup, distance and finite-precision kernel arithmetic. The
+published Apers/de Wolf algorithm gives ideal RAM time ~n^(3/2)/epsilon and a
+classical output, but also ~n^(3/2)/epsilon coherently accessible working bits.
+Input ingestion, point memory, working memory, numerical representation, and output
+all count. The active-qubit count is not total physical memory. A linear table-scan
+circuit can erase the saving, but it is not a lower bound on every architecture.
 
-## One bounded in-scope model/access comparison
+Broad Gaussian graphs with a certified minimum weight tau have an elementary
+classical uniform-edge construction using ~n/(tau epsilon^2) evaluations, followed
+by ordinary resparsification if needed. Geometric/kernel methods are additional
+competitors. Small tau alone is not hardness. At the opposite extreme, a known
+closest-pair reduction supplies conditional near-quadratic hardness for universal
+Gaussian graph sparsifiers with compact binary inputs and polylogarithmic weight
+precision. The quantum/RAM contrast is conditional; its useful learning-bandwidth
+regime and end-to-end advantage are not established by worst-case hardness.
 
-Return to graph sparsification, the closest shortlisted fit to the parent's
-original classical-input, reusable-output goal. Begin with one independently
-useful graph family that is specified implicitly from a compact classical input,
-not with an arbitrary dense edge oracle. State the downstream use, approximation
-quality, coefficient representation and costs of evaluating an edge or accessing
-its adjacency information coherently. Graph-query access and input memory may
-not be granted for free.
+## The next bounded algorithmic hypothesis
 
-Apers and de Wolf's quantum sparsification is prior work. Compare its complete
-applicable access and working-memory requirements with the strongest adequate
-classical construction for the selected family, including geometric/kernel
-methods such as the Screen-01 predecessor. Both competitors may avoid materializing
-an n-by-n graph and may bypass a sparsifier if the downstream output is cheaper
-to compute directly. Shared preprocessing and repeated-use counts must be priced.
+Apers/de Wolf use a generic 2Q-wise random-string replacement to preserve the exact
+output law of a Q-query quantum algorithm. That accounts for substantial coherent
+working storage. The useful output only needs to be a valid sparsifier, not have
+that exact independent-edge law. Doron et al.'s bounded-independence spectral
+sampling is an existing possible ingredient, not our theorem or a ready quantum
+implementation.
 
-The deliverable is a compact useful-input/output contract and one discriminating
-access/cost calculation. A known quantum theorem alone is not novelty; a hidden
-exponential lookup or an intentionally explicit classical input is not an advantage.
-If the necessary coherent memory cost or a classical shortcut removes the
-opportunity, record that decision before changing examples. No broad kernel census,
-new solver, full compiler, external dataset hunt or spin-off is the default task.
+Audit a short-seed replacement under the SAME input access assumptions. Start with
+the implicit iterative half-sparsifier/spanner construction, then its refined
+resistance-sampling stage. Prove correctness conditioned on all previously fixed
+choices, using a fresh seed before each sampling layer. Include quantum subroutine
+failure, edge-count concentration, probability rounding and reversible hash cost.
+Grover search is valid for each fixed marked set; no arbitrary-algorithm
+indistinguishability theorem is required if the output property is proved directly.
 
-The electronic-stopping candidate remains a reserve with its preparation and
-physical-adequacy obligations. It is not a parallel work order. The closed
-emitter-covariance lead is not enlarged or resumed by this comparison.
+Do not claim a smaller total memory by improving only the final stage while the
+rough sparsifier retains the old storage. Count surviving point-table, spanner,
+resistance-data and output memory. A shorter random seed does not eliminate input
+QRAM. Time/space and precision counts must be explicit; classical resparsification
+and approximate resistance evaluation are permitted. Check prior work before
+claiming a new result; a bounded search is not a novelty certification.
 
-## Evidence and action boundaries
+The deliverable is one proved integration or a precise obstruction, not a new
+randomness library, broad point-cloud census, giant solver or compiled QRAM. If
+known methods already establish the same tradeoff, record their scope rather than
+repackage them. A successful theoretical memory improvement is still conditional
+on access and does not itself prove a new practical label-learning speedup. Tie
+any further application claim back to a needed bandwidth/accuracy regime and the
+strongest adequate classical construction or bypass.
 
-Note 02 ran only exact regression/symbolic and finite Gaussian covariance checks;
-no waveform fitting, optical sampling, pilot acquisition or historical suite was
-run. Preserve the existing notes, code, reports, provenance, LICENSE and third-party
-rights. Modify only Quantum-Assisted-Algorithm-Discovery. No external contact,
-paid/unattended work, new repository, branch merge, release or admin change follows.
+## Evidence and preservation
+
+Note 03's standard-library exact-rational checker ran twice identically and rejected
+-O/-OO and six invalid inputs. It checks adjacency, one small Gaussian graph's
+resistance/harmonic identities, finite-bit cut reduction inequalities and a small
+absolute-pruning counterexample. No sparsifier, quantum search, bounded-independence
+construction, random-memory architecture, classification dataset or timing was run.
+The finite examples are not evidence of conditional hardness or a new separation.
+Historical scientific verifiers were not rerun.
+
+Sensing remains a scope-separated reference; stopping power is a reserve, not a
+parallel work order. The emitter-covariance lead remains closed. Preserve all
+historical notes, code, reports, provenance and rights. Only this parent repository
+may be modified. No new repo/spin-off, contact, paid/unattended work, manuscript,
+branch merge, release or administration change is authorized.
