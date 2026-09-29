@@ -1,80 +1,80 @@
 # Claim ledger
 
-## Current checkpoint: response-level acquisition and readout, 29 September 2026
+## Current checkpoint: classical trace acquisition, 29 September 2026
 
-[Response readout 22](exploration/phase_3/RESPONSE_READOUT_22.md) continues the
-same local alternating-offset spin model at d/J of order one. A characteristic-
-function witness lower-bounds spectral TV by exp(-gamma|t|)|Delta C(t)|/2.
-The finite-bin version includes discretization and overflow terms; arbitrary
-coarse binning need not retain a continuous-law discrepancy.
+[Trace acquisition 23](exploration/phase_3/TRACE_ACQUISITION_23.md) prices one
+established classical route to the response information from Note 22. For the
+normalized collective raising observable, Tr[(O^dagger O)^2]=2^k k^2/2 gives a
+time-uniform random-phase correlation variance bound 2/(R 2^k). The known trace
+normalization is used. Global Z4 phase vectors are not random product states.
+Random-phase trace estimation and dynamical typicality are explicitly prior work;
+no generic new algorithm, quantum advantage or publication priority is claimed.
 
-For one six-spin d=J control at t=2/J and gamma=J/4, exact rational moments and
-Taylor enclosures reject on-site-only and commuting SzSz responses at 5% TV
-for explicitly declared fine bins. Certified conservative bin-TV lower bounds
-are 0.137241910729 and 0.058101380567, respectively. The model is classically easy;
-this is evidence that these two approximations change the resolved output, not
-an application benchmark, all-classical obstruction or scaling theorem.
+The SAME probes are reused across all lags. With A_2=sum a_h^2 for the existing
+clock, expectation of squared readout error is at most 4 A_2/(R 2^k). Hence
+R>=max(1,ceil(4 A_2/(2^k beta epsilon_stat^2))) suffices for statistical readout error
+<=epsilon_stat with probability >=1-beta. No independence across lag errors or
+unpriced per-time union bound is assumed. Numerical propagation, clock, wrapping,
+output arithmetic and spatial errors remain separate. A once-prepared table
+shares its law error across draws; a per-draw guarantee is not an M-draw guarantee.
 
-The finite geometric-clock law can be reconstructed from N-1 scalar correlations.
-For errors e_h and clock autocorrelation weights a_h, integrating the estimated
-Fourier polynomial and positive-part-normalizing its bin masses incurs TV at most
-sqrt(2 sum a_h^2 e_h^2). Clock truncation, moment-controlled frequency wrapping,
-input uncertainty and numerical output arithmetic add to that bound. This is an
-explicit positive classical sampler with a conditional accuracy guarantee, not
-an assumption that the correlations can be computed cheaply or that positivity
-repair validates an incorrect signal. Fourier and time-splitting methods are prior
-work; no novelty or practical advantage is claimed.
+Two ordinary Hilbert vectors per probe implement the acquisition. Matrix-free
+local actions cost O(k 2^k), and one conservative grid/Taylor construction costs
+O(R N k 2^k(q+1)), with q=O(W tau+log(N/delta_U)). This is an arithmetic upper bound,
+not a runtime or a lower bound against all classical methods. It uses full-time
+propagation and does not automatically inherit the half-time operator-tensor
+advantage of Note 22. Statistical probe counts can fall while the per-probe
+state-vector cost grows. A one-probe sufficient budget at a specified 26-spin
+setting is analytical only, not an executed 26-spin calculation.
 
-For d=J, gamma=J/4, tau=0.1/J and N=256, correlation errors bounded by 0.002 suffice
-for per-block TV below 0.02834 before arithmetic, at any block size in this family.
-The numerical control perturbs exact six-spin values; no scalable classical
-algorithm was run to acquire those values. Add the spatial error from Note 21
-for the full-chain mixture. A per-draw guarantee is not automatically an M-draw
-joint guarantee. Classical preparation can be reused across M samples.
+Existing linked-cluster/typicality combinations strengthen the comparator, but
+signed cluster subtraction can amplify probe noise. No convergence or tail bound
+for such a subtraction in this collective alternating-field model is established.
+It cannot be relabeled as Note 21's positive finite-block mixture. A large Hilbert
+space, a large sufficient block, or a failed tensor approximation remains
+insufficient evidence for quantum advantage.
 
-The real generator and real initial raising vector give C(2s)=u(s)^T u(s).
-This is a bilinear half-time contraction, not u(s)^dagger u(s). A normalized
-operator-state error delta gives correlation error at most 2delta, but accurate
-scalar contractions do not require accurate reconstruction of every operator
-component. Classical half-time tensor, direct resolvent, restricted-state and
-recursion routes remain legitimate. Their required ranks and acquisition costs
-are unknown in the target growing-block regime. Direct quantum spectral sampling
-remains allowed and is not required to learn or output these classical scalars.
+The [work order](work_orders/CURRENT.md) requests a bounded resolution/sample-count
+decision after these stronger alternatives, not another general reconstruction
+framework. Direct quantum sampling remains permitted and need not produce the
+classical table. A credible useful regime, not a classical spin-off, is still the
+parent objective. No new repository or manuscript is needed.
 
-The [work order](work_orders/CURRENT.md) requests one response-sensitive acquisition
-cost analysis, not more generic readout machinery or another six-spin census.
-No useful quantum-classical separation, observed spectral prediction improvement,
-compiled quantum circuit, or new repository is established or needed.
+## Executed evidence and limits
 
-## Executed evidence
+The final independent NumPy diagnostic ran twice with identical JSON. One fixed
+ten-spin d=J block uses eight PCG64-seeded Z4 probes and matrix-free propagation
+to acquire 255 lags through t=25.5/J. The degree-16 step uses 4,080 batched H actions.
+A separate magnetization-sector diagonalization supplies a diagnostic reference,
+not input to the acquisition algorithm. Observed finite-clock bin TV is about
+0.006989; weighted scalar error is about 0.057745 and maximum scalar error is about
+0.026568. This single fixed-seed result is not a statistical confidence interval
+or a 99%-success large-block demonstration. The original fine bins are retained.
 
-The new checker ran twice with identical JSON under single-threaded BLAS. Python
-integers and Fractions generate moments through order 80 for the full six-spin
-model and two surrogates, rigorous cosine/exponential enclosures, conservative
-bin witnesses and two exact signed-bin controls. Lower bounds are rounded down.
-Complex128 eigendecomposition independently checks the return amplitude; four
-half-time identities, ten clock-kernel/Fourier identities, two perturbation-budget
-controls and a negative-bin case also pass. Six invalid inputs and -O/-OO execution
-were rejected. The [report](experiments/response_readout_v1/REPORT.json) records
-values and distinctions between the exact and floating calculations.
+The relative vector discrepancy against the independent diagonal reference is
+about 2.6e-14. The ideal Taylor truncation bound does not include all rounding.
+Other checks exhaust 64 two-spin global-phase classes at three times and 256
+four-spin product-phase choices, verify the observable fourth trace, and reject
+six invalid inputs and -O/-OO. The [report](experiments/trace_acquisition_v1/REPORT.json)
+clearly labels unexecuted analytical probe-count rows. These are complex128
+mathematical diagnostics, not interval certificates or performance measurements.
 
-Checker SHA256: `6777ad07343c4ee1ade0c90d4255056b2116daaab8a70f4b2e51a269be6b702e`.
-Report SHA256: `5d8199805b35d0ed4f970451f302400a2f584f064536d9c321a39de6eaf7c869`.
+Checker SHA256: `debcd383b7d12d4d4de89beda35281cf2e272b9bc9a28037a8d8ffa9bfe92254`.
+Report SHA256: `f8705f0d0f1ec177ffc0c4c7efdfa036071bbf71f6998da429849c4d11e7e31e`.
 
-No tensor-network algorithm, native NMR package, quantum circuit, experimental
-spectrum, noise model, timing benchmark or large-system scaling experiment was
-run. No prior scientific verifier was rerun, and no upstream data or code was
-imported. Primary abstracts and metadata establish cited predecessor scope;
-no PDF, figure or experimental table was analyzed this round. The bounded source
-screen is not an exhaustive priority audit.
+No native NMR or upstream typicality package, tensor algorithm, quantum circuit,
+experimental spectrum, large-block run or speedup benchmark was executed. Primary
+trace/typicality/linked-cluster methods were inspected as text; requested PDF
+screenshots failed, so no figure/table benchmarks were newly interpreted. The
+source screen is bounded, not an exhaustive novelty audit. No prior verifier was
+rerun or upstream data/code imported. All prior scientific files are unchanged.
 
 ## Preserved evidence
 
-The preceding ledger and its links remain at the pinned
-[pre-readout checkpoint](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/fdc88f1c59d743394001e28edf7b97a5270dba9c/STATUS.md).
-Notes 15-21, earlier proofs, code, reports, datasets and rights are unchanged.
-Older current/next headings are dated checkpoints, not competing work orders.
-Climate/dynamics remain open; Manthan is paused; battery/operator routes parked;
-both classical spin-offs independent; Phase-2 Note 27 closed. Manuscript remains
-on hold. Only the parent repository is modified; no outside contact, paid or
-unattended work, release, branch merge, new repository or administration change.
+The preceding ledger and its links are pinned at
+[pre-acquisition checkpoint](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/389f9d81014be10fa3a0b6d0c8c44fd91ea39e01/STATUS.md).
+Notes 15-22, previous proofs, code, reports, data and rights remain intact. Older
+current/next headings refer to their own checkpoints. Climate/dynamics remain open;
+Manthan is paused; battery/operator routes parked; both spin-offs independent;
+Phase-2 Note 27 closed; manuscript on hold. Only the parent repository is modified.
+No contact, paid/unattended work, release, merge, new repository or admin change.
