@@ -1,86 +1,70 @@
 # Claim ledger
 
-## Current checkpoint: excitation-limited emission memory, 29 September 2026
+## Current checkpoint: strategic revision, 29 September 2026
 
-[Note 26](exploration/phase_3/EMISSION_MEMORY_26.md) identifies a coherent classical
-memory reduction for the same driven Ising record law. Keeping all amplitudes with
-N_e<=q gives dimension D_q=sum_{r=0}^q binom(n,r). It does not cap accumulated photons,
-erase detector labels, assume independent populations or alter the required bins.
-The model has uniform drive/decay, diagonal interactions, ground initialization,
-finite horizon and a local Markov reservoir. No arbitrary initial-state or finite-
-temperature extension is claimed. No useful quantum advantage is established.
+[Revision 27](exploration/phase_3/STRATEGIC_REVISION_27.md) reassesses the exploration
+at `4d6204640d70d006ae637ce4c7830a033832a8d5`. The project has scoped quantum
+sampling constructions, classical reductions and finite correctness diagnostics.
+It has not established a useful quantum cost benefit, a central publication result,
+or novelty of the general simulation ingredients. This is a strategic/source
+revision, not a new theorem or an independent full-proof audit.
 
-For full and truncated dynamics, the averaged factorial moments satisfy
-M_r(t)<=binom(n,r)[|Omega|/kappa*(1-exp(-kappa*t/2))]^(2r). Positivity, collective
-ladder norms and exact decay of factorial moments prove the statement without
-assuming factorization, dephasing or a spectral gap. It is not a bound on every
-normalized rare-history state.
+**Decision:** preserve the mathematics and stop automatic generic extensions.
+The monitored-emitter family remains one candidate for a bounded model-specific
+usefulness/classical-comparator/quantum-leverage decision. The spectral work remains
+a quantitative reference, and broader mechanisms remain available. Model-first
+analysis and direct outputs remain authorized; neither a dataset nor a universal
+all-classical lower bound is required to investigate an explicit conditional claim.
+No new repository or third classical spin-off is needed.
 
-A count-lifted Duhamel proof gives fixed-ground-initial-state record-plus-final-
-state trace distance <= f_q integral sqrt(p_q^(q)(t))dt, with
-f_q=|Omega|sqrt((q+1)(n-q))/2. The same bound controls the full detector-record TV.
-Using the moment envelope yields min(1,kappa*T/2*sqrt((q+1)*lambda^(q+1)/q!)),
-lambda=n Omega^2/kappa^2; q=n is exact. This is not a uniform diamond-norm statement.
-The general residual-contraction method is prior work. Priority of this particular
-record/moment specialization is not established. Numerical errors remain separate.
+The source comparison is strengthened. Rose et al. (PRE 94,052132, 2016) analyze
+a periodic Ising chain and classical phase switching in a stated regime.
+Macieszczak et al. (PR Research 3,033047, 2021) also relate coarse measurement
+records to classical trajectories and treat within-phase/transient corrections.
+This is not only an averaged-state baseline. It does not automatically certify
+our entire fine ground-start record or make phase/rate extraction cheap at any
+size. Neither a bare two-state Poisson model nor free supplied rates constitutes
+the strongest comparison.
 
-At fixed lambda, kappa*T and tolerance, finite q gives a polynomial-in-n coherent
-classical sampler with explicitly charged propagation and record discretization.
-Holding lambda fixed requires Omega/kappa~n^(-1/2). The result does not establish
-fixed-density thermodynamic tractability or a classical lower bound in other regimes.
-Classical conditional-state simulation remains stronger than the population-rate
-approximation tested previously.
+The [work order](work_orders/CURRENT.md) now requires one short claim sheet and
+its decisive test. The useful observable, matched classical acquisition/generation
+cost, and a concrete quantum improvement must be stated together. Full record-plus-
+final-state accuracy is a sufficient proof tool, not automatically the consumer's
+minimal need. Any narrower coarsening must be explicitly identified. Failure of
+one approximation, a large Hilbert space, or another passing test does not replace
+the central claim. A small classical representation can still have costly acquisition;
+that possibility must be analyzed, not presumed to favor either side.
 
-Within q=1, local jumps have rank one and reset the whole conditional state to
-vacuum. Uniform open chains need just the vacuum, symmetric endpoint and symmetric
-interior amplitudes for no-count evolution. Site-labelled waiting-time laws and
-repeated photons follow exactly for that approximation. Its accuracy for the full
-model is conditional on the record error bound, not a new physical blockade.
-For q>=2, local clicks can leave coherent excitations on other sites. A reachable
-small-time expansion and finite check show dependence on the previous waiting
-time. Independent emitters can also retain local ages cheaply; nonrenewal and
-jump rank alone are not quantum-advantage evidence.
+## What was checked in this revision
 
-The [work order](work_orders/CURRENT.md) directs the next comparison to a phase-level
-or hidden-state description in the coherent non-dilute regime. Prior metastability
-work supplies a serious two-phase classical comparator for stated finite-system
-conditions. It has not been validated for this complete detector instrument.
-No generic new trajectory framework, third spin-off, manuscript or new repository
-is being started. Direct quantum sampling remains permitted.
+Read the live project map, charter, AGENTS, README, STATUS and work order, and the
+latest attached Note 26 and key assumptions. Its local Git blob equals the recorded
+live blob `cb720ec3568554103ad0bcd4e450ab01252085e7`. The supplied latest ZIP passes
+CRC and contains the same note. This is file integrity, not a scientific rerun.
 
-## Executed evidence
+Read selected primary model and record-metastability text. The 2016 paper's PDF
+page 5 was visually checked; the 2021 paper's relevant text was available, but
+its requested page-18 screenshot failed. No numerical graph values were used and
+no phase boundary was reproduced. The note states the limited inspection scope.
+No complete literature-priority audit or proof audit was performed.
 
-The final Python/NumPy/SciPy checker ran twice with identical JSON under one BLAS
-thread and rejected -O/-OO and six invalid inputs. A fixed four-site chain at
-Omega=0.1 and 1, V=kappa=1, T=6 gives eight excitation-cutoff comparisons. At weak
-drive q=2 has full-record upper bound 0.018 and observed three-bin dark/bright TV
-about 0.000006314. At equal scales q=1 and q=2 have observed coarse-record TV about
-0.496582 and 0.100045. Coarse TV is a lower bound on finer-record error, not an
-upper bound. The small exact model is classically easy; no size scaling is inferred.
-
-The [report](experiments/emission_memory_v1/REPORT.json) also records 160 moment
-envelopes, 160 drift inequalities, 28 factorial decay identities, eight boundary
-norms, eight jump ranks and degree-class/renewal identities. The q=1 n=7/10 tests
-propagate only reduced spaces, not full larger spin models. Repeated photons are
-explicitly checked, not forbidden by q. Matrix-exponential complex128 diagnostics
-are not interval certificates; the general record bounds follow from the proof.
-
-Checker SHA256: `bd8e4ab2cbcd10ec4b4b8601478edc7ef77b6b8c09945e725f59311893da768c`.
-Report SHA256: `5220059b73583e542f78520d2d332a217a0e92557c6dba914f2d9757d5d69584`.
-
-No quantum shots, laboratory data, native trajectory/tensor package, large-system
-run or timing benchmark was used. No old scientific verifier was rerun or upstream
-implementation imported. Primary HTML/abstracts and publisher summaries were
-inspected; no PDF or figure was analyzed. Source scope is explicit in the note,
-and the search is not an exhaustive novelty or significance audit.
+No new scientific code, numerical simulation, experiment, quantum circuit, timing
+benchmark or scientific-verifier run was performed. Only the revision note and
+current documentation/routing change. Earlier proofs, code, reports and data
+are unchanged; their verification claims remain historical.
 
 ## Preserved evidence
 
-The complete prior ledger and its links remain at the pinned
-[pre-memory checkpoint](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/7faa7b9935e5ec445e975b3cf1d695ae54521066/STATUS.md).
-Older current/next headings describe their checkpoints, not competing tasks.
-All previous proofs, sources, code, reports, data, licenses and rights are unchanged.
+The full preceding ledger is pinned at the
+[pre-revision checkpoint](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/4d6204640d70d006ae637ce4c7830a033832a8d5/STATUS.md).
+[Note 26](exploration/phase_3/EMISSION_MEMORY_26.md) retains its fixed-initial-state
+record bound and fixed-collective-drive classical regime, not a fixed-local-drive
+thermodynamic claim. [Note 25](exploration/phase_3/RECORD_INSTRUMENT_25.md) retains
+the full-record quantum construction. All earlier spectral and dynamical results
+keep their own scopes and limitations. Old next steps are dated history.
+
 Climate/dynamics remain open; Manthan paused; battery/operator routes parked;
 both independent spin-offs and Phase-2 Note 27 retain their boundaries. Manuscript
-preparation remains on hold. Only the parent repository is modified; no contact,
-paid/unattended work, release, merge or repository administration change occurred.
+preparation is on hold. No outside contact, paid/unattended work, release, merge,
+new repository or administration change occurred. Only Quantum-Assisted-Algorithm-
+Discovery is modified; original LICENSE and third-party rights are preserved.
