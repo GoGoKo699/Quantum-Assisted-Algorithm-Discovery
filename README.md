@@ -1,70 +1,74 @@
 # Quantum-Assisted Algorithm Discovery
 
 **Can circuit-model quantum computation obtain useful information more effectively
-than strong classical alternatives?** Direct samples and model-first analysis
-remain authorized. Essential access, accuracy and output costs stay explicit.
-See [AGENTS.md](AGENTS.md). Manuscript preparation remains on hold.
+than strong classical alternatives?** Direct samples and model-first exploration
+are allowed; a learned classical program is optional. Essential access, accuracy,
+output and validation costs remain explicit. See [AGENTS.md](AGENTS.md).
 
-**No useful quantum advantage is established. No new repository is needed.**
+**No useful quantum advantage is established. Manuscript preparation is on hold.**
 
-## Current decision: the source-matched activity test favors a classical contraction
+## Current checkpoint: activity claim closed, evidence preserved
 
-[Classical activity acquisition 29](exploration/phase_3/CLASSICAL_ACTIVITY_ACQUISITION_29.md)
-executes the comparison requested by [Claim 28](exploration/phase_3/EMISSION_ACTIVITY_CLAIM_28.md).
-For its seven-emitter periodic Ising calibration, a two-mode tilted model was
-acquired from the generator, not supplied or fitted to target trajectories.
-The ground-start covariance is reproduced with observed errors 3.32e-5, 3.18e-6
-and 3.75e-7 for the three declared observation windows. These are finite numerical
-diagnostics, not interval certificates or a theorem for growing rings.
+[Closeout 30](exploration/phase_3/ACTIVITY_CLAIM_CLOSEOUT_30.md) completes the
+repository handoff for the two-window emission-covariance proposal. That proposal
+is **not selected for further quantum-advantage development on the present evidence**.
+The classical acquisition thought potentially costly was performed at the specified
+seven-emitter parameter point, and a small tilted contraction reproduced the chosen
+statistic closely. Generic Monte Carlo precision is therefore not an adequate sole
+classical baseline for this example.
 
-Exact translation/reflection reduction first lowers the relevant operator sector
-from 16,384 coordinates to 1,300. One sparse factorization and right/left slow-mode
-solves acquire the reusable small model. Full invariant-sector exponential action
-provides a separate reference. Acquisition and validation are both recorded; no
-unknown phase rates, stationary-state preparation, burn-in or photon dataset is
-provided free. The small model retains the ground state's slow projection; omitted
-fast-transient effects are part of its tested error, not assumed absent.
+This is not a proof that all emitter systems are easy, a full-record accuracy
+claim, or a measured quantum runtime disadvantage. The quantum flag/instrument
+constructions remain conditional references. No replacement application or new
+research task is started in this wrap-up, and no new repository is needed.
 
-The reduced matrices compute the requested scalar, not an automatically positive
-full photon-record law. Individual moment errors are larger than covariance errors
-in this example. Other windows, parameters or larger systems require new validation.
-The exact spatial symmetry itself does not establish polynomial scaling in n.
+## Read the completed comparison
 
-This calibration does not justify quantum resource compilation for the proposed
-activity-precision advantage. Amplitude estimation improves generic Monte Carlo,
-not deterministic evaluation of an adequate small model. Its quantum construction
-remains valid and the broader emitter family is not declared easy. The
-[work order](work_orders/CURRENT.md) returns to a bounded positive-mechanism screen,
-not another generic estimator or automatic increase in emitter count.
+| Evidence | Contents |
+|---|---|
+| [Acquisition 29](exploration/phase_3/CLASSICAL_ACTIVITY_ACQUISITION_29.md) | Model acquired from the supplied generator; windows 1, 4, 16; [code](experiments/activity_acquisition_v1/verify.py) and [report](experiments/activity_acquisition_v1/REPORT.json) |
+| [Cross-check 29B](exploration/phase_3/CLASSICAL_ACTIVITY_CROSSCHECK_29B.md) | Separate calculation at windows 1, 5, 20; extra tilted-mode refinement; [code](experiments/activity_acquisition_crosscheck_v1/verify.py) and [report](experiments/activity_acquisition_crosscheck_v1/REPORT.json) |
+| [Closeout decision](exploration/phase_3/ACTIVITY_CLAIM_CLOSEOUT_30.md) | What is established, what is not, and the conditions for reopening |
+| [Import/replay manifest](provenance/activity_closeout_30.json) | Hashes of the previously local 29B payload and the maintenance replay |
 
-## Executed acquisition and validation
+Both evidence sets concern one periodic seven-emitter calibration, with ground
+initialization and no supplied phase rates or fitted photon data. Their observation
+windows are different and must not be relabeled. Results are finite floating-point
+diagnostics, not interval proofs, all-size tractability or experimental validation.
+The closeout retains the original numerical files rather than rewriting history.
+
+## Reproduce cross-check 29B
 
 ```sh
-OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python experiments/activity_acquisition_v1/verify.py
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python experiments/activity_acquisition_crosscheck_v1/verify.py
 ```
 
-Python 3.10+, NumPy and SciPy. The [report](experiments/activity_acquisition_v1/REPORT.json)
-records the acquired matrices, three covariance comparisons, symmetry intertwining,
-independent propagation, solver-shift and initial-state controls. The final script
-ran twice with identical JSON, rejecting -O/-OO and five invalid inputs.
-No quantum circuit, laboratory data, large-system study or timing comparison was
-performed. No earlier scientific verifier was rerun or historical file changed.
+Python 3.10+, NumPy and SciPy. The unchanged checker was replayed once during
+closeout and reproduced its archived report byte-for-byte; its invalid-input
+controls passed and -O/-OO invocations refused execution. Other historical
+scientific verifiers were not rerun. This maintenance replay is not new research,
+a quantum circuit, a larger-system study or a performance comparison.
 
-## Preserved work
+## Continuation and preserved work
 
-[Revision 27](exploration/phase_3/STRATEGIC_REVISION_27.md) governs priorities.
-[Record instrument 25](exploration/phase_3/RECORD_INSTRUMENT_25.md),
-[emission memory 26](exploration/phase_3/EMISSION_MEMORY_26.md), and Claim 28 keep
-their original mathematical scopes. Earlier spectral and dynamical results remain
-quantitative references, not rejected by this finite calibration. Direct samples
-need not become a classical program. No third classical spin-off is being created.
+The [current work order](work_orders/CURRENT.md) records the closed checkpoint;
+it no longer requests the completed acquisition. A subsequent continuation starts
+from [Revision 27](exploration/phase_3/STRATEGIC_REVISION_27.md), not by automatically
+increasing emitter count, tightening accuracy or extending the last certificate.
+The parent exploration remains open. Supporting results are not a substitute for
+a useful quantum contribution.
 
-The existing independent projects own their further development. The active parent
-branch is `research/prx-quantum-phase2`; `main` remains an entry point, not a merged
-copy of later work. [STATUS.md](STATUS.md) links current claims and pinned history.
-The [project map](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/main/PROJECT_MAP.md)
-and charter remain subject to the direct-output and model-first extensions.
-Climate/dynamics remain open, Manthan paused, battery/operator routes parked,
-and Phase-2 Note 27 closed. Earlier proofs, code, reports, data, the original
-[MIT license](LICENSE), Copyright (c) 2026 Ruge Lin, and third-party rights remain.
-Only Quantum-Assisted-Algorithm-Discovery may be modified in this context.
+[Claim 28](exploration/phase_3/EMISSION_ACTIVITY_CLAIM_28.md),
+[record instrument 25](exploration/phase_3/RECORD_INSTRUMENT_25.md),
+[emission memory 26](exploration/phase_3/EMISSION_MEMORY_26.md), and earlier spectral
+and dynamical studies keep their original scopes. Climate/dynamics remain open
+alternatives, Manthan paused, and battery/operator routes parked. The two
+independent classical spin-offs own their further development. No third spin-off
+is created, and Phase-2 Note 27 remains closed.
+
+The active research branch is `research/prx-quantum-phase2`. `main` is a public
+entry point, not a merged copy of the research. [STATUS.md](STATUS.md) links current
+claims and pinned history; the [project map](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/main/PROJECT_MAP.md)
+records branch roles and the direct-output/model-first scope. Earlier proofs,
+code, reports, data, third-party rights and the original [MIT license](LICENSE),
+Copyright (c) 2026 Ruge Lin, are preserved. Only this parent repository is writable.
