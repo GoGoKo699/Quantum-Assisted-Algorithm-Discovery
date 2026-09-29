@@ -1,67 +1,74 @@
 # Claim ledger
 
-## Current checkpoint: smooth response compression, 28 September 2026
+## Current checkpoint: positive spatial-window response, 29 September 2026
 
-[Note 20](exploration/phase_3/SMOOTH_RESPONSE_COMPRESSION_20.md) completes a bounded
-smooth alternative to sharp-band classification. A real function of the FULL
-Liouvillian preserves its spectral probabilities while moving line positions.
-If its core frequency error is delta inside |omega|<=kappa, the Cauchy(gamma)-
-broadened response differs in TV by at most
-min(1, ||Lo||^2/kappa^2+delta/(pi gamma)). The same bound holds after common binning.
-The alternating-offset collective response has ||Lo||^2=d^2 exactly.
+[Note 21](exploration/phase_3/POSITIVE_SPATIAL_WINDOWS_21.md) gives a positive
+finite-window sampler for the high-temperature collective raising response of
+a bounded nearest-neighbor spin chain at the original Lorentzian linewidth.
+Shifted block partitions retain short end blocks and original local frequency
+carriers. For each partition the disconnected spectrum is exactly the mixture
+of complete block spectra with weights |block|/n. Averaging partitions produces
+overlapping windows, not negative inclusion-exclusion weights or postselection.
 
-An existing bounded odd amplitude-multiplication polynomial supplies a quantum
-encoding of K=2 kappa P(L/alpha) without a smallest-gap or cutoff-edge-margin
-promise. It retains a positive full spectral law and is not state postselection.
-It is not a smooth projector inserted into Note 19, a smaller Hilbert space,
-or a new effective physical spin Hamiltonian. Tail probability is paid for, not
-renormalized away. Physical linewidth and the useful output are unchanged.
+Let a=2+log(C)/mu+2/(exp(mu)-1)^2 and b=v/mu for a uniform LR envelope.
+With X_ell=9 sum J_i^2(a+b/(2 gamma))/(n ell gamma^2), the full continuous-law
+TV error is at most min(1,X_ell,sqrt(X_ell/2)), also after common binning. The
+proof uses HS-orthogonality of distinct cut residuals, a vanishing first
+resolvent term, and a single-site locality bound with a separate collective
+norm argument. It does not assume that all physical cross correlations vanish.
+No spectral gap, sharp projector, parity-purity or memory-decay promise is used.
 
-The generic transform-then-simulate budget is ~(alpha/kappa)(1+kappa/gamma),
-so the leading alpha/gamma cost remains. This familiar cancellation and the
-generic oracle-transform restriction are explicitly attributed to prior work.
-The latter does not lower-bound state-specific sampling or an explicit spin
-family against every classical/quantum algorithm. No gap-independent speedup,
-quantum-classical separation, publication priority or measured benefit is claimed.
+A sufficient size O(epsilon_loc^-1[(J_*/gamma)^2+(J_*/gamma)^3]) is independent
+of n but may be large. It is not a necessary size or an empirical correlation
+length. Uniform offsets have an exact one-line response and need no such bound.
+The theorem is for a normalized infinite-temperature trace and common linewidth,
+not arbitrary finite-temperature, pulse, long-range or dissipative models.
+Locality, resolvent and spectral-sampling methods are prior ingredients; priority
+for this particular collective positive-mixture specialization is unassessed.
 
-The [current work order](work_orders/CURRENT.md) asks for a physical-locality
-comparison: a positive finite-window approximation of the collective response,
-including cross terms and boundary error, against direct local quantum sampling
-and strong classical methods. Generic cutoff engineering is not an indefinitely
-active workstream. No locality-based TV result or new useful regime is established
-by Note 20. Direct samples and model-first analysis remain authorized.
+## The computational implication is shared, not a separation
 
-## Executed evidence
+The classically selected block requires at most 2ell quantum system qubits plus
+ancillas, with the existing linewidth-time evolution and preparation/access costs.
+The same mixture is available classically through block diagonalization or stronger
+methods. Explicit preprocessing is polynomial in total n at fixed linewidth,
+local parameters and accuracy, with exponential dependence on the sufficient
+block size in the simple dense upper bound. It can be reused across samples.
+Uniform alternating chains require only O(ell) distinct block templates.
 
-The independent NumPy diagnostic ran twice with identical JSON and exit code zero;
--O/-OO refused execution. Three fixed n=2,4,6 chains supplied six moment checks,
-six smooth-cap comparisons and three bounded cubic-polynomial comparisons.
-Eight continuity checks, four Lorentzian translation checks, six invalid-input
-rejections and a state-filtering negative control also passed.
-The [report](experiments/smooth_response_v1/REPORT.json) records scope and results.
+Neither that dense upper bound nor the sufficient block size is a lower bound on
+classical computation. No useful quantum-classical separation, NMR prediction
+improvement, compiled circuit or runtime advantage has been established. The
+[work order](work_orders/CURRENT.md) directs the next comparison to necessary
+response complexity inside finite regions, not another generic transformation
+or an increase in total chain length. Direct samples and model-first scope remain.
 
-The analytic C2 cap is not the efficient amplification polynomial from the cited
-theorem. No scalable polynomial synthesis or phase sequence was implemented.
-The numerical controls are complex128 at tolerance 3e-10, not interval certificates.
-The continuous-law result follows from the proof rather than finite bins.
-Both runs emitted an unrelated runtime-startup warning; the research diagnostic
-completed normally and its report was deterministic.
+## Executed scope
 
-No experimental spectrum, native application, climate run, quantum circuit,
-hardware, model training or timing benchmark was used. No upstream code or data
-was imported, and no older verifier was rerun. Primary spectral-amplification and
-QSVT statements were inspected, with two successful PDF-page screenshots and one
-failed screenshot attempt; no experimental figure was digitized. Source scope
-and hashes are in the note. This is not an exhaustive priority audit.
+The final NumPy checker ran twice with identical JSON under one BLAS thread.
+-O/-OO and six invalid inputs were rejected. Four fixed chains (2,4,6 and a
+nonuniform 5-site control with a negative coupling) check 33 partitions, 99 block-
+mixture bin identities, 90 cut-residual orthogonality identities, 66 vanishing
+first-order and 66 second-resolvent identities, 99 residual envelopes and 42 binned
+bounds. Fourth moments, uniform-field exact limits and two invalid simplifications
+are checked. Some sufficient bounds saturate at one. The
+[report](experiments/spatial_windows_v1/REPORT.json) records all values and counts.
 
-## Preserved historical evidence
+These are complex128 mathematical diagnostics at tolerance 4e-9, not interval
+certificates, experimental spectra, a native NMR run, a compiled quantum circuit,
+or performance data. Continuous and all-size claims follow from the proof, not
+finite cases or quadrature. No prior suite was rerun; no upstream implementation
+or experimental dataset was imported. A primary LR theorem page was visually
+checked; a separate overview screenshot failed and supplied no figure data.
+The source search was bounded, not an exhaustive priority audit.
+
+## Preserved evidence
 
 The preceding ledger and its links are pinned at the
-[pre-smoothing checkpoint](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/4628eb7a18823bbe3b974c07d11fc671da3ecb9e/STATUS.md).
-Notes 15-19 and all earlier source, proofs, checks and reports remain unchanged.
-Their current/next headings describe their original checkpoints, not concurrent
-work orders. Climate/dynamics remain open; Manthan is paused, battery/operator
-routes parked, both classical spin-offs independent and Phase-2 Note 27 closed.
-Manuscript preparation remains on hold. Earlier licenses and third-party rights
-are retained. Only the parent repository is modified; no outside contact,
+[pre-window checkpoint](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/dfecc43cccda4843a209a9a55f5dc8547850c0ad/STATUS.md).
+Notes 15-20, all earlier proofs, code, reports, datasets and rights remain unchanged.
+Older current/next headings are dated checkpoints, not concurrent work orders.
+Climate/dynamics remain open; Manthan is paused; battery/operator routes parked;
+both spin-offs independent and Phase-2 Note 27 closed. Manuscript preparation
+remains on hold. Only this parent repository is modified; no outside contact,
 paid/unattended work, release, merge or new repository is part of this checkpoint.
