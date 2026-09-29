@@ -1,0 +1,70 @@
+{
+  "Z1_Z2_Z12": [
+    0.955371465474,
+    0.841453956225,
+    0.803092999927
+  ],
+  "checks": [
+    "physical marginal",
+    "tilted/flag identity",
+    "positive probabilities",
+    "bounded moments",
+    "jump completeness",
+    "u=0",
+    "no independent restart",
+    "coherent independent emitters",
+    "small classical phase bypass",
+    "wrong parity flag"
+  ],
+  "control_parameters": {
+    "Omega": 1.0,
+    "V": 1.0,
+    "graph": "periodic ring",
+    "initial": "ggg",
+    "kappa": 1.0,
+    "n": 3,
+    "u": 1.0,
+    "window_width": 1.0
+  },
+  "flag_order": [
+    "00",
+    "10",
+    "01",
+    "11"
+  ],
+  "flag_probabilities": [
+    0.803092999927,
+    0.038360956298,
+    0.152278465547,
+    0.006267578228
+  ],
+  "independent_coherent_Z1_Z2_Z12": [
+    0.953393378202,
+    0.815197842148,
+    0.775724566822
+  ],
+  "independent_coherent_covariance": -0.001479657806,
+  "invalid_inputs_rejected": 6,
+  "not_executed": [
+    "amplitude estimation",
+    "Lindblad simulation circuit",
+    "published metastable parameter slice",
+    "large chain",
+    "performance benchmark"
+  ],
+  "phase_control": {
+    "Z1_Z2_Z12": [
+      0.922729767844,
+      0.887995933745,
+      0.822919783459
+    ],
+    "meaning": "Illustrative supplied classical rates, not a fitted spin reduction"
+  },
+  "precision": "complex128 at tolerance 2e-10; reported decimals rounded to 12 places; one exact Fraction control",
+  "quietness_covariance": -0.000808099361,
+  "scope": "One three-emitter algebra check, not a quantum run, metastability demonstration, or runtime comparison.",
+  "source_slice_was_not_simulated": "V/kappa=250 and Omega/kappa=50 from Rose et al.; no scaling inferred.",
+  "status": "pass",
+  "two_event_absorbing_survival_exact": "1/4",
+  "two_event_wrong_flip_survival_exact": "1/2"
+}
