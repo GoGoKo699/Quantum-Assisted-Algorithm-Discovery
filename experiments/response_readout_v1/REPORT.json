@@ -1,0 +1,76 @@
+{
+  "J": 1,
+  "bin_contract": {
+    "interior_bins": 10000,
+    "interior_range": [
+      -50,
+      50
+    ],
+    "overflow_bins": 2,
+    "uniform_width": "1/100"
+  },
+  "cosine_taylor_degree": 78,
+  "d": 1,
+  "exact_repair_checks": 2,
+  "full_correlation_interval": [
+    "24230507921/250000000000",
+    "19384406337/200000000000"
+  ],
+  "half_time_checks": 4,
+  "invalid_inputs_rejected": 6,
+  "n": 6,
+  "negative_raw_bin_detected": true,
+  "readout_controls": [
+    {
+      "N": 256,
+      "caveat": "Perturbations test the conditional certificate; no tensor algorithm acquired them.",
+      "clock_tail_bound": 0.0016643226405622684,
+      "complete_per_draw_bound_before_arithmetic": 0.028339345974670513,
+      "finite_clock_bin_TV_diagnostic": 0.001716460483796283,
+      "gamma": 0.25,
+      "lag_count": 255,
+      "max_half_time": 12.75,
+      "moment_wrap_bound": 0.014184110341402729,
+      "per_lag_absolute_error": 0.002,
+      "readout_TV_bound": 0.012490912992705517,
+      "tau": 0.1
+    },
+    {
+      "N": 256,
+      "caveat": "Perturbations test the conditional certificate; no tensor algorithm acquired them.",
+      "clock_tail_bound": 2.7607801939234353e-06,
+      "complete_per_draw_bound_before_arithmetic": 0.03303462502977314,
+      "finite_clock_bin_TV_diagnostic": 0.0016006489579895528,
+      "gamma": 0.5,
+      "lag_count": 255,
+      "max_half_time": 12.75,
+      "moment_wrap_bound": 0.024310244243628387,
+      "per_lag_absolute_error": 0.002,
+      "readout_TV_bound": 0.008721620005950831,
+      "tau": 0.1
+    }
+  ],
+  "remainder_moment_order": 80,
+  "scope": "One six-spin exact-rational witness and separate complex128 readout identities; no tensor, quantum, experimental, or performance run.",
+  "status": "pass",
+  "witness_gamma": "1/4",
+  "witness_time": "2",
+  "witnesses": {
+    "free": {
+      "continuous_TV_lower": "155595999563/1000000000000",
+      "correlation_interval": [
+        "-104036709137/250000000000",
+        "-416146836547/1000000000000"
+      ],
+      "declared_bin_TV_lower": "137241910729/1000000000000"
+    },
+    "secular": {
+      "continuous_TV_lower": "7668365487/100000000000",
+      "correlation_interval": [
+        "-38984478529/250000000000",
+        "-31187582823/200000000000"
+      ],
+      "declared_bin_TV_lower": "58101380567/1000000000000"
+    }
+  }
+}
