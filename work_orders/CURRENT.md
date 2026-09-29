@@ -1,63 +1,59 @@
-# Current task: useful quantum mechanisms with explicit circuit data access
+# Current work order: ready for a new circuit-model comparison
 
-29 September 2026. Branch: `research/prx-quantum-phase2`.
-Read [AGENTS.md](../AGENTS.md),
-[hardware decision 05](../exploration/phase_4/NO_QRAM_HARDWARE_BOUNDARY_05.md),
-and the preserved [handover](../HANDOVER.md).
-No new repository is needed. Direct samples remain allowed; manuscripts stay on hold.
+29 September 2026 · `research/prx-quantum-phase2`
 
-## A firm hardware constraint, not a postponed caveat
+**No replacement candidate is selected. This maintenance pass starts no research.**
+Read [AGENTS.md](../AGENTS.md), [HANDOVER.md](../HANDOVER.md), and
+[hardware decision 05](../exploration/phase_4/NO_QRAM_HARDWARE_BOUNDARY_05.md).
+Manuscript preparation remains on hold; no new repository is needed.
 
-Assume an ambitious fault-tolerant gate-model processor, not fast QRAM. Classical
-control and ordinary classical memory are allowed. Coherent logical registers
-are allowed; arbitrary large quantum-addressable classical tables are not a cheap
-primitive. This supersedes the former current task of refining the sparsifier
-under its original coherent-RAM access assumption.
+## Carry forward the decision
 
-A data oracle, amplitude preparation or block encoding must have an explicit gate
-construction and cost. Computing a compact function reversibly is allowed with
-its arithmetic and precision costs. Compiled table lookups are allowed only as
-ordinary circuits with charged gates, depth, ancillas, routing and setup/updates.
-Neither QROM terminology nor a one-time loading claim hides repeated lookup cost.
-Symbolic bounds suffice at this stage; no vendor commitment or device compiler
-is required. Do not turn the owner's hardware boundary into a QRAM engineering task.
+Fault-tolerant gate-model computation is allowed; fast QRAM is not an assumption.
+The restriction covers arbitrary input and changing work tables, not merely data
+loading. Ordinary logical registers, classical control and RAM, reversible formulas,
+and gate-compiled lookups are allowed with all gate/depth/workspace/precision,
+routing, setup, update, and repeated-access costs counted. Do not hide access in
+an oracle, state preparation, QROM name, or block encoding.
 
-## Retain the result without letting it set the next agenda
+[Short-seed Note 04](../exploration/phase_4/SHORT_SEED_SPARSIFICATION_04.md) is parked
+as an active lead. Its RAM-model theorem and finite evidence remain unchanged,
+with correctness and priority questions unresolved. It is not proved wrong and
+not promoted as hardware-compatible. No automatic QRAM design, table compilation,
+sparsifier audit, or third spin-off is the next task.
 
-[Short-seed Note 04](../exploration/phase_4/SHORT_SEED_SPARSIFICATION_04.md) remains
-conditional theory, with unchanged proofs/checks and unresolved audit/priority.
-Its input-coordinate, spanner, resistance and output bookkeeping data still need
-coherent access. Removing a random table is not removing every table. This route
-is parked under the accepted hardware model; it is not a new practical result
-or a mathematically disproved algorithm. Do not automatically compile its tables
-into huge circuits merely to keep the candidate alive.
+## On the next explicit research continuation
 
-## Next explicit research continuation
+Compare a bounded set of independently useful models with ordinary-circuit quantum
+operations. For each, state the useful observable and necessary accuracy, the
+shared classical input, and the full path from preparation through coherent work
+to measurement and output. Identify every data access, including intermediate
+bookkeeping, its circuit or classical-control implementation, and total cost.
+Symbolic resource bounds suffice initially; no vendor choice, full compiler,
+near-term device, or empirical benchmark is required.
 
-Make one bounded comparison of independently useful models whose quantum operation
-has an ordinary-circuit description. Show the actual classical input, preparation,
-coherent evolution/arithmetic, measurement and useful output together. For every
-access operation, specify whether it is classical control, reversible computation,
-or a charged gate-based lookup. Include dynamically created work data and any
-repeated state preparation; input loading alone is not the whole audit.
+Put the positive quantum mechanism, strongest adequate classical acquisition or
+bypass, reuse/sample demand, and one discriminating test in the same proposal.
+Neither a giant Hilbert space nor an abstract query improvement is an advantage
+under this contract. A universal classical lower bound is not required to explore
+a well-motivated conditional opportunity.
 
-The useful quantity, necessary accuracy, strongest adequate classical calculation,
-and one discriminating test must appear in the same proposal. No arbitrary hard
-algebra problem, free state oracle or unnecessarily fine precision is acceptable.
-A universal classical lower bound is not required to explore a credible conditional
-opportunity, but a query-model improvement alone is not the accepted hardware claim.
+Do not preselect a graph retrofit, revive the closed emitter covariance, or change
+to unknown-source sensing merely to avoid input costs. A graph route could return
+only with a distinct useful gate construction and a credible complete comparison.
+Other archived methods require fresh access and model checks before becoming leads.
+Do not invent extra precision or difficult instances solely to defeat a baseline.
 
-A QRAM-free graph construction is possible to consider only when it has a specific
-useful purpose and a credible complete cost, not by inheriting Note 04's RAM time.
-The shortlist is not limited to graphs; no replacement is selected here. Do not
-reopen the closed emitter covariance or change to a physical-source sensing input
-model without a new justified scope and mechanism. Preserve earlier negative and
-conditional findings before beginning another candidate.
+## Checkpoint and action discipline
 
-## Execution boundary
+Preserve prior conclusions and scientific bytes. Use
+[canonical paths](../exploration/phase_4/README.md) and the
+[alternate-checkpoint register](../handover/ALTERNATE_CHECKPOINTS.md); old attached
+patches and next-step files do not override this work order. Finish each research
+checkpoint in the repository before changing candidates.
 
-This owner-decision checkpoint performs documentation/link/diff checks only.
-No scientific verifier or numerical benchmark is run. Preserve old scientific
-notes, code, reports, handover, license and rights. Only Quantum-Assisted-Algorithm-
-Discovery may be modified. No outside contact, paid/unattended work, new repository,
-third spin-off, branch merge, release, manuscript revival or admin change follows.
+[Reproduction instructions](../handover/REPRODUCING.md) describe opt-in checks.
+No scientific suite is rerun for this tidy. Only Quantum-Assisted-Algorithm-Discovery
+may be modified. Keep licenses and third-party rights. No outside contact,
+paid/unattended work, manuscript revival, branch merge, release, new repository,
+or administration change is authorized here.

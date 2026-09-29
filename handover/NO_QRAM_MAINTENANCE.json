@@ -1,0 +1,151 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-29",
+  "repository": "GoGoKo699/Quantum-Assisted-Algorithm-Discovery",
+  "purpose": "Documentation alignment after the owner no-QRAM decision; no new research.",
+  "starting_revisions": {
+    "main": {
+      "commit": "33c2fa57530a6adeeb31a37635ec981d39697dcd",
+      "tree": "d6343bd8f5023d7c17ea25d7d122ea3c401bf335"
+    },
+    "research/prx-quantum-phase2": {
+      "commit": "f957571985efd242cd7d4f3d8058641b483f07e5",
+      "tree": "133eae816043df4aafd334e5f1fb84c5d655b629"
+    },
+    "research/sharing-core-publication": {
+      "commit": "ebf9bc819963b880643f4bfe370a485798c24697",
+      "policy": "Leave unchanged."
+    }
+  },
+  "scope": {
+    "hardware": "Fault-tolerant gate-model computation; no assumed fast QRAM for input or work tables.",
+    "current_lead": "Short-seed sparsifier parked as an active advantage lead; conditional science preserved.",
+    "replacement_candidate_selected": false,
+    "scientific_verifiers_run": 0,
+    "historical_proof_or_novelty_audit": false,
+    "branch_merge": false,
+    "release": false,
+    "outside_repository_writes": false
+  },
+  "navigation": {
+    "status": "pass",
+    "scope": "Changed Markdown only; relative and canonical repository links resolved against inspected current paths and preserved historical references. No HTTP validation of third-party URLs or exhaustive historical-document audit.",
+    "markdown_pages": 15,
+    "repository_link_occurrences": 156,
+    "unique_repository_targets": 45,
+    "external_links_not_http_checked": [
+      "https://github.com/GoGoKo699/Algebraic-Loop-Certificates",
+      "https://github.com/GoGoKo699/Sparse-Weil-Reconstruction"
+    ],
+    "broken_destinations": 0,
+    "temporary_paths": 0,
+    "unclosed_fences": 0
+  },
+  "documentation_allowlist": {
+    "main": [
+      "AGENTS.md",
+      "PROJECT_MAP.md",
+      "README.md",
+      "STATUS.md",
+      "work_orders/CURRENT.md"
+    ],
+    "research": [
+      "HANDOVER.md",
+      "README.md",
+      "STATUS.md",
+      "experiments/README.md",
+      "exploration/README.md",
+      "exploration/phase_4/README.md",
+      "handover/ALTERNATE_CHECKPOINTS.md",
+      "handover/README.md",
+      "handover/REPRODUCING.md",
+      "work_orders/CURRENT.md"
+    ]
+  },
+  "added_record": "handover/NO_QRAM_MAINTENANCE.json",
+  "preservation": {
+    "policy": "No existing scientific note, code, report, dataset, license, or provenance manifest may differ. Existing handover/MAINTENANCE.json remains unchanged.",
+    "research_AGENTS_blob": "2798e6f1370b5c1dbd2c25bbd7aae41b1e624906",
+    "LICENSE_blob": "e17a781bf47c4aadf18b68fc593846a1193b86c1",
+    "PROVENANCE_blob": "7bac7419f9aa53da88fd3c02c1c0753369cc2935",
+    "phase_2_tree": "ba1c0b0307dda35a29cc6ac2088f62a602a98a25",
+    "phase_3_tree": "56764988397f41c01b7a7f4781feed44a77f0190",
+    "phase_4_notes": {
+      "MODEL_MECHANISM_SCREEN_01.md": "a00b9f6859324a7c8db92d49703c08bd1322f79a",
+      "TASK_MATCHED_READOUT_02.md": "1365c243787d1dde0b887c0bd488cfa511fadc8e",
+      "IMPLICIT_GAUSSIAN_GRAPH_03.md": "3daf5a173e22904f9acd7fe0e8a6431ac832440b",
+      "SHORT_SEED_SPARSIFICATION_04.md": "4a7914d74371f49546579ede5f929c116bc548e9",
+      "NO_QRAM_HARDWARE_BOUNDARY_05.md": "0dfcfa68d7764db84b9231da0238706bae12340d"
+    },
+    "phase_4_experiment_trees": {
+      "task_matched_readout_v1": "62c55b52a76b87a7afe588c3a56414b3ae0432c3",
+      "implicit_graph_contract_v1": "deafddf24c384c01991b4ce902385c522e6404a0",
+      "short_seed_sparsification_v1": "56dabbb3c43dd8a5887c302a5f5d4de238267e0e"
+    }
+  },
+  "attachment_checks": [
+    {
+      "archive": "Implicit_Gaussian_Graph_Checkpoint_03.zip",
+      "sha256": "b1793817a32afc92fba5638599ac738039a3d560986d5cbe43b75da31475c70b",
+      "crc": "pass",
+      "files": [
+        {
+          "path": "exploration/phase_4/IMPLICIT_GAUSSIAN_GRAPHS_03.md",
+          "bytes": 19819,
+          "sha256": "4a90c0f311b901d5cc290ec5f4eb4822c91c19b4e7e293ace88bd3401fce3ad9",
+          "git_blob": "002ba9ea1575c7c878cca772b920b726b7876704"
+        },
+        {
+          "path": "experiments/implicit_graph_v1/verify.py",
+          "bytes": 7197,
+          "sha256": "e4372d43306d5583892736cbf34abaa03c19fc326aaa2228945ed9223c392358",
+          "git_blob": "aa1c3f09a105c712b4225c53e45a555be7fd1cb4"
+        },
+        {
+          "path": "experiments/implicit_graph_v1/REPORT.json",
+          "bytes": 1302,
+          "sha256": "b7a1f77c300325589e5e51cc66c26980da7fc6f556aa0ecdfd911d0d25c97054",
+          "git_blob": "dc556297db6b6c4e3823dea31d0555b4c46a3280"
+        }
+      ],
+      "executed": false,
+      "imported": false
+    },
+    {
+      "archive": "Short_Seed_Sparsification_Checkpoint_04.zip",
+      "sha256": "6b5936c903d9090de0d7adc2bb087fb728bea81da095b54471a37ca68af90514",
+      "crc": "pass",
+      "files": [
+        {
+          "path": "exploration/phase_4/SHORT_SEED_SPARSIFICATION_04.md",
+          "bytes": 26772,
+          "sha256": "8dfbb1a071da5084c13c01aa389b2ec78f9a3233763d40dca1f44b9cf6d64a2b",
+          "git_blob": "686f4c09179778cb274e6f8ccd6212588c8c26a9"
+        },
+        {
+          "path": "experiments/short_seed_sparsification_v1/verify.py",
+          "bytes": 9377,
+          "sha256": "1a7d959a2fd6ba6a075bab1966d5c9249ec199b1a1057dc85ff7d9c42dd1af86",
+          "git_blob": "fdf47bc5ac0a146cb92cb5d1d722cf23b8f228b6"
+        },
+        {
+          "path": "experiments/short_seed_sparsification_v1/REPORT.json",
+          "bytes": 1952,
+          "sha256": "1816cf4aaeb187aa67419204fbb252f3cb3ffee2771b751126abfa055c2d71ac",
+          "git_blob": "54d3cce092f8d81364703de3bb437b59c6c37eab"
+        }
+      ],
+      "executed": false,
+      "imported": false
+    }
+  ],
+  "matching_attached_hardware_note_blob": "0dfcfa68d7764db84b9231da0238706bae12340d",
+  "not_claimed": [
+    "Exhaustive historical or external-link audit",
+    "Scientific rerun or proof audit",
+    "QRAM feasibility forecast or gate implementation",
+    "CI success",
+    "A new quantum advantage"
+  ],
+  "postwrite_validation": "Compare each commit with its stated parent against the documentation allowlist plus this record; check changed blobs and preserved tree identities before reporting completion."
+}

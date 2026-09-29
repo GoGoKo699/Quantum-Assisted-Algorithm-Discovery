@@ -1,16 +1,19 @@
-# Exploration archive
+# Exploration index
 
-[Handover](../HANDOVER.md) · [Current work order](../work_orders/CURRENT.md)
+[Handover](../HANDOVER.md) · [Status](../STATUS.md) · [Current work order](../work_orders/CURRENT.md)
 
-These directories preserve the research history. Their contents are not concurrent
-agendas and their filenames are not claims of completed novelty or advantage.
+The current hardware boundary is **fault-tolerant circuits without assumed fast
+QRAM**. Historical notes retain their original assumptions; neither an old next
+step nor a passing checker makes them eligible under a newer contract.
 
-| Directory | Read it for |
+| Phase | Read it for |
 |---|---|
-| [Phase 3](phase_3/README.md) | Application-first and direct-sampling exploration, ending with activity Closeout 30 |
-| [Phase 2](phase_2/README.md) | Earlier mechanism screens, synthesis/reconstruction comparisons, and the original charter |
+| [Phase 4](phase_4/README.md) | Fresh screens, conditional short-seed graph result, and no-QRAM decision; replacement not selected |
+| [Phase 3](phase_3/README.md) | Application-first and direct-sampling exploration, ending with the activity-covariance closeout |
+| [Phase 2](phase_2/README.md) | Earlier mechanisms, reconstruction comparisons, and original charter |
 
-Use the full path when citing a numbered note: the phases have separate numbering.
-No next phase is opened by this index. A later research continuation selects a
-model–mechanism pair under the current work order, not the last historical heading.
-Scientific files remain at their original paths to preserve citations and provenance.
+One parent exploration continues; these are not parallel default programs. Note
+numbers restart across phases. Cite full paths and distinguish conversation
+variants using the [checkpoint register](../handover/ALTERNATE_CHECKPOINTS.md).
+No scientific file is moved, renamed, or reclassified by this index. The next
+step is set only by the current work order, not by an archived heading.

@@ -1,27 +1,35 @@
 # Experiment archive
 
 [Handover](../HANDOVER.md) · [Reproduction guide](../handover/REPRODUCING.md) ·
-[Phase-3 evidence index](../exploration/phase_3/README.md)
+[Exploration index](../exploration/README.md)
 
-Each versioned directory is an independent scientific checkpoint, not a stage of
-one pipeline and not a requirement to install every historical dependency.
-Original sources, notices, fixtures, manifests, and saved reports stay together.
+Each versioned directory is an independent checkpoint, not a stage of one pipeline.
+Original source, fixtures, notices, and saved reports remain together.
 
-For the latest decision, use `activity_acquisition_v1` (Note 29) and
-`activity_acquisition_crosscheck_v1` (Note 29B). They use different observation
-windows. The closeout imported 29B without overwriting 29; reproduction instructions
-and the last replay scope are in the guide above.
+## Phase-4 evidence
 
-The phase-3 index maps every numbered note to its relevant code. Older directories
-retain synthesis, guided-search, sharing-core, and reconstruction evidence. Their
-past targets and next steps are historical. Further work on independent spin-offs
-belongs to those projects, not a duplicated development agenda here.
+| Directory | What it checks |
+|---|---|
+| [task_matched_readout_v1](task_matched_readout_v1/) | Finite regression and Gaussian readout identities |
+| [implicit_graph_contract_v1](implicit_graph_contract_v1/) | Exact graph, access-index, and comparison controls |
+| [short_seed_sparsification_v1](short_seed_sparsification_v1/) | Finite hashing, matrix moments, rounding, and adaptive-seed controls |
 
-`../verify.py` checks the original guided imports and its own mathematical scope;
-it is not an all-project test runner. Read each source header before execution.
-Write outputs to a temporary directory and never replace stored reports merely
-to make a new environment match. Passing finite checks does not establish a
-physical application, publication priority, or quantum advantage.
+The short-seed algorithm is parked under the no-QRAM hardware boundary. Its
+checker remains useful mathematical evidence; passing it does not supply an
+ordinary-circuit implementation or remove the archived coherent-RAM assumption.
+No experiment is required to reproduce the owner's hardware decision.
 
-No experimental program was run or refactored during this handover. Existing
-code/report pairs and all third-party rights remain unchanged.
+## Earlier evidence and execution
+
+The [phase-3 index](../exploration/phase_3/README.md) maps earlier scripts to notes.
+The activity acquisition and its cross-check use different windows and remain
+separate. The [guide](../handover/REPRODUCING.md) retains their commands and links.
+Older guided, synthesis, sharing-core, and reconstruction work is historical;
+its next-step text does not create an active task or restart an independent spin-off.
+
+Read the source header and applicable note before running a script. Root
+`verify.py` is not an all-project runner. Write regenerated reports outside the
+repository; never overwrite archived output to make a new environment match.
+No scientific code or report is altered or rerun in this tidy. Finite checks do
+not establish proof completeness, publication priority, application usefulness,
+or a quantum speedup. All licenses and third-party rights remain intact.

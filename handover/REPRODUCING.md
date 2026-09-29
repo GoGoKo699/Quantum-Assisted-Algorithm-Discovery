@@ -1,159 +1,127 @@
 # Reproducing the evidence
 
-[Handover](../HANDOVER.md) · [Research index](../exploration/phase_3/README.md)
+[Handover](../HANDOVER.md) · [Exploration index](../exploration/README.md)
 
-**There is no single all-project test and no claim that these scripts demonstrate
-quantum advantage.** Select the evidence you intend to check. Never overwrite a
-saved report with output from a new environment.
+**Reproducible mathematics is not hardware eligibility.** The current no-QRAM
+boundary parks the short-seed algorithm as a lead; its earlier exact checks remain
+available. Passing them does not implement coherent data access or convert its
+RAM-model time into a circuit cost. This maintenance runs no scientific verifier.
 
-## Obtain the correct branch
+## Correct branch and safe output handling
 
 ```sh
 git clone https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery.git
 cd Quantum-Assisted-Algorithm-Discovery
 git switch research/prx-quantum-phase2
 git rev-parse HEAD
-```
-
-The research evidence is not all present on `main`. For the immutable scientific
-closeout, use commit `a286ba415b0550db837e9c8144b80c4f21909d82` in a separate worktree
-or checkout; later handover documentation is not part of that older snapshot.
-Do not force-reset a working tree with uncommitted work.
-
-## Environment and output discipline
-
-Recent emitter checks declare Python 3.10+ with NumPy and SciPy. The last successful
-29B closeout replay recorded NumPy **2.3.5** and SciPy **1.17.0**, with one BLAS
-thread; see [the original manifest](../provenance/activity_closeout_30.json).
-Use an interpreter supported by those pinned packages. The handover does not
-claim to have freshly installed or tested every interpreter/package combination.
-Other historical suites have different requirements; consult their source headers.
-
-Example isolated setup, when the dependencies are not already available:
-
-```sh
-python3 -m venv /tmp/qaad-handover-venv
-. /tmp/qaad-handover-venv/bin/activate
-python -m pip install 'numpy==2.3.5' 'scipy==1.17.0'
+OUT=$(mktemp -d)
 export OPENBLAS_NUM_THREADS=1
 export OMP_NUM_THREADS=1
-OUT=$(mktemp -d)
 python -VV
-python -c 'import numpy, scipy; print(numpy.__version__, scipy.__version__)'
 ```
 
-Package installation needs network access; none is required by the self-contained
-recent checkers after setup. Never use `python -O` or `python -OO`. They disable
-assertions; the guarded checkers reject those modes. Keep regenerated outputs in
-`$OUT`, not over versioned `REPORT.json` files. Floating arithmetic, library versions,
-and BLAS differences can change final decimals. A byte mismatch is a reason to
-inspect numerical tests and provenance, not to replace the reference until it passes.
+Record the actual commit and environment of a rerun. Do not reset a dirty worktree
+or overwrite a versioned `REPORT.json`. Use a separate worktree for a historical
+revision. The instructions below are opt-in reproductions, not a request to run
+all suites before the next research step. No CI pass is implied by this guide.
 
-## The closed activity claim: two separate reproductions
+Never run assertion-dependent checks with `-O` or `-OO`. Install only dependencies
+required by the selected source header, in an isolated environment if needed.
+There is no all-project environment, test runner, or proof-validation command.
 
-**Note 29 — original acquisition; windows 1, 4, 16.**
+## Phase-4 checks
+
+All three source headers specify Python 3.10+. The readout checker uses SymPy and
+NumPy; the graph-contract and short-seed checkers use the standard library.
+
+| Note and source | Saved report | Actual scope |
+|---|---|---|
+| [02: task-matched readout](../experiments/task_matched_readout_v1/verify.py) | [Readout report](../experiments/task_matched_readout_v1/REPORT.json) | Finite regression/symbolic identities and Gaussian covariance arithmetic; not a sensor experiment |
+| [03: implicit graph contract](../experiments/implicit_graph_contract_v1/verify.py) | [Graph report](../experiments/implicit_graph_contract_v1/REPORT.json) | Exact graph/access and comparison controls; not a classifier or randomized sparsifier run |
+| [04: short-seed sampling](../experiments/short_seed_sparsification_v1/verify.py) | [Short-seed report](../experiments/short_seed_sparsification_v1/REPORT.json) | Hashing, trace moments, probability rounding, and adaptive-seed checks; not quantum search, a spanner implementation, or a gate-cost audit |
+
+Run only the applicable command:
+
+```sh
+python experiments/task_matched_readout_v1/verify.py > "$OUT/readout-02.json"
+python experiments/implicit_graph_contract_v1/verify.py > "$OUT/graph-03.json"
+python experiments/short_seed_sparsification_v1/verify.py > "$OUT/short-seed-04.json"
+```
+
+For example, compare a regenerated short-seed report without changing the archive:
+
+```sh
+cmp experiments/short_seed_sparsification_v1/REPORT.json "$OUT/short-seed-04.json"
+```
+
+A changed environment can alter printed floating-point output in applicable
+suites. Inspect the executable checks and numerical differences instead of editing
+an archived report to match. A byte-identical run still does not establish novelty,
+proof completeness, an adequate physical model, or useful quantum advantage.
+Notes 01 and 05 have no new scientific suite: they are a source/model screen and
+an owner hardware decision respectively. The [phase-4 index](../exploration/phase_4/README.md)
+links their complete scope.
+
+## The phase-3 activity closeout is separate
 
 ```sh
 python experiments/activity_acquisition_v1/verify.py > "$OUT/activity-29.json"
-```
-
-Compare with [its saved report](../experiments/activity_acquisition_v1/REPORT.json)
-and [method note](../exploration/phase_3/CLASSICAL_ACTIVITY_ACQUISITION_29.md).
-It acquires the small model from the specified seven-emitter generator and checks
-it against the full invariant-sector contraction. It is not a trajectory fit.
-
-**Note 29B — separate cross-check; windows 1, 5, 20.**
-
-```sh
 python experiments/activity_acquisition_crosscheck_v1/verify.py > "$OUT/activity-29B.json"
 ```
 
-Compare with [its saved report](../experiments/activity_acquisition_crosscheck_v1/REPORT.json)
-and [method note](../exploration/phase_3/CLASSICAL_ACTIVITY_CROSSCHECK_29B.md).
-It includes additional full-space and tilted-mode controls. Its source and report
-were imported byte-for-byte; Closeout 30 records a successful replay. Do not merge
-its rows with Note 29 or count the implementations as independent experiments.
-These sparse matrix calculations are more substantial than the small identity
-checks below. They are opt-in reproductions, not part of opening the repository.
+These require NumPy and SciPy and are more substantial opt-in sparse calculations.
+[Note 29](../exploration/phase_3/CLASSICAL_ACTIVITY_ACQUISITION_29.md) uses windows
+1, 4, 16 and [its report](../experiments/activity_acquisition_v1/REPORT.json).
+[Note 29B](../exploration/phase_3/CLASSICAL_ACTIVITY_CROSSCHECK_29B.md) uses windows
+1, 5, 20 and [a distinct report](../experiments/activity_acquisition_crosscheck_v1/REPORT.json).
+Do not merge those rows or count the implementations as separate applications.
+The [closeout](../exploration/phase_3/ACTIVITY_CLAIM_CLOSEOUT_30.md) records the
+scientific decision; the [import/replay manifest](../provenance/activity_closeout_30.json)
+records the earlier 29B replay with NumPy 2.3.5 and SciPy 1.17.0 under one BLAS
+thread. This guide does not claim a new installation or replay of that environment.
 
-## Supporting emitter checks
+The [phase-3 index](../exploration/phase_3/README.md) locates the supporting emitter,
+spectral, and probability-law checks. Read each source header. Historical scopes
+and commands are also preserved in the
+[pre-update reproduction guide](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/f957571985efd242cd7d4f3d8058641b483f07e5/handover/REPRODUCING.md).
 
-| Note | Command, from the research root | What it tests |
-|---|---|---|
-| 25 | `python experiments/record_instrument_v1/verify.py` | Count-labelled instrument identities and finite discretization controls |
-| 26 | `python experiments/emission_memory_v1/verify.py` | Excitation-cutoff, moment, and renewal controls |
-| 28 | `python experiments/activity_flags_v1/verify.py` | Exact flag/tilted-law identities and elementary classical controls |
+## Root verification and external inputs
 
-These require NumPy/SciPy, not experimental data or a quantum device. General
-all-size statements belong to the written proofs, not extrapolation from finite
-checks. Successful exit does not establish publication priority, physical adequacy,
-a complete proof audit, quantum hardware performance, or a best-classical separation.
+Root `python verify.py` checks the original guided-search imports and its own
+mathematics, not every later phase. Its optional `--quick` and `--full` modes add
+historical C++17 runs. `verify_target_closure.py` has another separate historical
+scope. Do not treat any of these as documentation checks or proof audits.
 
-## Other scientific evidence
-
-The [phase-3 index](../exploration/phase_3/README.md) pairs the spectral, sampling,
-and climate notes with their experiment directories. Read the applicable note and
-source header before running a historical suite. A directory is not a dependency
-of every other experiment; there is no reason to install every optional solver.
-The [phase-2 index](../exploration/phase_2/README.md) separates older exploration
-from the current objective and the two independent spin-offs.
-
-The repository-root command has a narrower purpose:
-
-```sh
-python verify.py
-```
-
-It checks the 18 original guided-search imports, regenerates the known reference
-in a disposable directory, and runs the guided-core checks. It does **not** verify
-all later spectral or emitter work. Its optional `--quick` and `--full` modes also
-require a C++17 compiler and perform additional historical runs; do not invoke them
-as a routine documentation check. `verify_target_closure.py` is likewise a separate
-historical scope. Optional native-Z3, NetworkX, and other comparisons belong only
-to the suites that explicitly request them.
-
-## External inputs and rights
-
-The battery archive checker requires the authors' external `paper_data.zip`:
+The battery archive checker uses the authors' external input:
 
 ```sh
 python experiments/reference_archive_v1/verify.py --archive /path/to/paper_data.zip
 ```
 
-[Archive replay 04](../exploration/phase_3/ARCHIVE_REPLAY_04.md) records provenance,
-expected digests, and what was reproduced. The checker reads the ZIP without
-turning it into a training dataset. It is not redistributed or relicensed here.
-The earlier uploaded archive is not an unresolved request for another upload.
+[Archive replay 04](../exploration/phase_3/ARCHIVE_REPLAY_04.md) records provenance
+and scope. The previously supplied archive need not be requested again, imported
+into this repository, or relicensed. [Climate audit 13](../exploration/phase_3/CONTINUATION_INFORMATION_13.md)
+records the missing continuation/ancestry files; they block only that empirical
+test, not model-first analysis. No climate run or measured statistic follows from
+an unrelated finite probability-law test.
 
-[Climate audit 13](../exploration/phase_3/CONTINUATION_INFORMATION_13.md) records
-the missing ancestry/continuation data and its exact source-file list. The data
-block only that empirical test, not model-first exploration. Do not claim its
-sibling-continuation statistic has been measured. Finite probability-law checkers
-in Notes 11–12 are not a CESM run.
-
-[PROVENANCE.md](../PROVENANCE.md), the manifests in `provenance/`, and experiment
-source notices retain the rights and import scope. The root MIT license does not
-override separately attributed third-party material.
+[PROVENANCE.md](../PROVENANCE.md), earlier manifests, and source notices retain
+third-party rights. The root MIT license does not replace their conditions.
 
 ## Alternate checkpoints
 
-Two different documents used the number 24. The repository's canonical
-[Note 24](../exploration/phase_3/SAMPLING_REGIME_DECISION_24.md) concerns fair reuse
-and the move to physical records. The conversation's smooth spectral-cache version
-is separate historical material, not a replacement work order. Its source archive
-and exact payload identities are recorded in
-[the alternate-checkpoint register](ALTERNATE_CHECKPOINTS.md).
+Use [ALTERNATE_CHECKPOINTS.md](ALTERNATE_CHECKPOINTS.md) before applying any old
+attachment patch. Local and committed 03/04 payloads are distinct; canonical file
+paths are listed above. Matching numbers or filenames do not establish byte
+identity. Notes 24 and 29B also have recorded delivery/import distinctions.
+The current work order supersedes bundled historical continuation proposals.
 
-The old local-delivery wording in Note 29B remains historical. Its later repository
-import is established by Closeout 30 and `provenance/activity_closeout_30.json`.
-Paths, titles, or equal note numbers do not establish byte identity; use the recorded
-hashes. Never apply an old checkpoint's bundled patch or next-step file over current
-routing merely because its science is being inspected.
+## Maintenance is not a scientific rerun
 
-## Maintenance versus scientific validation
-
-This handover checks navigation and preservation, not the numerical suites. The
-maintenance record lists the starting commits and exact scope. No continuous
-integration workflow is added and no CI pass is claimed by this handover. To report a new
-scientific rerun, record the command, interpreter, packages, thread settings,
-exit status, output location, and comparison method; retain the previous report.
+[NO_QRAM_MAINTENANCE.json](NO_QRAM_MAINTENANCE.json) records this pass's starting
+revisions, allowed documentation changes, attachment checks, and navigation scope.
+[MAINTENANCE.json](MAINTENANCE.json) remains the earlier immutable maintenance
+record. No scientific program, new theorem, hardware test, or performance study
+is executed by this update. A future rerun should record its command, commit,
+interpreter, package/thread settings, exit status, output path, and comparison
+method while preserving the old report.
