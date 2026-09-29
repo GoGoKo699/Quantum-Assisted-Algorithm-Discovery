@@ -1,71 +1,67 @@
 # Quantum-Assisted Algorithm Discovery
 
-**Can a circuit-model quantum computer discover a useful reusable classical method
-more efficiently than a strong classical discovery process?** The resulting method
-should run classically. Compactness and reuse alone do not establish quantum advantage.
+**Can circuit-model quantum computation obtain useful information more effectively
+than strong classical alternatives?** Direct samples may themselves be the output;
+a learned classical program and quantum-free deployment are optional. Mathematical
+models and quantum mechanisms come before implementation, while essential input,
+accuracy, output and validation costs remain explicit.
 
-**Status: continuing exploration. No useful quantum discovery advantage is established.
-Manuscript preparation is on hold.**
+**No useful quantum advantage is established. Manuscript preparation is on hold.**
 
-## Start here
+## Current checkpoint: activity claim closed, evidence retained
 
-Read the [project map](PROJECT_MAP.md) for the objective, independent spin-offs,
-branch roles, and continuation boundaries. The [active parent work order](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/research/prx-quantum-phase2/work_orders/CURRENT.md)
-and [phase-2 charter](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/research/prx-quantum-phase2/exploration/phase_2/CHARTER.md) govern the ongoing exploration.
+The two-window emission-covariance proposal is **not being advanced on the present
+evidence**. At its source-matched seven-emitter parameter point, a small classical
+tilted model was acquired from the supplied generator and reproduced the chosen
+statistic closely. This removes the proposed acquisition obstacle in that finite
+calibration; it is not an all-size classical theorem or a quantum runtime comparison.
 
-The active working branch is `research/prx-quantum-phase2`. This default branch is
-the public entry point and retains earlier evidence; it is not a merged copy of
-all later research. Sorting, filters, matrix multiplication, and reconstruction
-are not mandatory directions for the next step.
+Read the [closeout decision and evidence index](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/research/prx-quantum-phase2/exploration/phase_3/ACTIVITY_CLAIM_CLOSEOUT_30.md),
+[current research status](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/research/prx-quantum-phase2/STATUS.md),
+and [active work order](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/research/prx-quantum-phase2/work_orders/CURRENT.md).
+Notes 29 and 29B, their separate numerical windows, code, reports and provenance
+are retained on the research branch. No replacement application is selected by
+this repository wrap-up. The broader exploration remains open.
+
+## Branches and scope
+
+The active research branch is `research/prx-quantum-phase2`. **This default branch
+is an entry point and an archive of earlier evidence, not a merged research copy.**
+The [project map](PROJECT_MAP.md) records ownership and routing. The
+[current research instructions](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/research/prx-quantum-phase2/AGENTS.md)
+include the authorized direct-output and model-first extensions to the original
+[charter](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/research/prx-quantum-phase2/exploration/phase_2/CHARTER.md).
+Earlier requirements for classical-only deployment do not override those extensions.
+
+A candidate must connect a useful output, a genuine quantum operation, and a
+complete comparison against strong classical alternatives. The competitor may
+obtain the same benefit without reproducing the quantum pipeline. Compactness,
+reuse, a large Hilbert space, or an isolated quantum subroutine is not sufficient.
 
 ## Two independent classical spin-offs
 
-| Project | Work now owned by that project |
+| Project | Work owned by that project |
 |---|---|
-| [Algebraic-Loop-Certificates](https://github.com/GoGoKo699/Algebraic-Loop-Certificates) | Classical loop certificates, reusable summaries, and verification integration |
-| [Sparse-Weil-Reconstruction](https://github.com/GoGoKo699/Sparse-Weil-Reconstruction) | Exact selected-data reconstruction of Weil polynomials, proof, and decoder |
+| [Algebraic-Loop-Certificates](https://github.com/GoGoKo699/Algebraic-Loop-Certificates) | Classical loop certificates, reusable summaries and verification integration |
+| [Sparse-Weil-Reconstruction](https://github.com/GoGoKo699/Sparse-Weil-Reconstruction) | Exact selected-data reconstruction of Weil polynomials, proof and decoder |
 
-Both have their own projects and repositories. Their further development belongs
-there. They retain value on their own terms, but neither substitutes for the
-parent's quantum-discovery objective. The parent keeps provenance and supporting
-references rather than a duplicate development agenda.
+They have their own projects and repositories. They retain independent value,
+but neither substitutes for the parent's quantum objective. No third spin-off
+or new repository is created by the closeout. Links convey no write authorization.
 
-## What the parent must establish
-
-A candidate needs a useful classical output, a genuine quantum role in obtaining
-it, and a complete comparison against strong classical alternatives. Account for
-preparation, discovery, certification, extraction, error handling, and later use.
-A classical competitor may obtain the same benefit without reproducing the proposed
-quantum pipeline. The [charter](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/research/prx-quantum-phase2/exploration/phase_2/CHARTER.md) sets the detailed standard.
-
-## Preserved evidence and reproduction
+## Preserved historical evidence
 
 The [sorting-completion experiment](experiments/sorting_completion_v1/README.md),
-[eleven-bank filter screen](experiments/depth2_cover_v1/README.md), and older guided,
-target-closure, and filter experiments remain available in their versioned
-directories. They are retained checkpoints, not the default next task. Their
-scientific claims and limitations are unchanged. The older sections of the
-[claim ledger](STATUS.md) and [guided-search design](docs/current-design.md) are
-historical records, not competing current work orders.
+[eleven-bank filter screen](experiments/depth2_cover_v1/README.md), older experiments,
+[main-branch ledger](STATUS.md), and [guided-search design](docs/current-design.md)
+remain historical records, not current work orders. Scientific results and their
+limitations are unchanged. Follow each experiment's own reproduction instructions;
+never run assertion-dependent checks with Python -O or -OO.
 
-For the preserved sorting-completion checks, with Python 3.10 or later:
-
-```sh
-python experiments/sorting_completion_v1/verify.py
-```
-
-The optional native-Z3 check is:
-
-```sh
-python experiments/sorting_completion_v1/verify.py --solver
-```
-
-See each experiment's README for its verification scope and dependencies. Generated
-data belong in temporary paths. Never use Python `-O` or `-OO` for assertion-dependent
-checks. Historical timing and timeout observations are not deterministic expectations;
-old quantum resource figures apply only to their original constructions.
-
-This organizational update reran no experimental verifier and introduces no new
-scientific result. All experiment sources, reports, proof notes, manifests,
-third-party notices, and the original [MIT license](LICENSE), Copyright (c) 2026
-Ruge Lin, are preserved.
+The 29B checker was replayed during closeout on the research branch and reproduced
+its archived report byte-for-byte. That targeted replay is not a rerun of this
+branch's historical suites. Only routing documentation changes on main; there is
+no research merge, release, or repository administration change. Previous proofs,
+code, reports, data, third-party rights and the original [MIT license](LICENSE),
+Copyright (c) 2026 Ruge Lin, are preserved. Only this parent repository is writable
+in this project context.
