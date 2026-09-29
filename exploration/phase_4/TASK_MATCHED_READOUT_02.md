@@ -29,8 +29,8 @@ x_j=\theta g_j+A\sin\phi(t_j),\qquad p_j=A\cos\phi(t_j).
 $$
 
 Here we have denoted the desired known waveform template by g and its unknown
-amplitude by theta; the paper fits an injected chirp and a deterministic scatter
-model. Its actual phase phi(t) is fitted from data, not granted known. The
+amplitude by theta; the paper uses an injected chirp and fits a deterministic
+scatter model. Its actual phase phi(t) is fitted from data, not granted known. The
 sinusoid/harmonic phase model, detector imbalance and constant relative phase are
 explicit parts of that experiment. An earlier unentangled dual-readout experiment
 also models and subtracts backscatter [2]. Joint acquisition is therefore a real
