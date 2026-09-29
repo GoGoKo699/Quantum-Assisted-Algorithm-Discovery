@@ -1,93 +1,85 @@
-# Current task: one model-specific quantum-opportunity decision
+# Current task: test the classical acquisition cost of one activity statistic
 
 29 September 2026. Branch: `research/prx-quantum-phase2`.
-Model-first exploration; direct samples permitted; manuscript preparation on hold.
+Model-first; direct samples allowed; manuscript on hold. No new repository needed.
 
-Read [strategic revision 27](../exploration/phase_3/STRATEGIC_REVISION_27.md),
-[emission memory 26](../exploration/phase_3/EMISSION_MEMORY_26.md), and
-[record instrument 25](../exploration/phase_3/RECORD_INSTRUMENT_25.md).
-No new repository, third classical spin-off or implementation campaign is needed.
+Read [activity claim 28](../exploration/phase_3/EMISSION_ACTIVITY_CLAIM_28.md) and
+[strategic revision 27](../exploration/phase_3/STRATEGIC_REVISION_27.md).
+The target is now explicitly one bounded two-window statistic, not full histories.
+The new calculation does not solve the earlier fine-record output contract.
 
-## Decision after revision
+## A specific quantum mechanism is now stated
 
-Preserve the accumulated proofs, but stop treating another available error bound
-as the reason to continue. Correct quantum implementation, coherent classical
-reductions and finite output-level controls are valuable support. They have not
-established a consequential regime in which quantum sampling improves the complete
-cost. The spectral track remains a quantitative reference; the emitter track is
-one candidate, not an established destination or a result one lemma from completion.
+In the driven dissipative Ising family start from the ground product state and
+count all emitted photons K1,K2 in consecutive windows Delta. Set
+s=u/(n kappa Delta), u=1, and estimate
+G=Cov(exp(-s K1),exp(-s K2)) to a justified additive epsilon and confidence.
+This is a bounded measure of temporal activity dependence, not a complete count
+law, switching rate, stationary phase claim or relative-error rare-event target.
+The physical task motivates activity correlations; this particular bounded
+transform is chosen here and is not asserted to be an experimental standard.
 
-Direct samples and model-first investigation remain authorized. Do not require a
-classical program, production dataset, native package, hardware demonstration, or
-universal lower bound against all classical algorithms before exploring a credible
-hypothesis. Conversely, failure of a weak approximation is not that hypothesis.
-Choose the next calculation to decide quantum usefulness, not to enlarge a framework.
+For source matching use the periodic nearest-neighbor family of Rose et al.,
+including its V/kappa=250, Omega/kappa=50 finite-size slice as a reference.
+This explicitly differs from the previous open/equal-scale controls. No all-size
+metastability is assumed. Delta and accuracy must come from a useful prediction;
+neither is chosen solely to defeat a classical approximation. The ground transient
+and full horizon T=2 Delta are retained, with no free equilibrium preparation.
 
-## Stronger classical source that must be included
+Two absorbing flags exactly encode Z1=E exp(-sK1), Z2 and Z12=E exp(-s(K1+K2)).
+Flag-zero probabilities give these three numbers and G=Z12-Z1 Z2. The total system
+marginal obeys the original Lindbladian. No full photon tape or count cutoff is
+needed for this statistic. Both flags and the system are simulated coherently;
+other simulation/environment workspace is additional, not a free reset resource.
 
-Rose et al., PRE 94,052132 (2016), arXiv:1607.06780, analyze a periodic driven
-Ising chain and two-phase switching in specified regimes. The current open-chain,
-ground-start controls cannot inherit its conclusions without matching the regime,
-boundaries and initial transient.
+Use established high-accuracy Lindblad algorithms, retain their purification,
+and use standard amplitude estimation with the circuit and its inverse. This gives
+~O(1/epsilon) evaluations instead of the generic O(1/epsilon^2) sampling dependence.
+It cannot be applied to already measured laboratory records. With explicit local
+term access a sufficient total bound is ~O((n+edges)(1+Gamma T)/epsilon),
+Gamma=n|Omega|/2+edges|V|/4+n kappa. T, input precision, workspace, routing and
+fault-tolerant costs remain. This is not an all-classical separation or novelty claim.
+Using the old first-order splitting alone can erase the precision gain; the
+high-accuracy channel theorem is a material ingredient, not a free exact step.
 
-Macieszczak et al., PR Research 3,033047 (2021), arXiv:2006.01227v2, Sections V B
-2-4, also relate coarse continuous-measurement records to classical trajectories,
-with scale-separation conditions and within-phase/initial-transient corrections.
-It is insufficient to dismiss this comparator as an averaged-state model. Do not
-replace it by a bare Poisson telegraph process and call failure of that simpler
-process failure of the strongest classical alternative.
+## Decisive comparison, not another general construction
 
-Neither source automatically certifies the entire fine record in TV or makes
-phase/rate extraction inexpensive at arbitrary size. Their supplied parameters,
-stationary states, spectral information and model acquisition must be priced.
+The exact classical target is THREE tilted contractions:
+Z1=Tr exp(Delta L) exp(Delta Ls) rho0,
+Z2=Tr exp(Delta Ls) exp(Delta L) rho0,
+Z12=Tr exp(2 Delta Ls) rho0, Ls=L+(exp(-s)-1)J.
+A supplied adequate small tilted generator evaluates these cheaply without any
+Monte Carlo. Compare its ACQUISITION AND VALIDATION cost, not just supplied rates.
+Include Macieszczak et al.'s within-phase/transient corrections, coherent
+few-excitation methods, tensors/clusters and direct tilted propagation.
+Classical trajectory estimators can use the continuous bounded scores and variance
+reduction; do not add extra flag-marking noise to weaken them.
 
-## Next bounded deliverable
+The input-computable bound ||Ls-L||_diamond<=u/Delta makes long windows a small
+perturbation and may favor classical metastability. It is not by itself a
+nonnormal perturbation or all-size gap theorem. Small G at the useful tolerance
+is also a legitimate cheap answer. Independent coherent emitters can already
+have temporal correlations, so nonzero G alone is not evidence of many-body hardness.
 
-Write one short claim sheet for the SAME driven Ising family, containing:
+Next assess whether existing phase/symmetry/tensor methods obtain this G adequately
+and cheaply in the source-matched slice, with the ground transient retained.
+A specific surviving acquisition bottleneck warrants one focused resource or
+native comparison. A cheap adequate tilted model ends this claim's priority.
+Do not add another flag framework, generic estimator proof, small-instance census,
+harder graph or finer detector merely to keep the candidate alive.
 
-1. A physically motivated finite-time emission-activity observable, with graph,
-   boundaries, ground initialization or explicitly charged preparation, parameter
-   regime, horizon, detector bins/coarsening and justified absolute accuracy.
-   A bounded statistic may be the appropriate task. Fine site-resolved histories
-   are not mandatory merely because we can bound them. Any change from the prior
-   full-record task must be explicit, not relabeled as solving its finer law.
-2. Applicability and cost of the strongest adequate classical description at that
-   output: metastable dynamics including within-phase effects, coherent low-
-   excitation trajectories, tensors/clusters, event-driven conditional states and
-   direct-statistic computation as relevant. Include model acquisition and reuse.
-3. One specific costly operation that quantum conditional evolution could improve,
-   and one discriminating derivation or modest calculation. A conditional resource
-   claim with an explicit unresolved assumption is acceptable; a mere exponential
-   state dimension or a crossing of weak upper bounds is insufficient.
+## Evidence and preservation
 
-Focus on the relationship between internal relaxation, phase-switching, detector
-bin and observation times. Do not assume a scale separation, free burn-in, or a
-new gap promise. If a compact model works, determine whether its acquisition is
-also economical before declaring the application easy. Quantum calibration is an
-option to justify, not an advantage assumed by this work order.
+`python experiments/activity_flags_v1/verify.py` uses NumPy and SciPy. The final
+checker ran twice identically; -O/-OO and six invalid inputs were rejected. One
+three-emitter equal-scale ring checks the flag/tilted identities and physical
+marginal, not the published metastable parameter regime. An exact parity-control
+calculation, independent coherent emitters and a supplied classical two-state
+model prevent invalid simplifications. No amplitude-estimation circuit, high-order
+channel compiler, large-system calculation or speedup measurement was run.
+No earlier verifier was rerun; no upstream code/data imported.
 
-Proceed only when the useful output, classical limitation and quantum mechanism
-fit one argument. An adequate cheap classical route ends this emitter candidate's
-priority; retain it as a reference. A specific surviving quantum opportunity earns
-its targeted calculation. If no claim beyond "many-body states might be hard"
-can be stated, broaden mechanisms rather than add another generic certificate,
-raise cutoffs, make detectors arbitrarily fine, or choose an unrelated harder graph.
-No new hidden-state framework or large trajectory study is the next task.
-
-## Preserved conclusions and evidence
-
-Note 26's record guarantee is fixed-ground-initial-state, not arbitrary-input
-diamond norm. Its fixed-lambda classical regime requires Omega/kappa~n^(-1/2);
-it is not fixed-local-drive thermodynamic tractability. Its q=1 renewal model
-keeps repeated photons and is not an assumption of global blockade in the target.
-Note 25's full-record quantum instrument and its complete error budget remain.
-All earlier spectral and dynamical conclusions keep their original scopes.
-
-This revision read sources and checked the supplied latest archive/note integrity.
-No scientific verifier, new simulation, benchmark or independent full-proof audit
-was performed. Only documentation/routing changes are part of this checkpoint.
-Keep all earlier proof notes, code, reports, fixtures, source data and rights intact.
-Climate/dynamics remain open; Manthan paused; battery/operator routes parked;
-both spin-offs independent; Phase-2 Note 27 remains closed. Modify only Quantum-
-Assisted-Algorithm-Discovery. No outside contact, paid/unattended work, manuscript
-revival, release, branch merge or repository administration change is authorized.
+Preserve every earlier scientific note, source, report, license and rights notice.
+Other mechanisms remain available; the two classical spin-offs remain independent.
+Only Quantum-Assisted-Algorithm-Discovery may be modified. No external contact,
+paid/unattended work, manuscript revival, new repository, merge, release or admin.
