@@ -2,84 +2,90 @@
 
 **One continuing parent exploration; two independent classical spin-offs.**
 
-This is the canonical organization map for Quantum-Assisted Algorithm Discovery.
-It records the project separation as of 27 September 2026, not a new scientific result.
+Canonical organization and routing, updated 29 September 2026. This is not a
+new scientific result. The original 27 September map remains in
+[history](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/6bf5c75431465728b81804a5b08d920d2ea06b8f/PROJECT_MAP.md).
 
-## Parent objective
+## Parent objective and authorized scope
 
-Can a circuit-model quantum computer discover useful structural information or a
-reusable classical method materially more efficiently than a strong classical
-process, with the resulting method subsequently used on ordinary computers?
+Can a circuit-model quantum computer obtain information that makes a useful
+computation materially more effective than strong classical alternatives?
+The original objective emphasized discovery of a reusable classical method.
+The owner subsequently authorized direct quantum samples and model-first
+exploration. A learned classical program and quantum-free deployment are now
+optional, not requirements to reimpose through an older charter or checkpoint.
 
-The comparison must include discovery, input and coherent-access preparation,
-certification, error handling, extraction, and subsequent classical use. Allow the
-classical competitor a different construction or a way to obtain the same useful
-outputs without constructing the proposed object. Compactness, reuse, a classical
-theorem, or an isolated quantum subroutine does not alone establish the objective.
+Read the [current research instructions](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/research/prx-quantum-phase2/AGENTS.md)
+for these extensions. Essential preparation, coherent access, accuracy,
+certification, output, validation and repeated-use costs remain part of the
+comparison. A classical competitor may obtain the useful information by a
+different representation or bypass. Compactness, reuse, a classical theorem,
+large latent state, or an isolated quantum primitive alone does not establish
+useful advantage.
 
-**Status: exploratory. A useful quantum discovery advantage has not been established.
-Manuscript preparation remains on hold.** No particular application or hardware
-platform is imposed by the accumulated experiments.
+**No useful quantum advantage is established. Manuscript preparation is on hold.**
+No particular physical application or hardware platform is imposed by past work.
+
+## Current checkpoint and continuation
+
+[Closeout 30](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/research/prx-quantum-phase2/exploration/phase_3/ACTIVITY_CLAIM_CLOSEOUT_30.md)
+closes the standalone two-window emission-covariance advantage lead on present
+evidence. Notes 29 and 29B acquired and checked a classical tilted contraction
+at the source-matched finite parameter point. Their separate windows, code and
+reports are retained. This is not an all-size tractability theorem or a measured
+quantum runtime disadvantage. The prior quantum constructions remain references.
+
+The checkpoint is wrapped up before any new exploration begins. No replacement
+application is selected. A later continuation reads the
+[active work order](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/research/prx-quantum-phase2/work_orders/CURRENT.md)
+and strategic revision, rather than repeating the completed acquisition or
+extending the last lemma by default. A new candidate needs a useful output,
+quantum mechanism and strong classical comparison in the same argument. A
+universal classical lower bound is not a prerequisite to a substantive hypothesis.
 
 ## Independent spin-offs
 
-| Project | Its separate scope | Relationship to the parent |
+| Project | Separate scope | Relationship to the parent |
 |---|---|---|
-| [Algebraic-Loop-Certificates](https://github.com/GoGoKo699/Algebraic-Loop-Certificates) | Classical loop summaries, independently checkable algebraic certificates, and verification integration | A valuable classical outcome of the exploration; not the quantum-discovery result being sought |
-| [Sparse-Weil-Reconstruction](https://github.com/GoGoKo699/Sparse-Weil-Reconstruction) | Exact selected-data reconstruction of integral Weil polynomials, its proof, decoder, and predecessor comparison | A valuable classical outcome of the exploration; not an established quantum advantage |
+| [Algebraic-Loop-Certificates](https://github.com/GoGoKo699/Algebraic-Loop-Certificates) | Classical loop summaries, algebraic certificates and verification integration | Valuable classical outcome; not a substitute for the quantum objective |
+| [Sparse-Weil-Reconstruction](https://github.com/GoGoKo699/Sparse-Weil-Reconstruction) | Selected-data reconstruction of integral Weil polynomials, proof and decoder | Valuable classical outcome; no quantum advantage inferred from it |
 
-Both now have their own projects and repositories. Further theorem extensions,
-implementation work, teaching material, novelty assessment, and manuscript work
-belong there. Their current scientific status is maintained in their own repositories,
-not duplicated here. Their development need not finish before the parent continues.
-
-The parent retains provenance and supporting references. It may use either result
-as a component of a concrete quantum mechanism, but must justify that mechanism's
-complete advantage separately. Improving a spin-off is not automatically progress
-on the parent's outstanding question. A link does not authorize writes to another
-repository from this project context.
+Their further theorem development, software, teaching and manuscripts belong in
+their own projects and repositories. The parent retains provenance and may use
+these components only as part of a separately justified quantum mechanism.
+Their handoffs are organizational, not assertions that publication assessment
+is complete. No third spin-off or new repository is needed. A link does not
+authorize writes outside Quantum-Assisted-Algorithm-Discovery.
 
 ## Branch and document roles
 
 | Location | Role |
 |---|---|
-| `main` | Public entry point, this canonical map, and preserved earlier experiments |
-| `research/prx-quantum-phase2` | Active working branch for the parent exploration |
-| `research/sharing-core-publication` | Preserved earlier research branch; not a second active parent agenda |
-| [Active work order](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/research/prx-quantum-phase2/work_orders/CURRENT.md) | The current continuation task; the work order on `main` routes here |
-| [Phase-2 charter](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/research/prx-quantum-phase2/exploration/phase_2/CHARTER.md) | Scientific objective, comparison standard, and working rhythm |
-| [Status](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/main/STATUS.md) | Current organizational summary followed by the explicitly historical claim ledger |
+| `main` | Public entry point, this current map, and historical scientific files |
+| `research/prx-quantum-phase2` | Parent research notes, executed evidence and current checkpoint |
+| `research/sharing-core-publication` | Preserved earlier branch, not a second active parent agenda |
+| [Active work order](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/research/prx-quantum-phase2/work_orders/CURRENT.md) | Sole current continuation routing; the main copy points here |
+| [Research status](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/research/prx-quantum-phase2/STATUS.md) | Current claims, closure decision and pinned earlier ledgers |
+| [Original charter](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/research/prx-quantum-phase2/exploration/phase_2/CHARTER.md) | Comparison standard and working rhythm, subject to later explicit scope extensions |
+| [Main ledger](STATUS.md) | Historical organizational/scientific record, not the latest research status |
 
-The default branch is not a merged copy of all later research. Use explicit branch
-links when following phase-2 work from `main`. No wholesale branch merge, branch
-rename, or deletion is part of this reset.
+Main is not a merged copy of later research. Use explicit branch links above.
+This maintenance updates routing documents only on main; it does not merge,
+rename or delete branches, create a release, or alter repository administration.
 
-## Historical evidence is not an active work order
+## Preserved evidence is not an active work order
 
-Sorting, filter synthesis, guided search, e-graph/sharing investigations, and
-reconstruction investigations remain evidence and possible tools. Their presence
-is not a commitment to continue them. In particular, `docs/current-design.md` and
-the older portions of `STATUS.md` describe earlier checkpoints despite their names.
+Earlier sorting, filters, matrix multiplication, reconstruction, spectral,
+climate and emitter studies keep their original scopes, provenance and results.
+Their current/next headings are dated checkpoints, not parallel instructions.
+The spectral/emitter constructions remain references; climate/dynamics remain
+open alternatives, Manthan paused, and battery/operator routes parked.
+The closed phase-2 [source-aware descent comparison](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/research/prx-quantum-phase2/exploration/phase_2/SOURCE_AWARE_DESCENT_27.md)
+is not reopened by this closeout or by the independent reconstruction project.
 
-The numbered phase-2 notes and experiment reports retain their original meanings,
-proofs, boundaries, and provenance. Historical statements such as "create the
-spin-off repository", "latest", or "next" are checkpoint records, not live
-instructions. The two spin-off handoffs are complete at the project-organization
-level. This does not assert that their research or publication assessment is complete.
-
-The closed source-aware descent comparison in
-[Note 27](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/research/prx-quantum-phase2/exploration/phase_2/SOURCE_AWARE_DESCENT_27.md)
-is not reopened by the reconstruction spin-off. Failed or unresolved candidates
-must not silently become claimed advantages.
-
-## Continuation boundary
-
-A request to continue **this** project means continue the parent's quantum-discovery
-exploration, not automatically extend or polish either spin-off. The next research
-decision is to choose a short candidate mechanism and its decisive classical
-comparison under the charter. This reset selects no new application, starts no
-experiment, and revives no manuscript.
-
-Preserve historical source/results, proof notes, manifests, third-party notices,
-and LICENSE. Do not delete evidence merely to simplify navigation. This context
-may modify only `GoGoKo699/Quantum-Assisted-Algorithm-Discovery`.
+Negative and inconclusive findings must remain visible. Before moving to another
+candidate, land its available evidence and align the README, status and active
+work order with the actual decision. Do not delete scientific evidence merely
+to simplify navigation or let an uncommitted checkpoint become a claimed remote
+result. Preserve LICENSE, source attribution, data, reports and third-party rights.
+Only `GoGoKo699/Quantum-Assisted-Algorithm-Discovery` may be modified in this context.
