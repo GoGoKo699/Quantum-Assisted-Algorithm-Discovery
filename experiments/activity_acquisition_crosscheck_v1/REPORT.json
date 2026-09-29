@@ -1,0 +1,169 @@
+{
+  "additional_validation_shift_acquisition": {
+    "LU_stored_nonzeros": 1048440,
+    "note": "Residual is not a complete nonnormal error or truncation certificate.",
+    "residual_below_3e_8": true,
+    "shift_inverse_solves": {
+      "left": 21,
+      "right": 21
+    },
+    "sparse_factorizations": 1
+  },
+  "exact_invariant_dimension": 1300,
+  "full_generator_nonzeros": 274431,
+  "invariant_generator_nonzeros": 20019,
+  "model": {
+    "Omega_over_kappa": 50.0,
+    "V_over_kappa": 250.0,
+    "graph": "uniform periodic ring",
+    "initial": "all ground",
+    "kappa": 1.0,
+    "n": 7,
+    "u": 1
+  },
+  "not_executed": [
+    "quantum circuit",
+    "amplitude estimation",
+    "hardware",
+    "large-n extrapolation",
+    "Monte Carlo trajectories",
+    "native upstream implementation",
+    "wall-clock comparison"
+  ],
+  "once_acquired_reference": {
+    "LU_stored_nonzeros": 1055494,
+    "note": "Residual is not a complete nonnormal error or truncation certificate.",
+    "residual_below_3e_8": true,
+    "shift_inverse_solves": {
+      "left": 21,
+      "right": 21
+    },
+    "sparse_factorizations": 1
+  },
+  "once_acquired_slow_eigenvalues_real": [
+    0.0,
+    -0.066592688531
+  ],
+  "original_operator_dimension": 16384,
+  "precision": "complex128; probabilities rounded to 12 decimals. No interval-certified numerical errors or proof of a uniform metastable approximation.",
+  "rows": [
+    {
+      "exact_tilted_G": 0.007257734477,
+      "exact_tilted_Z1_Z2_Z12": [
+        0.96584719671,
+        0.967160923297,
+        0.941387401011
+      ],
+      "kappa_Delta": 1.0,
+      "once_acquired_G_absolute_error": 3.3167878e-05,
+      "once_acquired_max_Z_error": 0.000798714309,
+      "once_acquired_two_mode_G": 0.007224566599,
+      "once_acquired_two_mode_Z1_Z2_Z12": [
+        0.966586790198,
+        0.967281529401,
+        0.94218611532
+      ],
+      "tilt_readjusted_G": 0.007238537998,
+      "tilt_readjusted_G_absolute_error": 1.9196479e-05,
+      "tilt_readjusted_Z1_Z2_Z12": [
+        0.965763526112,
+        0.967256474644,
+        0.941379561605
+      ],
+      "tilt_readjusted_max_Z_error": 9.5551347e-05,
+      "tilted_acquisition": {
+        "LU_stored_nonzeros": 1055100,
+        "note": "Residual is not a complete nonnormal error or truncation certificate.",
+        "residual_below_3e_8": true,
+        "shift_inverse_solves": {
+          "left": 21,
+          "right": 21
+        },
+        "sparse_factorizations": 1
+      },
+      "wrong_stationary_start_G": 0.004058943674
+    },
+    {
+      "exact_tilted_G": 0.005851009803,
+      "exact_tilted_Z1_Z2_Z12": [
+        0.965797011082,
+        0.96881020109,
+        0.941525006321
+      ],
+      "kappa_Delta": 5.0,
+      "once_acquired_G_absolute_error": 2.33856e-06,
+      "once_acquired_max_Z_error": 0.000185105716,
+      "once_acquired_two_mode_G": 0.005848671243,
+      "once_acquired_two_mode_Z1_Z2_Z12": [
+        0.965982116798,
+        0.968815005477,
+        0.941706641019
+      ],
+      "tilt_readjusted_G": 0.005850994846,
+      "tilt_readjusted_G_absolute_error": 1.4957e-08,
+      "tilt_readjusted_Z1_Z2_Z12": [
+        0.965796981719,
+        0.968810246017,
+        0.941525006308
+      ],
+      "tilt_readjusted_max_Z_error": 4.4927e-08,
+      "tilted_acquisition": {
+        "LU_stored_nonzeros": 1052991,
+        "note": "Residual is not a complete nonnormal error or truncation certificate.",
+        "residual_below_3e_8": true,
+        "shift_inverse_solves": {
+          "left": 21,
+          "right": 21
+        },
+        "sparse_factorizations": 1
+      },
+      "wrong_stationary_start_G": 0.003492397208
+    },
+    {
+      "exact_tilted_G": 0.002199682382,
+      "exact_tilted_Z1_Z2_Z12": [
+        0.968236072282,
+        0.97327287965,
+        0.944557592632
+      ],
+      "kappa_Delta": 20.0,
+      "once_acquired_G_absolute_error": 2.41971e-07,
+      "once_acquired_max_Z_error": 4.7442986e-05,
+      "once_acquired_two_mode_G": 0.00219944041,
+      "once_acquired_two_mode_Z1_Z2_Z12": [
+        0.968283515267,
+        0.97327386514,
+        0.944604479866
+      ],
+      "tilt_readjusted_G": 0.002199682382,
+      "tilt_readjusted_G_absolute_error": "<1e-12",
+      "tilt_readjusted_Z1_Z2_Z12": [
+        0.968236072282,
+        0.97327287965,
+        0.944557592632
+      ],
+      "tilt_readjusted_max_Z_error": "<1e-12",
+      "tilted_acquisition": {
+        "LU_stored_nonzeros": 1053704,
+        "note": "Residual is not a complete nonnormal error or truncation certificate.",
+        "residual_below_3e_8": true,
+        "shift_inverse_solves": {
+          "left": 21,
+          "right": 21
+        },
+        "sparse_factorizations": 1
+      },
+      "wrong_stationary_start_G": 0.001604551622
+    }
+  ],
+  "scope": "One published seven-emitter parameter slice; numerical validation of one scalar, not all-size tractability or record-TV certification.",
+  "status": "pass",
+  "validation": {
+    "changed_eigensolver_shift_agrees_below_3e_8": true,
+    "exact_group_reduction_intertwining_below_1e_12": true,
+    "full_space_Z1_reference_agrees_below_3e_8": true,
+    "half_step_reference_agrees_below_3e_8": true,
+    "initial_transient_not_replaced_by_stationarity": true,
+    "invalid_inputs_rejected": 6
+  }
+}
