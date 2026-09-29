@@ -1,0 +1,161 @@
+{
+  "cache_budget": {
+    "bank_error": 0.02,
+    "bins": 10002,
+    "failure_probability": 0.01,
+    "sufficient_independent_original_draws": 6635758,
+    "warning": "A worst-case sufficient budget, not a necessary size or free independent replay."
+  },
+  "cache_control": {
+    "bank_draws": 4,
+    "effective_independent_draws_for_this_mean": "5/2",
+    "event_probability": "1/3",
+    "exact_mean": "1/3",
+    "exact_replay_variance": "4/45",
+    "fresh_draw_variance": "2/45",
+    "replay_draws": 5
+  },
+  "detector_instrument_control": {
+    "decay_probability": 0.25,
+    "labelled_record_TV": 0.12499999999999994,
+    "local_detector_probabilities": [
+      0.7499999999999999,
+      0.12499999999999997,
+      0.12499999999999997,
+      0.0
+    ],
+    "mixed_detector_probabilities": [
+      0.7499999999999999,
+      0.2499999999999999,
+      0.0,
+      0.0
+    ],
+    "unlabelled_channel_Frobenius_difference": 9.614813431917819e-17,
+    "warning": "Exact finite amplitude-damping instrument control; no driven many-body trajectory or continuum-limit test."
+  },
+  "invalid_inputs_rejected": 6,
+  "large_replay_example": {
+    "effective_draws_for_event_mean": 9900.999901980102,
+    "original_draws": 10000,
+    "replay_draws": 1000000
+  },
+  "not_executed": "20/26/32-spin propagation, tensor contraction, quantum circuit, driven-dissipative simulation or timing.",
+  "scope": "Analytical budgets, exact cache variance, and finite detector control only; no physical performance data.",
+  "spectral_resolution_budgets": [
+    {
+      "A2": 9.507680444703412,
+      "clock_length": 128,
+      "clock_tail_bound": 0.0016643226405622684,
+      "full_time_times_J": 12.700000000000001,
+      "gamma_over_J": 0.5,
+      "half_time_times_J": 6.3500000000000005,
+      "tau_times_J": 0.1,
+      "typicality_rows": [
+        {
+          "direct_quantum_normalization": 48.5,
+          "individual_vector_H_actions": 103632,
+          "probes": 24,
+          "spins": 20,
+          "sufficient_Taylor_degree": 17,
+          "term_entry_work_proxy": 2173320560640,
+          "vector_entries": 1048576
+        },
+        {
+          "direct_quantum_normalization": 63.5,
+          "individual_vector_H_actions": 5080,
+          "probes": 1,
+          "spins": 26,
+          "sufficient_Taylor_degree": 20,
+          "term_entry_work_proxy": 8863738757120,
+          "vector_entries": 67108864
+        },
+        {
+          "direct_quantum_normalization": 78.5,
+          "individual_vector_H_actions": 5842,
+          "probes": 1,
+          "spins": 32,
+          "sufficient_Taylor_degree": 23,
+          "term_entry_work_proxy": 802918366183424,
+          "vector_entries": 4294967296
+        }
+      ]
+    },
+    {
+      "A2": 19.50286342391748,
+      "clock_length": 256,
+      "clock_tail_bound": 0.0016643226405622684,
+      "full_time_times_J": 25.5,
+      "gamma_over_J": 0.25,
+      "half_time_times_J": 12.75,
+      "tau_times_J": 0.1,
+      "typicality_rows": [
+        {
+          "direct_quantum_normalization": 48.5,
+          "individual_vector_H_actions": 440640,
+          "probes": 48,
+          "spins": 20,
+          "sufficient_Taylor_degree": 18,
+          "term_entry_work_proxy": 9240890572800,
+          "vector_entries": 1048576
+        },
+        {
+          "direct_quantum_normalization": 63.5,
+          "individual_vector_H_actions": 10710,
+          "probes": 1,
+          "spins": 26,
+          "sufficient_Taylor_degree": 21,
+          "term_entry_work_proxy": 18687134269440,
+          "vector_entries": 67108864
+        },
+        {
+          "direct_quantum_normalization": 78.5,
+          "individual_vector_H_actions": 12240,
+          "probes": 1,
+          "spins": 32,
+          "sufficient_Taylor_degree": 24,
+          "term_entry_work_proxy": 1682252790497280,
+          "vector_entries": 4294967296
+        }
+      ]
+    },
+    {
+      "A2": 39.4994771388275,
+      "clock_length": 512,
+      "clock_tail_bound": 0.0016643226405622684,
+      "full_time_times_J": 51.1,
+      "gamma_over_J": 0.125,
+      "half_time_times_J": 25.55,
+      "tau_times_J": 0.1,
+      "typicality_rows": [
+        {
+          "direct_quantum_normalization": 48.5,
+          "individual_vector_H_actions": 1784412,
+          "probes": 97,
+          "spins": 20,
+          "sufficient_Taylor_degree": 18,
+          "term_entry_work_proxy": 37421831946240,
+          "vector_entries": 1048576
+        },
+        {
+          "direct_quantum_normalization": 63.5,
+          "individual_vector_H_actions": 42924,
+          "probes": 2,
+          "spins": 26,
+          "sufficient_Taylor_degree": 21,
+          "term_entry_work_proxy": 74895102836736,
+          "vector_entries": 67108864
+        },
+        {
+          "direct_quantum_normalization": 78.5,
+          "individual_vector_H_actions": 24528,
+          "probes": 1,
+          "spins": 32,
+          "sufficient_Taylor_degree": 24,
+          "term_entry_work_proxy": 3371102650761216,
+          "vector_entries": 4294967296
+        }
+      ]
+    }
+  ],
+  "status": "pass"
+}
