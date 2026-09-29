@@ -1,94 +1,93 @@
-# Current task: spatially local response versus full-chain spectral sampling
+# Current task: compare the cost of response-relevant finite regions
 
-28 September 2026. Active branch: `research/prx-quantum-phase2`.
-Scientific phase 3; manuscript preparation remains on hold.
+29 September 2026. Branch: `research/prx-quantum-phase2`.
+Model-first exploration; direct samples allowed; manuscript preparation on hold.
 
-Read [smooth response 20](../exploration/phase_3/SMOOTH_RESPONSE_COMPRESSION_20.md),
+Read [positive spatial windows 21](../exploration/phase_3/POSITIVE_SPATIAL_WINDOWS_21.md),
 [model comparison 15](../exploration/phase_3/SPECTRAL_MODEL_STRUCTURE_15.md), and
 [spectral boundary 16](../exploration/phase_3/SPECTRAL_BOUNDARY_16.md).
-Direct samples and model-first analysis remain authorized. No dataset, molecule,
-native installation, learned classical program or quantum-free deployment is an
-entry condition. Usefulness and honest complete costs remain required.
+No dataset, molecule, native installation, learned classical program or quantum-free
+deployment is an entry condition. Physical model and useful output stay explicit.
 
-## Completed cutoff calculation; do not extend generic filtering indefinitely
+## Completed locality result
 
-A bounded odd polynomial of the FULL Liouvillian gives K=2 kappa P(L/alpha).
-It keeps the original spectral probabilities and approximately preserves frequencies
-inside |omega|<=kappa, without a sharp projector, a smallest-spacing promise or
-a cutoff-edge margin. If the core frequency error is delta, the broadened-law TV
-error is at most min(1, ||Lo||^2/kappa^2+delta/(pi gamma)).
-For the existing alternating-offset collective response, ||Lo||^2=d^2 exactly.
+For the normalized high-temperature collective raising spectrum of the bounded
+nearest-neighbor chain, cut every ell-th bond and average uniformly over all ell
+boundary shifts. For each shift the disconnected collective response is exactly
+the positive mixture of its block responses, with weight |block|/n. Across shifts
+these form overlapping windows. Ends and original block frequency offsets are
+retained. Selecting a shift and a uniformly random site samples the block weights.
 
-This is generator transformation, not applying the polynomial to the state and
-postselecting. The latter reweights the law and can remove its dominant line.
-It is also not Note 19's Schur formula with a smooth function substituted for P,
-nor a promise that the retained Hilbert space is smaller. State/filter errors
-and the same linewidth and digital bins must be retained.
+A uniform single-site Lieb-Robinson envelope C exp(v|t|-mu distance) gives
+ a=2+log(C)/mu+2/(exp(mu)-1)^2 and b=v/mu. With
+ X_ell=9 sum_i J_i^2 (a+b/(2 gamma))/(n ell gamma^2),
+continuous TV error is at most min(1,X_ell,sqrt(X_ell/2)). Common binning preserves
+it. A conservative explicit chain envelope has C=2, mu=1, v=9 exp(1)J_*/2.
+On-site fields can be removed for the locality proof, not for free quantum evolution.
 
-Standard amplitude multiplication implements the bounded polynomial, but each
-compressed-block call costs order alpha/kappa original-block calls up to logs.
-Combining it with a linewidth-matched sampler gives the sufficient budget
-~(alpha/kappa)(1+kappa/gamma), retaining the alpha/gamma leading term of the direct
-route. The absence of a generic simulation gain is prior work, explicitly attributed.
-This calculation removes an access artifact, not the physical time/accuracy cost.
-No quantum-classical separation or practical advantage has been established.
+The proof uses two collective facts: distinct cut-bond residuals have zero partial
+trace on both adjacent blocks and are HS-orthogonal; the first resolvent correction
+has zero expectation between single-block operator sums. LR then bounds the
+remaining residual-square term. This is not a claim that full-chain cross
+correlations vanish or that a local-observable theorem automatically covers O.
+All frequencies, positivity and the original linewidth are retained.
 
-A standalone generic uniform eigenvalue transform has an oracle-hybrid lower
-bound proportional to alpha/kappa. That is not an all-algorithm lower bound for
-our explicitly supplied spin model or for state-specific spectral sampling.
-Endpoint/sum-of-squares and specially structured encodings are different regimes.
-The global-gap reduction, resonance-window proof and direct sampler remain intact
-with their own assumptions. Do not infer that all smooth reductions fail.
+A sufficient block size is O(epsilon_loc^-1[(J_*/gamma)^2+(J_*/gamma)^3]), independent
+of total n. This bound can be very large and is not a necessary size or physical
+correlation length. If the sufficient size exceeds n, use the uncut full model.
+At uniform offsets the collective response is exactly a single line anyway.
+There is no spectral gap, cutoff classification, memory-decay or parity assumption.
 
-## Next bounded model-level question
+## Quantum and classical consequences
 
-Return to physical locality of the same even nearest-neighbor, alternating-offset
-chain and collective raising response. Determine whether the linewidth-resolved
-spectral law can be approximated by a positive mixture of overlapping finite
-spatial windows, with an error independent of the total length once the chain is
-large enough. The requested gamma, bins and accuracy must remain fixed.
+A classically selected block requires at most 2ell system qubits plus ancillas
+for the existing doubled-register sampler. Its controlled evolution still lasts
+O(log(1/epsilon_alg)/gamma). Coefficient access, preparation, block construction,
+simulation precision, measurement, binning and repeated shots count. No coherent
+full-chain lookup is required by the mixture, and no time fast forwarding is proved.
 
-Construct the candidate observable/window law before bounding it. Include the
-collective cross correlations; an average of isolated one-spin spectra is wrong
-even in Note 16's exact two-spin control. If a correlation approximation is not a
-positive measure, it is not automatically a directly usable sampler. Account for
-physical boundary conditions and for any error introduced by cutting interactions.
+The SAME blocks are a classical sampler. Dense diagonalization is one explicit
+upper bound, with preprocessing O((n+ell)8^ell) for all distinct intervals and
+reuse across draws; it is not the best-classical cost. Uniform alternating chains
+have only O(ell) distinct block templates. At fixed local parameters, linewidth
+and accuracy there is therefore no exponential-in-total-n obstruction for this
+sampling task. A potential advantage concerns required resolution/local response
+complexity, not total spin count alone. No quantum-classical separation is shown.
 
-Use a locality/finite-time argument or another justified structural reduction,
-then translate it to the SAME broadened full-law or specified-bin tolerance.
-Do not assume that short evolution, high temperature or an extensive observable
-automatically gives a system-size-independent error. Retain dependence on J, d,
-gamma, epsilon, block size and graph geometry.
+## Next bounded model-level task
 
-If a suitable finite-window law is valid, compare classical construction/sampling
-of its block response with direct local quantum spectral sampling. Price state
-preparation, coefficient access, time evolution, repeated draws, block selection
-and any approximation needed to treat the whole chain. Tensor-network,
-restricted-operator and direct-correlation methods remain competitors; exponential
-dense-state cost is not their lower bound. Classical preprocessing can be amortized.
+Use a nontrivial regime of the SAME alternating-offset model with d/J of order
+one and variable gamma/J. Determine which operator/tensor or recursion information
+is actually necessary inside a finite region on the linewidth time scale. Keep
+the exact symmetry and commuting/secular limits as controls, and compare classical
+acquisition plus reuse for M draws against direct local quantum evolution.
 
-This is one discriminating mathematical derivation, not a new simulator or a large
-toy census. No locality-based TV guarantee for this collective construction exists
-in Note 20. A failure for the chosen windows should inform the model comparison,
-not become a universal rejection of direct quantum sampling.
+Do not use the loose sufficient ell as a lower bound on every classical method,
+or failed tensor truncation as an all-classical hardness theorem. Seek a concrete
+response-relevant compression or obstruction. The window theorem resolves total-
+length dependence; repeatedly enlarging n is not the next test. A local quantum
+processor may help only if the remaining block response earns its full cost.
 
-## Executed evidence and preservation
+Retain applicable restricted-state, tensor-network, effective-model and direct-
+correlation methods, and physical relaxation when its assumptions apply. A common
+Lorentzian kernel is not arbitrary order-dependent relaxation or a finite-temperature
+state. Do not extend the chain proof to long-range graphs without new accounting.
+No generic spectral filtering, locality framework, molecule search, large simulation,
+compiler or third classical spin-off is requested.
 
-The new NumPy checker ran twice with identical JSON and exit code zero. -O/-OO
-refusals were verified. Three fixed n=2,4,6 chains test six moment identities,
-six smooth-cap comparisons and three bounded cubic-polynomial comparisons, with
-eight edge-continuity, four translation and six invalid-input controls. A state-
-filtering negative control is retained. These are complex128 diagnostics at
-tolerance 3e-10, not interval certificates, general polynomial synthesis, quantum
-circuits, measured spectra or timings. The continuous bound follows from the proof.
+## Evidence and preservation
 
-The note records the unrelated Python startup warning and source-inspection scope.
-No older verifier was rerun; prior files remain unchanged. No source code or
-experimental data was imported. Direct spectral algorithms, polynomial amplitude
-multiplication and the oracle-hybrid argument are prior work.
+The new NumPy checker ran twice in final form with identical JSON under one BLAS
+thread; -O/-OO and six invalid inputs were rejected. Four fixed chains (2,4,6 and
+a nonuniform 5-site control) check 33 partitions, 99 block-mixture bin identities,
+90 cut-residual orthogonality identities, 66 first-order cancellations and 66
+second-resolvent identities, 99 residual envelopes and 42 binned bounds. The
+continuous result is proved, not inferred from those finite matrices. Tests are
+complex128 diagnostics at tolerance 4e-9, not interval certificates or timings.
+No older suite was rerun. No experimental data or upstream implementation imported.
 
-Climate/dynamics remain open; Manthan is paused, battery/operator routes parked,
-both spin-offs independent and Phase-2 Note 27 closed. Preserve all earlier notes,
-proofs, data, code, reports, licenses and rights. Modify only Quantum-Assisted-
+Climate/dynamics remain open; Manthan is paused; battery/operator routes parked;
+both spin-offs independent and Phase-2 Note 27 closed. Preserve all prior notes,
+proofs, code, data, reports, licenses and rights. Modify only Quantum-Assisted-
 Algorithm-Discovery. No outside contact, paid/unattended work, manuscript revival,
 release, merge, new repository or administration change is authorized.
