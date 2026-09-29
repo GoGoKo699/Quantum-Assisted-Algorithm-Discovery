@@ -1,0 +1,327 @@
+{
+  "block_carrier_bin_TV": 0.5749148699368347,
+  "constants": {
+    "C_LR": 2,
+    "a0": 3.3705409552368772,
+    "mu": 1,
+    "v_over_Jstar": 12.232268228065703
+  },
+  "counts": {
+    "averaged_cut_strength": 14,
+    "averaged_fourth_moment": 10,
+    "binned_TV_bound_diagnostic": 42,
+    "block_partition": 33,
+    "boundary_residual_envelope": 99,
+    "distinct_cut_residual_orthogonality": 90,
+    "first_resolvent_term_vanishes": 66,
+    "invalid_inputs_rejected": 6,
+    "local_spectrum_substitution_detected": 1,
+    "lost_block_carrier_detected": 1,
+    "normalized_spectral_law": 87,
+    "positive_block_mixture_identity": 99,
+    "positive_normalized_bins": 99,
+    "second_resolvent_identity": 66,
+    "uniform_field_exact_control": 3
+  },
+  "local_substitution_bin_TV": 0.407085576766934,
+  "numpy_version": "2.3.5",
+  "rows": [
+    {
+      "analytic_bound": 1.0,
+      "binned_TV": 0.09419978527721713,
+      "block_limit": 1,
+      "gamma": 0.35,
+      "n": 2
+    },
+    {
+      "analytic_bound": 1.0,
+      "binned_TV": 0.0006285170907604498,
+      "block_limit": 1,
+      "gamma": 2.0,
+      "n": 2
+    },
+    {
+      "analytic_bound": 0.29074624590170983,
+      "binned_TV": 2.5053500600641376e-06,
+      "block_limit": 1,
+      "gamma": 8.0,
+      "n": 2
+    },
+    {
+      "analytic_bound": 1.0,
+      "binned_TV": 0.04709989263860856,
+      "block_limit": 2,
+      "gamma": 0.35,
+      "n": 2
+    },
+    {
+      "analytic_bound": 1.0,
+      "binned_TV": 0.0003142585453802249,
+      "block_limit": 2,
+      "gamma": 2.0,
+      "n": 2
+    },
+    {
+      "analytic_bound": 0.14537312295085492,
+      "binned_TV": 1.2526750300320688e-06,
+      "block_limit": 2,
+      "gamma": 8.0,
+      "n": 2
+    },
+    {
+      "analytic_bound": 1.0,
+      "binned_TV": 0.1558865851128976,
+      "block_limit": 1,
+      "gamma": 0.35,
+      "n": 4
+    },
+    {
+      "analytic_bound": 1.0,
+      "binned_TV": 0.0013516025065201942,
+      "block_limit": 1,
+      "gamma": 2.0,
+      "n": 4
+    },
+    {
+      "analytic_bound": 0.36197907614762864,
+      "binned_TV": 6.256759255987565e-06,
+      "block_limit": 1,
+      "gamma": 8.0,
+      "n": 4
+    },
+    {
+      "analytic_bound": 1.0,
+      "binned_TV": 0.04710134466320824,
+      "block_limit": 2,
+      "gamma": 0.35,
+      "n": 4
+    },
+    {
+      "analytic_bound": 1.0,
+      "binned_TV": 0.0006496482824210649,
+      "block_limit": 2,
+      "gamma": 2.0,
+      "n": 4
+    },
+    {
+      "analytic_bound": 0.18098953807381432,
+      "binned_TV": 3.0864988282836014e-06,
+      "block_limit": 2,
+      "gamma": 8.0,
+      "n": 4
+    },
+    {
+      "analytic_bound": 1.0,
+      "binned_TV": 0.03581745830651868,
+      "block_limit": 3,
+      "gamma": 0.35,
+      "n": 4
+    },
+    {
+      "analytic_bound": 1.0,
+      "binned_TV": 0.00043192550635085675,
+      "block_limit": 3,
+      "gamma": 2.0,
+      "n": 4
+    },
+    {
+      "analytic_bound": 0.12065969204920955,
+      "binned_TV": 2.0580772763165167e-06,
+      "block_limit": 3,
+      "gamma": 8.0,
+      "n": 4
+    },
+    {
+      "analytic_bound": 1.0,
+      "binned_TV": 0.026863093729889,
+      "block_limit": 4,
+      "gamma": 0.35,
+      "n": 4
+    },
+    {
+      "analytic_bound": 1.0,
+      "binned_TV": 0.00032394412976315123,
+      "block_limit": 4,
+      "gamma": 2.0,
+      "n": 4
+    },
+    {
+      "analytic_bound": 0.09049476903690716,
+      "binned_TV": 1.5435579572495306e-06,
+      "block_limit": 4,
+      "gamma": 8.0,
+      "n": 4
+    },
+    {
+      "analytic_bound": 1.0,
+      "binned_TV": 0.11236585950481641,
+      "block_limit": 1,
+      "gamma": 0.35,
+      "n": 6
+    },
+    {
+      "analytic_bound": 1.0,
+      "binned_TV": 0.0010513682155970996,
+      "block_limit": 1,
+      "gamma": 2.0,
+      "n": 6
+    },
+    {
+      "analytic_bound": 0.4599757918352436,
+      "binned_TV": 4.960660550515361e-06,
+      "block_limit": 1,
+      "gamma": 8.0,
+      "n": 6
+    },
+    {
+      "analytic_bound": 1.0,
+      "binned_TV": 0.018378130205070495,
+      "block_limit": 2,
+      "gamma": 0.35,
+      "n": 6
+    },
+    {
+      "analytic_bound": 1.0,
+      "binned_TV": 0.0004889443732834925,
+      "block_limit": 2,
+      "gamma": 2.0,
+      "n": 6
+    },
+    {
+      "analytic_bound": 0.2299878959176218,
+      "binned_TV": 2.4221772322620405e-06,
+      "block_limit": 2,
+      "gamma": 8.0,
+      "n": 6
+    },
+    {
+      "analytic_bound": 1.0,
+      "binned_TV": 0.02086263968691527,
+      "block_limit": 3,
+      "gamma": 0.35,
+      "n": 6
+    },
+    {
+      "analytic_bound": 1.0,
+      "binned_TV": 0.00032348812354808174,
+      "block_limit": 3,
+      "gamma": 2.0,
+      "n": 6
+    },
+    {
+      "analytic_bound": 0.15332526394508122,
+      "binned_TV": 1.6156382978329414e-06,
+      "block_limit": 3,
+      "gamma": 8.0,
+      "n": 6
+    },
+    {
+      "analytic_bound": 1.0,
+      "binned_TV": 0.014704043582670696,
+      "block_limit": 4,
+      "gamma": 0.35,
+      "n": 6
+    },
+    {
+      "analytic_bound": 1.0,
+      "binned_TV": 0.0002430793234139729,
+      "block_limit": 4,
+      "gamma": 2.0,
+      "n": 6
+    },
+    {
+      "analytic_bound": 0.1149939479588109,
+      "binned_TV": 1.2117202389545084e-06,
+      "block_limit": 4,
+      "gamma": 8.0,
+      "n": 6
+    },
+    {
+      "analytic_bound": 1.0,
+      "binned_TV": 0.025314387563383618,
+      "block_limit": 1,
+      "gamma": 0.35,
+      "n": 5
+    },
+    {
+      "analytic_bound": 1.0,
+      "binned_TV": 0.00034642197261026964,
+      "block_limit": 1,
+      "gamma": 2.0,
+      "n": 5
+    },
+    {
+      "analytic_bound": 0.2616716213115388,
+      "binned_TV": 1.484907087500112e-06,
+      "block_limit": 1,
+      "gamma": 8.0,
+      "n": 5
+    },
+    {
+      "analytic_bound": 1.0,
+      "binned_TV": 0.011852949244321103,
+      "block_limit": 2,
+      "gamma": 0.35,
+      "n": 5
+    },
+    {
+      "analytic_bound": 1.0,
+      "binned_TV": 0.00016196592763587092,
+      "block_limit": 2,
+      "gamma": 2.0,
+      "n": 5
+    },
+    {
+      "analytic_bound": 0.1308358106557694,
+      "binned_TV": 7.361563311922281e-07,
+      "block_limit": 2,
+      "gamma": 8.0,
+      "n": 5
+    },
+    {
+      "analytic_bound": 1.0,
+      "binned_TV": 0.007870079811066258,
+      "block_limit": 3,
+      "gamma": 0.35,
+      "n": 5
+    },
+    {
+      "analytic_bound": 1.0,
+      "binned_TV": 0.00010820019238601264,
+      "block_limit": 3,
+      "gamma": 2.0,
+      "n": 5
+    },
+    {
+      "analytic_bound": 0.08722387377051295,
+      "binned_TV": 4.907906883191981e-07,
+      "block_limit": 3,
+      "gamma": 8.0,
+      "n": 5
+    },
+    {
+      "analytic_bound": 1.0,
+      "binned_TV": 0.0056105280976298365,
+      "block_limit": 4,
+      "gamma": 0.35,
+      "n": 5
+    },
+    {
+      "analytic_bound": 0.9020092580183469,
+      "binned_TV": 8.115187893689008e-05,
+      "block_limit": 4,
+      "gamma": 2.0,
+      "n": 5
+    },
+    {
+      "analytic_bound": 0.0654179053278847,
+      "binned_TV": 3.6809303014147254e-07,
+      "block_limit": 4,
+      "gamma": 8.0,
+      "n": 5
+    }
+  ],
+  "scope": "Finite complex128 identities; no experimental data, native NMR solver, compiled circuit or performance claim.",
+  "status": "pass",
+  "tolerance": 4e-09
+}
