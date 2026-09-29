@@ -1,54 +1,39 @@
-# Research continuation contract
+# Repository entry instructions
 
-## Read the current project, not an old checkpoint
+## Read the working-branch handover first
 
-Read the [canonical project map](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/main/PROJECT_MAP.md), README.md, STATUS.md, and
-work_orders/CURRENT.md first. The active parent research branch is
-`research/prx-quantum-phase2`; the work order on `main` routes to that branch.
-Read its phase-2 charter before selecting the next scientific step.
+This default branch is a public entry point, not the current scientific workspace.
+Read [HANDOVER](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/research/prx-quantum-phase2/HANDOVER.md),
+[the working rules](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/research/prx-quantum-phase2/AGENTS.md), and
+[the current work order](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/research/prx-quantum-phase2/work_orders/CURRENT.md)
+on `research/prx-quantum-phase2` before choosing or implementing research.
+The [project map](PROJECT_MAP.md) records branch roles and independent projects.
 
-Quantum-Assisted Algorithm Discovery is one continuing parent exploration. The
-independent Algebraic-Loop-Certificates and Sparse-Weil-Reconstruction projects
-own their further classical research, software, teaching material, and manuscripts.
-Do not automatically resume either spin-off when asked to continue this project.
-Neither substitutes for the parent's quantum-discovery objective. This context
-may modify only `GoGoKo699/Quantum-Assisted-Algorithm-Discovery`.
+## Scope that supersedes older descriptions
 
-The older ledger sections, `docs/current-design.md`, experiment notes, and previous
-work orders are historical records. Their uses of "current", "next", or a pending
-spin-off creation do not override the project map and active work order. Consult
-PROVENANCE.md and the relevant source/experiment documentation before reusing evidence.
+Direct useful quantum samples are authorized outputs; a reusable classical program
+and quantum-free deployment are optional. Investigate established mathematical
+models and a useful observable before software or hardware implementation, while
+retaining preparation, access, accuracy, validation, and reuse costs. No useful
+quantum advantage is established and manuscript preparation is on hold.
 
-## Preserve scientific and comparison boundaries
+The activity-covariance lead is closed on current evidence. The next exploration
+has not been selected. Historical “current,” “next,” and publication headings do
+not authorize restarting sorting, spectral certificates, or the closed acquisition
+test. The two classical spin-offs own their further development independently.
 
-The objective is a useful reusable classical output discovered more efficiently
-with a circuit-model quantum computer. No useful quantum discovery advantage is
-established. No application or device platform is mandated by earlier experiments.
-Manuscript preparation remains on hold.
+## Change and evidence boundaries
 
-Retain strong classical deductions and realistic baselines. Treat seed choice,
-horizon, initialization, marked-set definition, coefficient domain, readout, and
-all access costs as explicit model choices. Verify published claims from primary
-sources before relying on them for new research. Attribute standard methods and
-public reference certificates. Unit tests, local rediscovery, stored success
-frequencies, compactness, or reuse alone are not novelty or speedup evidence.
-Do not transfer historical quantum resource counts to a new construction.
+Modify only `GoGoKo699/Quantum-Assisted-Algorithm-Discovery`. Preserve scientific
+files, negative findings, manifests, LICENSE, and third-party rights. Do not apply
+old attached patches over current routing or erase saved reports to pass a test.
+Use versioned successors and finish each checkpoint before moving to another.
 
-## Evidence and execution
+For scientific changes run only the applicable verifiers and report their actual
+scope. Documentation/link/hash checks are not scientific reruns or proof audits.
+Root `verify.py` covers historical guided imports, not all later research. Never
+run assertion-dependent verification under `-O` or `-OO`; use disposable outputs.
 
-Preserve LICENSE, third-party notices, proof notes, source data, manifests, and
-reference outputs. Imported files are tracked by provenance/import-manifest.json;
-put substantive new work in a versioned successor directory. Do not overwrite
-historical evidence to make tests pass or remove it merely to simplify navigation.
-
-For scientific changes, run the applicable verifiers, including `python verify.py`
-for its historical scope when applicable, and record what was actually rerun.
-For documentation-only changes, check links, branch routing, and the diff; do not
-claim an experimental rerun. Use temporary paths for generated data and benchmarks.
-Never run assertion-dependent code under `-O` or `-OO`.
-
-Keep commits scoped. Update current status and the active work order when evidence
-or ownership changes; distinguish new findings from retained historical claims.
-Never promise unattended work. No external contact, paid computation, unrelated
-branch merge, submission, release tag, or repository administration change is
-authorized by this continuation contract.
+No external contact, paid/unattended work, manuscript revival, branch merge,
+release, branch deletion, or repository administration change is authorized by
+these instructions. The detailed working-branch contract remains authoritative.
