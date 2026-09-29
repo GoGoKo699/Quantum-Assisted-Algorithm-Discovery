@@ -4,19 +4,18 @@
 
 | Note | Question and decision | Evidence |
 |---|---|---|
-| [01 — Model/mechanism screen](MODEL_MECHANISM_SCREEN_01.md) | Graph sparsification, stopping power and explicitly separate physical-source acquisition | Primary-source and symbolic screen |
-| [02 — Task-matched readout](TASK_MATCHED_READOUT_02.md) | Calibrated scalar signals need not require a joint record; energy/loss matched unentangled comparator | [Exact and covariance checks](../../experiments/task_matched_readout_v1/) |
-| [03 — Implicit Gaussian graph](IMPLICIT_GAUSSIAN_GRAPH_03.md) | Useful graph/label contract; easy and conditionally hard regimes; coherent access and random-memory cost | [Exact input/accuracy controls](../../experiments/implicit_graph_contract_v1/) |
+| [01 — Model/mechanism screen](MODEL_MECHANISM_SCREEN_01.md) | Graph sparsification, stopping power and separate physical-source acquisition | Primary-source and symbolic screen |
+| [02 — Task-matched readout](TASK_MATCHED_READOUT_02.md) | Calibrated scalar signals admit an energy/loss-matched unentangled comparator | [Readout controls](../../experiments/task_matched_readout_v1/) |
+| [03 — Implicit Gaussian graph](IMPLICIT_GAUSSIAN_GRAPH_03.md) | Useful graph/label contract, classical boundaries and quantum memory hypothesis | [Graph controls](../../experiments/implicit_graph_contract_v1/) |
+| [04 — Short-seed sparsification](SHORT_SEED_SPARSIFICATION_04.md) | Both adaptive stages: correctness instead of exact random-output law; output-scale working-memory bound | [Exact proof-component controls](../../experiments/short_seed_sparsification_v1/) |
 
-The active comparison is graph sparsification on compact classical input, with a
-possible randomness-memory improvement to an existing quantum algorithm. The next
-step must audit both adaptive stages, not merely substitute a small seed in the
-last sampler. Bounded independence is prior work; no new algorithm or useful
-quantum advantage is established. Point access and real application needs remain
-part of the contract.
+Note 04 is an internally derived refinement using existing quantum spanner,
+resistance, bounded-independence and matrix-moment methods. It retains the original
+coherent input/RAM assumptions and time bound up to logarithms. Publication
+priority, independent proof audit and a useful end-to-end application benefit
+are unresolved. No historical science is rewritten as a new advantage.
 
-Sensing is retained as a separate-input reference and stopping-power as a reserve,
-not parallel default programs. The [phase-3 closeout](../phase_3/ACTIVITY_CLAIM_CLOSEOUT_30.md)
-remains closed; old notes and the handover are preserved. No new repository is
-needed, and manuscript preparation remains on hold. This index is not a second
-work order.
+The next work is a focused audit and matched useful-input resource comparison,
+not three parallel programs or generic certificate accumulation. Sensing remains
+a separate-input reference and stopping power a reserve. The phase-3 emitter
+closeout stays in force. No new repository is needed; manuscripts stay on hold.

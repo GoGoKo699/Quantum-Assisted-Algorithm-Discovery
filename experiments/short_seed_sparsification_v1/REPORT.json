@@ -1,0 +1,85 @@
+{
+  "arithmetic": "Exact integers and Fractions; standard library.",
+  "counts": {
+    "field_distributivity": 512,
+    "four_bit_parity_marginal": 15,
+    "four_output_bijection": 3,
+    "fresh_layer_seed_essential": 1,
+    "implicit_weight_replay": 28,
+    "invalid_inputs_rejected": 6,
+    "lookahead_graph_bias_detected": 1,
+    "low_moment_not_full_law": 3,
+    "parallel_path_leverage_bound": 1,
+    "replay_contains_deletion": 1,
+    "rounded_probability_reweight_unbiased": 4,
+    "scalar_count_constant_control": 5,
+    "spectral_moment_constant": 4,
+    "thresholded_joint_probabilities": 16,
+    "unique_field_inverse": 7,
+    "upward_probability_rounding": 4
+  },
+  "field_control": {
+    "coefficients": 4,
+    "field": "GF(8), modulus x^3+x+1",
+    "scope": "Tiny exact field identities only; no scalable field compiler or quantum oracle.",
+    "seed_bits": 12,
+    "seeds_exhausted": 4096
+  },
+  "implicit_oracle_control": {
+    "addresses": 7,
+    "layers": 3,
+    "scope": "Membership/reweighting algebra, not a spanner constructor."
+  },
+  "not_executed": [
+    "quantum search",
+    "quantum spanner routine",
+    "large sparsifier",
+    "QRAM circuit",
+    "classification benchmark",
+    "historical verifier"
+  ],
+  "rounding_and_adaptivity": {
+    "fresh_graph_then_seed_expectation": "1/2",
+    "reused_seed_expected_weight": "2",
+    "rounded_rows": [
+      {
+        "actual": "1/32",
+        "requested": "1/1000",
+        "threshold": 1
+      },
+      {
+        "actual": "5/16",
+        "requested": "2/7",
+        "threshold": 10
+      },
+      {
+        "actual": "1/2",
+        "requested": "1/2",
+        "threshold": 16
+      },
+      {
+        "actual": "1",
+        "requested": "1",
+        "threshold": 32
+      }
+    ],
+    "seed_then_graph_bias": "0",
+    "two_layer_expected_weight": "1"
+  },
+  "scope": "Finite proof-component controls. General correctness and resource bounds are in the note; no empirical speedup or priority claim.",
+  "status": "pass",
+  "trace_moments": {
+    "2": {
+      "even_parity": "3/2",
+      "independent": "3/2"
+    },
+    "4": {
+      "even_parity": "39/32",
+      "independent": "39/32"
+    },
+    "6": {
+      "even_parity": "147/128",
+      "independent": "9/8"
+    }
+  }
+}

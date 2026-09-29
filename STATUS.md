@@ -1,60 +1,52 @@
 # Current status
 
-29 September 2026 — implicit Gaussian-graph model/access audit.
+29 September 2026 — phase-4 short-seed integration.
 
-**No new useful quantum advantage, improved sparsification algorithm or application
-performance is established. Manuscript preparation remains on hold.**
+[Note 04](exploration/phase_4/SHORT_SEED_SPARSIFICATION_04.md) derives a conditional
+algorithmic memory refinement of the Apers/de Wolf quantum sparsifier. Both the
+implicit rough spanner stage and the refined resistance stage use fresh
+logarithmic-wise independent selectors. The moment proof establishes spectral
+correctness and edge-count tails directly, not equality of the full output law.
 
-[Note 03](exploration/phase_4/IMPLICIT_GAUSSIAN_GRAPH_03.md) selects Gaussian
-similarity graphs and harmonic label propagation as a concrete reusable-output
-contract. Both sides receive explicit finite-bit points and bandwidth, not a dense
-edge matrix. The spectral guarantee controls graph energies and a derived harmonic
-energy-norm error; classifier accuracy or isolated-point confidence requires extra
-assumptions. A downstream task may bypass the universal artifact.
+In the original finite-word adjacency/coherent-RAM model, the derived time is
+approximately sqrt(mn)/epsilon and additional coherent working storage is
+approximately n/epsilon^2, up to logarithms. Input storage, coherent lookup,
+finite-weight arithmetic, spanners, resistance data, output and search bookkeeping
+remain. Hash evaluation adds polylogarithmic reversible work and scratch, not a
+new large random-memory table. No QRAM-free or constant-hardware assertion is made.
 
-Published quantum graph sparsification gives ~n^(3/2)/epsilon time in its coherent
-adjacency/RAM model for complete graphs. It also uses substantial coherently
-accessible working bits. Data loading, two coordinate lookups, reversible kernel
-arithmetic, relative weight precision and output remain priced. No fault-tolerant
-memory implementation, circuit count or runtime estimate was run. A sequential
-lookup upper bound is not a lower bound for every memory architecture.
+The independent-copy symmetrization, adaptivity conditioning, probability rounding,
+cardinality caps and failure events are explicit. Bounded independence and the
+other primitives are prior methods. The exact composition's publication priority
+and independent proof audit are unresolved. No experimental or end-to-end useful
+quantum advantage is established. Manuscript preparation remains on hold.
 
-A broad-kernel classical uniform-edge comparator needs ~n/(tau epsilon^2) edge
-queries when a certified minimum weight tau is available. Standard geometric/KDE
-methods strengthen it in their regimes. At the other extreme, the known Gaussian
-closest-pair reduction admits exact dyadic weights with O(log^2 n) bits. Conditional
-fine-grained hardness thus concerns compact-input graphs too, not merely reading
-n^2 supplied edges. The randomized algorithm class must match the conjectured
-hardness assumption. This does not show that a useful data task requires the
-hardness construction's bandwidth or uniform relative accuracy on every weak cut.
+## Executed scope
 
-The next hypothesis concerns randomness storage in the existing quantum algorithm:
-its generic query-indistinguishability construction preserves more of the random
-output law than the spectral-correctness contract asks for. Prior bounded-
-independence sparsification may permit a smaller seed, but the full adaptive
-rough/refined quantum integration is not proved. Its input access, membership and
-resistance memory remain. The [work order](work_orders/CURRENT.md) sets this one
-bounded test, not a broad graph/data or pseudorandomness project.
+The standard-library checker ran twice with identical JSON. It verifies finite
+field hashing and threshold marginals, noncommutative trace-moment equality,
+round-up/reweighting, and implicit-layer replay. Negative controls detect seed
+reuse and choosing the next graph after its seed. Different sixth moments show
+that matching the needed lower moments does not reproduce the full law.
+Six invalid inputs and -O/-OO were rejected. The [report](experiments/short_seed_sparsification_v1/REPORT.json)
+contains exact arithmetic, not random performance trials. No quantum sampler,
+spanner implementation, large graph, classification dataset, hardware or historical
+verifier was run. General guarantees rely on the proof and cited subroutines.
 
-## Executed evidence
+Primary source text for quantum sparsification, bounded independence and matrix
+moments was inspected. Requested PDF screenshots failed; no figure/table results
+were interpreted. Focused searches did not establish novelty. The source record
+and all assumptions are in the note.
 
-The new standard-library Fraction checker ran twice with identical output. It
-checks complete-graph adjacency, six leverages and their sum, uniform-edge
-expectation, an exact harmonic perturbation bound, relative-error composition,
-finite dyadic cut separation, and a five-point absolute-pruning warning. It rejects
-six invalid inputs and -O/-OO. These are exact small identity controls, not an
-executed sparsifier, bounded-independence theorem test, conditional-hardness
-experiment, quantum search, real-data classifier, or benchmark.
+## Continuation and preservation
 
-The [saved report](experiments/implicit_graph_contract_v1/REPORT.json) records the
-rational values. General guarantees follow from the stated proofs and prior
-literature. Primary graph/kernel/closest-pair and small-space sources were read;
-two application/hardness PDF pages were visually checked, other requested PDF
-screenshots failed and no performance figures were inferred. The novelty screen
-is bounded, not proof that the proposed memory integration is original.
+The [work order](work_orders/CURRENT.md) calls for a focused audit and a useful
+input/resource comparison, not repeated generic certificate development. The
+Gaussian label-accuracy and strong-classical boundaries of Note 03 remain binding.
+The local plural-filename Note 03 is distinct from the committed singular-filename
+note that selected the short-seed hypothesis. Neither is rewritten here.
 
-The [preceding ledger](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/e7af3ecdaf0393cc9f279f1267429fba8073dcc0/STATUS.md)
-and all older science remain unchanged. No historical scientific verifier was
-rerun. Sensing remains scope-separated, stopping-power a reserve, and the emitter
-claim closed. Both spin-offs remain independent. No new repository, manuscript,
-external contact, paid/unattended work, release, merge or administration change.
+The [preceding ledger](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/288eedadc67c283f9fb1cce4b942e8c780eb43ec/STATUS.md)
+retains prior decisions. All earlier scientific files, handover, licenses and
+third-party rights are unchanged. Only the parent repository is modified; no
+new repository, third spin-off, branch merge, release, contact or paid work follows.
