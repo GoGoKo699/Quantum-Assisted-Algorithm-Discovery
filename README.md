@@ -1,66 +1,70 @@
 # Quantum-Assisted Algorithm Discovery
 
 **Can circuit-model quantum computation obtain useful information more effectively
-than strong classical alternatives?** Direct samples are allowed. Mathematical
-models and their quantum integration precede implementation; essential access,
-accuracy and output costs remain explicit. See [AGENTS.md](AGENTS.md).
+than strong classical alternatives?** Direct samples and model-first analysis
+remain authorized. Essential access, accuracy and output costs stay explicit.
+See [AGENTS.md](AGENTS.md). Manuscript preparation remains on hold.
 
-**Exploratory: no useful quantum advantage is established. Manuscript on hold.**
+**No useful quantum advantage is established. No new repository is needed.**
 
-## Current conditional claim: estimate temporal emission activity
+## Current decision: the source-matched activity test favors a classical contraction
 
-[Activity claim 28](exploration/phase_3/EMISSION_ACTIVITY_CLAIM_28.md) specializes
-the emitter question to a bounded correlation of counts in two successive windows.
-The task no longer asks for a complete microscopic history. Two computational
-flags exactly encode the needed three Laplace moments as final-state probabilities,
-without changing the underlying system dynamics or discarding rare paths.
+[Classical activity acquisition 29](exploration/phase_3/CLASSICAL_ACTIVITY_ACQUISITION_29.md)
+executes the comparison requested by [Claim 28](exploration/phase_3/EMISSION_ACTIVITY_CLAIM_28.md).
+For its seven-emitter periodic Ising calibration, a two-mode tilted model was
+acquired from the generator, not supplied or fitted to target trajectories.
+The ground-start covariance is reproduced with observed errors 3.32e-5, 3.18e-6
+and 3.75e-7 for the three declared observation windows. These are finite numerical
+diagnostics, not interval certificates or a theorem for growing rings.
 
-Standard high-accuracy Lindblad simulation plus amplitude estimation provides
-a concrete quantum precision mechanism: inverse-linear rather than generic
-inverse-square sampling dependence on additive error. The operation requires a
-coherent circuit and its inverse, with purification/workspace retained; it does
-not act retrospectively on measured photon data. Two statistic flags are not a
-claim of only two extra qubits for the whole simulation. Ordinary first-order
-splitting is not silently treated as an exact, cheap channel.
+Exact translation/reflection reduction first lowers the relevant operator sector
+from 16,384 coordinates to 1,300. One sparse factorization and right/left slow-mode
+solves acquire the reusable small model. Full invariant-sector exponential action
+provides a separate reference. Acquisition and validation are both recorded; no
+unknown phase rates, stationary-state preparation, burn-in or photon dataset is
+provided free. The small model retains the ground state's slow projection; omitted
+fast-transient effects are part of its tested error, not assumed absent.
 
-**The comparison remains conditional.** A known adequate small classical tilted
-generator evaluates the same statistic cheaply without sampling. Its acquisition,
-within-phase corrections and ground-start transient must be counted. Long bins
-can favor that classical reduction. The [work order](work_orders/CURRENT.md) now
-targets this one classical acquisition question, not another generic proof or a
-claim of advantage from the size of the many-body state. The standard primitives
-and counting-field machinery are attributed; novelty is not established.
+The reduced matrices compute the requested scalar, not an automatically positive
+full photon-record law. Individual moment errors are larger than covariance errors
+in this example. Other windows, parameters or larger systems require new validation.
+The exact spatial symmetry itself does not establish polynomial scaling in n.
 
-## Reproduce the identity check
+This calibration does not justify quantum resource compilation for the proposed
+activity-precision advantage. Amplitude estimation improves generic Monte Carlo,
+not deterministic evaluation of an adequate small model. Its quantum construction
+remains valid and the broader emitter family is not declared easy. The
+[work order](work_orders/CURRENT.md) returns to a bounded positive-mechanism screen,
+not another generic estimator or automatic increase in emitter count.
+
+## Executed acquisition and validation
 
 ```sh
-OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python experiments/activity_flags_v1/verify.py
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python experiments/activity_acquisition_v1/verify.py
 ```
 
-Python 3.10+, NumPy and SciPy. The [report](experiments/activity_flags_v1/REPORT.json)
-records a single three-emitter flag/tilted-law check and small classical controls.
-The checker ran twice identically and rejected -O/-OO. No published metastable
-parameter-slice simulation, quantum circuit, large-system run or timing comparison
-was performed. This is not evidence of a practical quantum advantage. Historical
-scientific verifiers were not rerun and their files remain unchanged.
+Python 3.10+, NumPy and SciPy. The [report](experiments/activity_acquisition_v1/REPORT.json)
+records the acquired matrices, three covariance comparisons, symmetry intertwining,
+independent propagation, solver-shift and initial-state controls. The final script
+ran twice with identical JSON, rejecting -O/-OO and five invalid inputs.
+No quantum circuit, laboratory data, large-system study or timing comparison was
+performed. No earlier scientific verifier was rerun or historical file changed.
 
-## Retained work and organization
+## Preserved work
 
-[Revision 27](exploration/phase_3/STRATEGIC_REVISION_27.md) governs the research
-priority. [Record instrument 25](exploration/phase_3/RECORD_INSTRUMENT_25.md) and
-[emission memory 26](exploration/phase_3/EMISSION_MEMORY_26.md) preserve the full-record
-quantum construction and coherent low-excitation classical comparison. Earlier
-spectral and dynamical work remains available, not refuted by the narrower task.
-No new repository or third classical spin-off is needed.
+[Revision 27](exploration/phase_3/STRATEGIC_REVISION_27.md) governs priorities.
+[Record instrument 25](exploration/phase_3/RECORD_INSTRUMENT_25.md),
+[emission memory 26](exploration/phase_3/EMISSION_MEMORY_26.md), and Claim 28 keep
+their original mathematical scopes. Earlier spectral and dynamical results remain
+quantitative references, not rejected by this finite calibration. Direct samples
+need not become a classical program. No third classical spin-off is being created.
 
-The independent [Algebraic-Loop-Certificates](https://github.com/GoGoKo699/Algebraic-Loop-Certificates)
-and [Sparse-Weil-Reconstruction](https://github.com/GoGoKo699/Sparse-Weil-Reconstruction)
-projects own their further development. The active branch is
-`research/prx-quantum-phase2`; `main` is an entry point, not a merged research copy.
-[STATUS.md](STATUS.md) links current claims and pinned prior ledgers. The
-[project map](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/main/PROJECT_MAP.md)
-and charter are subject to the explicit direct-output/model-first extensions.
+The existing independent projects own their further development. The active parent
+branch is `research/prx-quantum-phase2`; `main` remains an entry point, not a merged
+copy of later work. [STATUS.md](STATUS.md) links current claims and pinned history.
+The [project map](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/main/PROJECT_MAP.md)
+and charter remain subject to the direct-output and model-first extensions.
 Climate/dynamics remain open, Manthan paused, battery/operator routes parked,
-and Phase-2 Note 27 closed. Prior proofs, data, code and third-party rights remain
-intact. The original [MIT license](LICENSE), Copyright (c) 2026 Ruge Lin, is unchanged.
-Only this parent repository is writable in this project context.
+and Phase-2 Note 27 closed. Earlier proofs, code, reports, data, the original
+[MIT license](LICENSE), Copyright (c) 2026 Ruge Lin, and third-party rights remain.
+Only Quantum-Assisted-Algorithm-Discovery may be modified in this context.
