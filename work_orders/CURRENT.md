@@ -1,54 +1,57 @@
-# Current task: match the input, useful output, and physical resources
+# Current task: useful implicit graphs and fully priced access
 
 29 September 2026. Branch: `research/prx-quantum-phase2`.
 Read [Screen 01](../exploration/phase_4/MODEL_MECHANISM_SCREEN_01.md),
+[readout decision 02](../exploration/phase_4/TASK_MATCHED_READOUT_02.md),
 [AGENTS.md](../AGENTS.md), and the preserved [handover](../HANDOVER.md).
-The closed activity-covariance proposal is not resumed. No new repository is needed.
+No new repository is needed. Direct samples remain allowed; manuscripts stay on hold.
 
-## One bounded comparison, not another general framework
+## Decision carried forward
 
-Examine the proposed physical-signal acquisition branch using one independently
-motivated amplitude/phase noise-rejection or signal-quality task. Both strategies
-must access the same unknown source, have the same prior information, and deliver
-the same useful output. This is a scope audit of a DIFFERENT INPUT MODEL, not an
-authorized replacement of the original classical-input circuit-model objective.
-A Gaussian optical sensing improvement alone is not a result for that objective.
-Do not rewrite the charter or claim general-purpose quantum computation is needed.
+The calibrated signal-template task has a task-aligned, squeezed but unentangled
+homodyne comparator. It is not a need for a full joint record. Unequal pure loss
+and both signal/total photon budgets are included; nuisance calibration, angle
+control, temporal correlations and back-action limit the applicability to actual
+unknown-waveform sensing. Do not claim that all sensing is easy, that squeezing
+is classical, or that this affine result solves nonlinear contamination learning.
 
-Use the quantum-dense metrology experiments and the 2026 quantum signal-learning
-paper as prior work and application anchors, not as the project's discoveries.
-Specify signal and nuisance distributions, the observable and justified accuracy,
-when queries are known, source-use and time budgets, probe/reference energy,
-loss, detector efficiency, phase stability and calibration error. Decide whether
-the useful task truly needs joint measurements or only a few selected marginals.
-Do not invent a delayed query or microscopic feature solely to favor one method.
+No useful new entangled acquisition regime or general-purpose circuit role has
+been established. Retain sensing as a separate-input reference, not another
+indefinite metrology program. Do not add generic Gaussian bounds, delayed-query
+restrictions, or finer unknown features merely to evade the task-specific comparator.
 
-Compare optimized homodyne angles, squeezed but unentangled probes, adaptive
-allocation, and classical inference with entangled joint readout. Equal x/p-axis
-marginals failing to determine covariance is not an all-homodyne obstruction:
-two rotated quadrature variances suffice. Cheaper processing of a quantum-acquired
-record is allowed, but acquiring and calibrating that record must earn its cost.
-The Gaussian deconvolution variance in Screen 01 is one estimator's performance,
-not a lower bound on all algorithms or a benefit for a supplied known distribution.
+## One bounded in-scope model/access comparison
 
-The deliverable is one useful input/output contract and a matched comparison that
-can reject the candidate. If existing metrology already settles it, or a simple
-unentangled strategy suffices, retain that conclusion without building new proof
-machinery. Any surviving difference needs an explicit new-result and scope case.
-No large numerical scan, laboratory request, sensor design, waveform database,
-compiler or independent spin-off is the default next step.
+Return to graph sparsification, the closest shortlisted fit to the parent's
+original classical-input, reusable-output goal. Begin with one independently
+useful graph family that is specified implicitly from a compact classical input,
+not with an arbitrary dense edge oracle. State the downstream use, approximation
+quality, coefficient representation and costs of evaluating an edge or accessing
+its adjacency information coherently. Graph-query access and input memory may
+not be granted for free.
 
-## In-scope alternatives and evidence boundaries
+Apers and de Wolf's quantum sparsification is prior work. Compare its complete
+applicable access and working-memory requirements with the strongest adequate
+classical construction for the selected family, including geometric/kernel
+methods such as the Screen-01 predecessor. Both competitors may avoid materializing
+an n-by-n graph and may bypass a sparsifier if the downstream output is cheaper
+to compute directly. Shared preprocessing and repeated-use counts must be priced.
 
-Graph sparsification remains the closest shortlisted match to reusable classical
-outputs. Its quantum precedent prices coherent adjacency and working-memory
-access; implicit kernel graphs have strong classical shortcuts. Electronic stopping
-remains a reserve with an explicit initial-state and classical-comparison obligation.
-They are alternatives, not parallel default programs or proven failed directions.
+The deliverable is a compact useful-input/output contract and one discriminating
+access/cost calculation. A known quantum theorem alone is not novelty; a hidden
+exponential lookup or an intentionally explicit classical input is not an advantage.
+If the necessary coherent memory cost or a classical shortcut removes the
+opportunity, record that decision before changing examples. No broad kernel census,
+new solver, full compiler, external dataset hunt or spin-off is the default task.
 
-This checkpoint performed literature/model analysis and three symbolic expression
-checks only. No scientific simulation or historical suite was rerun. Preserve all
-previous notes, source, reports, provenance and rights. Keep the phase-3 handover
-as history; update current routing rather than rewriting its decisions. Only
-Quantum-Assisted-Algorithm-Discovery may be modified. Manuscript remains on hold;
-no new repository, merger, release, outside contact or paid/unattended work.
+The electronic-stopping candidate remains a reserve with its preparation and
+physical-adequacy obligations. It is not a parallel work order. The closed
+emitter-covariance lead is not enlarged or resumed by this comparison.
+
+## Evidence and action boundaries
+
+Note 02 ran only exact regression/symbolic and finite Gaussian covariance checks;
+no waveform fitting, optical sampling, pilot acquisition or historical suite was
+run. Preserve the existing notes, code, reports, provenance, LICENSE and third-party
+rights. Modify only Quantum-Assisted-Algorithm-Discovery. No external contact,
+paid/unattended work, new repository, branch merge, release or admin change follows.

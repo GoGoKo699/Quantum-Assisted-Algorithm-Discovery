@@ -2,48 +2,47 @@
 
 **Can quantum computation obtain useful information more effectively than strong classical alternatives?**
 
-**Phase 4: fresh model/mechanism comparison. No useful quantum advantage is established. Manuscript preparation remains on hold.**
+**Phase 4: model-first exploration. No useful quantum advantage is established.
+Manuscript preparation remains on hold.**
 
-Direct quantum samples are permitted; a reusable classical program is optional.
-Model-level reasoning comes before implementation, with preparation, input access,
-accuracy, validation and output costs retained. See [AGENTS.md](AGENTS.md).
+Direct samples are permitted; a reusable classical program is optional. Essential
+preparation, input, accuracy and output costs remain explicit. See [AGENTS.md](AGENTS.md).
 
-## Current exploration
+## Current result and decision
 
-[Screen 01](exploration/phase_4/MODEL_MECHANISM_SCREEN_01.md) compares three
-independently motivated possibilities: reusable graph sparsifiers, electronic
-energy-deposition calculations, and better acquisition of physical signals.
-The first two retain classically specified computational inputs. Physical signal
-learning instead accesses an unknown source before measurement; it is explicitly
-a proposed different input model, not a claimed speedup on supplied classical data
-or a silent replacement of the circuit-model objective.
+[Task-matched readout 02](exploration/phase_4/TASK_MATCHED_READOUT_02.md) tests the
+physical-acquisition candidate from [Screen 01](exploration/phase_4/MODEL_MECHANISM_SCREEN_01.md).
+For a supplied signal template and calibrated nuisance shapes, a single chosen
+quadrature per temporal mode reproduces the nuisance-insensitive amplitude
+statistic. Under the stated pure-loss model, squeezed homodyne is less noisy than
+the symmetric two-mode-squeezed Bell scheme at matched photon budgets, even with
+unequal signal/reference losses. Squeezed homodyne is unentangled, not classical light.
 
-The next bounded check examines whether a useful joint signal diagnostic benefits
-from quantum-assisted acquisition after energy, loss, calibration and optimized
-unentangled readout are matched. Existing quantum-dense metrology and quantum
-signal-learning results are prior work, not our contribution. Simple rotated
-measurements are retained as an important bypass. No new sensor or simulator is
-being built, and no input-model extension is treated as an established result.
-Graph sparsification remains the closest shortlisted fit to the original goal.
+This does not solve unknown, drifting nuisance inference or refute quantum-dense
+metrology. Calibrating the shapes and controlling the measurement angles can be
+substantial tasks; their costs are not declared free in a real experiment. The
+comparison supplies no new entangled-sensing or general-purpose circuit advantage.
+Physical-source access remains a separate proposed input model, not a replacement
+of the original classical-input objective.
 
-## Navigation
+Sensing is retained as a scope-separated reference. The [next work order](work_orders/CURRENT.md)
+returns to the shortlisted graph-sparsification question: useful implicit inputs,
+coherent access and memory costs, and strong classical graph construction. No
+new dataset, simulator, optical instrument or repository is requested.
 
-| Read | Purpose |
-|---|---|
-| [Phase-4 index](exploration/phase_4/README.md) | Fresh screen and its scope |
-| [Current work order](work_orders/CURRENT.md) | One active comparison, not three parallel tasks |
-| [Status](STATUS.md) | Current limits and pinned earlier ledger |
-| [Handover](HANDOVER.md) | Preserved starting snapshot and history |
-| [Phase-3 index](exploration/phase_3/README.md) | Previous scientific notes and evidence |
-| [Reproduction guide](handover/REPRODUCING.md) | Scope of historical checkers and external inputs |
+## Evidence and navigation
 
-The activity-covariance lead remains closed on present evidence; see
-[Closeout 30](exploration/phase_3/ACTIVITY_CLAIM_CLOSEOUT_30.md). It is not reopened
-by this restart. The handover's unselected-next-phase wording is historical.
-No old scientific verifier was rerun in the new source/model screen.
+```sh
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python experiments/task_matched_readout_v1/verify.py
+```
 
-The working branch remains `research/prx-quantum-phase2`; its name is historical.
-`main` is a routing entry, not a merged research copy. Both classical spin-offs
-retain their independent projects. Earlier notes, code, reports, rights and the
-original [MIT license](LICENSE) are preserved. Only this parent repository may be
-modified; no new repository, manuscript, release or branch merge is required.
+Python 3.10+, SymPy and NumPy. The [saved report](experiments/task_matched_readout_v1/REPORT.json)
+contains exact finite regression identities and six analytic loss/energy controls,
+not physical samples or performance data. Two identical runs; no historical suite
+rerun. The [phase-4 index](exploration/phase_4/README.md), [status](STATUS.md),
+[preserved handover](HANDOVER.md), and [phase-3 archive](exploration/phase_3/README.md)
+retain the decisions and evidence. The activity-covariance lead remains closed.
+
+The research branch name `research/prx-quantum-phase2` is historical. Main remains
+a routing entry. Earlier science, source/report pairs, both independent spin-offs,
+and the original [MIT license](LICENSE) are preserved. Only this parent is writable.

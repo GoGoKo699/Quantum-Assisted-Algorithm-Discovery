@@ -1,0 +1,77 @@
+{
+  "exact_regression": {
+    "exact_checks_passed": true,
+    "nuisance_columns": 2,
+    "residual": [
+      "1",
+      "-1/2",
+      "97/50",
+      "-2/25",
+      "-7/10",
+      "0",
+      "29/50",
+      "14/25"
+    ],
+    "squared_residual_norm": "154/25",
+    "time_modes": 4
+  },
+  "invalid_inputs_rejected": 6,
+  "limits": "Noise rows assume pure loss, stable known phases and no back-action; sensing and reference squeezed energy are counted. Homodyne is squeezed but unentangled, not classical light.",
+  "noise_rows": [
+    {
+      "Bell_noise_per_coordinate": 1.0,
+      "homodyne_equal_sensor_photons": 0.5,
+      "homodyne_equal_total_budget": 0.5,
+      "reference_efficiency": 1,
+      "signal_efficiency": 1,
+      "squeezed_photons_total_budget": 0
+    },
+    {
+      "Bell_noise_per_coordinate": 0.171572875254,
+      "homodyne_equal_sensor_photons": 0.085786437627,
+      "homodyne_equal_total_budget": 0.050510257217,
+      "reference_efficiency": 1,
+      "signal_efficiency": 1,
+      "squeezed_photons_total_budget": 2
+    },
+    {
+      "Bell_noise_per_coordinate": 0.421572875254,
+      "homodyne_equal_sensor_photons": 0.210786437627,
+      "homodyne_equal_total_budget": 0.175510257217,
+      "reference_efficiency": 0.8,
+      "signal_efficiency": 0.8,
+      "squeezed_photons_total_budget": 2
+    },
+    {
+      "Bell_noise_per_coordinate": 0.337722339832,
+      "homodyne_equal_sensor_photons": 0.210786437627,
+      "homodyne_equal_total_budget": 0.175510257217,
+      "reference_efficiency": 1,
+      "signal_efficiency": 0.8,
+      "squeezed_photons_total_budget": 2
+    },
+    {
+      "Bell_noise_per_coordinate": 0.252551286084,
+      "homodyne_equal_sensor_photons": 0.147774424948,
+      "homodyne_equal_total_budget": 0.136911518298,
+      "reference_efficiency": 1,
+      "signal_efficiency": 0.8,
+      "squeezed_photons_total_budget": 10
+    },
+    {
+      "Bell_noise_per_coordinate": 0.714745962156,
+      "homodyne_equal_sensor_photons": 0.147774424948,
+      "homodyne_equal_total_budget": 0.136911518298,
+      "reference_efficiency": 0.5,
+      "signal_efficiency": 0.8,
+      "squeezed_photons_total_budget": 10
+    }
+  ],
+  "phase_drift_negative_control": {
+    "amplitude": 10.0,
+    "bias": 0.09999833334166665,
+    "radians": 0.01
+  },
+  "scope": "Exact finite regression identities and analytic Gaussian covariance arithmetic; no waveform fit, unknown-nuisance pilot, device, or performance run.",
+  "status": "pass"
+}

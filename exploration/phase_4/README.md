@@ -1,19 +1,17 @@
 # Phase 4 — fresh model/mechanism exploration
 
-29 September 2026. The preceding [handover](../../HANDOVER.md) and
-[activity closeout](../phase_3/ACTIVITY_CLAIM_CLOSEOUT_30.md) remain intact.
+[Handover](../../HANDOVER.md) · [Status](../../STATUS.md) · [Current task](../../work_orders/CURRENT.md)
 
-Start with [Screen 01](MODEL_MECHANISM_SCREEN_01.md): graph sparsification,
-energy deposition, and a scope-separated physical-signal acquisition candidate.
-The last is a proposed input-model branch, not a completed answer to the original
-classical-input circuit-computation task. Its first check must compare useful
-outputs and physical resources against optimized unentangled measurements.
+| Note | Question and decision | Evidence |
+|---|---|---|
+| [01 — Model/mechanism screen](MODEL_MECHANISM_SCREEN_01.md) | Graph sparsification, stopping power and explicitly separate physical-source acquisition | Primary-source and symbolic screen |
+| [02 — Task-matched readout](TASK_MATCHED_READOUT_02.md) | Calibrated scalar signals need not require a joint record; energy/loss matched unentangled comparator | [Exact and covariance checks](../../experiments/task_matched_readout_v1/) |
 
-No new quantum advantage, algorithmic novelty, laboratory result or performance
-claim is established. The original working rules are unchanged. The
-[current work order](../../work_orders/CURRENT.md) selects one bounded comparison;
-this shortlist does not create three parallel default programs.
+The next comparison concerns useful implicit graph inputs, complete quantum access
+cost and strong classical alternatives. The sensing audit is a scope-separated
+reference, not a replacement of the classical-input objective or a no-go theorem
+for unknown-waveform sensing. No useful new quantum advantage is established.
 
-The [phase-3 index](../phase_3/README.md) preserves the previous evidence, and
-[STATUS.md](../../STATUS.md) records current claims. No historical scientific file
-is modified and no new repository is needed. Manuscript preparation remains on hold.
+The [phase-3 closeout](../phase_3/ACTIVITY_CLAIM_CLOSEOUT_30.md) remains closed;
+old notes and the handover are preserved. No new repository is needed and
+manuscript preparation remains on hold. This index is not a second work order.
