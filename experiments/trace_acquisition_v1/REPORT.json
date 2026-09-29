@@ -1,0 +1,94 @@
+{
+  "analytical_readout_budget": {
+    "N": 256,
+    "clock_bound": 0.0016643226405622684,
+    "clock_weight_square_sum": 19.50286342391748,
+    "failure_probability": 0.01,
+    "gamma": 0.25,
+    "size_rows": [
+      {
+        "block_spins": 12,
+        "ordinary_Hilbert_dimension": 4096,
+        "probes_sufficient_for_readout_0.0125_failure_0.01": 12190
+      },
+      {
+        "block_spins": 20,
+        "ordinary_Hilbert_dimension": 1048576,
+        "probes_sufficient_for_readout_0.0125_failure_0.01": 48
+      },
+      {
+        "block_spins": 26,
+        "ordinary_Hilbert_dimension": 67108864,
+        "probes_sufficient_for_readout_0.0125_failure_0.01": 1
+      }
+    ],
+    "target_statistical_readout_error": 0.0125,
+    "tau": 0.1,
+    "total_before_deterministic_arithmetic": 0.028348432981965,
+    "warning": "None of the size rows is an executed simulation. Each random vector has 2^k entries and must be propagated to the linewidth time.",
+    "wrap_bound": 0.014184110341402729
+  },
+  "arithmetic": "NumPy complex128; algebraic formulas and operator-error proof are in the note; floating runs are not interval certificates.",
+  "invalid_inputs_rejected": 6,
+  "phase_probe_variance_controls": [
+    {
+      "enumerated_variance": 0.12499999999999992,
+      "formula_variance": 0.125,
+      "time": 0.0
+    },
+    {
+      "enumerated_variance": 0.12499999999999994,
+      "formula_variance": 0.12499999999999994,
+      "time": 0.7
+    },
+    {
+      "enumerated_variance": 0.12499999999999997,
+      "formula_variance": 0.12499999999999994,
+      "time": 2.0
+    }
+  ],
+  "product_state_negative_control": {
+    "invalid_global_phase_upper_bound": 0.125,
+    "k": 4,
+    "meaning": "An ensemble identity control, not an output error: C(0) is set to one exactly.",
+    "product_probe_variance_at_zero": 0.18750000000000006
+  },
+  "scope": "One ten-spin independent matrix-free pure-state acquisition and small identity controls; no quantum circuit, large-block feasibility, upstream solver, or performance claim.",
+  "signed_cluster_noise_control": {
+    "independent_two_cluster_one_probe_variance_upper_bound": 0.0008087158203125,
+    "scope": "Propagation of probe variance only; no linked-cluster convergence result is asserted.",
+    "unit_cells": 10
+  },
+  "sparse_acquisition": {
+    "J": 1,
+    "Taylor_step_degree": 16,
+    "d": 1,
+    "dimension": 1024,
+    "ideal_arithmetic_accumulated_operator_error_bound": 3.6009029272046774e-11,
+    "k": 10,
+    "matrix_action_calls_on_batch": 4080,
+    "max_observed_scalar_error": 0.02656791818693727,
+    "max_time": 25.5,
+    "negative_raw_bin_mass": 0.0,
+    "observed_finite_clock_bin_TV": 0.006988925780109512,
+    "observed_weighted_scalar_error": 0.05774471052011436,
+    "output_bins": {
+      "interior_range": [
+        -50,
+        50
+      ],
+      "interior_width": 0.01,
+      "overflow_bins": 2
+    },
+    "probes": 8,
+    "relative_vector_error_vs_diagonal_reference": 2.5723833164795818e-14,
+    "rng": "NumPy PCG64",
+    "seed": 230929,
+    "simultaneous_vectors_in_control": 16,
+    "tau": 0.1,
+    "time_lags": 255,
+    "variance_based_expected_readout_error_upper_bound": 0.09758525775551195,
+    "warning": "Observed errors are one fixed-seed check, not independent empirical confidence intervals or a full-spectrum performance comparison."
+  },
+  "status": "pass"
+}
