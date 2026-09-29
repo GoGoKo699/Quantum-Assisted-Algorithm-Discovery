@@ -1,50 +1,37 @@
 # Current status
 
-29 September 2026 · **Handover checkpoint; next exploration not selected.**
+29 September 2026 — phase-4 opening screen.
 
-No useful quantum advantage is established. Manuscript preparation remains on
-hold. Direct useful samples and model-first analysis are authorized.
+**No useful quantum advantage, new algorithmic result or experimental improvement
+is established. Manuscript preparation remains on hold.**
 
-## Scientific decision
+[Screen 01](exploration/phase_4/MODEL_MECHANISM_SCREEN_01.md) compares graph
+sparsification, electronic stopping and physical signal acquisition. Each has a
+specified input and output and primary-literature precedents. They are not three
+selected applications. The graph route remains the closest fit to the original
+classical-input, reusable-output objective.
 
-The two-window emission-covariance lead is inactive on the present evidence.
-[Closeout 30](exploration/phase_3/ACTIVITY_CLAIM_CLOSEOUT_30.md) is the decision of
-record. The source-matched classical acquisition was completed, not left pending.
+The preferred next audit concerns joint physical-signal acquisition before
+measurement. This is a proposed, explicitly separate input model: both strategies
+would access an unknown physical source. A sensing improvement alone is not a
+speedup for the original classical-data problem, and the need for a general-purpose
+quantum computer has not been established. AGENTS.md and the original scope are
+not amended. The audit must compare the same useful task and physical resources,
+including optimized squeezed/unentangled measurements and classical processing.
 
-[Note 29](exploration/phase_3/CLASSICAL_ACTIVITY_ACQUISITION_29.md) and
-[29B](exploration/phase_3/CLASSICAL_ACTIVITY_CROSSCHECK_29B.md) preserve distinct
-windows, implementations, reports, and validation. Neither supplies an all-size
-tractability theorem, a full photon-record guarantee, interval-certified decimals,
-or a quantum/classical runtime comparison. Previous quantum constructions remain
-conditional references, not reclassified as advantages or mathematical failures.
+The Gaussian-noise characteristic-function identity and rotated-covariance bypass
+are elementary model calculations, not new theorems or all-classical lower bounds.
+Three symbolic expression checks ran in SymPy. No simulation, data acquisition,
+new device circuit, performance test or historical scientific verifier was run.
+PDF text and primary HTML/abstracts were inspected; PDF screenshots failed and no
+figure/table performance values were inferred. The screen is not a novelty audit.
 
-## State of the handover
+The [work order](work_orders/CURRENT.md) is the sole next task. A known scalar
+projection or an adequately measured covariance is not enough to justify joint
+quantum readout. A useful matched gain and its distinction from prior metrology
+must be established before opening a substantial research program.
 
-The [handover guide](HANDOVER.md) is the starting point. The
-[current work order](work_orders/CURRENT.md) is the only continuation task; the
-[research index](exploration/phase_3/README.md) and
-[reproduction guide](handover/REPRODUCING.md) locate the evidence.
-
-The obsolete sharing-core publication draft, PR #1, was closed without merging.
-Its branch and discussion are preserved. No new repository, release, phase,
-scientific result, or third spin-off was created. The two existing spin-offs
-retain their own projects. Other mechanisms remain alternatives, not concurrent
-instructions to resume simulations.
-
-## Verification scope
-
-This pass checks handover documents, internal navigation, recorded file identity,
-and preservation of historical evidence. It does **not** rerun the scientific
-suites or independently reprove the notes. The latest scientific replay is the
-29B maintenance replay in [Closeout 30](exploration/phase_3/ACTIVITY_CLAIM_CLOSEOUT_30.md),
-with its [recorded environment and hashes](provenance/activity_closeout_30.json).
-The [handover maintenance record](handover/MAINTENANCE.json) states this pass's scope.
-
-## Previous ledgers remain immutable
-
-The full [pre-handover ledger](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/a286ba415b0550db837e9c8144b80c4f21909d82/STATUS.md)
-contains the closeout details and links to earlier ledgers. The
-[earlier default-branch ledger](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/7e5d2ba2bfc176086e99eecf62bc10e6aaf53d39/STATUS.md)
-retains the organizational and bootstrap history. Those dated “latest” and “next”
-headings do not override today's work order. Scientific notes, code, datasets,
-reports, licenses, and source attribution are preserved at their existing paths.
+The complete [handover ledger](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/f2c82701cddf7e1c813638b342d278bfd8eb7fcb/STATUS.md)
+and [handover](HANDOVER.md) remain historical evidence. Phase-3 Closeout 30 stays in
+force. All older scientific files and both independent spin-offs remain unchanged.
+No new repository, release, merge, outside contact or paid work follows.

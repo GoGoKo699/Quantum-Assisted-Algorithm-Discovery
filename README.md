@@ -2,50 +2,48 @@
 
 **Can quantum computation obtain useful information more effectively than strong classical alternatives?**
 
-Research handover · 29 September 2026  
-**No useful quantum advantage is established. Manuscript preparation is on hold.**
+**Phase 4: fresh model/mechanism comparison. No useful quantum advantage is established. Manuscript preparation remains on hold.**
 
-This repository preserves a continuing exploration, including unsuccessful and
-inconclusive candidates. Direct quantum samples are permitted outputs; a learned
-classical program is optional. Mathematical models and their quantum integration
-come before implementation, with essential input and accuracy costs retained.
+Direct quantum samples are permitted; a reusable classical program is optional.
+Model-level reasoning comes before implementation, with preparation, input access,
+accuracy, validation and output costs retained. See [AGENTS.md](AGENTS.md).
 
-## Start here
+## Current exploration
+
+[Screen 01](exploration/phase_4/MODEL_MECHANISM_SCREEN_01.md) compares three
+independently motivated possibilities: reusable graph sparsifiers, electronic
+energy-deposition calculations, and better acquisition of physical signals.
+The first two retain classically specified computational inputs. Physical signal
+learning instead accesses an unknown source before measurement; it is explicitly
+a proposed different input model, not a claimed speedup on supplied classical data
+or a silent replacement of the circuit-model objective.
+
+The next bounded check examines whether a useful joint signal diagnostic benefits
+from quantum-assisted acquisition after energy, loss, calibration and optimized
+unentangled readout are matched. Existing quantum-dense metrology and quantum
+signal-learning results are prior work, not our contribution. Simple rotated
+measurements are retained as an important bypass. No new sensor or simulator is
+being built, and no input-model extension is treated as an established result.
+Graph sparsification remains the closest shortlisted fit to the original goal.
+
+## Navigation
 
 | Read | Purpose |
 |---|---|
-| **[Handover](HANDOVER.md)** | Objective, current decision, evidence map, unresolved questions, and how to resume |
-| [Status](STATUS.md) | What is and is not established; historical ledgers |
-| [Current work order](work_orders/CURRENT.md) | The sole continuation instruction; no new candidate has been selected |
-| [Research index](exploration/phase_3/README.md) | All phase-3 notes, grouped by question rather than filename |
-| [Reproduction guide](handover/REPRODUCING.md) | Branch, environment, verification scope, and safe output handling |
+| [Phase-4 index](exploration/phase_4/README.md) | Fresh screen and its scope |
+| [Current work order](work_orders/CURRENT.md) | One active comparison, not three parallel tasks |
+| [Status](STATUS.md) | Current limits and pinned earlier ledger |
+| [Handover](HANDOVER.md) | Preserved starting snapshot and history |
+| [Phase-3 index](exploration/phase_3/README.md) | Previous scientific notes and evidence |
+| [Reproduction guide](handover/REPRODUCING.md) | Scope of historical checkers and external inputs |
 
-## Latest decision
+The activity-covariance lead remains closed on present evidence; see
+[Closeout 30](exploration/phase_3/ACTIVITY_CLAIM_CLOSEOUT_30.md). It is not reopened
+by this restart. The handover's unselected-next-phase wording is historical.
+No old scientific verifier was rerun in the new source/model screen.
 
-The two-window emission-covariance lead is **closed on the present evidence**.
-A classical tilted model was acquired from the specified seven-emitter generator
-and checked against full symmetry-reduced propagation. It was not supplied with
-phase rates or fitted to the answer. This removes the proposed acquisition
-obstacle for that calibration; it does not prove all larger emitter systems easy.
-
-[Closeout 30](exploration/phase_3/ACTIVITY_CLAIM_CLOSEOUT_30.md) preserves the
-conclusion, both numerical evidence sets, and reopening conditions. Notes
-[29](exploration/phase_3/CLASSICAL_ACTIVITY_ACQUISITION_29.md) and
-[29B](exploration/phase_3/CLASSICAL_ACTIVITY_CROSSCHECK_29B.md) have different
-observation windows and remain separate. No new exploration starts in this handover.
-
-## Repository roles
-
-This is the working research branch, `research/prx-quantum-phase2`; its name is
-historical, not a requirement to return to phase 2. The default branch is a public
-entry point, not a merged research copy. The old sharing-core branch is preserved.
-See the [project map](PROJECT_MAP.md) and [working rules](AGENTS.md).
-
-The independent [Algebraic-Loop-Certificates](https://github.com/GoGoKo699/Algebraic-Loop-Certificates)
-and [Sparse-Weil-Reconstruction](https://github.com/GoGoKo699/Sparse-Weil-Reconstruction)
-projects own their further development. No third spin-off or new repository is needed.
-
-Scientific notes, code, reports, original [MIT license](LICENSE), and third-party
-rights remain preserved. [Experiments](experiments/README.md) and the historical
-[publication folder](publication/README.md) are evidence, not active work orders.
-This handover is documentation and integrity work, not a scientific rerun or proof audit.
+The working branch remains `research/prx-quantum-phase2`; its name is historical.
+`main` is a routing entry, not a merged research copy. Both classical spin-offs
+retain their independent projects. Earlier notes, code, reports, rights and the
+original [MIT license](LICENSE) are preserved. Only this parent repository may be
+modified; no new repository, manuscript, release or branch merge is required.
