@@ -1,66 +1,63 @@
-# Current task: audit the short-seed refinement and its useful resource consequence
+# Current task: useful quantum mechanisms with explicit circuit data access
 
 29 September 2026. Branch: `research/prx-quantum-phase2`.
-Read [Note 04](../exploration/phase_4/SHORT_SEED_SPARSIFICATION_04.md),
-[the committed graph contract](../exploration/phase_4/IMPLICIT_GAUSSIAN_GRAPH_03.md),
-and [AGENTS.md](../AGENTS.md). No new repository is needed. Manuscript stays on hold.
+Read [AGENTS.md](../AGENTS.md),
+[hardware decision 05](../exploration/phase_4/NO_QRAM_HARDWARE_BOUNDARY_05.md),
+and the preserved [handover](../HANDOVER.md).
+No new repository is needed. Direct samples remain allowed; manuscripts stay on hold.
 
-## Derived result to audit, not merely a final-stage substitution
+## A firm hardware constraint, not a postponed caveat
 
-Both stages of the existing quantum sparsification algorithm can use logarithmic-
-wise independent sampling, with a fresh seed drawn after the current graph and
-bundle/importance data are fixed. The proof matches a finite trace moment and
-uses a separate count tail; it does not emulate every random-oracle transcript.
-An independent-copy symmetrization explicitly supplies the distributional symmetry
-required by the cited matrix moment inequality. A fixed sampled graph is a valid
-input for quantum search and spanner construction even though its edges are not
-fully independent. Conditioning on an already-used seed is not allowed.
+Assume an ambitious fault-tolerant gate-model processor, not fast QRAM. Classical
+control and ordinary classical memory are allowed. Coherent logical registers
+are allowed; arbitrary large quantum-addressable classical tables are not a cheap
+primitive. This supersedes the former current task of refining the sparsifier
+under its original coherent-RAM access assumption.
 
-Rough sampling uses spanner packings with enlarged logarithmic constants and
-fixed total rough accuracy. Retain old seeds and bundles for implicit replay; do
-not materialize the dense intermediates. Final sampling uses upper resistance
-estimates, rounded-up probabilities and reweighting by the ACTUAL probability.
-Output caps, subroutine failure, numerical graph error, final rounding and searches
-are counted. The approximation success event is sufficient for all later graph
-energy queries; independent-edge output samples are not the required product.
+A data oracle, amplitude preparation or block encoding must have an explicit gate
+construction and cost. Computing a compact function reversibly is allowed with
+its arithmetic and precision costs. Compiled table lookups are allowed only as
+ordinary circuits with charged gates, depth, ancillas, routing and setup/updates.
+Neither QROM terminology nor a one-time loading claim hides repeated lookup cost.
+Symbolic bounds suffice at this stage; no vendor commitment or device compiler
+is required. Do not turn the owner's hardware boundary into a QRAM engineering task.
 
-In the source finite-word RAM model, the resulting internally derived bounds are
-~sqrt(mn)/epsilon time and ~n/epsilon^2 additional coherently accessible working
-bits, excluding the supplied point/graph input. The random seeds alone have
-polylogarithmic size. The input lookup, spanner/resistance/output storage, active
-hash scratch, finite arithmetic and hardware error correction are NOT eliminated.
-A small active quantum register is not the total physical memory. No quantum
-implementation or empirical speedup has been run.
+## Retain the result without letting it set the next agenda
 
-## One focused next decision
+[Short-seed Note 04](../exploration/phase_4/SHORT_SEED_SPARSIFICATION_04.md) remains
+conditional theory, with unchanged proofs/checks and unresolved audit/priority.
+Its input-coordinate, spanner, resistance and output bookkeeping data still need
+coherent access. Removing a random table is not removing every table. This route
+is parked under the accepted hardware model; it is not a new practical result
+or a mathematically disproved algorithm. Do not automatically compile its tables
+into huge circuits merely to keep the candidate alive.
 
-Check the exact two-stage integration against published quantum sparsification
-and bounded-independence work. Verify its subroutine time/space promises and the
-fresh-seed conditional proof. The finite checker is not an independent proof audit
-and no claim of publication priority follows from a bounded search. If the same
-refinement is already known, record that provenance and do not present it as new.
+## Next explicit research continuation
 
-Then state one complete resource comparison for compact Gaussian point input at
-a bandwidth and prediction tolerance that an actual learning task needs. Separate
-input ingestion and point lookup from the saved randomness storage; price the
-strongest adequate geometric/kernel construction or direct prediction bypass.
-At fixed broad kernels, classical sampling can already be near linear. A minimum
-weight or a worst-case universal-sparsifier reduction alone is not evidence that
-useful predictions require difficult connectivity. Reuse benefits both sides.
+Make one bounded comparison of independently useful models whose quantum operation
+has an ordinary-circuit description. Show the actual classical input, preparation,
+coherent evolution/arithmetic, measurement and useful output together. For every
+access operation, specify whether it is classical control, reversible computation,
+or a charged gate-based lookup. Include dynamically created work data and any
+repeated state preparation; input loading alone is not the whole audit.
 
-A meaningful theoretical memory saving can merit study without a hardware demo
-or universal classical lower bound. It does not by itself prove a practical
-learning gain. Do not open a hash library, a spanner framework, a large census,
-a new QRAM architecture, a dataset hunt or a third spin-off just to extend the note.
-Keep the positive quantum mechanism and its useful consequence in one argument.
+The useful quantity, necessary accuracy, strongest adequate classical calculation,
+and one discriminating test must appear in the same proposal. No arbitrary hard
+algebra problem, free state oracle or unnecessarily fine precision is acceptable.
+A universal classical lower bound is not required to explore a credible conditional
+opportunity, but a query-model improvement alone is not the accepted hardware claim.
 
-## Evidence and boundaries
+A QRAM-free graph construction is possible to consider only when it has a specific
+useful purpose and a credible complete cost, not by inheriting Note 04's RAM time.
+The shortlist is not limited to graphs; no replacement is selected here. Do not
+reopen the closed emitter covariance or change to a physical-source sensing input
+model without a new justified scope and mechanism. Preserve earlier negative and
+conditional findings before beginning another candidate.
 
-The new standard-library exact checker ran twice identically, with -O/-OO and
-six invalid inputs rejected. It checks finite polynomial hashing, trace moments,
-probability rounding and layered replay, with explicit invalid-seed controls.
-It does not run quantum search, a quantum spanner, a large sparsifier, a classifier,
-a circuit, or a hardware benchmark. Older scientific verifiers were not rerun.
-Only Quantum-Assisted-Algorithm-Discovery may be modified. Preserve existing
-notes, code, reports, provenance and rights; no outside contact, paid/unattended
-work, manuscript revival, branch merge, release or administration change.
+## Execution boundary
+
+This owner-decision checkpoint performs documentation/link/diff checks only.
+No scientific verifier or numerical benchmark is run. Preserve old scientific
+notes, code, reports, handover, license and rights. Only Quantum-Assisted-Algorithm-
+Discovery may be modified. No outside contact, paid/unattended work, new repository,
+third spin-off, branch merge, release, manuscript revival or admin change follows.

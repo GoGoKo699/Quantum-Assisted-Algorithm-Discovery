@@ -2,53 +2,49 @@
 
 **Can quantum computation obtain useful information more effectively than strong classical alternatives?**
 
-**Phase 4: model-first exploration. Manuscript preparation remains on hold.**
-No end-to-end application advantage has been established. Direct useful samples
-and reusable classical outputs are permitted; input, accuracy and memory costs count.
+**Hardware boundary: fault-tolerant gate-model computation, without assumed fast QRAM.**
+No end-to-end useful quantum advantage is established. Manuscript preparation
+remains on hold. Direct samples and reusable classical outputs are both allowed.
 
-## Current derivation: sparsification with output-scale working memory
+## Current decision
+
+[Hardware decision 05](exploration/phase_4/NO_QRAM_HARDWARE_BOUNDARY_05.md) records
+the owner's exclusion of fast quantum-addressable classical memory from the
+permitted assumptions. Ordinary logical qubits, coherent circuit operations and
+classical control remain allowed. Every preparation and data-access step must
+have a gate-level cost, including lookups into intermediate working data.
+
+A lookup compiled into ordinary gates is not an assumed QRAM primitive, but it
+must be paid for. Renaming an access routine QROM, an oracle or a block encoding
+does not make it free. Detailed hardware engineering is not a prerequisite to
+model-first analysis; an explicit symbolic circuit cost is.
 
 [Short-seed sparsification 04](exploration/phase_4/SHORT_SEED_SPARSIFICATION_04.md)
-integrates bounded-independence sampling with both stages of the existing quantum
-sparsifier. It proves the required graph property rather than emulating the exact
-fully independent output law. Fresh seeds are chosen after each current graph
-and spanner bundle are fixed; they remain fixed during quantum queries.
+is retained as conditional theory under its original RAM assumptions, not an
+active hardware-compatible advantage lead. It reduces randomness storage without
+eliminating coherent point-table, spanner, resistance or bookkeeping access.
+Neither its scientific content nor its saved checks are changed by this decision.
+Its independent correctness audit and publication priority remain unresolved.
 
-Under the original finite-word coherent-access model, the derived upper bounds
-are time approximately sqrt(mn)/epsilon and additional coherent working memory
-approximately n/epsilon^2, up to logarithms. Point/graph input storage is separate.
-The result removes the larger random-tape emulation structure, not all QRAM or
-arbitrary lookup costs. Output, spanners, resistance data, precision and search
-bookkeeping remain charged. The explicit hash implementation uses polylogarithmic
-active quantum scratch, not a claimed preservation of the source's exact logarithmic
-active-qubit count.
+The [current work order](work_orders/CURRENT.md) calls for a bounded useful-model
+comparison within the new hardware boundary. It does not mandate a QROM retrofit,
+a memory architecture, another sparsifier framework or a replacement application.
 
-This is an internally derived algorithmic refinement using established matrix
-moment, bounded-independence, spanner and quantum-search methods. Publication
-priority and an independent proof audit are unresolved. It is not a compiled
-quantum implementation, measured speedup, or demonstrated learning improvement.
-The [current task](work_orders/CURRENT.md) requests a focused audit and useful-input
-resource comparison, not a new randomness library or a third spin-off.
+## Navigation and evidence
 
-## Evidence and navigation
+[Working rules](AGENTS.md) · [Status](STATUS.md) ·
+[Phase-4 index](exploration/phase_4/README.md) · [Handover](HANDOVER.md) ·
+[Reproduction guide](handover/REPRODUCING.md)
 
-```sh
-python experiments/short_seed_sparsification_v1/verify.py
-```
+The [implicit-graph contract](exploration/phase_4/IMPLICIT_GAUSSIAN_GRAPH_03.md)
+and all prior scientific notes, code and reports remain at their original paths.
+Their conditional resource claims are not converted into QRAM-free guarantees.
+The hardware decision is documentation only; no scientific verifier or new
+simulation was run. Other mechanisms remain alternatives, not parallel programs.
 
-Python 3.10+, standard library only. The [report](experiments/short_seed_sparsification_v1/REPORT.json)
-records exact finite field, trace-moment, rounding and adaptive-seed checks.
-The final checker ran twice identically and rejected -O/-OO and six invalid inputs.
-No quantum search, spanner implementation, large sparsifier, dataset benchmark or
-historical scientific suite was run. The general claim follows from the written
-integration of cited theorems, not an empirical success rate on small graphs.
-
-[Phase-4 index](exploration/phase_4/README.md) · [Status](STATUS.md) ·
-[Handover](HANDOVER.md) · [Phase-3 archive](exploration/phase_3/README.md)
-
-[Implicit graph 03](exploration/phase_4/IMPLICIT_GAUSSIAN_GRAPH_03.md) retains the
-harmonic-learning contract and classical shortcuts. Compact input is not free
-coherent input; a hard sparsifier instance need not be a useful learning instance.
-Sensing remains scope-separated, stopping power a reserve, and the activity-
-covariance closeout remains in force. Only this parent repository is modified.
-All previous science, the independent spin-offs, and [LICENSE](LICENSE) are preserved.
+The working branch remains `research/prx-quantum-phase2`; the name is historical.
+The emitter-covariance closeout stays in force. Sensing remains scope-separated,
+and electronic stopping remains a reserve subject to all current assumptions.
+Both spin-offs are independent. Only this parent repository may be modified.
+No new repository, branch merge or release is needed. [LICENSE](LICENSE) and
+third-party rights are preserved.

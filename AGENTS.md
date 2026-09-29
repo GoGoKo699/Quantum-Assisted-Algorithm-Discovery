@@ -1,5 +1,42 @@
 # Research continuation contract
 
+## Hardware boundary: fault-tolerant circuits without assumed QRAM
+
+Owner direction, 29 September 2026: scalable fault-tolerant gate-model processors
+are acceptable assumptions; fast QRAM is not. This is a firm admissibility
+constraint, not a hardware caveat to leave until after deriving a query speedup.
+It supersedes earlier permission to select a lead conditional on fast coherent
+adjacency-list or quantum-read/classical-write RAM. Preserve those earlier results
+as conditional theory with their original assumptions, not as eligible applications.
+
+Use ordinary logical qubits, gates, measurements, resets, classical control and
+classical RAM. Logical qubits may retain coherent computational states; that is
+not a blanket permission for efficient arbitrary table lookup in superposition.
+No specialized QRAM device, unit-cost large coherent data oracle, free arbitrary
+amplitude encoding, or cheaply updatable quantum-addressable classical table may
+be assumed for either the input or intermediate/output working data.
+
+A reversible formula is allowed only with its actual circuit cost. A table lookup
+compiled into an ordinary gate circuit (sometimes called QROM) is not free or
+excluded merely by its name: count gates, depth, ancillas, routing, preprocessing,
+coefficient precision and updates/recompilation. Do not relabel QRAM as QROM or
+hide its cost in a block-encoding/state-preparation oracle. Do not infer a universal
+linear lower bound on lookup from the cost of one implementation.
+
+Every candidate must expose classical input -> circuit/state preparation ->
+coherent operations -> measurement -> useful output, with ALL data accesses
+priced before it becomes an active advantage lead. Symbolic circuit bounds are
+enough for initial model-first screening; a specific vendor, near-term device,
+full hardware compiler or empirical benchmark is not required. Trapped-ion and
+superconducting examples motivate the allowed model, not a platform commitment.
+
+The QRAM-dependent short-seed sparsifier in phase-4 Note 04 is parked under this
+constraint. Its reduced randomness storage does not remove point-table, spanner,
+resistance or search-bookkeeping access. No continued QRAM design or automatic
+QROM retrofit is authorized. Reopen a graph candidate only with a specific ordinary-
+circuit construction, fully charged costs and a credible useful comparison.
+See [hardware decision 05](exploration/phase_4/NO_QRAM_HARDWARE_BOUNDARY_05.md).
+
 ## Model-first exploration for every example
 
 Owner direction, 28 September 2026: focus first on mathematical models and the
