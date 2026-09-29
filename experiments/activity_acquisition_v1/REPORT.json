@@ -1,0 +1,129 @@
+{
+  "acquisition": {
+    "full_Liouville_dimension": 16384,
+    "generator_nonzeros": 20019,
+    "initial_coefficients": [
+      1.0,
+      -0.03127678724
+    ],
+    "intertwining_checks": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "left_residual_Frobenius": 6.336e-09,
+    "method": "two shift-invert sparse right/left eigensolves, biorthogonal projection; one acquisition reused at all windows",
+    "reduced_L": [
+      [
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        -0.066592688531
+      ]
+    ],
+    "reduced_jump": [
+      [
+        0.193578709456,
+        -3.32907838518
+      ],
+      [
+        -0.113665967613,
+        3.233074395649
+      ]
+    ],
+    "reduced_parameters_fitted_or_supplied": false,
+    "right_residual_Frobenius": 3.7e-11,
+    "slow_modes_per_side": 2,
+    "slow_relaxation_time": 15.016663571588,
+    "sparse_work": {
+      "factor_L_plus_U_nonzeros": 1055494,
+      "left_inverse_actions": 21,
+      "right_inverse_actions": 21,
+      "sparse_factorizations": 1
+    },
+    "symmetry": "simultaneous dihedral action on bra and ket",
+    "symmetry_dimension": 1300,
+    "trace_row": [
+      1.0,
+      0.0
+    ]
+  },
+  "interpretation": "The two-mode model is validated for three scalar contractions/covariance, not a positive full-record instrument or all counting fields.",
+  "invalid_inputs_rejected": 5,
+  "model": {
+    "Omega_over_kappa": 50.0,
+    "V_over_kappa": 250.0,
+    "graph": "periodic nearest-neighbor ring",
+    "initial": "all ground",
+    "n": 7,
+    "u": 1
+  },
+  "precision": "complex128, rounded decimals; no interval certificate or worst-case scaling inference",
+  "rows": [
+    {
+      "absolute_covariance_discrepancy": 3.3167878e-05,
+      "acquired_two_mode_Z1_Z2_Z12": [
+        0.966586790198,
+        0.967281529401,
+        0.942186115321
+      ],
+      "acquired_two_mode_covariance": 0.007224566599,
+      "full_covariance": 0.007257734477,
+      "full_tilted_Z1_Z2_Z12": [
+        0.96584719671,
+        0.967160923297,
+        0.941387401011
+      ],
+      "max_Laplace_probability_discrepancy": 0.000798714309,
+      "propagation_half_step_vector_discrepancy": 0.0,
+      "shift_check_max_probability_discrepancy": 0.0,
+      "window_kappa_Delta": 1.0,
+      "wrong_stationary_start_covariance": 0.004058943674
+    },
+    {
+      "absolute_covariance_discrepancy": 3.183594e-06,
+      "acquired_two_mode_Z1_Z2_Z12": [
+        0.965845468562,
+        0.968247444992,
+        0.941437691665
+      ],
+      "acquired_two_mode_covariance": 0.006260284472,
+      "full_covariance": 0.006263468066,
+      "full_tilted_Z1_Z2_Z12": [
+        0.965616046321,
+        0.968241081458,
+        0.941212593029
+      ],
+      "max_Laplace_probability_discrepancy": 0.000229422241,
+      "propagation_half_step_vector_discrepancy": 0.0,
+      "shift_check_max_probability_discrepancy": 0.0,
+      "window_kappa_Delta": 4.0,
+      "wrong_stationary_start_covariance": 0.003682506652
+    },
+    {
+      "absolute_covariance_discrepancy": 3.74512e-07,
+      "acquired_two_mode_Z1_Z2_Z12": [
+        0.967763593519,
+        0.972664156553,
+        0.944115680046
+      ],
+      "acquired_two_mode_covariance": 0.002806720614,
+      "full_covariance": 0.002807095126,
+      "full_tilted_Z1_Z2_Z12": [
+        0.967704419724,
+        0.972662899065,
+        0.944057281452
+      ],
+      "max_Laplace_probability_discrepancy": 5.9173795e-05,
+      "propagation_half_step_vector_discrepancy": 0.0,
+      "shift_check_max_probability_discrepancy": 0.0,
+      "window_kappa_Delta": 16.0,
+      "wrong_stationary_start_covariance": 0.00195114737
+    }
+  ],
+  "scope": "One source-matched seven-emitter acquisition/validation. No quantum circuit, native upstream solver, trajectory shots, parameter sweep, or timing comparison.",
+  "status": "pass",
+  "validation": "Direct sparse exponential action in the full invariant operator sector; full-basis intertwining; second eigensolver shift; step composition"
+}
