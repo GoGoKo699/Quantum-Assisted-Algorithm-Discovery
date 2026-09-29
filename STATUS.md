@@ -1,84 +1,81 @@
 # Claim ledger
 
-## Current checkpoint: fair reuse and physical-record screen, 29 September 2026
+## Current checkpoint: monitored record instrument, 29 September 2026
 
-[Sampling decision 24](exploration/phase_3/SAMPLING_REGIME_DECISION_24.md) completes
-the present resolution/sample-count comparison without establishing a useful
-quantum advantage or an impossibility theorem. Classical typicality, half-time
-tensors, recursion, effective reductions and exact small-block diagonalization
-remain alternatives for the same output. The available bounds do not identify a
-necessary response component that defeats adequate classical acquisition at lower
-quantum cost. The spectral construction remains a quantitative reference; further
-generic spectral engineering is not the default task.
+[Note 25](exploration/phase_3/RECORD_INSTRUMENT_25.md) follows the live photon-record
+work order, not the distinct attached local spectral-cache Note 24. Neither old
+note is overwritten. The current construction samples coarse physical emission
+histories of a driven dissipative Ising model from a product initial state over
+a fixed horizon. Ideal local Markov decay, supplied interaction graph and explicit
+detector bins remain assumptions, not an experimental realization claim.
 
-The comparison now explicitly permits caching on the quantum side too. Standard
-empirical distribution learning gives a sufficient original-sample budget for a
-reusable table, with approximation and failure probabilities recorded. For the
-prior 10002 bins, bank error 0.02 and failure 0.01, the conservative sufficient
-budget is 6,635,758 original samples. It is not necessary, a proposed experiment,
-or a claim that an expensive microscopic distribution must be reconstructed.
+Adding counters to the Lindblad generator preserves the measured unraveling.
+Drive rotations, ZZ rotations and exact monitored amplitude-damping steps give
+a CPTP discrete instrument retaining the system state between outputs. If h=Delta/r,
+counts are accumulated into the SAME detector bins Delta. Multiple emissions and
+saturated >=K labels are not dropped; jumps after saturation still update the state.
+For ideal primitives the entire record-plus-final-state half-diamond error is
+bounded by min(1,C T h/4), with the explicitly derived local commutator constant C.
+At bounded degree C is linear in n for fixed rates. Initialization, gate/instrument
+precision, output arithmetic and nonideal detector models require their own budgets.
+This is a sufficient first-order product-formula result, not a new generic quantum
+simulation theorem, optimality result, practical speedup or publication-priority claim.
 
-For an event of probability p, S independent originals followed by M empirical-
-table replays give variance p(1-p)(S+M-1)/(SM). Reuse does not produce new information;
-10,000 originals replayed 1,000,000 times correspond to about 9,901 fresh draws
-for that event mean. This is not a universal effective sample size. Per-draw
-approximation, joint-M law quality and inference from fresh samples are distinct
-contracts. These elementary learning/variance facts are not novelty claims.
+The circuit description needs n system qubits plus one recycled ancilla and
+O((n+edges)T/h) local primitives, before precision synthesis and M-record repetition.
+Classical quantum-jump algorithms retain a conditional 2^n-entry pure state rather
+than necessarily a 4^n density matrix and may skip empty intervals. Tensor, cluster,
+renewal, low-excitation, symmetry and direct-statistic methods remain allowed.
+No adequate growing-system classical rank/complexity lower bound is established.
 
-## Additional direct-output model, not a demonstrated application advantage
+A two-emitter Omega=V=kappa=1, initially gg, two-bin control gives a dark-then-bright
+probability 0.42439280916, versus 0.30266450416 for the population-rate extrapolation.
+A degree-128 exact-rational Taylor calculation certifies the gap >0.121728304996.
+The rate elimination is not assumed valid in this coherent regime. Independent
+coherent-emitter renewal is another explicit comparator, not a Poisson straw man.
+Strong-dephasing checks are different physical models, not free target modifications.
+Exact classical two-emitter propagation solves the diagnostic. No collective
+large-system phase, experimental benefit or all-classical hardness follows.
 
-The [work order](work_orders/CURRENT.md) opens one bounded analysis of time-resolved
-emission records from the established driven dissipative interacting-spin model.
-The independent motivation is photon waiting-time/intermittency statistics. Local
-Markovian decay, supplied product initial state, finite observation horizon and
-an explicit detector are assumptions, not experimentally verified properties of
-an arbitrary platform. Excitation-count experiments are cited with their different
-measurement scope. No new physical prediction or validated emitter model is claimed.
+The [work order](work_orders/CURRENT.md) now targets conditional-memory compressibility
+in the same driven family. A local jump need not factorize all remaining sites.
+The next task is an output-sensitive model comparison, not another generic
+instrument theorem or collection of small examples. Direct samples and model-first
+exploration remain authorized. No new repository or manuscript is needed.
 
-A standard quantum-jump record law and an exact finite-step amplitude-damping
-instrument specify the quantum integration: repeated local evolution/measurement
-while retaining the conditional quantum state. Classical pure-state trajectory,
-renewal, rate, tensor and hidden-state methods are legitimate competitors. Strong
-dephasing can justify classical rate reductions; an enormous record alphabet or
-quantum antibunching alone is not computational advantage.
+## Executed evidence and limitations
 
-The averaged master-equation channel does not determine a detector-labelled record.
-Two Kraus instruments can yield identical unlabelled channels but different record
-laws. A two-emitter Bell-state control at decay probability 1/4 has record TV 1/8;
-coarsening the labels to total counts erases that discrepancy. This is a diagnostic,
-not a hard many-body instance. A full-record bound must concern the instrument
-including both output label and conditional state. The elementary composition
-bound sums per-step half-diamond errors. A complete continuous-time record
-approximation and total gate/cost comparison have NOT yet been proved.
+The final Python/NumPy/SciPy checker ran twice with identical JSON under one BLAS
+thread. It constructs 81 saturated two-bin record words for two emitters and checks
+four substep counts (16,32,64,128). Observed record-TV errors are about 0.0247878,
+0.0123222, 0.00614229 and 0.00306634. The analytic bound is conservative and sometimes
+trivial. Numerical Choi trace norms bound, but do not exactly evaluate, the
+record-plus-state diamond distance. The count law includes same-site repeated
+emissions, whose first-bin probability is about 0.0165283 in this control.
 
-## Executed scope
+Separate no-count maps reproduce the coarsened dark/bright law. Rational Taylor
+arithmetic certifies the event difference, separately from complex128 diagnostics
+at tolerance 5e-10. Independent-emitter factorization and two dephasing controls
+were checked. Six invalid inputs and -O/-OO execution were rejected. The
+[report](experiments/record_instrument_v1/REPORT.json) records scope and values.
+The all-size theorem follows from the proof, not a finite-system extrapolation.
 
-The independent NumPy/standard-library checker ran twice identically under one
-BLAS thread. It evaluates analytical spectral budgets for linewidths J/2, J/4 and
-J/8 and lists 20/26/32-spin resource counts WITHOUT propagating those systems.
-One exact rational binomial enumeration checks cache variance. A two-emitter
-complex128 calculation checks Kraus completeness, equality of unlabelled channels,
-different detector-labelled probabilities and their coarsening. Six invalid inputs
-and execution under -O/-OO were rejected. The [report](experiments/sampling_regime_v1/REPORT.json)
-distinguishes these controls from unexecuted performance or dynamics claims.
+Checker SHA256: `d0126af07e0e52dcf91f4425a53de72c604a52eff13a8882173abcd5b1603a5e`.
+Report SHA256: `7304d69dc0a39163e476ff2de81791c416175da77b95b151825fda126b41388b`.
 
-Checker SHA256: `e2490bd3c1a64bfbc2b0c0468a3b8478cbbca16ab264778dc47b97104b4b829a`.
-Report SHA256: `24425508da8d78d1a384f2e162e727c2ecf4bd0b808bfc1184ac909321bfbfdd`.
-
-No driven many-body propagation, tensor benchmark, native application, quantum
-circuit, photon experiment or timing run occurred. No earlier verifier was rerun
-and no upstream code/data imported. Primary model and learning proofs were read,
-with two successful PDF-page screenshots. Other source abstracts were inspected
-only to the scope stated in the note; no experimental result was reproduced.
-The screen is bounded, not an exhaustive priority audit.
+No quantum shots, native trajectory package, laboratory measurements, tensor
+algorithm, large-system simulation or timing benchmark were used. No earlier
+scientific verifier was rerun and no upstream code/data were imported. Primary
+model/product-formula/elimination text was inspected; three PDF screenshots failed
+and supplied no plot/table-derived results. Source inspection was bounded, not an
+exhaustive novelty audit. Standard ingredients are attributed in the note.
 
 ## Preserved evidence
 
-The complete preceding ledger and its links are pinned at the
-[pre-decision checkpoint](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/2704f4aa9ce39030f24558c597a3153462b4bed6/STATUS.md).
-Notes 15-23 and all earlier proofs, code, data and reports remain unchanged.
-Direct samples and model-first analysis remain authorized. Climate/dynamics remain
-open, Manthan paused, battery/operator candidates parked, both classical spin-offs
-independent, and Phase-2 Note 27 closed. Manuscript remains on hold. No new repository
-is needed. Only Quantum-Assisted-Algorithm-Discovery is modified; no outside contact,
-paid/unattended work, release, merge or repository administration change occurred.
+The complete previous ledger and its links are pinned at the
+[pre-instrument checkpoint](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/092b2828d2904045923ac2bf72266d00383bf56e/STATUS.md).
+Earlier spectral proofs, code, reports, data and rights remain untouched.
+Climate/dynamics remain open; Manthan paused; battery/operator routes parked;
+both independent spin-offs retain their own projects; Phase-2 Note 27 stays closed.
+Manuscript preparation remains on hold. Only this parent repository is modified;
+no contact, paid/unattended work, release, branch merge or administration change.
