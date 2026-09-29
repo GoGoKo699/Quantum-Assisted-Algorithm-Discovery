@@ -1,87 +1,66 @@
 # Quantum-Assisted Algorithm Discovery
 
-**Can circuit-model quantum computation produce information that makes a useful
-computation materially more effective than strong classical alternatives?**
+**Can circuit-model quantum computation obtain useful information more effectively
+than strong classical alternatives?** Direct samples are allowed. Mathematical
+models and their quantum integration precede implementation; essential access,
+accuracy and output costs remain explicit. See [AGENTS.md](AGENTS.md).
 
-Direct samples may be useful outputs. Mathematical models and quantum integration
-precede datasets, software and hardware engineering. Essential input, accuracy,
-output and validation costs remain explicit. See [AGENTS.md](AGENTS.md).
+**Exploratory: no useful quantum advantage is established. Manuscript on hold.**
 
-**Status: exploratory. No useful quantum advantage is established.
-Manuscript preparation remains on hold.**
+## Current conditional claim: estimate temporal emission activity
 
-## Current decision: establish the useful quantum opportunity before extending the machinery
+[Activity claim 28](exploration/phase_3/EMISSION_ACTIVITY_CLAIM_28.md) specializes
+the emitter question to a bounded correlation of counts in two successive windows.
+The task no longer asks for a complete microscopic history. Two computational
+flags exactly encode the needed three Laplace moments as final-state probabilities,
+without changing the underlying system dynamics or discarding rare paths.
 
-[Strategic revision 27](exploration/phase_3/STRATEGIC_REVISION_27.md) reassesses the
-accumulated work. We have explicit quantum sampling constructions, controlled
-classical reductions, and tests of output accuracy. We have not yet identified a
-consequential regime where quantum computation improves the complete cost.
-Another available error bound is therefore not the default next task.
+Standard high-accuracy Lindblad simulation plus amplitude estimation provides
+a concrete quantum precision mechanism: inverse-linear rather than generic
+inverse-square sampling dependence on additive error. The operation requires a
+coherent circuit and its inverse, with purification/workspace retained; it does
+not act retrospectively on measured photon data. Two statistic flags are not a
+claim of only two extra qubits for the whole simulation. Ordinary first-order
+splitting is not silently treated as an exact, cheap channel.
 
-The monitored-emitter model remains a candidate for ONE bounded regime-selection
-study. The [work order](work_orders/CURRENT.md) requires a physically motivated
-counting observable, the strongest matched classical description including its
-acquisition cost, and a specific quantum operation that could improve the result.
-A conditional hypothesis can justify exploration; a universal classical lower
-bound, hardware demonstration or new dataset is not required. A large quantum
-state or failure of one weak approximation is not sufficient either.
+**The comparison remains conditional.** A known adequate small classical tilted
+generator evaluates the same statistic cheaply without sampling. Its acquisition,
+within-phase corrections and ground-start transient must be counted. Long bins
+can favor that classical reduction. The [work order](work_orders/CURRENT.md) now
+targets this one classical acquisition question, not another generic proof or a
+claim of advantage from the size of the many-body state. The standard primitives
+and counting-field machinery are attributed; novelty is not established.
 
-The classical baseline is stronger than an averaged-state comparison. Existing
-metastability theory explicitly treats coarse continuous-measurement records and
-within-phase fluctuations. Its assumptions must be matched to the finite-time,
-ground-start task; it is not automatically valid for every microscopic record.
-Neither cheap sampling from supplied phase rates nor expensive full-state
-propagation establishes the cost of acquiring the adequate classical model.
-
-The next deliverable is one claim sheet and its decisive test, not another generic
-trajectory, filtering or reconstruction framework. The full record-plus-final-
-state bounds remain useful certificates, not a requirement that every scientific
-consumer needs that much output. Any narrower useful task must be declared.
-No new repository or third classical spin-off is needed.
-
-## Retained emitter results
-
-[Record instrument 25](exploration/phase_3/RECORD_INSTRUMENT_25.md) specifies direct
-quantum sampling through local coherent evolution and monitored decay. It retains
-the conditional state between outputs and bounds whole-record discretization error.
-It is an explicit use of established simulation methods, not an advantage claim.
-
-[Emission memory 26](exploration/phase_3/EMISSION_MEMORY_26.md) gives a coherent
-classical few-excitation approximation with a record-level error bound. The cutoff
-limits simultaneous excitations, not cumulative photons. At fixed collective
-drive n Omega^2/kappa^2 it supplies a controlled polynomial-in-n regime; that is
-not fixed-local-drive thermodynamic tractability. The q=1 uniform-chain model has
-an exact three-amplitude renewal description. Its failure in one non-dilute small
-control is not all-classical hardness.
-
-The historical checker remains available:
+## Reproduce the identity check
 
 ```sh
-OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python experiments/emission_memory_v1/verify.py
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python experiments/activity_flags_v1/verify.py
 ```
 
-Python 3.10+, NumPy and SciPy. Its [report](experiments/emission_memory_v1/REPORT.json)
-records the earlier finite controls. It was NOT rerun for this documentation-only
-revision. No new simulation, timing result, experimental validation or independent
-full-proof audit is claimed. The supplied latest archive and note were checked
-for integrity; that is not scientific revalidation.
+Python 3.10+, NumPy and SciPy. The [report](experiments/activity_flags_v1/REPORT.json)
+records a single three-emitter flag/tilted-law check and small classical controls.
+The checker ran twice identically and rejected -O/-OO. No published metastable
+parameter-slice simulation, quantum circuit, large-system run or timing comparison
+was performed. This is not evidence of a practical quantum advantage. Historical
+scientific verifiers were not rerun and their files remain unchanged.
 
-## Preserved mechanisms and organization
+## Retained work and organization
 
-The [sampling decision 24](exploration/phase_3/SAMPLING_REGIME_DECISION_24.md)
-retains the spectral cost comparison and the explicitly distinct attached local
-cache analysis. Earlier spectral algorithms, response/locality proofs and classical
-comparisons remain quantitative references. Climate/dynamics remain open; missing
-files block only their empirical test. Manthan is paused; battery/operator routes
-remain parked; Phase-2 Note 27 stays closed. Old next steps are dated records,
-not parallel active tasks.
+[Revision 27](exploration/phase_3/STRATEGIC_REVISION_27.md) governs the research
+priority. [Record instrument 25](exploration/phase_3/RECORD_INSTRUMENT_25.md) and
+[emission memory 26](exploration/phase_3/EMISSION_MEMORY_26.md) preserve the full-record
+quantum construction and coherent low-excitation classical comparison. Earlier
+spectral and dynamical work remains available, not refuted by the narrower task.
+No new repository or third classical spin-off is needed.
 
-[Algebraic-Loop-Certificates](https://github.com/GoGoKo699/Algebraic-Loop-Certificates)
+The independent [Algebraic-Loop-Certificates](https://github.com/GoGoKo699/Algebraic-Loop-Certificates)
 and [Sparse-Weil-Reconstruction](https://github.com/GoGoKo699/Sparse-Weil-Reconstruction)
-are independent projects owning their further development. Scientific phase 3
-uses `research/prx-quantum-phase2`; `main` is an entry point, not a merged copy of
-later work. The [project map](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/main/PROJECT_MAP.md)
+projects own their further development. The active branch is
+`research/prx-quantum-phase2`; `main` is an entry point, not a merged research copy.
+[STATUS.md](STATUS.md) links current claims and pinned prior ledgers. The
+[project map](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/main/PROJECT_MAP.md)
 and charter are subject to the explicit direct-output/model-first extensions.
-[STATUS.md](STATUS.md) links current claims and pinned prior ledgers. The original
-[MIT license](LICENSE), Copyright (c) 2026 Ruge Lin, and all earlier research,
-source data and third-party rights are preserved. Only this parent is writable.
+Climate/dynamics remain open, Manthan paused, battery/operator routes parked,
+and Phase-2 Note 27 closed. Prior proofs, data, code and third-party rights remain
+intact. The original [MIT license](LICENSE), Copyright (c) 2026 Ruge Lin, is unchanged.
+Only this parent repository is writable in this project context.
