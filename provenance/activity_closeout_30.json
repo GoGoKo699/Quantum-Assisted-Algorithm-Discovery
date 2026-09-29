@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-29",
+  "repository": "GoGoKo699/Quantum-Assisted-Algorithm-Discovery",
+  "branch": "research/prx-quantum-phase2",
+  "closeout_baseline_commit": "22c9594bcc7e5539c913e8c6756baf5459388bd6",
+  "decision_note": "exploration/phase_3/ACTIVITY_CLAIM_CLOSEOUT_30.md",
+  "source_archive": {
+    "filename": "Classical_Activity_Crosscheck_29B.zip",
+    "sha256": "2061311a52ae31744de3827d18147cc34f61bdc90794fc36a609a96be4508eec",
+    "source_kind": "user-provided checkpoint from the preceding conversation turn",
+    "crc_check": "pass",
+    "original_base_commit": "4f0e57e2ef56e3ddb395ebecb4fec115c29d3b44",
+    "original_parallel_note29_commit": "cbf06221c667b49b76140f241384e1e14e3cab20"
+  },
+  "import_policy": "Only the three substantive UTF-8 payloads are imported, byte-for-byte, into distinct paths. Old patch and proposed routing are not applied. Original local-delivery statements are historical; Closeout 30 records the subsequent import.",
+  "payloads": {
+    "exploration/phase_3/CLASSICAL_ACTIVITY_CROSSCHECK_29B.md": {
+      "bytes": 15467,
+      "sha256": "5ce708be6c836c4a2c4761765b411f5002f4117a738b1620c0b3664a7c878c44",
+      "git_blob_sha1": "d57860812461ebeb870f304e07bda883019b6d6b"
+    },
+    "experiments/activity_acquisition_crosscheck_v1/verify.py": {
+      "bytes": 14891,
+      "sha256": "fba4c6acd18e9d31ea11fc703ffb752d5d194d58253c49be52ab5534843303d5",
+      "git_blob_sha1": "6a1cb212f016000a968dd5282fbd78c63adc8d0a"
+    },
+    "experiments/activity_acquisition_crosscheck_v1/REPORT.json": {
+      "bytes": 5248,
+      "sha256": "bdbc673e98f1788ba3df070fc82cd164228140dd65037951072e362f34b9e04a",
+      "git_blob_sha1": "cda3fb2174ad9ca5bafd7aaeedb0886ad69b1db3"
+    }
+  },
+  "distinct_evidence": {
+    "note29": {
+      "note": "exploration/phase_3/CLASSICAL_ACTIVITY_ACQUISITION_29.md",
+      "report": "experiments/activity_acquisition_v1/REPORT.json",
+      "report_blob_sha1_at_closeout_baseline": "e2970629abe9af28e70ad28d45131ac87644830d",
+      "windows_kappa_Delta": [1, 4, 16],
+      "scientific_payload_modified": false,
+      "scientific_verifier_rerun_in_closeout": false
+    },
+    "note29B": {
+      "windows_kappa_Delta": [1, 5, 20],
+      "additional_tilted_mode_reacquisition": true,
+      "meaning_of_independent": "Separately implemented numerical cross-check, not external peer review or an independent physical experiment."
+    }
+  },
+  "maintenance_validation": {
+    "imported_payloads_match_source_manifest": true,
+    "python_ast_parse": "pass",
+    "full_29B_replays_during_closeout": 1,
+    "replay_exit_code": 0,
+    "replay_stdout_byte_identical_to_archived_report": true,
+    "replay_stderr_empty": true,
+    "numpy_version": "2.3.5",
+    "scipy_version": "1.17.0",
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "invalid_inputs_rejected_by_replayed_checker": 6,
+    "minus_O_refused": true,
+    "minus_OO_refused": true,
+    "other_historical_scientific_suites_rerun": false,
+    "new_scientific_parameters_or_result_claims": false
+  },
+  "limits": "All imported results remain finite complex128 diagnostics. This replay is not interval certification, an all-size tractability theorem, a quantum circuit, or a runtime comparison. No new exploration begins in this closeout."
+}
