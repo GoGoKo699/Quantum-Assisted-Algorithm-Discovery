@@ -1,0 +1,204 @@
+{
+  "analytical_regime_budget": [
+    {
+      "cutoff": 1,
+      "kappa_T": 100.0,
+      "lambda_collective": 0.01,
+      "scope": "unexecuted all-size bound; Omega/kappa=sqrt(lambda/n)",
+      "uniform_upper_bound": 0.7071067811865476
+    },
+    {
+      "cutoff": 2,
+      "kappa_T": 100.0,
+      "lambda_collective": 0.01,
+      "scope": "unexecuted all-size bound; Omega/kappa=sqrt(lambda/n)",
+      "uniform_upper_bound": 0.06123724356957946
+    },
+    {
+      "cutoff": 3,
+      "kappa_T": 100.0,
+      "lambda_collective": 0.01,
+      "scope": "unexecuted all-size bound; Omega/kappa=sqrt(lambda/n)",
+      "uniform_upper_bound": 0.004082482904638631
+    },
+    {
+      "cutoff": 4,
+      "kappa_T": 100.0,
+      "lambda_collective": 0.01,
+      "scope": "unexecuted all-size bound; Omega/kappa=sqrt(lambda/n)",
+      "uniform_upper_bound": 0.00022821773229381924
+    }
+  ],
+  "counts": {
+    "decay_number_identity": 15,
+    "degree_class_generator": 3,
+    "degree_class_invariance": 3,
+    "every_jump_resets_vacuum_q1": 63,
+    "excitation_boundary_norm": 8,
+    "factorial_decay_identity": 28,
+    "factorial_drift_inequality": 160,
+    "factorial_transient_envelope": 160,
+    "jump_rank_formula": 8,
+    "last_click_not_global_renewal": 1,
+    "record_and_final_state_bound": 8,
+    "record_normalization": 11,
+    "renewal_waiting_state_identity": 9,
+    "repeated_photons_allowed_in_q1": 1,
+    "site_resolved_waiting_density": 63,
+    "three_amplitude_open_chain": 3
+  },
+  "cutoff_comparisons": [
+    {
+      "Omega": 0.1,
+      "V": 1.0,
+      "analytic_record_bound": 0.14696938456699069,
+      "conditional_vector_dimension": 5,
+      "excitation_cutoff": 1,
+      "full_probability_at_least_one_count": 0.07104665295666412,
+      "kappa": 1.0,
+      "local_jump_rank": 1,
+      "n": 4,
+      "record_TV": 0.0006858890888312048,
+      "record_plus_final_state_trace_distance": 0.012876654765246834,
+      "truncated_probability_at_least_one_count": 0.07071739902130902
+    },
+    {
+      "Omega": 0.1,
+      "V": 1.0,
+      "analytic_record_bound": 0.018000000000000006,
+      "conditional_vector_dimension": 11,
+      "excitation_cutoff": 2,
+      "full_probability_at_least_one_count": 0.07104665295666412,
+      "kappa": 1.0,
+      "local_jump_rank": 4,
+      "n": 4,
+      "record_TV": 6.3143336454011165e-06,
+      "record_plus_final_state_trace_distance": 0.0008298747938424786,
+      "truncated_probability_at_least_one_count": 0.07104932319694524
+    },
+    {
+      "Omega": 0.1,
+      "V": 1.0,
+      "analytic_record_bound": 0.0012000000000000005,
+      "conditional_vector_dimension": 15,
+      "excitation_cutoff": 3,
+      "full_probability_at_least_one_count": 0.07104665295666412,
+      "kappa": 1.0,
+      "local_jump_rank": 7,
+      "n": 4,
+      "record_TV": 9.024223008136311e-09,
+      "record_plus_final_state_trace_distance": 4.0741594236131915e-05,
+      "truncated_probability_at_least_one_count": 0.07104664803209704
+    },
+    {
+      "Omega": 0.1,
+      "V": 1.0,
+      "analytic_record_bound": 0.0,
+      "conditional_vector_dimension": 16,
+      "excitation_cutoff": 4,
+      "full_probability_at_least_one_count": 0.07104665295666412,
+      "kappa": 1.0,
+      "local_jump_rank": 8,
+      "n": 4,
+      "record_TV": 0.0,
+      "record_plus_final_state_trace_distance": 0.0,
+      "truncated_probability_at_least_one_count": 0.07104665295666412
+    },
+    {
+      "Omega": 1.0,
+      "V": 1.0,
+      "analytic_record_bound": 1.0,
+      "conditional_vector_dimension": 5,
+      "excitation_cutoff": 1,
+      "full_probability_at_least_one_count": 0.9982360100138428,
+      "kappa": 1.0,
+      "local_jump_rank": 1,
+      "n": 4,
+      "record_TV": 0.4965818206302459,
+      "record_plus_final_state_trace_distance": 0.6788105955014967,
+      "truncated_probability_at_least_one_count": 0.9004749049414618
+    },
+    {
+      "Omega": 1.0,
+      "V": 1.0,
+      "analytic_record_bound": 1.0,
+      "conditional_vector_dimension": 11,
+      "excitation_cutoff": 2,
+      "full_probability_at_least_one_count": 0.9982360100138428,
+      "kappa": 1.0,
+      "local_jump_rank": 4,
+      "n": 4,
+      "record_TV": 0.1000445305117654,
+      "record_plus_final_state_trace_distance": 0.3289572531091082,
+      "truncated_probability_at_least_one_count": 0.9910471348748143
+    },
+    {
+      "Omega": 1.0,
+      "V": 1.0,
+      "analytic_record_bound": 1.0,
+      "conditional_vector_dimension": 15,
+      "excitation_cutoff": 3,
+      "full_probability_at_least_one_count": 0.9982360100138428,
+      "kappa": 1.0,
+      "local_jump_rank": 7,
+      "n": 4,
+      "record_TV": 0.017014181551889312,
+      "record_plus_final_state_trace_distance": 0.11463514106781475,
+      "truncated_probability_at_least_one_count": 0.9985524334702426
+    },
+    {
+      "Omega": 1.0,
+      "V": 1.0,
+      "analytic_record_bound": 0.0,
+      "conditional_vector_dimension": 16,
+      "excitation_cutoff": 4,
+      "full_probability_at_least_one_count": 0.9982360100138428,
+      "kappa": 1.0,
+      "local_jump_rank": 8,
+      "n": 4,
+      "record_TV": 0.0,
+      "record_plus_final_state_trace_distance": 0.0,
+      "truncated_probability_at_least_one_count": 0.9982360100138428
+    }
+  ],
+  "invalid_inputs_rejected": 6,
+  "precision": "complex128 diagnostics; universal statements follow from the proof, not interval numerics",
+  "q1_probability_bright_in_each_of_three_bins": 0.23805772457445853,
+  "reachable_post_click_control": [
+    {
+      "first_click_density": 0.04646419516677253,
+      "first_click_site": 0,
+      "first_click_time": 0.5,
+      "post_click_neighbor_intensity": 0.048142508059853026
+    },
+    {
+      "first_click_density": 0.1180262733505556,
+      "first_click_site": 0,
+      "first_click_time": 1.0,
+      "post_click_neighbor_intensity": 0.14782755926086125
+    }
+  ],
+  "record": "global dark/bright coarsening; three bins of width 2; theorem covers the finer site-count law",
+  "renewal_controls": [
+    {
+      "n": 4,
+      "propagated_amplitudes": 3,
+      "scope": "single-excitation model, not full-chain accuracy",
+      "single_excitation_dimension": 5
+    },
+    {
+      "n": 7,
+      "propagated_amplitudes": 3,
+      "scope": "single-excitation model, not full-chain accuracy",
+      "single_excitation_dimension": 8
+    },
+    {
+      "n": 10,
+      "propagated_amplitudes": 3,
+      "scope": "single-excitation model, not full-chain accuracy",
+      "single_excitation_dimension": 11
+    }
+  ],
+  "scope": "Fixed four-site record laws and reduced-space algebra; not many-body scaling, hardware, or runtime.",
+  "status": "pass"
+}
