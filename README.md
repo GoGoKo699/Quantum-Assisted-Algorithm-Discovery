@@ -10,64 +10,71 @@ output and validation costs remain explicit. See [AGENTS.md](AGENTS.md).
 **Status: exploratory. No useful quantum advantage is established.
 Manuscript preparation remains on hold.**
 
-## Current result: quantify the conditional memory left between photons
+## Current decision: establish the useful quantum opportunity before extending the machinery
 
-[Emission memory 26](exploration/phase_3/EMISSION_MEMORY_26.md) studies the same
-monitored interacting-emitter model. A coherent classical approximation keeps at
-most q simultaneous excitations, not at most q photons over the observation.
-A factorial-moment envelope and a count-lifted residual bound control the entire
-site/time-binned record and final state. The approximation retains coherences,
-interactions within the retained sector and repeated emissions.
+[Strategic revision 27](exploration/phase_3/STRATEGIC_REVISION_27.md) reassesses the
+accumulated work. We have explicit quantum sampling constructions, controlled
+classical reductions, and tests of output accuracy. We have not yet identified a
+consequential regime where quantum computation improves the complete cost.
+Another available error bound is therefore not the default next task.
 
-For fixed collective drive parameter lambda=n Omega^2/kappa^2, dimensionless
-horizon and accuracy, a finite q gives a polynomial classical sampler in n.
-This is not a fixed-local-drive thermodynamic claim: lambda grows with n when
-Omega/kappa is fixed. A failed sufficient bound is not evidence of hardness.
-The proof specializes existing residual/trajectory methods; no generic novelty
-or practical advantage is claimed.
+The monitored-emitter model remains a candidate for ONE bounded regime-selection
+study. The [work order](work_orders/CURRENT.md) requires a physically motivated
+counting observable, the strongest matched classical description including its
+acquisition cost, and a specific quantum operation that could improve the result.
+A conditional hypothesis can justify exploration; a universal classical lower
+bound, hardware demonstration or new dataset is not required. A large quantum
+state or failure of one weak approximation is not sufficient either.
 
-At q=1 each photon truly resets the whole approximate system. The uniform open
-chain then has an exact three-amplitude renewal description including waiting
-times and detector labels. It is not a global-blockade assumption about the full
-model. At comparable drive and decay, a four-site check shows that this simple
-renewal law and a two-excitation law differ from the requested record. That system
-is classically easy; neither discrepancy establishes many-body difficulty.
+The classical baseline is stronger than an averaged-state comparison. Existing
+metastability theory explicitly treats coarse continuous-measurement records and
+within-phase fluctuations. Its assumptions must be matched to the finite-time,
+ground-start task; it is not automatically valid for every microscopic record.
+Neither cheap sampling from supplied phase rates nor expensive full-state
+propagation establishes the cost of acquiring the adequate classical model.
 
-The [current work order](work_orders/CURRENT.md) now tests a stronger classical
-possibility: phase-level or hidden-state dynamics for non-dilute emission records.
-Existing Ising-model metastability work already describes classical switching in
-some regimes. Its averaged-state reduction is not automatically an accurate
-site-resolved detector instrument. The comparison must identify useful record
-information and price acquisition of the adequate model, not just count amplitudes.
-No new repository, spin-off or simulation framework is needed.
+The next deliverable is one claim sheet and its decisive test, not another generic
+trajectory, filtering or reconstruction framework. The full record-plus-final-
+state bounds remain useful certificates, not a requirement that every scientific
+consumer needs that much output. Any narrower useful task must be declared.
+No new repository or third classical spin-off is needed.
 
-## Quantum integration and verification
+## Retained emitter results
 
-[Record instrument 25](exploration/phase_3/RECORD_INSTRUMENT_25.md) retains the direct
-quantum construction: local coherent evolution and monitored decay, preserving the
-conditional quantum state between outputs. Its whole-record discretization,
-precision and repeated-history costs still count. The classical reduction is a
-competitor, not a requirement to convert quantum samples into a classical program.
+[Record instrument 25](exploration/phase_3/RECORD_INSTRUMENT_25.md) specifies direct
+quantum sampling through local coherent evolution and monitored decay. It retains
+the conditional state between outputs and bounds whole-record discretization error.
+It is an explicit use of established simulation methods, not an advantage claim.
+
+[Emission memory 26](exploration/phase_3/EMISSION_MEMORY_26.md) gives a coherent
+classical few-excitation approximation with a record-level error bound. The cutoff
+limits simultaneous excitations, not cumulative photons. At fixed collective
+drive n Omega^2/kappa^2 it supplies a controlled polynomial-in-n regime; that is
+not fixed-local-drive thermodynamic tractability. The q=1 uniform-chain model has
+an exact three-amplitude renewal description. Its failure in one non-dilute small
+control is not all-classical hardness.
+
+The historical checker remains available:
 
 ```sh
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python experiments/emission_memory_v1/verify.py
 ```
 
-Python 3.10+, NumPy and SciPy. The [report](experiments/emission_memory_v1/REPORT.json)
-contains one four-site model at two drives, excitation-cutoff comparisons and
-reduced-space renewal controls. The final checker ran twice with identical JSON;
--O/-OO and six invalid inputs were rejected. These are floating-point diagnostics,
-not interval certificates, measured photon histories, quantum circuits or timings.
-The all-size statements follow from the written proof. No old verifier was rerun.
+Python 3.10+, NumPy and SciPy. Its [report](experiments/emission_memory_v1/REPORT.json)
+records the earlier finite controls. It was NOT rerun for this documentation-only
+revision. No new simulation, timing result, experimental validation or independent
+full-proof audit is claimed. The supplied latest archive and note were checked
+for integrity; that is not scientific revalidation.
 
 ## Preserved mechanisms and organization
 
-The [live sampling decision 24](exploration/phase_3/SAMPLING_REGIME_DECISION_24.md)
-sets the record direction and retains the distinct attached spectral-cache note.
-Earlier spectral algorithms, response/locality proofs and classical comparisons
-remain quantitative references, not refuted results. Climate/dynamics remain open;
-missing files block only their empirical test. Manthan is paused, battery/operator
-routes parked, and Phase-2 Note 27 remains closed.
+The [sampling decision 24](exploration/phase_3/SAMPLING_REGIME_DECISION_24.md)
+retains the spectral cost comparison and the explicitly distinct attached local
+cache analysis. Earlier spectral algorithms, response/locality proofs and classical
+comparisons remain quantitative references. Climate/dynamics remain open; missing
+files block only their empirical test. Manthan is paused; battery/operator routes
+remain parked; Phase-2 Note 27 stays closed. Old next steps are dated records,
+not parallel active tasks.
 
 [Algebraic-Loop-Certificates](https://github.com/GoGoKo699/Algebraic-Loop-Certificates)
 and [Sparse-Weil-Reconstruction](https://github.com/GoGoKo699/Sparse-Weil-Reconstruction)
@@ -76,5 +83,5 @@ uses `research/prx-quantum-phase2`; `main` is an entry point, not a merged copy 
 later work. The [project map](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/main/PROJECT_MAP.md)
 and charter are subject to the explicit direct-output/model-first extensions.
 [STATUS.md](STATUS.md) links current claims and pinned prior ledgers. The original
-[MIT license](LICENSE), Copyright (c) 2026 Ruge Lin, and prior evidence and
-third-party rights are preserved. Only this parent repository is writable.
+[MIT license](LICENSE), Copyright (c) 2026 Ruge Lin, and all earlier research,
+source data and third-party rights are preserved. Only this parent is writable.
