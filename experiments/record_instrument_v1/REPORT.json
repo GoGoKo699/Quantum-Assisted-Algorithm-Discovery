@@ -1,0 +1,94 @@
+{
+  "Omega": 1.0,
+  "V": 1.0,
+  "basis": "ground then excited; Sz=diag(-1/2,1/2)",
+  "certified_dark_then_bright_gap_lower": "30432076249/250000000000",
+  "dark_record_order": [
+    "dark-dark",
+    "dark-bright",
+    "bright-dark",
+    "bright-bright"
+  ],
+  "dephasing_controls": [
+    {
+      "dark_binary_record_TV": 0.024464891751024065,
+      "dephasing_coherence_rate": 4.0,
+      "scope": "different model control, not a proof of asymptotic convergence"
+    },
+    {
+      "dark_binary_record_TV": 0.0018061242767249963,
+      "dephasing_coherence_rate": 20.0,
+      "scope": "different model control, not a proof of asymptotic convergence"
+    }
+  ],
+  "detector_bin_width": 2.0,
+  "detector_bins": 2,
+  "exact_independent_emitter_dark_record": [
+    0.039389565795988096,
+    0.4787717379459666,
+    0.08731764089067912,
+    0.39452105536736615
+  ],
+  "exact_quantum_dark_record": [
+    0.11324256617546818,
+    0.4243928091599734,
+    0.10604591743698671,
+    0.3563187072275717
+  ],
+  "independent_emitter_dark_record_TV": 0.09258127692578767,
+  "invalid_inputs_rejected": 6,
+  "kappa": 1.0,
+  "n": 2,
+  "per_site_count_labels": [
+    "0",
+    "1",
+    ">=2"
+  ],
+  "population_rate_dark_record": [
+    0.13975113113397555,
+    0.302664504163503,
+    0.19001147032617863,
+    0.3675728943763429
+  ],
+  "population_rate_dark_record_TV": 0.12172830499647044,
+  "precision": "complex128 matrix diagnostics at tolerance 5e-10; only Taylor witness is exact Fraction arithmetic",
+  "probability_some_emitter_has_at_least_two_emissions_in_first_bin": 0.016528271060367878,
+  "rational_Taylor_degree": 128,
+  "record_words": 81,
+  "rows": [
+    {
+      "analytic_record_bound": 1.0,
+      "h": 0.125,
+      "half_diamond_Choi_lower_diagnostic": 0.05492056138101716,
+      "half_diamond_Choi_upper_diagnostic": 0.21968224552406865,
+      "observed_record_TV": 0.024787833984061924,
+      "substeps_per_detector_bin": 16
+    },
+    {
+      "analytic_record_bound": 0.875,
+      "h": 0.0625,
+      "half_diamond_Choi_lower_diagnostic": 0.027423056680232295,
+      "half_diamond_Choi_upper_diagnostic": 0.10969222672092918,
+      "observed_record_TV": 0.012322183065497082,
+      "substeps_per_detector_bin": 32
+    },
+    {
+      "analytic_record_bound": 0.4375,
+      "h": 0.03125,
+      "half_diamond_Choi_lower_diagnostic": 0.013700835486422189,
+      "half_diamond_Choi_upper_diagnostic": 0.054803341945688755,
+      "observed_record_TV": 0.006142289069599471,
+      "substeps_per_detector_bin": 64
+    },
+    {
+      "analytic_record_bound": 0.21875,
+      "h": 0.015625,
+      "half_diamond_Choi_lower_diagnostic": 0.006847577959251443,
+      "half_diamond_Choi_upper_diagnostic": 0.02739031183700577,
+      "observed_record_TV": 0.0030663411791626866,
+      "substeps_per_detector_bin": 128
+    }
+  ],
+  "scope": "One 2-emitter exact coarse-record matrix diagnostic and rational dark-event witness. Not many-body hardness, a hardware run, or a timing comparison.",
+  "status": "pass"
+}
