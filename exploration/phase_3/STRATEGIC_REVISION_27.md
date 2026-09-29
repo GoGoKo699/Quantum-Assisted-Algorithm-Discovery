@@ -190,9 +190,9 @@ routing changes distinguish the revised task from the retained history.
 Primary-source review: [1] Sections III and conclusions/model passages; its PDF
 page 5 was visually checked. For [2], the introduction, Sections V B 2-4 and the
 stated scope of its numerical acquisition method were read as parsed text. A
-screenshot of PDF page 18 failed; no figure-derived number from it is used. The
-90-page supplement was not exhaustively audited. [3] was inspected at its primary
-abstract/model-motivation scope. No numerical phase boundary was reproduced.
+screenshot of PDF page 18 failed; no figure-derived number from it is used. The full
+90-page document, including its supplement, was not exhaustively audited. [3] was
+inspected at its primary abstract/model-motivation scope. No numerical phase boundary was reproduced.
 
 ### Primary sources
 
