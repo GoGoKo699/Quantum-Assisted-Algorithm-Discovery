@@ -2,52 +2,51 @@
 
 **Can quantum computation obtain useful information more effectively than strong classical alternatives?**
 
-Research handover · 29 September 2026  
-**No useful quantum advantage is established. Manuscript preparation is on hold.**
+**Fault-tolerant circuits; no assumed fast QRAM.**
+No useful end-to-end quantum advantage is established. Manuscript preparation is on hold.
 
-This is an exploration archive, including unsuccessful and inconclusive candidates.
-Direct quantum samples are allowed; a learned classical program is optional.
-Mathematical models and quantum integration precede implementation, while
-preparation, accuracy, validation, and output costs remain explicit.
+Direct samples and reusable classical artifacts are allowed. Mathematical models
+come before implementation, but preparation, input and working-data access,
+accuracy, measurement, and reuse costs must be included from the start.
 
 ## Start here
 
-**[Read the research handover](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/research/prx-quantum-phase2/HANDOVER.md)**
+**[Current research handover](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/research/prx-quantum-phase2/HANDOVER.md)**
 
 | Destination | Purpose |
 |---|---|
-| [Current status](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/research/prx-quantum-phase2/STATUS.md) | Present claim boundary and historical evidence |
-| [Current work order](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/research/prx-quantum-phase2/work_orders/CURRENT.md) | Sole continuation instruction; next candidate not selected |
-| [Research index](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/research/prx-quantum-phase2/exploration/phase_3/README.md) | Grouped notes and associated code/reports |
-| [Reproduction guide](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/research/prx-quantum-phase2/handover/REPRODUCING.md) | Correct branch, environments, commands, and verification limits |
-| [Project map](PROJECT_MAP.md) | Branch roles, scope, and independent projects |
+| [Working rules](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/research/prx-quantum-phase2/AGENTS.md) | Binding hardware and research constraints |
+| [Current status](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/research/prx-quantum-phase2/STATUS.md) | Current decisions and claim boundaries |
+| [Current work order](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/research/prx-quantum-phase2/work_orders/CURRENT.md) | Sole continuation instruction; replacement not selected |
+| [Exploration index](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/research/prx-quantum-phase2/exploration/README.md) | Phase 4 and the preserved scientific archive |
+| [Reproduction guide](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/research/prx-quantum-phase2/handover/REPRODUCING.md) | Commands and their evidence limits |
+| [Project map](PROJECT_MAP.md) | Branch roles and independent projects |
 
-## Latest decision
+## Decision before the next step
 
-The two-window emission-covariance proposal is closed on present evidence.
-A small classical model was acquired from the specified seven-emitter generator
-and checked against full symmetry-reduced propagation. This removes the immediate
-acquisition obstacle in that calibration; it is not an all-size tractability theorem
-or a measured quantum runtime disadvantage.
+[Hardware decision 05](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/research/prx-quantum-phase2/exploration/phase_4/NO_QRAM_HARDWARE_BOUNDARY_05.md)
+excludes assumed fast coherent access to arbitrary large input or work tables.
+Ordinary logical registers, classical control and RAM, and explicitly priced
+reversible arithmetic or gate-based lookup remain allowed. Calling a lookup QROM,
+an oracle, or a block encoding does not make it free.
 
-[Closeout 30](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/research/prx-quantum-phase2/exploration/phase_3/ACTIVITY_CLAIM_CLOSEOUT_30.md)
-preserves the stopping decision and the distinct 29/29B checks. Their science is
-not deleted or presented as a quantum advantage. **No new exploration starts in
-this handover.**
+The short-seed sparsifier is **parked as an active advantage lead**, not disproved.
+Its conditional RAM-model derivation and checks remain archived under their
+original assumptions; independent correctness and priority are unresolved.
+The earlier emitter-covariance closeout also remains in force. No replacement
+application, automatic QROM retrofit, memory-device program, or new phase is
+started by this cleanup.
 
-## Which branch to use
+## Repository roles
 
-`main` is the public entry point and retains earlier scientific files. The
-[working branch](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/tree/research/prx-quantum-phase2)
-is `research/prx-quantum-phase2`; it contains the later research and handover.
-The old sharing-core branch is preserved, not an active publication agenda.
-No branch merge, deletion, release, or new repository is part of the cleanup.
+`main` is the public entry point, not a merged copy of the research. The working
+branch is `research/prx-quantum-phase2`; the name is historical. Its handover,
+status, and work order are the live research references. The sharing-core branch
+remains a historical archive, not a publication agenda.
 
 [Algebraic-Loop-Certificates](https://github.com/GoGoKo699/Algebraic-Loop-Certificates)
 and [Sparse-Weil-Reconstruction](https://github.com/GoGoKo699/Sparse-Weil-Reconstruction)
-are independent projects. Their further work belongs there, not in a third parent
-spin-off. Read [AGENTS.md](AGENTS.md) before making changes.
-
+remain independent projects. Only this parent repository is writable here.
 Existing proofs, code, data, reports, [provenance](PROVENANCE.md), the original
-[MIT license](LICENSE), and third-party rights are preserved. A passing historical
-checker is not an all-project audit or evidence of useful quantum advantage.
+[MIT license](LICENSE), and third-party rights are preserved. No scientific suite
+is rerun, branch merged, release made, or new repository created in this tidy.
