@@ -10,72 +10,81 @@ accuracy costs remain explicit. See [AGENTS.md](AGENTS.md).
 **Status: exploratory. No useful quantum advantage is established.
 Manuscript preparation remains on hold.**
 
-## Current result: sample finite regions with a collective spectral guarantee
+## Current comparison: what information does the spectrum actually require?
+
+[Response readout 22](exploration/phase_3/RESPONSE_READOUT_22.md) compares the same
+local-block spectral task at the output level. A difference in scalar return
+amplitudes certifies a spectral difference. Exact rational controls show that
+independent-spin and commuting approximations miss a declared resolved six-spin
+response. That small system is classically easy; the result establishes the
+importance of interactions there, not quantum advantage or growing-chain hardness.
+
+Conversely, finitely many sufficiently accurate scalar correlations yield a
+classical bin sampler with a proved error budget. The Fourier reconstruction is
+matched to the existing geometric quantum clock. Any negative approximate bin
+weights are repaired with their effect bounded, rather than silently ignored.
+Clock truncation, observable-weighted wrapping, correlation errors and arithmetic
+are all charged. A small final spectrum does not mean it is cheap to acquire.
+
+Strong classical tensor methods can use half-time evolution to calculate these
+correlations. For the real spin generator the required contraction is bilinear,
+not the conserved operator norm. The [work order](work_orders/CURRENT.md) now asks
+what it costs to acquire the response-relevant scalars as resolution increases.
+Large Schmidt rank, full-state complexity or failure of one truncation does not
+by itself establish a difficult sampled spectrum. The quantum route need not
+construct the scalars classically; it may still return direct spectral samples.
+
+At d=J and linewidth J/4, one explicit conditional target is 255 correlations
+within 0.002, sufficient for per-block TV below 0.02834 before arithmetic. No cheap
+large-block method has been demonstrated to meet that target. No native tensor
+simulation, experimental spectrum or quantum performance result is claimed.
+
+## Local quantum integration remains available
 
 [Positive spatial windows 21](exploration/phase_3/POSITIVE_SPATIAL_WINDOWS_21.md)
-constructs a positive mixture of finite-chain responses at the same requested
-Lorentzian linewidth. Randomly shifted cuts give overlapping spatial windows;
-each window retains its full collective observable, original offsets and physical
-ends. The approximation error is bounded in total variation independently of
-total chain length, using finite-range locality and collective residual identities.
+retains its positive mixture of finite regions, with a collective spectral error
+bound independent of total chain length at fixed local parameters and linewidth.
+Both classical and quantum methods may use it. Quantum system-register size is
+at most twice the selected block size; linewidth time, coefficient access and
+repeated-shot costs remain. The sufficient block size is not a hardness bound.
+Its spatial error must be added to the new per-block readout error.
 
-This is not an average of isolated spin spectra with cross correlations silently
-removed. The proof controls the change caused by the cut bonds over all frequencies.
-No spectral gap, sharp cutoff, unknown eigenbasis or short-memory assumption is used.
-The sufficient region size depends on coupling, linewidth and accuracy and may be
-large; it is not a necessary correlation length or a practical hardware estimate.
-Locality and spectral-sampling ingredients are prior work, not new primitives.
-
-Both sides benefit. A quantum sampler can select a block classically and operate
-on its doubled register, rather than the full chain, while retaining the linewidth
-time and all access/precision costs. A classical method can construct the same
-block spectra and reuse them. At fixed parameters and resolution this gives a
-classical alternative polynomial in total chain length; increasing total spin count
-alone is not evidence of advantage. Tensor and restricted-state methods may improve
-substantially over dense block diagonalization.
-
-The [work order](work_orders/CURRENT.md) now asks what response-relevant information
-is actually required INSIDE a finite region, in a nontrivial alternating-offset
-regime, and compares classical acquisition/reuse with local quantum evolution.
-No new molecule, large simulation, generic filter or third spin-off is the next step.
+[Model comparison 15](exploration/phase_3/SPECTRAL_MODEL_STRUCTURE_15.md) supplies
+the direct linewidth-matched quantum sampler and analytic classical limits.
+[Spectral boundary 16](exploration/phase_3/SPECTRAL_BOUNDARY_16.md) retains the
+recursion certificate. Notes 17-20 preserve their distinct memory, slow-sector,
+resonance-window and generic-filter conclusions. The new scalar reconstruction is
+a classical competitor, not a renewed classical-program requirement.
 
 ## Mathematical checks
 
 ```sh
-OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python experiments/spatial_windows_v1/verify.py
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python experiments/response_readout_v1/verify.py
 ```
 
-Python 3.10+ and NumPy. The [report](experiments/spatial_windows_v1/REPORT.json)
-contains finite 2/4/5/6-spin identities for positive mixtures, collective residuals,
-resolvents, moments and negative controls. The final checker ran twice identically;
--O/-OO was rejected. These are floating-point diagnostics, not interval proofs,
-experimental spectra, quantum circuits or performance benchmarks. The all-size
-continuous-law bound follows from the written argument and a cited locality theorem.
-No previous verifier was rerun or historical scientific file changed.
+Python 3.10+ and NumPy. The [report](experiments/response_readout_v1/REPORT.json)
+separates exact rational moment/Taylor witnesses from complex128 readout controls.
+The final checker ran twice with identical output; -O/-OO was rejected. These are
+not hardware, native NMR or tensor benchmarks. General output guarantees follow
+from the proof, not finite numerical plots. No older verifier was rerun or old
+scientific file changed. No source dataset or upstream implementation was imported.
 
-## Retained comparisons and organization
+## Organization and preserved work
 
-[Model comparison 15](exploration/phase_3/SPECTRAL_MODEL_STRUCTURE_15.md) retains
-the linewidth-matched quantum clock and classical limits.
-[Spectral boundary 16](exploration/phase_3/SPECTRAL_BOUNDARY_16.md) retains the
-classical recursion certificate. Notes
-[17](exploration/phase_3/EXCHANGE_MEMORY_17.md),
-[18](exploration/phase_3/SLOW_SECTOR_SAMPLING_18.md),
-[19](exploration/phase_3/RESONANCE_WINDOW_19.md) and
-[20](exploration/phase_3/SMOOTH_RESPONSE_COMPRESSION_20.md) retain their distinct
-memory, slow-sector, resonance-window and generic-filter conclusions.
-
-Classical probability/climate exploration remains open. Missing climate files
-block only the empirical test in [Audit 13](exploration/phase_3/CONTINUATION_INFORMATION_13.md).
-Manthan is paused; battery/operator routes are parked. The independent
+The existing parent repository is the appropriate workspace; no new repository
+or third classical spin-off is needed. Both
 [Algebraic-Loop-Certificates](https://github.com/GoGoKo699/Algebraic-Loop-Certificates)
 and [Sparse-Weil-Reconstruction](https://github.com/GoGoKo699/Sparse-Weil-Reconstruction)
-projects own their further development.
+remain independent projects owning their further development.
 
-Scientific phase 3 uses `research/prx-quantum-phase2`. The original
+Climate/dynamics remain open; missing files block only the empirical test in
+[Audit 13](exploration/phase_3/CONTINUATION_INFORMATION_13.md). Manthan remains
+paused and battery/operator routes parked. Scientific phase 3 uses
+`research/prx-quantum-phase2`. The original
 [project map](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/main/PROJECT_MAP.md)
 and [charter](exploration/phase_2/CHARTER.md) are subject to the explicit direct-output
 and model-first extensions. `main` is an entry point, not a merged copy of later
-work. [STATUS.md](STATUS.md) links current claims and pinned historical ledgers.
-Prior evidence, rights notices and the original [MIT license](LICENSE), Copyright
-(c) 2026 Ruge Lin, are preserved. Only this parent repository may be modified.
+work. [STATUS.md](STATUS.md) links claims and pinned historical ledgers.
+Phase-2 Note 27 remains closed. Prior evidence, notices and the original
+[MIT license](LICENSE), Copyright (c) 2026 Ruge Lin, are preserved.
+Only Quantum-Assisted-Algorithm-Discovery may be modified in this context.
