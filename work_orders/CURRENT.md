@@ -1,65 +1,70 @@
-# Current task: justify a residual pricing regime before further development
+# Current task: test the useful threshold in risk-aware packing pricing
 
 30 September 2026 · `research/prx-quantum-phase2`
-Read [workload 07](../exploration/phase_4/PRICING_WORKLOAD_07.md),
-[circuit construction 06](../exploration/phase_4/CIRCUIT_NATIVE_PRICING_06.md), and
-[AGENTS.md](../AGENTS.md). No fast QRAM, new repository, or manuscript is required.
+Read [risk-aware gate 08](../exploration/phase_4/RISK_AWARE_PRICING_GATE_08.md),
+[workload 07](../exploration/phase_4/PRICING_WORKLOAD_07.md), and
+[AGENTS.md](../AGENTS.md). No QRAM, new repository, or manuscript.
 
-## Completed decision test
+## Source gate completed, benefit still unproved
 
-One public 120-item Falkenauer uniform instance was solved through actual native
-restricted-master LPs, classical pricing, and integer recovery. Exact equal-size
-aggregation preserves the original binary root problem and leaves 58 types.
-Both policies improve the 49-bin greedy incumbent to 48 bins; volume and an explicit
-item assignment certify global integer optimality without completing root-LP pricing.
+Ordinary deterministic root pricing remains a reference; the fixed-capacity test
+is not enlarged. Uncertain cloud allocation supplies an independently motivated
+DIFFERENT constraint A(x)+sqrt(q S(x))<=C. Means, variance/range coefficients,
+risk convention and data validity must be explicit. A snapshot risk model is not
+an all-time/all-server reliability certificate. Never manufacture covariance,
+precision or constraints solely to make a classical method fail.
 
-The exact-pricing policy has 55 pricing and 56 master calls. Greedy-first has nine
-exact pricing and 80 master calls. Each full DP needs 11,042 integer updates.
-The nine true fallback calls have substantial marked probability, computed offline
-as a diagnostic, not supplied to the quantum algorithm. No no-column certification
-call was needed before either useful answer. Do not report absent-column proving
-as an observed bottleneck just because it was a previous concern.
+Xu et al. (2023) report a pricing-heavy medium family but a much smaller pricing
+share in the largest hybrid case. These are generated benchmarks and aggregate
+source metrics, not a new run, industrial deployment or evidence of quantum hardness.
+Root quantum pricing cannot claim the whole published branch-and-price time share.
 
-This is a published synthetic benchmark, not an industrial trial or an all-instance
-negative theorem. But fixed capacity makes larger uniform instances an inappropriate
-next default test of exponential pricing difficulty. Multiplying every size and
-capacity by a common factor changes units, not the feasible set. Free-item count
-and a QRAM-free circuit are not, by themselves, evidence of useful quantum leverage.
+The circuit uses sequential constants, running sums and a sign-guarded squared
+comparison; no probability oracle or quantum-addressable data is supplied. Its
+full arithmetic, bit widths, inverses, recompile costs and routing are charged.
+Branch-specific together/apart constraints are not automatically covered by the
+root predicate. Generic feasible generation, amplification and quantum stochastic
+knapsack are prior work; no novelty is established by the composition.
 
-## One bounded source/model gate
+## Next bounded test
 
-Before another workload, identify an independently motivated pricing regime in
-published optimization practice whose effective capacity/representation and required
-LP/integer accuracy survive the already identified DP, core, approximation, and
-scaled-dual bypasses. Name the actual consumer, input family, what is costly to
-obtain, and why its cost affects the final solution rather than just one oracle.
-Retain native solver reuse and the different progress caused by different columns.
+Use one declared risk convention in the source's medium family and genuine root
+pricing calls from an adequate classical workflow. First inspect or implement the
+strongest applicable cheap feasible and upper-bound methods, including the later
+Kim-Lee non-convex relaxation/rounding, native heuristic, approximation and gap
+bypasses. Do not compare only to the older conic solver or random feasible draws.
+A model-level contraction of the relevant feasible frontier is also a valid early
+rejection; no native installation or dataset is mandatory before such an analysis.
 
-No bigger fixed-capacity census or quantum compiler is selected. The routine of
-Note 06 remains a hardware-admissible candidate finder, not a proved novelty or an
-eligible speedup on this tested slice. Do not force continuation because code exists.
-If there is no specific credible residual case after a limited literature/model
-check, park the ordinary one-dimensional pricing lead and resume the broader
-ordinary-circuit mechanism screen.
+For each relevant call retain the actual duals, restricted-master z_R, valid current
+lower bound L, best feasible score ell, and safe pricing upper bound U. The marked
+set is feasible v>1 AND v>=z_R/L, not simply negative reduced cost. A witness at that
+threshold shows exact pricing cannot improve this Farley bound and permits the
+source's bypass. It is not global optimality or guaranteed fast master convergence.
+Validate numerical bounds; L=0 and uncertain inequalities need separate handling.
 
-Richer constraints may be considered ONLY with independent application motivation
-and an explicit new input/output/circuit contract. They are not covered silently by
-the binary root generator, equal-size symmetry, or knapsack approximation scheme.
-Do not add dimensions, conflicts or excess digits solely to make classical pricing
-fail. A universal classical lower bound is not needed to investigate a credible
-conditional mechanism, but a squared sampling-cost formula alone is insufficient.
+If ell already meets the threshold, use it classically. If U<z_R/L, the desired
+witness is impossible and an improved master bound may already be available. If
+U<=1, there is no improving column. Only a material collection of costly unresolved
+calls warrants estimating the actual feasible-generator mass p_theta and comparing
+fully priced quantum work with avoided fallback work. Obtaining p_theta is not
+free and cannot use an uncounted exact solution. Cap quantum attempts and preserve
+a justified classical fallback; failed search never proves absence.
 
-## Evidence discipline
+Report effect on useful integer/LP gap and total optimizer work, not just a large
+state space, smaller query exponent, or a favorable source percentage. Missing
+inputs block only a workload run. If stronger classical methods settle the useful
+calls economically, park this candidate rather than build another framework.
+No large census, new cloud control system or quantum compiler is selected.
 
-The [verifier](../experiments/pricing_workload_v1/verify.py) and
-[report](../experiments/pricing_workload_v1/REPORT.json) retain the precise two
-policies, operation counts, explicit packings and separately charged probability
-calculations. The normalized public input travels with its source notice.
-No production branch-and-price framework, quantum search or physical runtime was
-measured. The final verifier ran twice identically and rejects optimized Python;
-historical scientific suites were not rerun.
+## Evidence and preservation
 
-Preserve all prior proofs, reports, hardware rules and rights. Only Quantum-Assisted-
-Algorithm-Discovery may be modified. The graph lead stays parked, the emitter
-covariance stays closed, and the two spin-offs remain independent. No outside
-contact, paid/unattended work, branch merge, release or administration change follows.
+Note 08 contains source-reported workload facts and one exact small algebra check;
+it does not execute the source solver or provide real pricing traces. Its final
+checker ran twice identically, rejecting -O/-OO and six invalid inputs. No old
+scientific suite was rerun. Use historical reports without overwriting them.
+
+The graph stays parked and emitter covariance closed. Other mechanisms remain
+available, not parallel programs. Only Quantum-Assisted-Algorithm-Discovery may be
+modified. Preserve source rights, licenses and independent spin-offs. No outside
+contact, paid/unattended work, new repository, merge, release or administration.

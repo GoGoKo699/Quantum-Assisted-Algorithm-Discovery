@@ -1,0 +1,56 @@
+{
+  "checked_distinctions": [
+    "two resources vs mean-only DP",
+    "pooled vs per-item buffer",
+    "positive covariance is not diagonal covariance",
+    "sign before squaring",
+    "safe upward rounding is not absence certification",
+    "positive column vs bound-aware threshold"
+  ],
+  "hybrid_threshold": {
+    "bound_ceiling_from_witness": "5000/53",
+    "improved_lower_bound": "1250/13",
+    "old_lower_bound": "95",
+    "positive_but_insufficient_score": "103/100",
+    "pricing_upper_below_threshold": "26/25",
+    "restricted_master": "100",
+    "sufficient_witness_score": "53/50",
+    "threshold": "20/19"
+  },
+  "invalid_inputs_rejected": 6,
+  "not_run": [
+    "FPTAS/PTAS",
+    "non-convex relaxation",
+    "piecewise-linear branch-and-cut",
+    "column-generation benchmark",
+    "amplitude amplification",
+    "any historical scientific suite"
+  ],
+  "scope": "Exact small algebra only; no cloud trace, native solver, quantum circuit, runtime or speedup claim.",
+  "small_generator": {
+    "capacity": 14,
+    "feasible_patterns": 5,
+    "improving_pattern": [
+      1,
+      0,
+      1
+    ],
+    "improving_probability": "1/4",
+    "means": [
+      10,
+      10,
+      1
+    ],
+    "probability_sum": "1",
+    "risk_multiplier_squared": 4,
+    "subset_patterns_checked": 8,
+    "uniform_feasible_probability": "1/5",
+    "variances": [
+      1,
+      4,
+      1
+    ],
+    "warning": "Illustrative prices, not a restricted-master trajectory or a useful hard case."
+  },
+  "status": "pass"
+}

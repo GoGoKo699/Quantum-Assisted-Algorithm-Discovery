@@ -8,33 +8,35 @@
 | Note | Result or decision | Current role |
 |---|---|---|
 | [01 — Mechanism screen](MODEL_MECHANISM_SCREEN_01.md) | Graphs, stopping, and distinct physical-source sensing | Historical shortlist |
-| [02 — Task-matched readout](TASK_MATCHED_READOUT_02.md) | Calibrated signal has a strong unentangled comparator | Sensing reference, separate input model |
+| [02 — Task-matched readout](TASK_MATCHED_READOUT_02.md) | Calibrated signal has a strong unentangled comparator | Separate-input sensing reference |
 | [03 — Gaussian graph](IMPLICIT_GAUSSIAN_GRAPH_03.md) | Graph utility and access/classical boundaries | Reference, not a gate-model speedup |
 | [04 — Short-seed sparsification](SHORT_SEED_SPARSIFICATION_04.md) | Conditional RAM-model refinement | Parked; correctness/priority unresolved |
 | [05 — Hardware boundary](NO_QRAM_HARDWARE_BOUNDARY_05.md) | Charge all preparation and table accesses | Binding scope |
-| [06 — Circuit-native pricing](CIRCUIT_NATIVE_PRICING_06.md) | Explicit feasible generator, search and classical bypasses | Conditional construction, not a novel application advantage |
-| [07 — Actual pricing workload](PRICING_WORKLOAD_07.md) | Two native-master workflows certify 48 bins on one public benchmark | No supported quantum bottleneck in this slice; residual-regime justification required |
+| [06 — Circuit-native pricing](CIRCUIT_NATIVE_PRICING_06.md) | Feasible circuit generator and classical bypasses | Conditional circuit reference |
+| [07 — Actual pricing workload](PRICING_WORKLOAD_07.md) | Two native-master workflows certify 48 bins on a public benchmark | No supported bottleneck in that fixed-capacity slice |
+| [08 — Risk-aware pricing gate](RISK_AWARE_PRICING_GATE_08.md) | Independent uncertainty-aware application, published bottleneck, risk predicate and bound-aware target | One conditional residual-call test; no speedup or new algorithm established |
 
-## Latest test
+## Current evidence
 
 ```sh
-OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python experiments/pricing_workload_v1/verify.py
+python experiments/risk_pricing_gate_v1/verify.py
 ```
 
-Run from the root, Python 3.10+, NumPy and SciPy. The
-[report](../../experiments/pricing_workload_v1/REPORT.json) includes both exact
-packing certificates and separately accounted operation/probability diagnostics.
-The [input notice](../../experiments/pricing_workload_v1/SOURCE_NOTICE.md) distinguishes
-public synthetic data from industrial records. No source answer is supplied to the
-optimizer, and numerical solver flags are not the final optimality proof.
+Run from the root, Python 3.10+ and standard library. The
+[report](../../experiments/risk_pricing_gate_v1/REPORT.json) checks finite risk and
+threshold identities, not a cloud workload or quantum circuit. The published
+runtime shares in Note 08 are source-reported aggregates, not reproduced here.
+The new risk constraint and confidence assumptions are explicit; Note 07's
+single-capacity representation is not silently reused.
 
-Greedy-first reduces pricing effort but requires more master iterations. Exact
-capacity DP already makes the failed cheap screens inexpensive. The next task is
-not a larger run of the same fixed-capacity family, a QRAM retrofit, or a new solver
-framework. A credible useful residual must be identified before further quantum work.
+The useful target is a feasible score v>1 and v>=z_R/L, the published hybrid
+criterion for skipping a particular exact bound computation. Stronger later
+classical bounds may settle that task cheaply and must be tested first. No new
+native solver framework or benchmark campaign is selected.
 
-All older notes and [controls](../../experiments/README.md) remain unchanged.
-[Reproduction guidance](../../handover/REPRODUCING.md) and the
-[alternate-checkpoint register](../../handover/ALTERNATE_CHECKPOINTS.md) preserve
-historical scope and filename distinctions. The handover is a dated snapshot;
-CURRENT.md supplies the single live task. No new repository or spin-off is needed.
+The [previous workload report](../../experiments/pricing_workload_v1/REPORT.json),
+[source notice](../../experiments/pricing_workload_v1/SOURCE_NOTICE.md), and all
+older science remain unchanged. [Reproduction guidance](../../handover/REPRODUCING.md)
+and the [checkpoint register](../../handover/ALTERNATE_CHECKPOINTS.md) retain
+historical scope. The handover is a snapshot; CURRENT.md is the sole live task.
+No new repository, spin-off, manuscript or release is needed.
