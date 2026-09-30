@@ -1,0 +1,88 @@
+{
+  "approximation_margin_controls": [
+    {
+      "guaranteed_return_score": "201/200",
+      "improvement_margin": "1/100",
+      "relative_approximation_error": "1/202"
+    },
+    {
+      "guaranteed_return_score": "21/20",
+      "improvement_margin": "1/10",
+      "relative_approximation_error": "1/22"
+    },
+    {
+      "guaranteed_return_score": "5/4",
+      "improvement_margin": "1/2",
+      "relative_approximation_error": "1/6"
+    }
+  ],
+  "core_control": {
+    "free_items": 5,
+    "probability_of_improvement": "7/8",
+    "residual_capacity": 4
+  },
+  "external_code_or_data_used": false,
+  "improving_columns_preserved_checks": 6,
+  "invalid_inputs_rejected": 6,
+  "jobs": [
+    {
+      "best_pattern_probability": "5/16",
+      "best_value": "23/20",
+      "capacity": 10,
+      "certified_fixed_bits": {
+        "0": 1,
+        "6": 0,
+        "7": 0
+      },
+      "classical_bound_proves_no_improvement": false,
+      "feasible_patterns": 40,
+      "fractional_upper_bound": "71/60",
+      "improving_patterns": 5,
+      "improving_probability": "7/16",
+      "items": 8,
+      "threshold": "1",
+      "uniform_feasible_probability": "1/8"
+    },
+    {
+      "best_pattern_probability": "3/8",
+      "best_value": "13/20",
+      "capacity": 7,
+      "certified_fixed_bits": {},
+      "classical_bound_proves_no_improvement": true,
+      "feasible_patterns": 6,
+      "fractional_upper_bound": "7/10",
+      "improving_patterns": 0,
+      "improving_probability": "0",
+      "items": 3,
+      "threshold": "1",
+      "uniform_feasible_probability": "0"
+    },
+    {
+      "best_pattern_probability": "1/8",
+      "best_value": "6/5",
+      "capacity": 10,
+      "certified_fixed_bits": {
+        "0": 1,
+        "1": 1,
+        "2": 1
+      },
+      "classical_bound_proves_no_improvement": false,
+      "feasible_patterns": 8,
+      "fractional_upper_bound": "6/5",
+      "improving_patterns": 1,
+      "improving_probability": "1/8",
+      "items": 3,
+      "threshold": "1",
+      "uniform_feasible_probability": "1/8"
+    }
+  ],
+  "negative_controls": [
+    "feasible generator is not uniform",
+    "profit register cannot wrap",
+    "margin failure is not no-column certificate"
+  ],
+  "reduced_cost_identities_checked": 54,
+  "scaled_dual_constraints_checked": 54,
+  "scope": "Exact finite arithmetic only; no real pricing workload, quantum circuit compilation, amplitude amplification, or runtime comparison.",
+  "status": "pass"
+}

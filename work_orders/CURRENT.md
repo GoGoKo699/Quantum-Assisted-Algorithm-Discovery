@@ -1,59 +1,67 @@
-# Current work order: ready for a new circuit-model comparison
+# Current task: does useful packing pricing leave a quantum-search opportunity?
 
-29 September 2026 · `research/prx-quantum-phase2`
+30 September 2026 · `research/prx-quantum-phase2`
+Read [Note 06](../exploration/phase_4/CIRCUIT_NATIVE_PRICING_06.md) and
+[AGENTS.md](../AGENTS.md). No assumed fast QRAM, new repository, or manuscript.
 
-**No replacement candidate is selected. This maintenance pass starts no research.**
-Read [AGENTS.md](../AGENTS.md), [HANDOVER.md](../HANDOVER.md), and
-[hardware decision 05](../exploration/phase_4/NO_QRAM_HARDWARE_BOUNDARY_05.md).
-Manuscript preparation remains on hold; no new repository is needed.
+## One selected hypothesis, not a new generic solver
 
-## Carry forward the decision
+A classical packing optimizer supplies item sizes, capacity, and current rational
+nonnegative dual prices. A quantum routine may return a feasible bit string whose
+score exceeds one. Fixed constants drive sequential reversible arithmetic; the
+master, existing columns and DP work tables remain purely classical. All circuit
+preparation, reflection, routing, precision, price updates and verification count.
+Quantum tree generation and quantum-assisted column generation are existing work,
+not novelty claims. A useful practical regime remains unestablished.
 
-Fault-tolerant gate-model computation is allowed; fast QRAM is not an assumption.
-The restriction covers arbitrary input and changing work tables, not merely data
-loading. Ordinary logical registers, classical control and RAM, reversible formulas,
-and gate-compiled lookups are allowed with all gate/depth/workspace/precision,
-routing, setup, update, and repeated-access costs counted. Do not hide access in
-an oracle, state preparation, QROM name, or block encoding.
+The current scope is root LP pricing in ordinary one-dimensional binary bin packing.
+Do not silently substitute unbounded cutting stock, branch conflicts, or another
+constraint family. Negative reduced cost does not promise immediate objective
+improvement or an integer packing. The complete solver output and needed gap matter.
 
-[Short-seed Note 04](../exploration/phase_4/SHORT_SEED_SPARSIFICATION_04.md) is parked
-as an active lead. Its RAM-model theorem and finite evidence remain unchanged,
-with correctness and priority questions unresolved. It is not proved wrong and
-not promoted as hardware-compatible. No automatic QRAM design, table compilation,
-sparsifier audit, or third spin-off is the next task.
+## The next discriminating test
 
-## On the next explicit research continuation
+Characterize pricing calls arising within a specified adequate classical column-
+generation workflow, not arbitrary hard standalone knapsacks. First apply cheap
+existing-column/greedy searches, fractional/core bounds, capacity DP when appropriate,
+and approximation-scheme or scaled-dual bounds at the ACTUALLY needed quality.
+The full-master lower bound z_R/max(1,U), for a valid pricing upper bound U, can
+sometimes avoid exact no-column pricing. A constant improvement margin admits a
+polynomial classical finder. Do not invent tiny margins solely to defeat it.
 
-Compare a bounded set of independently useful models with ordinary-circuit quantum
-operations. For each, state the useful observable and necessary accuracy, the
-shared classical input, and the full path from preparation through coherent work
-to measurement and output. Identify every data access, including intermediate
-bookkeeping, its circuit or classical-control implementation, and total cost.
-Symbolic resource bounds suffice initially; no vendor choice, full compiler,
-near-term device, or empirical benchmark is required.
+Identify whether remaining expensive work finds new columns or mostly proves
+there are none. The proposed quantum finder helps only the former without an
+additional justified certification routine. Establish the residual free-item count,
+coefficient widths, target reduced cost and actual feasible-generator marked mass p
+(or a justified bound), and compare against strong core/DP/branch-and-bound and
+lexicographic/stabilized pricing. Extracting p may be expensive; do not supply it
+free as an algorithm input merely because an offline small check knows it.
 
-Put the positive quantum mechanism, strongest adequate classical acquisition or
-bypass, reuse/sample demand, and one discriminating test in the same proposal.
-Neither a giant Hilbert space nor an abstract query improvement is an advantage
-under this contract. A universal classical lower bound is not required to explore
-a well-motivated conditional opportunity.
+Judge setup plus all master/pricing iterations at the same LP/integer solution
+quality, including failed quantum attempts, fallback certificates and recompilation.
+Classical reuse of columns, dual information, approximations and alternative direct
+solutions is allowed. A faster random column can still slow master convergence.
+Recent pricing-filter/template results are relevant precedents with their own
+problem-specific scope, not instantly transferred packing guarantees.
 
-Do not preselect a graph retrofit, revive the closed emitter covariance, or change
-to unknown-source sensing merely to avoid input costs. A graph route could return
-only with a distinct useful gate construction and a credible complete comparison.
-Other archived methods require fresh access and model checks before becoming leads.
-Do not invent extra precision or difficult instances solely to defeat a baseline.
+A small existing benchmark slice or model-level family may be used when it answers
+this one question. No dataset campaign, general quantum compiler, native solver
+reimplementation, or larger synthetic census is requested. If classical methods
+make all useful surviving calls cheap, or certification is the real bottleneck,
+park the claim early. A concrete residual opportunity justifies a focused cost
+and novelty audit, not an all-classical lower-bound assertion.
 
-## Checkpoint and action discipline
+## Preserved boundaries and evidence
 
-Preserve prior conclusions and scientific bytes. Use
-[canonical paths](../exploration/phase_4/README.md) and the
-[alternate-checkpoint register](../handover/ALTERNATE_CHECKPOINTS.md); old attached
-patches and next-step files do not override this work order. Finish each research
-checkpoint in the repository before changing candidates.
+The numerical controls in Note 06 are exact algebra on three easy illustrative
+jobs, not acquired industrial pricing inputs. They check pruning, generator masses,
+overflow and margin/scaled-dual logic; no FPTAS, quantum circuit or native optimizer
+was executed. The final checker ran twice identically and rejects optimized Python.
+No historical suite was rerun. Use saved reports without overwriting them.
 
-[Reproduction instructions](../handover/REPRODUCING.md) describe opt-in checks.
-No scientific suite is rerun for this tidy. Only Quantum-Assisted-Algorithm-Discovery
-may be modified. Keep licenses and third-party rights. No outside contact,
-paid/unattended work, manuscript revival, branch merge, release, new repository,
-or administration change is authorized here.
+The prior handover remains a dated pre-selection snapshot. Do not revive the
+parked RAM-model graph or closed emitter covariance to avoid this decision.
+Particle dynamics and transport remain alternatives, not parallel programs.
+Only Quantum-Assisted-Algorithm-Discovery may be modified. Preserve prior science,
+rights and both independent spin-offs. No outside contact, paid work, unattended
+execution, branch merge, release or repository-administration change is authorized.
