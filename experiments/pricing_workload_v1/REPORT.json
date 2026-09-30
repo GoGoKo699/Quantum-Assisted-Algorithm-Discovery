@@ -1,0 +1,811 @@
+{
+  "fixed_policy": {
+    "DP_tie_rule": "profit, then used capacity; existing state wins remaining ties",
+    "dual_denominator": 16777216,
+    "integer_recovery_interval_columns": 10,
+    "iterations_cap": 300,
+    "probability_state_cap_per_call": 200000,
+    "stabilization": "none; equal-size item symmetry aggregated exactly"
+  },
+  "instance": {
+    "capacity": 150,
+    "equal_size_types": 58,
+    "input_sha256": "51f26bd988055d22f9b5fdcfaf218675eaa8bcca41f932f9c8d4ba746a6b16c2",
+    "n": 120,
+    "name": "u120_00",
+    "source": "https://people.brunel.ac.uk/~mastjjb/jeb/orlib/files/binpack1.txt",
+    "source_reference_count_used_by_algorithm": false,
+    "total_size": 7078
+  },
+  "invalid_inputs_rejected": 6,
+  "limitations": [
+    "One benchmark is not a representative hard-pricing sample.",
+    "HiGHS primal/duals are floating; returned packings and price-DP statements are checked with integers/rationals.",
+    "Exact probabilities were calculated after classical solution as charged diagnostics, not provided freely to a quantum algorithm.",
+    "No quantum search, FPTAS, advanced lexicographic/stabilized pricer, native SCIP, or timing crossover was run.",
+    "Reference number in the input is metadata only; volume and explicit item assignment prove the achieved bin count."
+  ],
+  "pattern_price_rounding_error_bound": "7/16777216",
+  "policies": [
+    {
+      "added_columns": 55,
+      "counts": {
+        "actual_exact_DP_calls": 55,
+        "actual_exact_DP_relaxations": 607310,
+        "greedy_failed_calls": 4,
+        "greedy_positive_calls": 51,
+        "integer_recovery_calls": 4,
+        "positive_exact_DP_calls": 55,
+        "restricted_LP_solves": 56,
+        "three_order_greedy_screens": 55,
+        "unchanged_LP_objective_after_last_addition": 16,
+        "validation_DP_calls": 55,
+        "validation_DP_transitions": 869000
+      },
+      "final_column_count": 155,
+      "final_primal_upper": "398077359/8388608",
+      "first_LP_objective": 49.0,
+      "initial_column_count": 100,
+      "integer_recovery": [
+        {
+          "iteration": 25,
+          "nodes": 1,
+          "solver_status": 0,
+          "verified_bins": 49
+        },
+        {
+          "iteration": 35,
+          "nodes": 1,
+          "solver_status": 0,
+          "verified_bins": 49
+        },
+        {
+          "iteration": 45,
+          "nodes": 1,
+          "solver_status": 0,
+          "verified_bins": 49
+        },
+        {
+          "iteration": 55,
+          "nodes": 1,
+          "solver_status": 0,
+          "verified_bins": 48
+        }
+      ],
+      "last_LP_objective": 47.4545182972,
+      "last_action": "stop: exact volume plus verified packing certificate",
+      "packing_item_ids_zero_based": [
+        [
+          55,
+          114
+        ],
+        [
+          67,
+          94
+        ],
+        [
+          41,
+          43
+        ],
+        [
+          24,
+          103
+        ],
+        [
+          93,
+          100
+        ],
+        [
+          52,
+          73
+        ],
+        [
+          4,
+          28
+        ],
+        [
+          17,
+          110
+        ],
+        [
+          26,
+          74
+        ],
+        [
+          68,
+          106
+        ],
+        [
+          5,
+          115
+        ],
+        [
+          89,
+          97
+        ],
+        [
+          16,
+          37
+        ],
+        [
+          54,
+          77
+        ],
+        [
+          20,
+          92
+        ],
+        [
+          105,
+          111
+        ],
+        [
+          13,
+          91
+        ],
+        [
+          3,
+          71
+        ],
+        [
+          2,
+          112
+        ],
+        [
+          78,
+          101
+        ],
+        [
+          104,
+          109
+        ],
+        [
+          81,
+          86
+        ],
+        [
+          79,
+          80
+        ],
+        [
+          11,
+          31
+        ],
+        [
+          29,
+          107
+        ],
+        [
+          1,
+          95
+        ],
+        [
+          57,
+          64,
+          85
+        ],
+        [
+          8,
+          12,
+          61
+        ],
+        [
+          39,
+          82
+        ],
+        [
+          30,
+          96
+        ],
+        [
+          70,
+          76
+        ],
+        [
+          23,
+          32,
+          99
+        ],
+        [
+          14,
+          60,
+          117,
+          118
+        ],
+        [
+          33,
+          88,
+          113,
+          116
+        ],
+        [
+          9,
+          63,
+          65,
+          84
+        ],
+        [
+          40,
+          51,
+          58,
+          119
+        ],
+        [
+          6,
+          19,
+          47,
+          98
+        ],
+        [
+          7,
+          56,
+          59,
+          87
+        ],
+        [
+          38,
+          50,
+          53
+        ],
+        [
+          48,
+          90,
+          108
+        ],
+        [
+          22,
+          46,
+          75
+        ],
+        [
+          18,
+          34,
+          35,
+          49
+        ],
+        [
+          42,
+          66,
+          72
+        ],
+        [
+          10,
+          15,
+          21
+        ],
+        [
+          27,
+          36,
+          69
+        ],
+        [
+          83,
+          102
+        ],
+        [
+          25,
+          45,
+          62
+        ],
+        [
+          0,
+          44
+        ]
+      ],
+      "policy": "exact-pricing",
+      "post_solution_probability_diagnostics": [
+        {
+          "capacity_bits": 8,
+          "exact": true,
+          "exact_price": "8949285/8388608",
+          "fixed_items": 0,
+          "free_items": 120,
+          "iteration": 42,
+          "lower": "532180509847382850533935827/9903520314283042199192993792",
+          "lower_decimal": 0.053736499039,
+          "price_vector_sha256": "674a3657e2eb548b7078f1f4ee61952574a243cc1fa75c2038447410d9d179ab",
+          "safe_score_bits": 30,
+          "score_denominator": 16777216,
+          "states": 22326,
+          "suffix_cells": 18120,
+          "upper": "532180509847382850533935827/9903520314283042199192993792",
+          "upper_decimal": 0.053736499039
+        },
+        {
+          "capacity_bits": 8,
+          "exact": true,
+          "exact_price": "17835237/16777216",
+          "fixed_items": 0,
+          "free_items": 120,
+          "iteration": 44,
+          "lower": "15714100702292009938032573/77371252455336267181195264",
+          "lower_decimal": 0.203099991323,
+          "price_vector_sha256": "cc1e7e146ee560d3b140d558d967dc010173934e38bba887222e5e9ac26949aa",
+          "safe_score_bits": 30,
+          "score_denominator": 16777216,
+          "states": 11477,
+          "suffix_cells": 18120,
+          "upper": "15714100702292009938032573/77371252455336267181195264",
+          "upper_decimal": 0.203099991323
+        },
+        {
+          "capacity_bits": 8,
+          "exact": true,
+          "exact_price": "8926625/8388608",
+          "fixed_items": 2,
+          "free_items": 118,
+          "iteration": 45,
+          "lower": "8495844752935010214835449183/19807040628566084398385987584",
+          "lower_decimal": 0.428930546075,
+          "price_vector_sha256": "3b32e7a45f9ccfb5d0a5440d2750d99165d475c2146cb2dec4633275eda4bd44",
+          "safe_score_bits": 30,
+          "score_denominator": 16777216,
+          "states": 15795,
+          "suffix_cells": 17818,
+          "upper": "8495844752935010214835449183/19807040628566084398385987584",
+          "upper_decimal": 0.428930546075
+        },
+        {
+          "capacity_bits": 8,
+          "exact": true,
+          "exact_price": "9014019/8388608",
+          "fixed_items": 1,
+          "free_items": 119,
+          "iteration": 46,
+          "lower": "1014666530421931317864497341/9903520314283042199192993792",
+          "lower_decimal": 0.102455136984,
+          "price_vector_sha256": "0c2697d4673c0b50fa4cf74f0031918896f4bec9e3c7a05b1c4a5128d9401b7e",
+          "safe_score_bits": 30,
+          "score_denominator": 16777216,
+          "states": 12191,
+          "suffix_cells": 17969,
+          "upper": "1014666530421931317864497341/9903520314283042199192993792",
+          "upper_decimal": 0.102455136984
+        }
+      ],
+      "price_trace_sha256": "3063427f8758a11d7ad5954605d7cc5dc3031749cdf315de0e4b0b1b1eff29e3",
+      "verified_packing_bins": 48,
+      "volume_lower_bound": 48
+    },
+    {
+      "added_columns": 79,
+      "counts": {
+        "actual_exact_DP_calls": 9,
+        "actual_exact_DP_relaxations": 99378,
+        "greedy_failed_calls": 9,
+        "greedy_positive_calls": 70,
+        "integer_recovery_calls": 5,
+        "positive_exact_DP_calls": 9,
+        "restricted_LP_solves": 80,
+        "three_order_greedy_screens": 79,
+        "unchanged_LP_objective_after_last_addition": 30,
+        "validation_DP_calls": 9,
+        "validation_DP_transitions": 142200
+      },
+      "final_column_count": 179,
+      "final_primal_upper": "797193939/16777216",
+      "first_LP_objective": 49.0,
+      "initial_column_count": 100,
+      "integer_recovery": [
+        {
+          "iteration": 39,
+          "nodes": 1,
+          "solver_status": 0,
+          "verified_bins": 49
+        },
+        {
+          "iteration": 49,
+          "nodes": 1,
+          "solver_status": 0,
+          "verified_bins": 49
+        },
+        {
+          "iteration": 59,
+          "nodes": 1,
+          "solver_status": 0,
+          "verified_bins": 49
+        },
+        {
+          "iteration": 69,
+          "nodes": 1,
+          "solver_status": 0,
+          "verified_bins": 49
+        },
+        {
+          "iteration": 79,
+          "nodes": 1,
+          "solver_status": 0,
+          "verified_bins": 48
+        }
+      ],
+      "last_LP_objective": 47.5164609053,
+      "last_action": "stop: exact volume plus verified packing certificate",
+      "packing_item_ids_zero_based": [
+        [
+          55,
+          114
+        ],
+        [
+          67,
+          94
+        ],
+        [
+          41,
+          43
+        ],
+        [
+          24,
+          103
+        ],
+        [
+          93,
+          100
+        ],
+        [
+          52,
+          73
+        ],
+        [
+          4,
+          28
+        ],
+        [
+          17,
+          110
+        ],
+        [
+          26,
+          74
+        ],
+        [
+          68,
+          106
+        ],
+        [
+          5,
+          115
+        ],
+        [
+          89,
+          97
+        ],
+        [
+          16,
+          37
+        ],
+        [
+          54,
+          77
+        ],
+        [
+          20,
+          92
+        ],
+        [
+          105,
+          111
+        ],
+        [
+          66,
+          91
+        ],
+        [
+          13,
+          71
+        ],
+        [
+          2,
+          112
+        ],
+        [
+          56,
+          83
+        ],
+        [
+          78,
+          101
+        ],
+        [
+          104,
+          109
+        ],
+        [
+          81,
+          86
+        ],
+        [
+          79,
+          80
+        ],
+        [
+          29,
+          107
+        ],
+        [
+          31,
+          95
+        ],
+        [
+          1,
+          85
+        ],
+        [
+          39,
+          82
+        ],
+        [
+          30,
+          96
+        ],
+        [
+          70,
+          76
+        ],
+        [
+          23,
+          32,
+          99
+        ],
+        [
+          14,
+          60,
+          117,
+          118
+        ],
+        [
+          33,
+          88,
+          113,
+          116
+        ],
+        [
+          9,
+          63,
+          65,
+          84
+        ],
+        [
+          40,
+          51,
+          58,
+          119
+        ],
+        [
+          6,
+          19,
+          47,
+          98
+        ],
+        [
+          8,
+          64,
+          72,
+          87
+        ],
+        [
+          12,
+          57,
+          69
+        ],
+        [
+          0,
+          61,
+          108
+        ],
+        [
+          38,
+          48,
+          59
+        ],
+        [
+          34,
+          42,
+          50,
+          102
+        ],
+        [
+          3,
+          35,
+          62
+        ],
+        [
+          7,
+          44,
+          45
+        ],
+        [
+          22,
+          46,
+          90
+        ],
+        [
+          11,
+          25
+        ],
+        [
+          27,
+          53,
+          75
+        ],
+        [
+          10,
+          18,
+          21
+        ],
+        [
+          15,
+          36,
+          49
+        ]
+      ],
+      "policy": "greedy-first",
+      "post_solution_probability_diagnostics": [
+        {
+          "capacity_bits": 8,
+          "exact": true,
+          "exact_price": "18952039/16777216",
+          "fixed_items": 0,
+          "free_items": 120,
+          "iteration": 43,
+          "lower": "29959766848480256610658833875/79228162514264337593543950336",
+          "lower_decimal": 0.378145420741,
+          "price_vector_sha256": "e6458f2b9c877e7a69ea127c59e5f26efdcda936cc93b45ce68300ef191f49c4",
+          "safe_score_bits": 30,
+          "score_denominator": 16777216,
+          "states": 23205,
+          "suffix_cells": 18120,
+          "upper": "29959766848480256610658833875/79228162514264337593543950336",
+          "upper_decimal": 0.378145420741
+        },
+        {
+          "capacity_bits": 8,
+          "exact": true,
+          "exact_price": "19325367/16777216",
+          "fixed_items": 0,
+          "free_items": 120,
+          "iteration": 47,
+          "lower": "122149065962318849799826689934389/162259276829213363391578010288128",
+          "lower_decimal": 0.75280174021,
+          "price_vector_sha256": "ab27ca8fae92a9f4a8f061060e9127fc93169a5a72a1950b346697a758de6859",
+          "safe_score_bits": 30,
+          "score_denominator": 16777216,
+          "states": 33191,
+          "suffix_cells": 18120,
+          "upper": "122149065962318849799826689934389/162259276829213363391578010288128",
+          "upper_decimal": 0.75280174021
+        },
+        {
+          "capacity_bits": 8,
+          "exact": true,
+          "exact_price": "9056651/8388608",
+          "fixed_items": 0,
+          "free_items": 120,
+          "iteration": 50,
+          "lower": "81743057512676430319041414344191/162259276829213363391578010288128",
+          "lower_decimal": 0.50378048707,
+          "price_vector_sha256": "c5b9cf7128df248758fea47544352e3021d09d73f38a4ce13df7a4c4ae909632",
+          "safe_score_bits": 30,
+          "score_denominator": 16777216,
+          "states": 45713,
+          "suffix_cells": 18120,
+          "upper": "81743057512676430319041414344191/162259276829213363391578010288128",
+          "upper_decimal": 0.50378048707
+        },
+        {
+          "capacity_bits": 8,
+          "exact": true,
+          "exact_price": "8928783/8388608",
+          "fixed_items": 0,
+          "free_items": 120,
+          "iteration": 56,
+          "lower": "472939617883772265919842606193/2535301200456458802993406410752",
+          "lower_decimal": 0.186541787539,
+          "price_vector_sha256": "bbb61ffd9bad582d3cecad3cdf5f48da9ffa2f3423cc4334a7787932df4f7ab7",
+          "safe_score_bits": 30,
+          "score_denominator": 16777216,
+          "states": 24522,
+          "suffix_cells": 18120,
+          "upper": "472939617883772265919842606193/2535301200456458802993406410752",
+          "upper_decimal": 0.186541787539
+        },
+        {
+          "capacity_bits": 8,
+          "exact": true,
+          "exact_price": "17793245/16777216",
+          "fixed_items": 1,
+          "free_items": 119,
+          "iteration": 66,
+          "lower": "227004409004241467971243239/2475880078570760549798248448",
+          "lower_decimal": 0.091686350631,
+          "price_vector_sha256": "3fb65cff0a46b2bd5b26a8f39d9cb42595c1036986d3796156f8eca158ebb7ba",
+          "safe_score_bits": 30,
+          "score_denominator": 16777216,
+          "states": 11311,
+          "suffix_cells": 17969,
+          "upper": "227004409004241467971243239/2475880078570760549798248448",
+          "upper_decimal": 0.091686350631
+        },
+        {
+          "capacity_bits": 8,
+          "exact": true,
+          "exact_price": "17880801/16777216",
+          "fixed_items": 0,
+          "free_items": 120,
+          "iteration": 71,
+          "lower": "43634392059466169998181687/154742504910672534362390528",
+          "lower_decimal": 0.281980649626,
+          "price_vector_sha256": "6014740bea7b438d11218194363b9f0b58ee6ec752203ea76378a13713aaf396",
+          "safe_score_bits": 30,
+          "score_denominator": 16777216,
+          "states": 17014,
+          "suffix_cells": 18120,
+          "upper": "43634392059466169998181687/154742504910672534362390528",
+          "upper_decimal": 0.281980649626
+        },
+        {
+          "capacity_bits": 8,
+          "exact": true,
+          "exact_price": "4504993/4194304",
+          "fixed_items": 0,
+          "free_items": 120,
+          "iteration": 72,
+          "lower": "2193175290213855702754137313/4951760157141521099596496896",
+          "lower_decimal": 0.442908222655,
+          "price_vector_sha256": "f55b1ef8fbf3521e6e3e8c05a2f92a5d73ce1c21e43d488ec2101d66855c73bb",
+          "safe_score_bits": 30,
+          "score_denominator": 16777216,
+          "states": 13890,
+          "suffix_cells": 18120,
+          "upper": "2193175290213855702754137313/4951760157141521099596496896",
+          "upper_decimal": 0.442908222655
+        },
+        {
+          "capacity_bits": 8,
+          "exact": true,
+          "exact_price": "18048217/16777216",
+          "fixed_items": 1,
+          "free_items": 119,
+          "iteration": 74,
+          "lower": "8820257479089940809511197/19342813113834066795298816",
+          "lower_decimal": 0.455996624027,
+          "price_vector_sha256": "79ebdbe652e917867238e45c4f30de37937458ed474d5db0d9aeabf6e52612f5",
+          "safe_score_bits": 30,
+          "score_denominator": 16777216,
+          "states": 8342,
+          "suffix_cells": 17969,
+          "upper": "8820257479089940809511197/19342813113834066795298816",
+          "upper_decimal": 0.455996624027
+        },
+        {
+          "capacity_bits": 8,
+          "exact": true,
+          "exact_price": "17794015/16777216",
+          "fixed_items": 1,
+          "free_items": 119,
+          "iteration": 75,
+          "lower": "8420508670081558411112775/19342813113834066795298816",
+          "lower_decimal": 0.435330094983,
+          "price_vector_sha256": "5dcf92568bd09aaa28e5c4030043d47c68840c3856b13693ac8aa134a8578940",
+          "safe_score_bits": 30,
+          "score_denominator": 16777216,
+          "states": 7936,
+          "suffix_cells": 17969,
+          "upper": "8420508670081558411112775/19342813113834066795298816",
+          "upper_decimal": 0.435330094983
+        }
+      ],
+      "price_trace_sha256": "ab376a119a6276d9b41a6ae7c73eb5f9306b3ee4d26db3cbb6bd9ccde6081cb1",
+      "verified_packing_bins": 48,
+      "volume_lower_bound": 48
+    }
+  ],
+  "scope": "One public instance, two declared root workflows; exact output certificate, not an industrial or quantum timing benchmark.",
+  "software": {
+    "LP": "SciPy linprog/HiGHS dual simplex",
+    "integer_recovery": "SciPy milp/HiGHS, node cap 1000",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0"
+  },
+  "status": "pass",
+  "work_per_full_item_DP_call": 11042
+}
